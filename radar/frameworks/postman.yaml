@@ -1,0 +1,17 @@
+name: Postman
+blip:
+  since: 2
+  ring: ADOPT
+description: |
+  Postman is an API testing and development tool. At the core are Postman Collections which
+  is an executable description of an API. With Postman Collections you can mock, test,
+  document and monitor your API.
+rationale: |
+  Postman is a great tool for testing and mocking APIs. It can be used for
+  integration tests in your CI/CD pipelines by leveraging the `newman` CLI.
+
+  Our main interest in Postman at the moment is as a testing platform and an IDE
+  to help during development. We don't see it as a source for documenting our APIs.
+related:
+  - name: OpenAPI (Swagger)
+  - file: openapi.html

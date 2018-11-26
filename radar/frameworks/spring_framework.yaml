@@ -1,0 +1,18 @@
+name: Spring Framework
+logo: https://spring.io/img/homepage/icon-spring-framework.svg
+blip:
+  since: 2
+  ring: HOLD
+description: |
+  Spring Framework is an application framework and IoC container for Java.
+  It integrates with most things Java and prominent features and frameworks include:
+    - JPA (Hibernate)
+    - Spring MVC
+    - Spring Security
+    - Spring Integration (Messaging)
+rationale: |
+  There's nothing wrong with Spring Framework. If you're already using Spring
+  Framework in your product, please continue to do so. It will serve you well.
+  But, if you are about to build a new microservice, consider something else
+  than Spring Framework. There are lots of alternatives that are faster, smaller
+  and quicker to develop.

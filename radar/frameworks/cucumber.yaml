@@ -1,0 +1,19 @@
+name: Cucumber
+logo: https://docs.cucumber.io/img/cucumber-logo.png
+blip:
+  since: 1
+  ring: ADOPT
+  moved: false
+description: |
+  Cucumber is a software tool used by computer programmers for testing other software.
+  It runs automated acceptance tests written in a behavior-driven development style.
+  Central to the Cucumber BDD approach is its plain language parser called Gherkin.
+rationale: |
+  Scenario-based requirements are at the core of Extenda's development process.
+  Features are described with Gherkin and tests are automated with Cucumber.
+
+  Cucumber should be used for acceptance tests for all languages where it isn't
+  an awkward fit. For the following platforms, _always_ favor Cucumber over
+  alternatives such as for example _Spock_.
+  - Java
+  - Python

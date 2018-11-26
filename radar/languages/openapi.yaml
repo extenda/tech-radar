@@ -1,0 +1,14 @@
+name: OpenAPI (Swagger)
+logo: https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png
+blip:
+  since: 1
+  ring: ADOPT
+  moved: true
+description: |
+  The OpenAPI specification is a formal description of a RESTful web service
+  which can be used to consume, document and visualize the API. Originally
+  part of Swagger, but since 2016 separated to the OpenAPI initiative.
+rationale: |
+  Use OpenAPI specifications as the primary way to share REST API specifications
+  both internally and externally. Swagger is the most known implementation and we
+  recommend it is used for all REST APIs.

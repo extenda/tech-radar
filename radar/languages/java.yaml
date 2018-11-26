@@ -1,0 +1,25 @@
+name: Java
+logo: https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/234px-Java_programming_language_logo.svg.png
+blip:
+  since: 1
+  ring: ADOPT
+description: |
+  Java is an object-oriented programming language that runs in a Java Runtime Environment (JRE).
+  Java compiles to bytecode which is then run on the JRE, allowing the same program to run on multiple platforms.
+rationale: |
+  There's many reasons we use Java at Extenda Retail.
+
+    * Huge existing Java codebase and competence pool
+    * Massive ecosystem and community
+    * Great support for cloud
+    * Runs efficiently on *nix and Docker
+
+  When building new products, make sure to use the latest JDK available for
+  your target deployment. For example, if you are building a microservice for
+  SaaS, don't build it for Java 8, go for the latest Java release. But, if you
+  are building a process that runs on a POS workstation, make sure to match
+  the available JRE.
+
+  For existing systems, it is important to start to upgrade to the next LTS
+  release after Java 8 (at this time Java 11). We must make sure our products
+  work on supported Java versions and don't lag behind on Java 8 after EOL.

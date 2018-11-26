@@ -1,0 +1,13 @@
+name: Docker
+blip:
+  since: 1
+  ring: ADOPT
+description: |
+  Docker is a tool designed to make it easier to create, deploy, and run applications
+  by using containers. Containers allow a developer to package up an application with
+  all of the parts it needs, such as libraries and other dependencies, and ship it all
+  out as one package.
+rationale: |
+  We see many usages for Docker. As we're entering the cloud, we need to explore
+  it for production. The other primary focus so far has been to use Docker for
+  self-contained exploratory testing.

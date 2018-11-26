@@ -1,0 +1,22 @@
+name: Gradle
+blip:
+  since: 2
+  ring: HOLD
+description: |
+  Gradle is a build system and dependency manager for JVM languages such as Java, Groovy and Android.
+  The main differentiator when compared to Apache Maven is that it's configured with Groovy instead of XML.
+  This allows for _very flexible_ build systems.
+rationale:
+  Extenda Retail is invested in Apache Maven as the preferred build system for
+  JVM languages. Our development processes and CI pipelines are targeted at
+  Apache Maven and not Gradle.
+
+  Don't use Gradle simply because the team prefers it over the alternatives.
+  To use Gradle, make sure to _really motivate_ why it is a better fit. A good
+  example where it _is_ a better fit is Android, because the Google preferred
+  build platform for Android is Gradle.
+related:
+  - name: Apache Ant
+    file: ant.html
+  - name: Apache Maven
+    file: maven.html

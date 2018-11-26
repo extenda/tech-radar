@@ -1,0 +1,13 @@
+name: Node.js
+logo: https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg
+blip:
+  since: 1
+  ring: ADOPT
+  moved: true
+description: |
+  _Node.js_ is javascript on the server. It is asynchronous and event driven
+  Javascript runtime built to be scalable and highly concurrent.
+rationale: |
+  Node.js is supported by all cloud provides and is essential in serverless and
+  cloud native solutions. It is also a vital part of the front-end stack and a
+  candidate for backend-for-frontend services.

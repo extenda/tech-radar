@@ -1,0 +1,15 @@
+name: Jersey (JAX-RS) 1.x
+blip:
+  since: 1
+  ring: HOLD
+  moved: false
+description: |
+  Jersey 1.x is the reference implementation for JAX-RS 1. It is a framework
+  to build RESTful services with Java.
+rationale: |
+  Jersey 1.x predates Servlet 3.0 and asynchrous request handling. Do not build
+  REST services with Jersey and JAX-RS 1.x. Use other frameworks that supports
+  asynchrous requests.
+related:
+  - name: Spring Boot 2
+    file: spring_boot2.html
