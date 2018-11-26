@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+}
+
+#radar {
+  display: block;
+  margin: auto;
+}
+.svglink {
+  cursor: pointer;
+}
+
+.entry-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 2rem;
+}
+
+.entry-container h1 {
+  margin-bottom: 0;
+  order: 1;
+}
+
+img.entry-logo {
+  order: 2;
+  max-width: 90px;
+  max-height: 40px;
+  margin-left: 10px;
+}
+
+div.entry-description {
+  order: 3;
+}
+
+h1.center {
+  text-align: center;
+  clear: both;
+}
+
+span.edition {
+  background: #43a047;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+span.edition, span.edition i {
+  color: white;
+  font-size: 2.6rem;
+  white-space: nowrap;
+  vertical-align: text-top;
+}
+
+.footer div {
+  border-top: 1px solid #757575;
+  padding: 10px 0;
+}
+
+.footer-text {
+  width: 70%;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: auto;
+}
+
+.navbar {
+  background: #01579b;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar.archive {
+  background: #ff8f00;
+}
+
+div.archive-notice {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+}
+
+div.archive-notice a {
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+ul.no-bullets {
+  list-style: none;
+}
+
+.navbar ul {
+  list-style: none;
+  overflow: hidden;
+  margin: 0 auto 3rem auto;
+  max-width: 960px;
+}
+
+.navbar li {
+  float: left;
+  padding: 12px;
+}
+
+.radar-archive i {
+  color: white;
+}
+
+ul.breadcrumb {
+  list-style: none;
+  overflow: hidden;
+}
+
+.breadcrumb li, li.radar-root {
+  float: left;
+  padding-left: 6px;
+  color: white;
+}
+
+.breadcrumb li i, li.radar-root i {
+  color: white;
+  padding-left: 18px;
+}
+
+.breadcrumb li.active {
+  color: white;
+}
+
+.badges {
+  margin-bottom: 10px;
+}
+
+.badge {
+  background: #cfd8dc;
+  padding: 4px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.badge.Adopt {
+  background: #43a047;
+  color: white;
+}
+
+.badge.Trial {
+  background: #c0ca33;
+  color: white;
+}
+
+.badge.Assess {
+  background: #ffb300;
+  color: white;
+}
+
+.badge.Hold {
+  background: #bf360c;
+  color: white;
+}
+
+ul.adopt, ul.assess, ul.trial, ul.hold {
+  border-left: 3px solid #43a047;
+  padding-left: 8px;
+}
+
+ul.trial {
+  border-color: #c0ca33;
+}
+
+ul.assess {
+  border-color: #fbdb84;
+}
+
+ul.hold {
+  border-color: #bf360c;
+}
+
+li {
+  margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 1rem;
+}

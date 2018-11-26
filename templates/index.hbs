@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>{{title}} #{{edition}}</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/main.css">
+</head>
+<body>
+  <nav class="navbar" role="navigation">
+    <ul class="quadrants">
+      <li class="radar-root">Radar #{{edition}}<i class="fa fa-rss"></i></li>
+      {{#each quadrants}}
+      <li><a href="{{dirname}}.html">{{name}}</a></li>
+      {{/each}}
+      <li class="radar-archive"><i class="fa fa-archive"></i> <a href="/archive/index.html">Archive</a></li>
+    </ul>
+  </nav>
+  <h1 class="center">{{title}} <span class="edition">#{{edition}}</span></h1>
+  <div class="svg-radar">
+    <svg id="radar"></svg>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="one-half column">
+        <h2>About the Tech Radar</h2>
+        <p>
+          The Extenda Retail Tech Radar is based on the concept introduced by <a href="https://www.thoughtworks.com/radar">ThoughtWorks</a>.
+          The Radar contains a list of technologies, complemented by assement result, called ring assement. The following rings are used:
+        </p>
+        <ul class="no-bullets">
+          <li><strong>Adopt</strong> — Technologies we have high confidence in and recommend for wide use.</li>
+          <li><strong>Trial</strong> — Technologies we have seen used with success, but are yet to be proved successfully and wide and large scale. Carries higher risk.</li>
+          <li><strong>Assess</strong> — Technologies that are promising with a clear potential value for us. Requires research and prototyping to analyze its impact.</li>
+          <li><strong>Hold</strong> — Technologies not recommended for new products or technology we no longer want to invest in. Existing products may still consider these depending on its legacy.</li>
+        </ul>
+      </div>
+      <div class="one-half column">
+        <h2>The Purpose</h2>
+        <p>
+          The Tech Radar aims to inspire and support teams at Extenda Retail to pick the best technologies for their projects.
+          It is way to share experience and knowledge between the teams and to create transparency about the
+          technology direction of Extenda Retail.
+          The Tech Radar also becomes a list of dos and don'ts, what to try and to avoid in order to increase success.
+        </p>
+
+        <h2>How to Contribute</h2>
+        <p>
+          The Tech Radar is updated roughly every 6 months by a working group consisting of technologists
+          from different branches of Extenda Retail.
+        </p>
+        <p>
+          The Tech Radar is maintained on <a href="https://github.com/extenda/tech-radar">GitHub</a>.
+          There you can read more about the process and how to contribute.
+        </p>
+      </div>
+    </div>
+  </div>
+  {{>footer}}
+<script src="//d3js.org/d3.v4.min.js"></script>
+<script src="/lib/radar.js"></script>
+<script>
+radar_visualization({
+  svg_id: "radar",
+  width: 1450,
+  height: 1000,
+  colors: {
+    background: "#fff",
+    grid: "#bbb",
+    inactive: "#ddd"
+  },
+  title: "{{title}} — {{edition}}",
+  quadrants: [
+    {{#each quadrants}}
+    { name: "{{name}}" }{{#unless @last}},{{/unless}}
+    {{/each}}
+  ],
+  rings: [
+    { name: "Adopt", color: "#43a047" },
+    { name: "Trial", color: "#c0ca33" },
+    { name: "Assess", color: "#ffb300" },
+    { name: "Hold", color: "#bf360c" }
+  ],
+  print_layout: true,
+  // zoomed_quadrant: 0,
+  //ENTRIES
+  entries: {{{entries}}}
+  //ENTRIES
+});
+</script>
+</body>
+</html>
