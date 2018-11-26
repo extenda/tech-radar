@@ -1,0 +1,5 @@
+# Code owners
+# https://help.github.com/articles/about-codeowners/
+# Order is important, the last matching pattern takes the most precedence.
+
+*                                           @sasjo
