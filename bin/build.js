@@ -8,6 +8,7 @@ const radarModel = require('./radar_model')
 
 const outputDir = 'build'
 
+// Build the static radar HTML representation from the model and radar entries
 function buildRadar(archive) {
 
   handlebars.registerPartial('footer', handlebars.compile(fs.readFileSync('templates/footer.hbs', 'utf8')))
@@ -29,6 +30,7 @@ function buildRadar(archive) {
 
   console.log('  - Entries')
 
+  // Create all the entries pages and collect blips.
   for (var f of klawSync('radar', { nodir: true, traverseAll: true, filter: p => path.extname(p.path) === '.yaml' })) {
     var content = yaml.parse(fs.readFileSync(f.path, 'utf8'))
     validateYaml(f.path, content)
@@ -60,6 +62,7 @@ function buildRadar(archive) {
     )
   }
 
+  // Create the quadrant index pages.
   console.log('  - Quadrants')
   for (var q of radar.quadrants) {
     q.title = radar.title
@@ -75,11 +78,14 @@ function buildRadar(archive) {
     fs.writeFileSync(path.join(outputDir, q.dirname + '.html'), quadrantPage(q))
   }
 
+  // Create the main radar visualization
   console.log('  - Radar visualization')
   fs.writeFileSync(path.join(outputDir, 'index.html'), radarPage(radar))
 
+  // Archive the current edition and write the archive index
   createArchive(radar, archive)
 
+  // Copy static resources
   console.log('Copy resources')
   fs.copySync('app', outputDir)
 }
@@ -141,6 +147,7 @@ function findQuadrant(radar, sourceFile, callback) {
   }
 }
 
+// Validate all required properties in the radar YAML entries
 function validateYaml(filename, content) {
   if (!content.hasOwnProperty('name')) {
     console.error(`Missing 'name' in ${filename}`)
@@ -161,7 +168,7 @@ function validateYaml(filename, content) {
 
 function createBlip(radar, entry, htmlFile, sourceFile) {
   var blip = {
-    label: entry.name,
+    label: entry.shortname ? entry.shortname : entry.name,
     quadrant: 0,
     ring: radar.rings.indexOf(entry.blip.ring),
     moved: entry.blip.since === radar.edition,

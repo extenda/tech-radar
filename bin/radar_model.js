@@ -6,24 +6,37 @@ module.exports = {
     var radar = {
       title: 'Extenda Retail Tech Radar',
       edition: process.env.EDITION,
+
+      // Quadrants in the radar visualization order.
       quadrants: [
         {
-          dirname: 'languages',
-          name: 'Languages'
+          dirname: 'techniques',
+          name: 'Techniques'
         },
         {
-          dirname: 'infrastructure',
-          name: 'Infrastructure'
+          dirname: 'infrastructure_config',
+          name: 'Infrastructure & Configuration'
         },
         {
-          dirname: 'frameworks',
-          name: 'Frameworks'
+          dirname: 'languages_frameworks',
+          name: 'Languages & Frameworks'
         },
         {
           dirname: 'data_management',
           name: 'Data Management'
         }
       ],
+
+      // Quadrants in the order we want them in the navbar.
+      quadrantsNavigation: function() {
+        return [
+          this.quadrants[2],
+          this.quadrants[3],
+          this.quadrants[1],
+          this.quadrants[0]
+        ]
+      },
+
       rings: [
         'ADOPT',
         'TRIAL',

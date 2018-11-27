@@ -15,5 +15,5 @@ rationale: |
   Cucumber should be used for acceptance tests for all languages where it isn't
   an awkward fit. For the following platforms, _always_ favor Cucumber over
   alternatives such as for example _Spock_.
-  - Java
-  - Python
+    * Java
+    * Python

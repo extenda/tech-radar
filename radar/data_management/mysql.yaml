@@ -1,0 +1,6 @@
+name: MySQL
+blip:
+  since: 2
+  ring: HOLD
+description: |
+rationale: |

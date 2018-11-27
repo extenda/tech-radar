@@ -1,0 +1,8 @@
+name: Twelve-factor app
+shortname: 12-factor app
+blip:
+  since: 1
+  ring: ADOPT
+description: |
+  [The twelve-factor app](https://12factor.net/) is a methodology for building maintanable SaaS applications.
+#rationale: |

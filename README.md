@@ -48,6 +48,7 @@ Each blip (entry) on the radar is stored in a YAML file under the `radar` direct
 The format of a blip is as follows:
 ```yaml
 name: Entry name # Required
+shortname: Short # Optional. Use only if name is too long for the radar blip
 blip:
   active: true # Optional. If set to `false`, the blip is hidden
   since: 2 # Required. The first edition the blip appeared

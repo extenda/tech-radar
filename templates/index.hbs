@@ -14,7 +14,7 @@
   <nav class="navbar" role="navigation">
     <ul class="quadrants">
       <li class="radar-root">Radar #{{edition}}<i class="fa fa-rss"></i></li>
-      {{#each quadrants}}
+      {{#each quadrantsNavigation}}
       <li><a href="{{dirname}}.html">{{name}}</a></li>
       {{/each}}
       <li class="radar-archive"><i class="fa fa-archive"></i> <a href="/archive/index.html">Archive</a></li>
@@ -34,9 +34,9 @@
         </p>
         <ul class="no-bullets">
           <li><strong>Adopt</strong> — Technologies we have high confidence in and recommend for wide use.</li>
-          <li><strong>Trial</strong> — Technologies we have seen used with success, but are yet to be proved successfully and wide and large scale. Carries higher risk.</li>
+          <li><strong>Trial</strong> — Technologies we have seen used with success, but are yet to be proved successfully in wide use and at large scale. Carries higher risk.</li>
           <li><strong>Assess</strong> — Technologies that are promising with a clear potential value for us. Requires research and prototyping to analyze its impact.</li>
-          <li><strong>Hold</strong> — Technologies not recommended for new products or technology we no longer want to invest in. Existing products may still consider these depending on its legacy.</li>
+          <li><strong>Hold</strong> — Technologies not recommended for new products or technology we no longer want to invest in. Existing products may still consider these depending on their legacy.</li>
         </ul>
       </div>
       <div class="one-half column">
@@ -76,7 +76,7 @@ radar_visualization({
   title: "{{title}} — {{edition}}",
   quadrants: [
     {{#each quadrants}}
-    { name: "{{name}}" }{{#unless @last}},{{/unless}}
+    { name: "{{{name}}}" }{{#unless @last}},{{/unless}}
     {{/each}}
   ],
   rings: [
