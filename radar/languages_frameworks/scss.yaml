@@ -1,0 +1,12 @@
+name: SCSS
+blip:
+  since: 1
+  ring: ADOPT
+description: |
+  Sass 3 introduces a new syntax known as SCSS which is fully compatible with the syntax of CSS, while still supporting the full power of Sass.
+  This means that every valid CSS stylesheet is a valid SCSS file with the same meaning.
+rationale: |
+  We want a well understood and well used method of writing, structuring and reusing our CSS, SCSS gives us this with minimal
+  context switching for people who has written CSS before.
+
+  As with JavaScript we enforce strict rules for how our SCSS and CSS is written, this helps keep quality high and code between projects consistent.

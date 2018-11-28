@@ -101,12 +101,13 @@ function dateToday() {
 function createArchive(radar, archive) {
 
   // Archive current edition
-  const archiveDir = path.join('archive', radar.edition)
+  const archiveDir = path.join('build/archive', radar.edition)
   if (fs.existsSync(archiveDir)) {
     fs.removeSync(archiveDir)
   }
-  fs.mkdirSync(archiveDir)
+
   fs.mkdirSync(path.join(outputDir, 'archive'))
+  fs.mkdirSync(archiveDir)
 
   if (archive) {
     console.log('Archive')
@@ -116,7 +117,7 @@ function createArchive(radar, archive) {
   // Create archive page
   const archivePage = handlebars.compile(fs.readFileSync('templates/archive_page.hbs', 'utf8'))
   var editions = []
-  for (var f of klawSync('archive', {nofile: true, depthLimit: 0, filter: p => path.basename(p.path) != radar.edition })) {
+  for (var f of klawSync('build/archive', {nofile: true, depthLimit: 0, filter: p => path.basename(p.path) != radar.edition })) {
     const edition = path.basename(f.path)
     fs.copySync(f.path, path.join(outputDir, 'archive', edition))
     editions.push({
