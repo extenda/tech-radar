@@ -1,5 +1,15 @@
-name: Javascript
+name: JavaScript
 blip:
   since: 1
   ring: ADOPT
 description: |
+  JavaScript, often abbreviated as JS, is a high-level, interpreted programming language.
+  It is a language which is also characterized as dynamic, weakly typed, prototype-based and multi-paradigm.
+rationale: |
+  JS is the only currently widely supported language for web technologies and as such it's the only choice
+  for building clients with HTML and CSS. The language has matured significantly the last few years and the evolution
+  is continuing in a good pace.
+
+  Because of it's loosely typed nature and plethora of misinformation online on how to write proper JS we have
+  strict and unapologetic best practices for how JS projects should be structured and how the code should be written
+  and quality assured.

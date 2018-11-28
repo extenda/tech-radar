@@ -105,8 +105,9 @@ function createArchive(radar, archive) {
   if (fs.existsSync(archiveDir)) {
     fs.removeSync(archiveDir)
   }
-  fs.mkdirSync(archiveDir)
+
   fs.mkdirSync(path.join(outputDir, 'archive'))
+  fs.mkdirSync(archiveDir)
 
   if (archive) {
     console.log('Archive')
