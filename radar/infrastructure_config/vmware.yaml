@@ -1,0 +1,10 @@
+name: VM Ware
+blip:
+  since: 1
+  ring: HOLD
+description: |
+  VM Ware is a software to run and manage virtual machines. VM Ware has been for
+  many years at Extenda Retail to manage test environments.
+rationale: |
+  Avoid VM Ware and switch to modern and more efficient solutions such as Docker.
+  If not possible to use Docker, use Vagrant instead, don't resort to VM Ware.

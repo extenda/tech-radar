@@ -1,0 +1,9 @@
+name: Elasticsearch
+blip:
+  since: 1
+  ring: TRIAL
+description: |
+  Elasticsearch is a distributed, massivily scalable search engine.
+rationale: |
+  Consider Elasticsearch it when there's a need to search massive amounts of
+  data, for example in Centraloffice and ASI.

@@ -172,7 +172,7 @@ function createBlip(radar, entry, htmlFile, sourceFile) {
     label: entry.shortname ? entry.shortname : entry.name,
     quadrant: 0,
     ring: radar.rings.indexOf(entry.blip.ring),
-    moved: entry.blip.since === radar.edition,
+    moved: entry.blip.since == radar.edition,
     link: path.relative(outputDir, htmlFile),
     active: true
   }

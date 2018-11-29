@@ -2,8 +2,7 @@ name: Node.js
 logo: https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg
 blip:
   since: 1
-  ring: ADOPT
-  moved: true
+  ring: TRIAL
 description: |
   _Node.js_ is javascript on the server. It is asynchronous and event driven
   Javascript runtime built to be scalable and highly concurrent.
