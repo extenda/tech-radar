@@ -1,0 +1,10 @@
+name: React Native
+logo: https://facebook.github.io/react-native/img/header_logo.png
+blip:
+  since: 2
+  ring: ASSESS
+  moved: true
+description: |
+  React Native lets you build mobile apps using only JavaScript. It uses the same design as React, letting you compose a rich mobile UI from declarative components.
+rationale: |
+  As an alternative to NativeSceript, React Native takes a more explicit approach to building apps on iOS and Android.

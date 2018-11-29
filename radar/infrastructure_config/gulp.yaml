@@ -1,0 +1,10 @@
+name: Gulp
+logo: https://upload.wikimedia.org/wikipedia/commons/7/72/Gulp.js_Logo.svg
+blip:
+  since: 2
+  ring: HOLD
+  moved: true
+description: |
+  Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something.
+rationale: |
+  Our projects doesn't currently require any additional build tools or task managers outside of Webpack & NPM.

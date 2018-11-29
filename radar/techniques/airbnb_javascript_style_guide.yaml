@@ -1,0 +1,9 @@
+name: AirBnB JavaScript Style Guide
+blip:
+  since: 2
+  ring: TRIAL
+  moved: true
+description: |
+  A mostly reasonable approach to JavaScript. (https://github.com/airbnb/javascript).
+rationale: |
+  To make our JavaScript consistent, readable, scalable and with a style guide that is well documented, updated and for free.

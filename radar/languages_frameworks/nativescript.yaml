@@ -1,0 +1,12 @@
+name: NativeScript
+logo: https://www.nativescript.org/images/default-source/logos/nativescript-logo.png?sfvrsn=2
+blip:
+  since: 2
+  ring: TRIAL
+  moved: true
+description: |
+  Open source framework for building truly native mobile apps with Angular, Vue.js, TypeScript, or JavaScript.
+rationale: |
+  We're currently evaluating NativeScript as a framework for mobile (Android, iOS) clients in mobilepos, the goal
+  is to find a framework that allows code sharing, rapid development and prototyping for everything between
+  phones and large scale displays.
