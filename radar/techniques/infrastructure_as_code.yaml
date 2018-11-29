@@ -4,3 +4,10 @@ blip:
   since: 1
   ring: ADOPT
 description: |
+  Infrastructure as code (IaC) is the process of managing and provisioning infrastructure
+  (machines, data-centers) through definition files, rather than physical,
+  manual configuration or using interactive tools. IaC is essential to automating
+  infrastructure configuration.
+rationale: |
+  Treat your infrastructure as code and automate creating it and destroying it.
+  This becomes especially important in a cloud-environment.

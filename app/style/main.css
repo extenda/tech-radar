@@ -7,6 +7,12 @@ body {
   margin: auto;
 }
 
+blockquote {
+  font-style: italic;
+  border-left: 3px solid #ccc;
+  padding-left: 6px;
+}
+
 .svglink {
   cursor: pointer;
 }

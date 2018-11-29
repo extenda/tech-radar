@@ -1,0 +1,9 @@
+name: SaltStack
+blip:
+  since: 1
+  ring: ADOPT
+description: |
+  SaltStack is a deployment and monitoring platform.
+rationale: |
+  SaltStack is the underlying technology used by Extenda Up! to manage the state
+  of thousands of workstations.

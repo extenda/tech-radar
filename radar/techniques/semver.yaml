@@ -1,0 +1,22 @@
+name: Semantic versioning
+shortname: Semantic version
+blip:
+  since: 1
+  ring: ADOPT
+description: |
+  In short, [semantic versioning](https://semver.org) is a versioning scheme where the following rules govern how versions change:
+
+  > Given a version number MAJOR.MINOR.PATCH, increment the:
+  > 1. MAJOR version when you make incompatible API changes,
+  > 2. MINOR version when you add functionality in a backwards-compatible manner, and
+  > 3. PATCH version when you make backwards-compatible bug fixes.
+rationale: |
+  The rationale for semantic versioning is that it provides a set of rules to
+  communicate change in our software. Semantic versions helps the consumers of
+  our software to evaluate the risk associated with an upgrade.
+
+    * A MAJOR upgrade will most likely break things and additional work is likely required to mitigate this
+    * A MINOR upgrade will introduce new functionality which may need to be configured, but nothing should break
+    * A PATCH upgrade only contains bug fixes to existing features
+
+  Extenda Retail's [product versioning policy](https://docs.extenda.se/display/DEV/Product+versioning+policy) dictates that all software projects must use semantic versioning.

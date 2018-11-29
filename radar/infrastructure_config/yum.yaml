@@ -1,0 +1,17 @@
+name: YUM
+blip:
+  since: 1
+  ring: TRIAL
+description: |
+  Linux package management to find packages and resolve dependencies between RPM packages.
+rationale: |
+  Extenda Retail is aiming to reduce size of delivered packages. One way to achieve
+  this is to utilize the support for tracking dependencies to other packages instead
+  of bundling everything in one big package.
+
+  For example, instead of delivering a big package for a POS workstation in a country,
+  deliver a package that contains _only_ the country specific code and depends on the
+  shared customizations and eventually the standard POS package.
+
+  We have started storing RPM artifacts in an S3 YUM repository, but are still to
+  utilize dependencies properly and allow customers to fetch them.

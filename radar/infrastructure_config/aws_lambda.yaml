@@ -1,0 +1,15 @@
+name: AWS Lambda
+blip:
+  since: 1
+  ring: HOLD
+  moved: true
+description: |
+  AWS Lambdas are serverless functions managed by AWS and automatically scaled
+  to handle varying load. They support multiple languages such as Java, Node.js
+  and Python.
+rationale: |
+  Extenda Retail has chosen Google Cloud as the strategic, preferred cloud
+  provider, hence new products should not be built with AWS Lambda if
+  Google Cloud can be used.
+
+  There is no requirement to convert existing solutions built on AWS Lambda.
