@@ -114,6 +114,7 @@ ul.no-bullets {
 .navbar li {
   float: left;
   padding: 12px;
+  white-space: nowrap;
 }
 
 .radar-archive i {
