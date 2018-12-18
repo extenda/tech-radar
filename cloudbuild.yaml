@@ -4,6 +4,6 @@ steps:
   - name: 'gcr.io/cloud-builders/npm'
     args: ['run', 'build']
   - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA', '.' ]
+    args: [ 'build', '-t', 'eu.gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA', '.' ]
 images:
-  - 'gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA'
+  - 'eu.gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA'
