@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>{{name}} | Tech Radar #{{edition}}</title>
+  <title>{{name}} | Tech Radar {{version}}</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar" role="navigation">
       <ul class="breadcrumb">
-        <li><a href="../index.html" class="breadcrumb">Radar #{{edition}}</a><i class="fa fa-angle-right"></i></li>
+        <li><a href="../index.html" class="breadcrumb">Radar {{version}}</a><i class="fa fa-angle-right"></i></li>
         <li><a href="../{{quadrant.dirname}}.html" class="breadcrumb">{{quadrant.name}}</a><i class="fa fa-angle-right"></i></li>
         <li class="active">{{name}}</li>
       </ul>
@@ -30,7 +30,7 @@
       <div class="row">
         <div class="badges">
           <span class="badge {{blip.ringName}}"><i class="fa fa-map-marker"></i> {{blip.ringName}}</span>
-          <span class="badge"><i class="fa fa-tag"></i> #{{blip.since}}</span>
+          <span class="badge"><i class="fa fa-tag"></i> {{blip.since}}</span>
         </div>
         <div class="twelve.columns">
           {{{markdown description}}}
