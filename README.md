@@ -101,7 +101,7 @@ $ docker run --rm -it -v $(pwd):/home -w /home -p 3000:3000 node:alpine sh -c "n
 
 The Tech Radar is released with a CI/CD pipeline, where every commit to `master` is deployed to production.
 
-To build a release package, run the following on CI:
+To build a deployment package, run the following on CI:
 
 ```bash
 $ npm run package
@@ -113,12 +113,14 @@ This will build the following:
   - An archive of previous tags
   - The latest (edge) Tech Radar accessible at `/latest`
 
-The release will be packaged into a Docker image tagged as
+The contents will be packaged into a Docker image tagged as
 
   - `tech-radar:latest`
   - `tech-radar:$(git rev-parse --short HEAD)`
 
 Use the SHA tagged image on CI, retag it and publish to production.
+
+The build process does not modify or tag anything in source code.
 
 ### Semantic Versioning
 
