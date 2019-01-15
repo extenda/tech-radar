@@ -45,13 +45,13 @@ h1.center {
   clear: both;
 }
 
-span.edition {
+span.version {
   background: #43a047;
   border-radius: 6px;
   padding: 6px;
 }
 
-span.edition, span.edition i {
+span.version, span.version i {
   color: white;
   font-size: 2.6rem;
   white-space: nowrap;

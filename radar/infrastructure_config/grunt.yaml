@@ -1,7 +1,8 @@
+version: 1
 name: Grunt
 logo: https://gruntjs.com/img/grunt-logo.svg
 blip:
-  since: 2
+  since: "1.1.0"
   ring: HOLD
   moved: true
 description: |

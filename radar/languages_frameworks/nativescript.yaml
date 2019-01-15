@@ -1,7 +1,8 @@
+version: 1
 name: NativeScript
 logo: https://www.nativescript.org/images/default-source/logos/nativescript-logo.png?sfvrsn=2
 blip:
-  since: 2
+  since: "1.1.0"
   ring: TRIAL
   moved: true
 description: |

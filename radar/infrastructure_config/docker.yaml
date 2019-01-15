@@ -1,6 +1,7 @@
+version: 1
 name: Docker
 blip:
-  since: 1
+  since: "1.0.0"
   ring: ADOPT
 description: |
   Docker is a tool designed to make it easier to create, deploy, and run applications

@@ -1,6 +1,7 @@
+version: 1
 name: SaltStack
 blip:
-  since: 1
+  since: "1.0.0"
   ring: ADOPT
 description: |
   SaltStack is a deployment and monitoring platform.

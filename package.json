@@ -1,24 +1,25 @@
 {
   "name": "tech-radar",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "description": "Generator for Extenda Retail Technology Radar",
   "main": "index.js",
   "config": {
     "radar": {
-      "edition": 2,
       "docker": "414891016442.dkr.ecr.eu-west-1.amazonaws.com/extenda/tech-radar:latest"
     }
   },
   "scripts": {
-    "build": "EDITION=$npm_package_config_radar_edition node bin/build.js --build",
-    "start": "EDITION=$npm_package_config_radar_edition node index.js",
-    "docker:build": "docker build --squash -t $npm_package_config_radar_docker .",
-    "preedition:next": "git tag -a -m 'Tech Radar Edition $npm_package_config_radar_edition' radar-edition-$npm_package_config_radar_edition",
-    "edition:next": "node bin/edition.js --next",
-    "postedition:next": "git add package.json && git commit -m 'Prepare next radar edition'",
-    "prerelease": "npm run build && git add archive && git commit -m 'Archive edition $npm_package_config_radar_edition'",
-    "release": "npm run build:archive && npm edition:next && npm run docker:build",
-    "postrelease": "docker push $npm_package_config_radar_docker && git push --follow-tags"
+    "build": "node bin/builder.js --clean --build",
+    "clean": "node bin/builder.js --clean",
+    "docker:build": "sh bin/docker-build.sh",
+    "docker": "docker run --rm -it -p 3000:80 tech-radar",
+    "package": "npm run clean && node bin/package.js && npm run docker:build",
+    "start": "node index.js",
+    "prerelease": "npm run build",
+    "release": "git tag -a -m 'Release $npm_package_version' v$npm_package_version && npm --no-git-tag-version version patch",
+    "postrelease": "git add package.json package-lock.json && sh bin/git-commit-version.sh && git push --follow-tags",
+    "version:major": "npm --no-git-tag-version version major && sh bin/git-commit-version.sh && git push",
+    "version:minor": "npm --no-git-tag-version version minor && sh bin/git-commit-version.sh && git push"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "klaw-sync": "^6.0.0",
     "live-server": "^1.2.0",
     "markdown-it": "^8.4.2",
+    "simple-git": "^1.107.0",
     "util": "^0.11.1",
     "watch": "^1.0.2",
     "yaml": "^1.0.2"

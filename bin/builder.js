@@ -4,12 +4,14 @@ const path = require('path')
 const yaml = require('yaml')
 const handlebars = require('handlebars')
 const md = require('markdown-it')()
-const radarModel = require('./radar_model')
-
-const outputDir = 'build'
+const radarModel = require('./radarmodel')
 
 // Build the static radar HTML representation from the model and radar entries
-function buildRadar(archive) {
+function buildRadar(outputDir, radarDir, version, creationDate = new Date(), archiveDates = {}) {
+
+  // Ensure directories exist
+  fs.mkdirsSync(outputDir)
+  fs.mkdirSync(path.join(outputDir, 'entries'))
 
   handlebars.registerPartial('footer', handlebars.compile(fs.readFileSync('templates/footer.hbs', 'utf8')))
   handlebars.registerHelper('markdown', value => md.render(value))
@@ -18,20 +20,17 @@ function buildRadar(archive) {
   const quadrantPage = handlebars.compile(fs.readFileSync('templates/quadrant_page.hbs', 'utf8'))
   const radarPage = handlebars.compile(fs.readFileSync('templates/index.hbs', 'utf8'))
 
-  console.log(`Clean ${outputDir}`)
-  fs.removeSync(outputDir)
-  fs.mkdirSync(outputDir)
-  fs.mkdirSync(path.join(outputDir, 'entries'))
+  var radar = radarModel.createModel(version)
+  radar.date = dateFormat(creationDate)
+  radar.radarDir = radarDir
+  radar.outputDir = outputDir
 
-  console.log('Build radar')
-
-  var radar = radarModel.createModel()
-  radar.date = dateToday()
+  console.log('Build radar', radar.version)
 
   console.log('  - Entries')
 
   // Create all the entries pages and collect blips.
-  for (var f of klawSync('radar', { nodir: true, traverseAll: true, filter: p => path.extname(p.path) === '.yaml' })) {
+  for (var f of klawSync(radar.radarDir, { nodir: true, traverseAll: true, filter: p => path.extname(p.path) === '.yaml' })) {
     var content = yaml.parse(fs.readFileSync(f.path, 'utf8'))
     validateYaml(f.path, content)
     var quadrantIndex = 0
@@ -41,8 +40,8 @@ function buildRadar(archive) {
     })
 
     content.title = radar.title
-    content.edition = radar.edition
-    content.date = dateToday()
+    content.version = radar.version
+    content.date = dateFormat(creationDate)
     content.blip.ringName = content.blip.ring.charAt(0) + content.blip.ring.substr(1).toLowerCase()
 
     const filename = path.join(outputDir, 'entries', path.basename(f.path, '.yaml') + '.html')
@@ -66,8 +65,8 @@ function buildRadar(archive) {
   console.log('  - Quadrants')
   for (var q of radar.quadrants) {
     q.title = radar.title
-    q.edition = radar.edition
-    q.date = dateToday()
+    q.version = radar.version
+    q.date = dateFormat(creationDate)
 
     const sortFn = (a, b) => a.name.localeCompare(b.name)
     q.adopt.sort(sortFn)
@@ -82,64 +81,47 @@ function buildRadar(archive) {
   console.log('  - Radar visualization')
   fs.writeFileSync(path.join(outputDir, 'index.html'), radarPage(radar))
 
-  // Archive the current edition and write the archive index
-  createArchive(radar, archive)
+  if (outputDir == 'build') {
+    // Create the archive index
+    if (fs.existsSync(path.join(outputDir, 'archive'))) {
+      createArchivePage(radar, archiveDates)
+    }
 
-  // Copy static resources
-  console.log('Copy resources')
-  fs.copySync('app', outputDir)
+    // Copy static resources
+    console.log('Copy resources')
+    fs.copySync('app', outputDir)
+  }
 }
 
-function dateToday() {
-  return new Date().toLocaleString('en', {
+function dateFormat(time) {
+  return time.toLocaleString('en', {
     year: 'numeric',
     month: 'short',
     day: 'numeric'
   })
 }
 
-function createArchive(radar, archive) {
-
-  // Archive current edition
-  const archiveDir = path.join('archive', radar.edition)
-  if (fs.existsSync(archiveDir)) {
-    fs.removeSync(archiveDir)
-  }
-
-  fs.mkdirSync(path.join(outputDir, 'archive'))
-  fs.mkdirSync(archiveDir)
-
-  if (archive) {
-    console.log('Archive')
-    fs.copySync(outputDir, archiveDir)
-  }
-
-  // Create archive page
+function createArchivePage(radar, archiveDates) {
   const archivePage = handlebars.compile(fs.readFileSync('templates/archive_page.hbs', 'utf8'))
-  var editions = []
-  for (var f of klawSync('archive', {nofile: true, depthLimit: 0, filter: p => path.basename(p.path) != radar.edition })) {
-    const edition = path.basename(f.path)
-    fs.copySync(f.path, path.join(outputDir, 'archive', edition))
-    editions.push({
-      edition: edition,
-      created: f.stats.ctime.toLocaleString('en', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
-      })
+  var versions = []
+  for (var f of klawSync(path.join(radar.outputDir, 'archive'), {nofile: true, depthLimit: 0 })) {
+    const version = path.basename(f.path)
+    versions.push({
+      version: version,
+      created: dateFormat(archiveDates[version])
     })
   }
-  fs.writeFileSync(path.join(outputDir, 'archive', 'index.html'), archivePage({
+  fs.writeFileSync(path.join(radar.outputDir, 'archive', 'index.html'), archivePage({
     title: radar.title,
     name: 'Archive',
-    date: dateToday(),
-    edition: radar.edition,
-    editions: editions
+    date: radar.date,
+    version: radar.version,
+    versions: versions
   }))
 }
 
 function findQuadrant(radar, sourceFile, callback) {
-  const quadrant = path.relative('radar', path.dirname(sourceFile))
+  const quadrant = path.relative(radar.radarDir, path.dirname(sourceFile))
   for (const [i, q] of radar.quadrants.entries()) {
     if (q.dirname === quadrant) {
       callback(i, q)
@@ -172,8 +154,8 @@ function createBlip(radar, entry, htmlFile, sourceFile) {
     label: entry.shortname ? entry.shortname : entry.name,
     quadrant: 0,
     ring: radar.rings.indexOf(entry.blip.ring),
-    moved: entry.blip.since == radar.edition,
-    link: path.relative(outputDir, htmlFile),
+    moved: entry.blip.since == radar.version,
+    link: path.relative(radar.outputDir, htmlFile),
     active: true
   }
 
@@ -189,13 +171,22 @@ function createBlip(radar, entry, htmlFile, sourceFile) {
   return blip
 }
 
+function cleanAll(outputDir) {
+  console.log(`Clean ${outputDir}`)
+  fs.removeSync(outputDir)
+}
+
 module.exports = {
-  build: buildRadar
+  build: buildRadar,
+  clean: cleanAll
 }
 
 // Command-line entry point.
 process.argv.slice(2).forEach(function(val, index, array) {
+  if (val === '--clean') {
+    cleanAll('build')
+  }
   if (val === '--build') {
-    buildRadar(true)
+    buildRadar('build', 'radar')
   }
 })

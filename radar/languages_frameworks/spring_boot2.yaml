@@ -1,7 +1,8 @@
+version: 1
 name: Spring Boot 2
 logo: https://spring.io/img/homepage/icon-spring-boot.svg
 blip:
-  since: 1
+  since: "1.0.0"
   ring: TRIAL
   moved: true
 description: |

@@ -1,6 +1,7 @@
+version: 1
 name: Pipelines as code
 blip:
-  since: 1
+  since: "1.0.0"
   ring: ADOPT
 description: |
   _Pipelines as code_ is defining the build and deployment pipeline through

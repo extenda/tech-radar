@@ -1,7 +1,8 @@
+version: 1
 name: Cucumber
 logo: https://docs.cucumber.io/img/cucumber-logo.png
 blip:
-  since: 1
+  since: "1.0.0"
   ring: ADOPT
   moved: false
 description: |

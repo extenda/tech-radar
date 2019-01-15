@@ -1,7 +1,8 @@
+version: 1
 name: Infrastructure as code
 shortname: Infra. as code
 blip:
-  since: 1
+  since: "1.0.0"
   ring: ADOPT
 description: |
   Infrastructure as code (IaC) is the process of managing and provisioning infrastructure

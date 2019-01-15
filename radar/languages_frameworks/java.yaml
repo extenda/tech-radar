@@ -1,7 +1,8 @@
+version: 1
 name: Java
 logo: https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/234px-Java_programming_language_logo.svg.png
 blip:
-  since: 1
+  since: "1.0.0"
   ring: ADOPT
 description: |
   Java is an object-oriented programming language that runs in a Java Runtime Environment (JRE).
