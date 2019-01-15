@@ -16,7 +16,7 @@
     "package": "npm run clean && node bin/package.js && npm run docker:build",
     "start": "node index.js",
     "prerelease": "npm run build",
-    "release": "git tag v$npm_package_version && npm --no-git-tag-version version patch",
+    "release": "git tag -a -m 'Release $npm_package_version' v$npm_package_version && npm --no-git-tag-version version patch",
     "postrelease": "git add package.json package-lock.json && sh bin/git-commit-version.sh && git push --follow-tags",
     "version:major": "npm --no-git-tag-version version major && sh bin/git-commit-version.sh && git push",
     "version:minor": "npm --no-git-tag-version version minor && sh bin/git-commit-version.sh && git push"
