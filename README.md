@@ -101,7 +101,13 @@ $ docker run --rm -it -v $(pwd):/home -w /home -p 3000:3000 node:alpine sh -c "n
 
 The Tech Radar is released with a CI/CD pipeline, where every commit to `master` is deployed to production.
 
-To build a deployment package, run the following on CI:
+To build a deployment package, make sure you have fetched all tags:
+
+```bash
+$ git fetch --tags
+```
+
+And then run the following on CI:
 
 ```bash
 $ npm run package
