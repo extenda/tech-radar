@@ -1,6 +1,7 @@
+version: 1
 name: Terraform
 blip:
-  since: 1
+  since: "1.0.0"
   ring: ADOPT
 description: |
   HashiCorp Terraform allows you to declare infrastructure as code.

@@ -1,6 +1,7 @@
+version: 1
 name: Enunciate
 blip:
-  since: 1
+  since: "1.0.0"
   ring: HOLD
   moved: false
 description: |

@@ -1,7 +1,8 @@
+version: 1
 name: React Native
 logo: https://facebook.github.io/react-native/img/header_logo.png
 blip:
-  since: 2
+  since: "1.1.0"
   ring: ASSESS
   moved: true
 description: |

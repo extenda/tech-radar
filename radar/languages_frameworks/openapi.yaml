@@ -1,7 +1,8 @@
+version: 1
 name: OpenAPI (Swagger)
 logo: https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png
 blip:
-  since: 1
+  since: "1.0.0"
   ring: ADOPT
   moved: false
 description: |

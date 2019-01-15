@@ -1,6 +1,7 @@
+version: 1
 name: CircleCI
 blip:
-  since: 1
+  since: "1.0.0"
   ring: ASSESS
 description: |
   CircleCI is an elastic SaaS CI/CD platform. It's based on dockerized ephemeral builds

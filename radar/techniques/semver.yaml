@@ -1,7 +1,8 @@
+version: 1
 name: Semantic versioning
 shortname: Semantic version
 blip:
-  since: 1
+  since: "1.0.0"
   ring: ADOPT
 description: |
   In short, [semantic versioning](https://semver.org) is a versioning scheme where the following rules govern how versions change:

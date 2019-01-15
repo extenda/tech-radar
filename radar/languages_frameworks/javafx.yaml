@@ -1,7 +1,8 @@
+version: 1
 name: JavaFX
 logo: https://upload.wikimedia.org/wikipedia/en/c/cc/JavaFX_Logo.png
 blip:
-  since: 1
+  since: "1.0.0"
   ring: HOLD
   moved: false
 description: |
