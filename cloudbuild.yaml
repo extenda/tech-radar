@@ -4,6 +4,6 @@ steps:
   - name: 'gcr.io/cloud-builders/npm'
     args: ['run', 'package']
   - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'build', '-t', 'eu.gcr.io/$PROJECT_ID/tech-radar:$(node -p -e “require(‘./package.json’).version”)', '.' ]
+    args: [ 'build', '-t', 'eu.gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA', '.' ]
 images:
-  - 'eu.gcr.io/$PROJECT_ID/tech-radar:$(node -p -e “require(‘./package.json’).version”)'
+  - 'eu.gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA'
