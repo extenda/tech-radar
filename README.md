@@ -119,13 +119,6 @@ This will build the following:
   - An archive of previous tags
   - The latest (edge) Tech Radar accessible at `/latest`
 
-The contents will be packaged into a Docker image tagged as
-
-  - `tech-radar:latest`
-  - `tech-radar:$(git rev-parse --short HEAD)`
-
-Use the SHA tagged image on CI, retag it and publish to production.
-
 The build process does not modify or tag anything in source code.
 
 ### Semantic Versioning
