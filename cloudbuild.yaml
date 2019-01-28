@@ -2,7 +2,7 @@ steps:
   - name: 'gcr.io/cloud-builders/npm'
     args: ['install']
   - name: 'gcr.io/cloud-builders/npm'
-    args: ['run', 'package']
+    args: ['version', 'patch']
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'build', '-t', 'eu.gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA', '.' ]
 images:
