@@ -4,10 +4,10 @@ steps:
   - name: 'gcr.io/cloud-builders/npm'
     args: ['version', 'patch', '-m', 'Release %s']
     env:
-      - 'GIT_COMMITTER_NAME=Pipeline Committer'
-      - 'GIT_AUTHOR_NAME=Pipeline Committer'
-      - 'GIT_COMMITTER_EMAIL=pipeline@extendaretail.com'
-      - 'GIT_AUTHOR_EMAIL='pipeline@extendaretail.com'
+      - GIT_COMMITTER_NAME=Pipeline Committer
+      - GIT_AUTHOR_NAME=Pipeline Committer
+      - GIT_COMMITTER_EMAIL=pipeline@extendaretail.com
+      - GIT_AUTHOR_EMAIL='pipeline@extendaretail.com
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'build', '-t', 'eu.gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA', '.' ]
 images:
