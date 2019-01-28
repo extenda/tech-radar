@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/npm'
-    args: ['install']
+    args: ['ci']
   - name: 'gcr.io/cloud-builders/npm'
     args: ['version', 'patch']
   - name: 'gcr.io/cloud-builders/docker'
