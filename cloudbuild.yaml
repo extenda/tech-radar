@@ -2,7 +2,7 @@ steps:
   - name: 'gcr.io/cloud-builders/npm'
     args: ['ci']
   - name: 'gcr.io/cloud-builders/npm'
-    args: ['version', 'patch', '-m', 'Release %s']
+    args: ['ci', 'version', 'patch', '-m', 'Release %s']
     env:
       - GIT_COMMITTER_NAME=Pipeline Committer
       - GIT_AUTHOR_NAME=Pipeline Committer
