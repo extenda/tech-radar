@@ -4,7 +4,11 @@ steps:
     args:
       - '-c'
       - |
-          npm ci && npm version patch -m "Release %s"
+          git fetch --tags \
+          && npm ci \
+          && npm version patch -m "Release %s" \
+          && git push --follow-tags \
+          && npm run package
     env:
       - GIT_COMMITTER_NAME=Pipeline Committer
       - GIT_AUTHOR_NAME=Pipeline Committer
