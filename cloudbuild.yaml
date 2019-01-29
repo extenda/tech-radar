@@ -4,7 +4,8 @@ steps:
     args:
       - '-c'
       - |
-          git fetch --tags \
+          gcloud init && git config credential.helper gcloud \
+          && git fetch --tags \
           && npm ci \
           && npm version patch -m "Release %s" \
           && git push --follow-tags \
