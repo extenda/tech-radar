@@ -1,5 +1,5 @@
 steps:
-  - name: 'gcr.io/cloud-builders/npm'
+  - name: 'gcr.io/cloud-builders/npm:current'
     args: ['ci', 'version', 'patch', '-m', 'Release %s']
     env:
       - GIT_COMMITTER_NAME=Pipeline Committer
