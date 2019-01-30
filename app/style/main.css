@@ -76,21 +76,6 @@ span.version, span.version i {
   margin: 0;
 }
 
-.navbar.archive {
-  background: #ff8f00;
-}
-
-div.archive-notice {
-  background: black;
-  color: white;
-  text-align: center;
-  padding: 5px 0;
-}
-
-div.archive-notice a {
-  color: white;
-}
-
 .navbar a {
   color: white;
   text-decoration: none;
@@ -115,10 +100,6 @@ ul.no-bullets {
   float: left;
   padding: 12px;
   white-space: nowrap;
-}
-
-.radar-archive i {
-  color: white;
 }
 
 ul.breadcrumb {
@@ -170,6 +151,11 @@ ul.breadcrumb {
 
 .badge.Hold {
   background: #bf360c;
+  color: white;
+}
+
+.badge.inactive {
+  background: #ff8f00;
   color: white;
 }
 

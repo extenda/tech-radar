@@ -2,9 +2,10 @@ version: 1
 name: Spring Boot 2
 logo: https://spring.io/img/homepage/icon-spring-boot.svg
 blip:
-  since: "1.0.0"
-  ring: TRIAL
-  moved: true
+  - version: "1.0.0"
+    ring: ASSESS
+  - version: "1.1.0"
+    ring: TRIAL
 description: |
   Spring Boot 2 is an opioninated Spring library to create Spring application quickly.
   It comes with the ever-familiar dependency injection, autoconfiguration and loads

@@ -2,9 +2,8 @@ version: 1
 name: AirBnB JavaScript Style Guide
 shortname: AirBnB JS Guide
 blip:
-  since: "1.1.0"
-  ring: TRIAL
-  moved: true
+  - version: "1.1.0"
+    ring: TRIAL
 description: |
   [A mostly reasonable approach to JavaScript.](https://github.com/airbnb/javascript)
 rationale: |

@@ -2,9 +2,8 @@ version: 1
 name: React Native
 logo: https://facebook.github.io/react-native/img/header_logo.png
 blip:
-  since: "1.1.0"
-  ring: ASSESS
-  moved: true
+  - version: "1.1.0"
+    ring: ASSESS
 description: |
   React Native lets you build mobile apps using only JavaScript. It uses the same design as React, letting you compose a rich mobile UI from declarative components.
 rationale: |

@@ -6,8 +6,14 @@ const handlebars = require('handlebars')
 const md = require('markdown-it')()
 const radarModel = require('./radarmodel')
 
+if (!Array.prototype.last) {
+  Array.prototype.last = function() {
+    return this[this.length - 1]
+  }
+}
+
 // Build the static radar HTML representation from the model and radar entries
-function buildRadar(outputDir, radarDir, version, creationDate = new Date(), archiveDates = {}) {
+function buildRadar(outputDir, radarDir, version, creationDate = new Date()) {
 
   // Ensure directories exist
   fs.mkdirsSync(outputDir)
@@ -42,11 +48,10 @@ function buildRadar(outputDir, radarDir, version, creationDate = new Date(), arc
     content.title = radar.title
     content.version = radar.version
     content.date = dateFormat(creationDate)
-    content.blip.ringName = content.blip.ring.charAt(0) + content.blip.ring.substr(1).toLowerCase()
 
     const filename = path.join(outputDir, 'entries', path.basename(f.path, '.yaml') + '.html')
 
-    radar.quadrants[quadrantIndex][content.blip.ring.toLowerCase()].push({
+    radar.quadrants[quadrantIndex][content.blip.last().ring.toLowerCase()].push({
       name: content.name,
       file: path.relative(outputDir, filename)
     })
@@ -55,6 +60,9 @@ function buildRadar(outputDir, radarDir, version, creationDate = new Date(), arc
     if (blip.active) {
       radar.blips.push(blip)
     }
+
+    content.blip = blip
+
     fs.writeFileSync(
       filename,
       entryPage(content)
@@ -82,11 +90,6 @@ function buildRadar(outputDir, radarDir, version, creationDate = new Date(), arc
   fs.writeFileSync(path.join(outputDir, 'index.html'), radarPage(radar))
 
   if (outputDir == 'build') {
-    // Create the archive index
-    if (fs.existsSync(path.join(outputDir, 'archive'))) {
-      createArchivePage(radar, archiveDates)
-    }
-
     // Copy static resources
     console.log('Copy resources')
     fs.copySync('app', outputDir)
@@ -99,25 +102,6 @@ function dateFormat(time) {
     month: 'short',
     day: 'numeric'
   })
-}
-
-function createArchivePage(radar, archiveDates) {
-  const archivePage = handlebars.compile(fs.readFileSync('templates/archive_page.hbs', 'utf8'))
-  var versions = []
-  for (var f of klawSync(path.join(radar.outputDir, 'archive'), {nofile: true, depthLimit: 0 })) {
-    const version = path.basename(f.path)
-    versions.push({
-      version: version,
-      created: dateFormat(archiveDates[version])
-    })
-  }
-  fs.writeFileSync(path.join(radar.outputDir, 'archive', 'index.html'), archivePage({
-    title: radar.title,
-    name: 'Archive',
-    date: radar.date,
-    version: radar.version,
-    versions: versions
-  }))
 }
 
 function findQuadrant(radar, sourceFile, callback) {
@@ -138,11 +122,16 @@ function validateYaml(filename, content) {
   if (!content.hasOwnProperty('blip')) {
     console.error(`Missing 'blip' in ${filename}`)
   }
-  if (!content.blip.hasOwnProperty('since')) {
-    console.error(`Missing 'blip.since' in ${filename}`)
+  if (!Array.isArray(content.blip)) {
+    console.error(`'blip' is not an array in ${filename}`)
   }
-  if (!content.blip.hasOwnProperty('ring')) {
-    console.error(`Missing 'blip.ring' in ${filename}`)
+  for (var blip of content.blip) {
+    if (!blip.hasOwnProperty('version')) {
+      console.error(`Missing 'blip[*].version' in ${filename}`)
+    }
+    if (!blip.hasOwnProperty('ring')) {
+      console.error(`Missing 'blip[*].ring' in ${filename}`)
+    }
   }
   if (!content.hasOwnProperty('description')) {
     console.error(`Missing 'description' in ${filename}`)
@@ -153,19 +142,34 @@ function createBlip(radar, entry, htmlFile, sourceFile) {
   var blip = {
     label: entry.shortname ? entry.shortname : entry.name,
     quadrant: 0,
-    ring: radar.rings.indexOf(entry.blip.ring),
-    moved: entry.blip.since == radar.version,
+    since: entry.blip[0].version,
+    ring: radar.rings.indexOf(entry.blip.last().ring),
+    moved: entry.blip.last().version == radar.version,
     link: path.relative(radar.outputDir, htmlFile),
     active: true
   }
 
-  if (!blip.moved && entry.blip.hasOwnProperty('moved')) {
-    blip.moved = entry.blip.moved
+  if (!blip.moved && entry.blip.length > 1) {
+    blip.moved = entry.blip[entry.blip.length - 2].ring !== blip.ring
   }
 
   findQuadrant(radar, sourceFile, (i, q) => blip.quadrant = i)
-  if (entry.blip.hasOwnProperty('active')) {
-    blip.active = entry.blip.active
+
+  if (entry.hasOwnProperty('active')) {
+    blip.active = entry.active
+  }
+
+  let ringName = entry.blip.last().ring
+  blip.ringName = ringName.charAt(0) + ringName.substr(1).toLowerCase()
+
+  if (entry.blip.length > 1) {
+    blip.history = []
+    for (var p of entry.blip) {
+      blip.history.push({
+        version: p.version,
+        ringName: p.ring.charAt(0) + p.ring.substr(1).toLowerCase()
+      })
+    }
   }
 
   return blip

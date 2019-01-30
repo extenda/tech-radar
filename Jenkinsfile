@@ -20,8 +20,8 @@ buildProject {
       npm 'ci'
       npm 'run bump-version'
     }
-    stage('package') {
-      npm 'run package'
+    stage('build') {
+      npm 'run build'
     }
 
     if (branch('master')) {
