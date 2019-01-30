@@ -1,8 +1,8 @@
 version: 1
 name: Apache Ant
 blip:
-  since: "1.0.0"
-  ring: HOLD
+  - version: "1.0.0"
+    ring: HOLD
 description: |
   Apache Ant is a build tool designed to replace Make in early 2000. It is
   implemented in Java, configured with XML and primarily used to configure

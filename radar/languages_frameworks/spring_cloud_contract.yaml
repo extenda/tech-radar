@@ -2,7 +2,7 @@ version: 1
 name: Spring Cloud Contract
 logo: https://spring.io/img/homepage/icon-spring-cloud.svg
 blip:
-  since: "1.1.0"
-  ring: ASSESS
+  - version: "1.1.0"
+    ring: ASSESS
 description: |
 #rationale: |

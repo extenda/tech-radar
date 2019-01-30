@@ -1,8 +1,8 @@
 version: 1
 name: Pipelines as code
 blip:
-  since: "1.0.0"
-  ring: ADOPT
+  - version: "1.0.0"
+    ring: ADOPT
 description: |
   _Pipelines as code_ is defining the build and deployment pipeline through
   code instead of using the CI/CD tool's interface. Examples of systems with

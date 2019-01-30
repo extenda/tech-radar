@@ -1,7 +1,7 @@
 version: 1
 name: MySQL
 blip:
-  since: "1.1.0"
-  ring: HOLD
+  - version: "1.1.0"
+    ring: HOLD
 description: |
 rationale: |
