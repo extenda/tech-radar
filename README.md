@@ -1,27 +1,63 @@
 # Extenda Retail Tech Radar
 
-This project contains the data points and a generator for the [Extenda Retail Tech Radar](http://tech-radar.extenda.io).
+This project contains the data points and a generator for the [Extenda Retail Tech Radar](http://tech-radar.extendaretail.io).
 
 The Tech Radar aims to inspire and support teams at Extenda Retail to pick the best technologies for their projects.
 It is way to share experience and knowledge between the teams and to create transparency about the technology direction of Extenda Retail. The Tech Radar also becomes a list of dos and don'ts, what to try and to avoid in order to increase success.
 
 The Tech Radar is available at:
 
-  - https://tech-radar.extenda.io
-  - https://tech-radar.extenda.io/latest - For latest development version
+  - https://tech-radar.extendaretail.io
 
 ## How to Contribute
 
 The radar content is maintained in the `radar` directory. To suggest changes or submit a new proposed entry to the radar do the following:
 
   1. Fork this repository
-  2. Make changes in your fork, see [Development](#Development) for more info
+  2. Make changes in your fork
+      - See [Development](#development) for more info
+      - See [Semantic Versioning](#semantic-versioning) on how to format commit messages
   3. Open a pull request motivating the change
   4. Post a link to your pull request in [#tech-radar](https://extendaretail.slack.com/channels/tech-radar)
 
 ### Vote on Pull Requests
 
 To promote change, everyone is encouraged to vote on active pull requests. We use pull request comments to discuss changes. In the end, pull requests are reviewed and merged by the Tech Radar maintainers.
+
+## Semantic Versioning
+
+The Tech Radar is versioned with semantic versioning. Increment version as follows:
+
+  - `PATCH` version increments only for bug fixes and radar changes that doesn't change the recommendations in the radar
+  - `MINOR` version increments for every radar blip content change
+  - `MAJOR` version increments for major (incompatible) changes such as radar quadrant changes
+
+Versioning is controlled with commit messages adhering to the [angular convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines).
+The commit message consists of a **header**, **body** and **footer**. The **header** has a **type**, **scope** and **subject**:
+```
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
+The **header** is mandatory and the **scope** of the header is optional.
+
+For this project, use one of the follow values for **type**:
+
+  - **feat**: New or changed radar content
+  - **fix**: A fix to existing radar content
+  - **docs**: Documentation change, not related to radar content
+  - **style**: Changes that do not affect the meaning of code (white-space, formatting)
+  - **perf**: A major, incompatible code change
+  - **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
+
+All commit messages in `master` should define type **type** of change. For changes to the radar contents, use:
+
+  - **feat**: for new radar content
+  - **fix**: for minor improvements to text on existing radar content
+
+The other type of changes are normally not used when modifying the radar blip contents.
 
 ### Maintainers
 
@@ -100,78 +136,7 @@ $ docker run --rm -it -v $(pwd):/home -w /home -p 3000:3000 node:alpine sh -c "n
 ## Release Process
 
 The Tech Radar is released with a CI/CD pipeline, where every commit to `master` is deployed to production.
-
-To build a deployment package, make sure you have fetched all tags:
-
-```bash
-$ git fetch --tags
-```
-
-And then run the following on CI:
-
-```bash
-$ npm run package
-```
-
-This will build the following:
-
-  - The latest tagged release
-  - An archive of previous tags
-  - The latest (edge) Tech Radar accessible at `/latest`
-
-The build process does not modify or tag anything in source code.
-
-### Semantic Versioning
-
-The Tech Radar is versioned with semantic versioning. Increment version as follows:
-
-  - `PATCH` version increments only for bug fixes and radar changes that doesn't change the recommendations in the radar
-  - `MINOR` version increments for every radar blip content change
-  - `MAJOR` version increments for major (incompatible) changes such as radar quadrant changes
-
-The version should be changed when we modify content to the radar and we wish to promote the contents from `latest` to become the current (active) Tech Radar.
-
-### How to Release the Tech Radar
-
-Changing the Tech Radar version is a _manual_ step to be performed by a Tech Radar maintainer.
-
-**The release should be performed on the `master` branch.**
-
-To release the current version, run this command:
-
-```bash
-$ npm run release
-```
-
-The `release` script will perform the following actions:
-
-  - Run a test build
-  - Tag the `HEAD` with the current version in `package.json`
-  - Bump the version in `package.json` to the next patch version
-  - Push the new version and tags to GitHub
-
-When the new tagged version has been pushed to GitHub it will be built and published by the CI/CD pipeline.
-
-### How to Change the Version
-
-Often, you'll find that you should bump the version before releasing the radar.
-
-**The version should be changed on the `master` branch.**
-
-  - Bump `MINOR` version if radar blips has been added or moved
-  - Bump `MAJOR` version if incompatible changes has been made
-
-There are two scripts available to bump respective versions
-
-```bash
-$ npm run version:minor
-$ npm run version:major
-```
-
-The scripts will perform the following actions:
-
-  - Bump the version in `package.json` to the next desired version
-  - Push the new version to GitHub
+Every build is automatically versioned according to commit messages adhering to the [angular convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines).
 
 ## Acknowledgements
 
