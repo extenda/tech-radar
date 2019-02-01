@@ -1,14 +1,4 @@
 steps:
-<<<<<<< HEAD
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['install']
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['run', 'build']
-  - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'build', '-t', 'eu.gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA', '.' ]
-images:
-  - 'eu.gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA'
-=======
   - name: 'gcr.io/cloud-builders/npm:current'
     entrypoint: 'bash'
     args:
@@ -29,4 +19,3 @@ images:
     args: [ 'build', '-t', 'eu.gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA', '.' ]
 images:
   - 'eu.gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA'
->>>>>>> 0d32574023b4345c9b6e40b4f1f359f351835e92
