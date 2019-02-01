@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: master
-          image: extenda/tech-radar
+          image: index.docker.io/extenda/tech-radar
           imagePullPolicy: Always
           ports:
             - containerPort: 80
