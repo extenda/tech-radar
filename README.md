@@ -143,3 +143,4 @@ Every build is automatically versioned according to commit messages adhering to 
 
   * The Tech Radar visualization is based on Zalando's MIT licensed [radar visualization](https://github.com/zalando/tech-radar).
   * This project is licensed under the [MIT license](https://github.com/extenda/tech-radar/blob/master/LICENSE).
+  .
