@@ -19,26 +19,28 @@ spec:
         app: tech-radar
     spec:
       containers:
-        - name: master
-          image: index.docker.io/extenda/tech-radar
-          imagePullPolicy: Always
-          ports:
-            - containerPort: 80
-          readinessProbe:
-            httpGet:
-              path: /
-              port: 80
-            periodSeconds: 10
-            timeoutSeconds: 5
-            successThreshold: 2
-            failureThreshold: 5
-          resources:
-            limits:
-              cpu: 300m
-              memory: 512Mi
-            requests:
-              cpu: 200m
-              memory: 448Mi
+      - name: master
+        image: index.docker.io/extenda/tech-radar
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          periodSeconds: 10
+          timeoutSeconds: 5
+          successThreshold: 2
+          failureThreshold: 5
+        resources:
+          limits:
+            cpu: 300m
+            memory: 512Mi
+          requests:
+            cpu: 200m
+            memory: 448Mi
+      imagePullSecrets:
+        - name: extenda-dockerhub
 ---
 kind: Service
 apiVersion: v1
