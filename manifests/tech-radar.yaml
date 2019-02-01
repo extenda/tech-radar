@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: master
-          image: eu.gcr.io/jenkins-162516/tech-radar
+          image: extenda/tech-radar
           imagePullPolicy: Always
           ports:
             - containerPort: 80
