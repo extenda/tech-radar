@@ -2,7 +2,7 @@
 
 const server = require('live-server')
 const watch = require('watch')
-const builder = require('./bin/build')
+const builder = require('./bin/builder')
 
 const opts = {
   interval: 5,
@@ -13,7 +13,8 @@ const opts = {
 watch.watchTree('.', opts, function(f, curr, prev) {
   console.log('Change detected. Rebuild radar')
   try {
-    builder.build(false)
+    builder.clean('build')
+    builder.build('build', 'radar')
   } catch (e) {
     console.error('Failed to build radar. Will continue to try\n', e)
   }

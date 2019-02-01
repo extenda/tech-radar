@@ -45,13 +45,13 @@ h1.center {
   clear: both;
 }
 
-span.edition {
+span.version {
   background: #43a047;
   border-radius: 6px;
   padding: 6px;
 }
 
-span.edition, span.edition i {
+span.version, span.version i {
   color: white;
   font-size: 2.6rem;
   white-space: nowrap;
@@ -74,21 +74,6 @@ span.edition, span.edition i {
   background: #01579b;
   padding: 0;
   margin: 0;
-}
-
-.navbar.archive {
-  background: #ff8f00;
-}
-
-div.archive-notice {
-  background: black;
-  color: white;
-  text-align: center;
-  padding: 5px 0;
-}
-
-div.archive-notice a {
-  color: white;
 }
 
 .navbar a {
@@ -115,10 +100,6 @@ ul.no-bullets {
   float: left;
   padding: 12px;
   white-space: nowrap;
-}
-
-.radar-archive i {
-  color: white;
 }
 
 ul.breadcrumb {
@@ -170,6 +151,11 @@ ul.breadcrumb {
 
 .badge.Hold {
   background: #bf360c;
+  color: white;
+}
+
+.badge.inactive {
+  background: #ff8f00;
   color: white;
 }
 

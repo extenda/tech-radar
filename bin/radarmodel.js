@@ -1,11 +1,13 @@
 const util = require('util')
+const packageVersion = require('../package.json').version
 
 // Tech radar object model. Used by the builder.
 module.exports = {
-  createModel: function() {
+  createModel: function(version) {
+    let radarVersion = version || packageVersion
     var radar = {
       title: 'Extenda Retail Tech Radar',
-      edition: process.env.EDITION,
+      version: radarVersion,
 
       // Quadrants in the radar visualization order.
       quadrants: [

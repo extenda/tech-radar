@@ -1,4 +1,5 @@
 steps:
+<<<<<<< HEAD
   - name: 'gcr.io/cloud-builders/npm'
     args: ['install']
   - name: 'gcr.io/cloud-builders/npm'
@@ -7,3 +8,25 @@ steps:
     args: [ 'build', '-t', 'eu.gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA', '.' ]
 images:
   - 'eu.gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA'
+=======
+  - name: 'gcr.io/cloud-builders/npm:current'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+          gcloud init && git config credential.helper gcloud \
+          && git fetch --tags \
+          && npm ci \
+          && npm version patch -m "Release %s" \
+          && git push --follow-tags \
+          && npm run package
+    env:
+      - GIT_COMMITTER_NAME=Pipeline Committer
+      - GIT_AUTHOR_NAME=Pipeline Committer
+      - GIT_COMMITTER_EMAIL=pipeline@extendaretail.com
+      - GIT_AUTHOR_EMAIL='pipeline@extendaretail.com
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'build', '-t', 'eu.gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA', '.' ]
+images:
+  - 'eu.gcr.io/$PROJECT_ID/tech-radar:$SHORT_SHA'
+>>>>>>> 0d32574023b4345c9b6e40b4f1f359f351835e92

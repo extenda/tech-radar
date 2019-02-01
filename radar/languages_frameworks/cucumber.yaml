@@ -1,9 +1,9 @@
+version: 1
 name: Cucumber
 logo: https://docs.cucumber.io/img/cucumber-logo.png
 blip:
-  since: 1
-  ring: ADOPT
-  moved: false
+  - version: "1.0.0"
+    ring: ADOPT
 description: |
   Cucumber is a software tool used by computer programmers for testing other software.
   It runs automated acceptance tests written in a behavior-driven development style.

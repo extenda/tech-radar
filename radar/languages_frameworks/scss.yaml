@@ -1,8 +1,9 @@
+version: 1
 name: SCSS
 logo: https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg
 blip:
-  since: 2
-  ring: ADOPT
+  - version: "1.1.0"
+    ring: ADOPT
 description: |
   Sass 3 introduces a new syntax known as SCSS which is fully compatible with the syntax of CSS, while still supporting the full power of Sass.
   This means that every valid CSS stylesheet is a valid SCSS file with the same meaning.

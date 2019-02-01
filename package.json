@@ -1,24 +1,15 @@
 {
   "name": "tech-radar",
-  "version": "0.0.1",
+  "version": "0.0.1-local",
   "description": "Generator for Extenda Retail Technology Radar",
   "main": "index.js",
-  "config": {
-    "radar": {
-      "edition": 2,
-      "docker": "414891016442.dkr.ecr.eu-west-1.amazonaws.com/extenda/tech-radar:latest"
-    }
-  },
   "scripts": {
-    "build": "EDITION=$npm_package_config_radar_edition node bin/build.js --build",
-    "start": "EDITION=$npm_package_config_radar_edition node index.js",
-    "docker:build": "docker build --squash -t $npm_package_config_radar_docker .",
-    "preedition:next": "git tag -a -m 'Tech Radar Edition $npm_package_config_radar_edition' radar-edition-$npm_package_config_radar_edition",
-    "edition:next": "node bin/edition.js --next",
-    "postedition:next": "git add package.json && git commit -m 'Prepare next radar edition'",
-    "prerelease": "npm run build && git add archive && git commit -m 'Archive edition $npm_package_config_radar_edition'",
-    "release": "npm run build:archive && npm edition:next && npm run docker:build",
-    "postrelease": "docker push $npm_package_config_radar_docker && git push --follow-tags"
+    "build": "node bin/builder.js --clean --build",
+    "clean": "node bin/builder.js --clean",
+    "docker:build": "sh bin/docker-build.sh",
+    "docker": "docker run --rm -it -p 3000:80 tech-radar",
+    "start": "node index.js",
+    "bump-version": "sh bin/bump-version.sh"
   },
   "repository": {
     "type": "git",
@@ -31,11 +22,14 @@
   },
   "homepage": "https://github.com/extenda/tech-radar#readme",
   "devDependencies": {
+    "conventional-changelog-angular": "^5.0.2",
+    "conventional-recommended-bump": "^4.0.4",
     "fs-extra": "^7.0.1",
     "handlebars": "^4.0.12",
     "klaw-sync": "^6.0.0",
     "live-server": "^1.2.0",
     "markdown-it": "^8.4.2",
+    "semver": "^5.6.0",
     "util": "^0.11.1",
     "watch": "^1.0.2",
     "yaml": "^1.0.2"

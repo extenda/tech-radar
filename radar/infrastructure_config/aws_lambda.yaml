@@ -1,8 +1,10 @@
+version: 1
 name: AWS Lambda
 blip:
-  since: 1
-  ring: HOLD
-  moved: true
+  - version: "1.0.0"
+    ring: TRIAL
+  - version: "1.1.0"
+    ring: HOLD
 description: |
   AWS Lambdas are serverless functions managed by AWS and automatically scaled
   to handle varying load. They support multiple languages such as Java, Node.js

@@ -1,9 +1,9 @@
+version: 1
 name: OpenAPI (Swagger)
 logo: https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png
 blip:
-  since: 1
-  ring: ADOPT
-  moved: false
+  - version: "1.0.0"
+    ring: ADOPT
 description: |
   The OpenAPI specification is a formal description of a RESTful web service
   which can be used to consume, document and visualize the API. Originally

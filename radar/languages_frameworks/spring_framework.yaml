@@ -1,8 +1,9 @@
+version: 1
 name: Spring Framework
 logo: https://spring.io/img/homepage/icon-spring-framework.svg
 blip:
-  since: 2
-  ring: HOLD
+  - version: "1.1.0"
+    ring: HOLD
 description: |
   Spring Framework is an application framework and IoC container for Java.
   It integrates with most things Java and prominent features and frameworks include:

@@ -1,8 +1,9 @@
+version: 1
 name: Postman
 logo: https://www.getpostman.com/img/v2/logo-mark.svg
 blip:
-  since: 2
-  ring: ADOPT
+  - version: "1.1.0"
+    ring: ADOPT
 description: |
   Postman is an API testing and development tool. At the core are Postman Collections which
   is an executable description of an API. With Postman Collections you can mock, test,

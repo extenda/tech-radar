@@ -1,7 +1,8 @@
+version: 1
 name: Gradle
 blip:
-  since: 2
-  ring: HOLD
+  - version: "1.1.0"
+    ring: HOLD
 description: |
   Gradle is a build system and dependency manager for JVM languages such as Java, Groovy and Android.
   The main differentiator when compared to Apache Maven is that it's configured with Groovy instead of XML.

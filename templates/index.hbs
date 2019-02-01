@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>{{title}} #{{edition}}</title>
+  <title>{{title}} {{version}}</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,14 +13,13 @@
 <body>
   <nav class="navbar" role="navigation">
     <ul class="quadrants">
-      <li class="radar-root">Radar #{{edition}}<i class="fa fa-rss"></i></li>
+      <li class="radar-root">Tech Radar<i class="fa fa-rss"></i></li>
       {{#each quadrantsNavigation}}
       <li><a href="{{dirname}}.html">{{name}}</a></li>
       {{/each}}
-      <li class="radar-archive"><i class="fa fa-archive"></i> <a href="/archive/index.html">Archive</a></li>
     </ul>
   </nav>
-  <h1 class="center">{{title}} <span class="edition">#{{edition}}</span></h1>
+  <h1 class="center">{{title}} <span class="version"><i class="fa fa-tag"></i> {{version}}</span></h1>
   <div class="svg-radar">
     <svg id="radar"></svg>
   </div>
@@ -50,10 +49,6 @@
 
         <h2>How to Contribute</h2>
         <p>
-          The Tech Radar is updated roughly every 6 months by a working group consisting of technologists
-          from different branches of Extenda Retail.
-        </p>
-        <p>
           The Tech Radar is maintained on <a href="https://github.com/extenda/tech-radar">GitHub</a>.
           There you can read more about the process and how to contribute.
         </p>
@@ -73,7 +68,7 @@ radar_visualization({
     grid: "#bbb",
     inactive: "#ddd"
   },
-  title: "{{title}} — {{edition}}",
+  title: "{{title}} — {{version}}",
   quadrants: [
     {{#each quadrants}}
     { name: "{{{name}}}" }{{#unless @last}},{{/unless}}

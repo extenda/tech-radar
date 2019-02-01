@@ -1,19 +1,70 @@
 # Extenda Retail Tech Radar
 
-This project contains the data points and a generator for the [Extenda Retail Tech Radar](http://tech-radar.extenda.io).
+This project contains the data points and a generator for the [Extenda Retail Tech Radar](http://tech-radar.extendaretail.io).
 
 The Tech Radar aims to inspire and support teams at Extenda Retail to pick the best technologies for their projects.
 It is way to share experience and knowledge between the teams and to create transparency about the technology direction of Extenda Retail. The Tech Radar also becomes a list of dos and don'ts, what to try and to avoid in order to increase success.
 
+The Tech Radar is available at:
+
+  - https://tech-radar.extendaretail.io
+
 ## How to Contribute
 
-The radar content is maintained in the `radar` directory. To suggest changes or submit a new proposed entry to the radar to the following:
+The radar content is maintained in the `radar` directory. To suggest changes or submit a new proposed entry to the radar do the following:
 
   1. Fork this repository
-  2. Make changes in your fork, see [Development](#Development) for more info
+  2. Make changes in your fork
+      - See [Development](#development) for more info
+      - See [Semantic Versioning](#semantic-versioning) on how to format commit messages
   3. Open a pull request motivating the change
+  4. Post a link to your pull request in [#tech-radar](https://extendaretail.slack.com/channels/tech-radar)
 
-Pull requests will be reviewed by the Tech Radar working group.
+### Vote on Pull Requests
+
+To promote change, everyone is encouraged to vote on active pull requests. We use pull request comments to discuss changes. In the end, pull requests are reviewed and merged by the Tech Radar maintainers.
+
+## Semantic Versioning
+
+The Tech Radar is versioned with semantic versioning. Increment version as follows:
+
+  - `PATCH` version increments only for bug fixes and radar changes that doesn't change the recommendations in the radar
+  - `MINOR` version increments for every radar blip content change
+  - `MAJOR` version increments for major (incompatible) changes such as radar quadrant changes
+
+Versioning is controlled with commit messages adhering to the [angular convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines).
+The commit message consists of a **header**, **body** and **footer**. The **header** has a **type**, **scope** and **subject**:
+```
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
+The **header** is mandatory and the **scope** of the header is optional.
+
+For this project, use one of the follow values for **type**:
+
+  - **feat**: New or changed radar content
+  - **fix**: A fix to existing radar content
+  - **docs**: Documentation change, not related to radar content
+  - **style**: Changes that do not affect the meaning of code (white-space, formatting)
+  - **perf**: A major, incompatible code change
+  - **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
+
+All commit messages in `master` should define type **type** of change. For changes to the radar contents, use:
+
+  - **feat**: for new radar content
+  - **fix**: for minor improvements to text on existing radar content
+
+The other type of changes are normally not used when modifying the radar blip contents.
+
+### Maintainers
+
+The Tech Radar maintainers are the members of the following teams:
+
+  - [radar-maintainers](https://github.com/orgs/extenda/teams/radar-maintainers)
+  - [admins](https://github.com/orgs/extenda/teams/admins)
 
 ## Development
 
@@ -22,20 +73,12 @@ Start by installing dependencies:
 $ npm install
 ```
 
-Next, make sure to install pre-commit hooks.
+Next, make sure to install [pre-commit](https://pre-commit.com) hooks.
 ```bash
 $ pre-commit install
 ```
 
-To build a copy of the radar, run the following:
-
-```bash
-$ npm run build
-```
-
-This will build the radar and prepare an archived version that can be committed and pushed to GitHub.
-As an alternative to the above script, it is possible to start a development server that will refresh automatically as you make changes to the radar contents.
-
+To start a development server that automatically refresh as you make changes to the radar contents, run the following:
 ```bash
 $ npm start
 ```
@@ -47,13 +90,15 @@ Each blip (entry) on the radar is stored in a YAML file under the `radar` direct
 
 The format of a blip is as follows:
 ```yaml
+version: 1 # YAML format version (to cope with future changes)
 name: Entry name # Required
 shortname: Short # Optional. Use only if name is too long for the radar blip
-blip:
-  active: true # Optional. If set to `false`, the blip is hidden
-  since: 2 # Required. The first edition the blip appeared
-  ring: ADOPT # Required. One of ADOPT, TRIAL, ASSESS, HOLD
-  moved: false # Optional. Set to `true` if an existing blip changes ring
+active: true # Optional. If set to `false`, the blip is hidden on the visual radar
+blip: # A list of blip positions. Add a new entry every time the blip moves
+  - version: "1.0.0" # Required. The MAJOR.MINOR.PATCH version for the blip
+    ring: ASSESS # Required. The position at version, One of ADOPT, TRIAL, ASSESS, HOLD
+  - version: "1.1.0"
+    ring: ADOPT
 description: |
   A required, short description of the technology.
   This entry can be multiple lines and supports Markdown.
@@ -70,7 +115,7 @@ related: # Optional list of related entries
 ### Docker
 
 The Tech Radar is packaged into a Docker image. The image is automatically built
-on release, but can also be built manually.
+on `package`, but can also be built manually.
 
 ```bash
 $ docker build -t tech-radar .
@@ -81,32 +126,21 @@ And to run a container, you'd run it in a way similar to this:
 ```bash
 $ docker run --rm -it -p 3000:80 tech-radar
 ```
-The Tech-Radar would now be available at http://localhost:3000
+The Tech Radar would now be available at http://localhost:3000
 
-### Release the Radar
+It is also possible to run the development server in Docker:
 
-The Tech Radar is updated roughly every 6 months by a working group consisting of technologists from different branches of Extenda Retail.
-
-To release the radar, use the following command:
 ```bash
-$ npm run release
+$ docker run --rm -it -v $(pwd):/home -w /home -p 3000:3000 node:alpine sh -c "npm i; npm start"
 ```
-This will perform the following steps:
-  1. Build the current radar edition
-  2. Archive and commit the edition
-  3. Tag the edition
-  4. Update `package.json` to next edition
-  5. Build a Docker image
-  6. Push changes to GitHub
-  7. Push the Docker image to ECR
 
-If the last step fails, take action to push to image manually to ECR. This step would fail if
-  * User isn't authenticated for the Docker ECR
-  * User doesn't have permission to push to ECR
+## Release Process
 
-After the Docker image has been published, the `tech-radar` ECS instance must be redeployed.
+The Tech Radar is released with a CI/CD pipeline, where every commit to `master` is deployed to production.
+Every build is automatically versioned according to commit messages adhering to the [angular convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines).
 
 ## Acknowledgements
 
   * The Tech Radar visualization is based on Zalando's MIT licensed [radar visualization](https://github.com/zalando/tech-radar).
   * This project is licensed under the [MIT license](https://github.com/extenda/tech-radar/blob/master/LICENSE).
+  .

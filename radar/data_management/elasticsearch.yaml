@@ -1,7 +1,8 @@
+version: 1
 name: Elasticsearch
 blip:
-  since: 1
-  ring: TRIAL
+  - version: "1.0.0"
+    ring: TRIAL
 description: |
   Elasticsearch is a distributed, massivily scalable search engine.
 rationale: |

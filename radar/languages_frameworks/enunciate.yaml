@@ -1,8 +1,8 @@
+version: 1
 name: Enunciate
 blip:
-  since: 1
-  ring: HOLD
-  moved: false
+  - version: "1.0.0"
+    ring: HOLD
 description: |
   Enunciate is a framework to create HTML documentation and client APIs for your
   REST service implemented with Java. The documentation is generated from source

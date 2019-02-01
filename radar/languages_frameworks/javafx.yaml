@@ -1,9 +1,9 @@
+version: 1
 name: JavaFX
 logo: https://upload.wikimedia.org/wikipedia/en/c/cc/JavaFX_Logo.png
 blip:
-  since: 1
-  ring: HOLD
-  moved: false
+  - version: "1.0.0"
+    ring: HOLD
 description: |
   JavaFX is a desktop application platform by Oracle. It is intended to replace
   Swing and AWT for Java desktop applications.
