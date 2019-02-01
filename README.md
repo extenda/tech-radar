@@ -7,7 +7,7 @@ It is way to share experience and knowledge between the teams and to create tran
 
 The Tech Radar is available at:
 
-  - https://tech-radar.extendaretail.io
+  - https://tech-radar.extendaretail.com
 
 ## How to Contribute
 
@@ -22,7 +22,7 @@ The radar content is maintained in the `radar` directory. To suggest changes or 
 
 ### Vote on Pull Requests
 
-To promote change, everyone is encouraged to vote on active pull requests. We use pull request comments to discuss changes. In the end, pull requests are reviewed and merged by the Tech Radar maintainers.
+To promote change, everyone is encouraged to vote on active pull requests. We use slack channel [#tech-radar](https://extendaretail.slack.com/channels/tech-radar) to discuss changes. In the end, pull requests are reviewed and merged by the Tech Radar maintainers.
 
 ## Semantic Versioning
 
