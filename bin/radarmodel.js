@@ -1,13 +1,16 @@
 const util = require('util')
 const packageVersion = require('../package.json').version
+const semver = require('semver')
 
 // Tech radar object model. Used by the builder.
 module.exports = {
   createModel: function(version) {
     let radarVersion = version || packageVersion
+    let semVersion = semver.coerce(radarVersion)
     var radar = {
       title: 'Extenda Retail Tech Radar',
       version: radarVersion,
+      majorMinorVersion: `${semVersion.major}.${semVersion.minor}`,
 
       // Quadrants in the radar visualization order.
       quadrants: [

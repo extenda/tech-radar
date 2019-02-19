@@ -1,7 +1,7 @@
 version: 1
 name: YUM
 blip:
-  - version: "1.0.0"
+  - version: "1.0"
     ring: TRIAL
 description: |
   Linux package management to find packages and resolve dependencies between RPM packages.

@@ -1,7 +1,7 @@
 version: 1
 name: Jersey 1.x
 blip:
-  - version: "1.0.0"
+  - version: "1.0"
     ring: HOLD
 description: |
   Jersey 1.x is the reference implementation for JAX-RS 1. It is a framework

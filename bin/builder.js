@@ -5,6 +5,7 @@ const yaml = require('yaml')
 const handlebars = require('handlebars')
 const md = require('markdown-it')()
 const radarModel = require('./radarmodel')
+const semver = require('semver')
 
 if (!Array.prototype.last) {
   Array.prototype.last = function() {
@@ -87,6 +88,9 @@ function buildRadar(outputDir, radarDir, version, creationDate = new Date()) {
 
   // Create the main radar visualization
   console.log('  - Radar visualization')
+  if (radar.version === '0.0.1-local') {
+    adjustBlipMovementForLocalBuild(radar.blips)
+  }
   fs.writeFileSync(path.join(outputDir, 'index.html'), radarPage(radar))
 
   if (outputDir == 'build') {
@@ -102,6 +106,26 @@ function dateFormat(time) {
     month: 'short',
     day: 'numeric'
   })
+}
+
+function adjustBlipMovementForLocalBuild(blips) {
+  const newest = blips.map(blip => semver.coerce(blip.updated)).reduce((result, current) => {
+    if (!result) {
+      return current
+    } else if (semver.gt(current, result)) {
+      return current
+    }
+    return result
+  })
+
+  const newestMajorMinor = `${newest.major}.${newest.minor}`
+  console.log(`  - devmode: Blip movements recalculated against version ${newestMajorMinor}`)
+
+  // Now, adjust movements against newest version
+  for (var blip of blips) {
+    blip.moved = blip.updated === newestMajorMinor
+  }
+
 }
 
 function findQuadrant(radar, sourceFile, callback) {
@@ -144,13 +168,10 @@ function createBlip(radar, entry, htmlFile, sourceFile) {
     quadrant: 0,
     since: entry.blip[0].version,
     ring: radar.rings.indexOf(entry.blip.last().ring),
-    moved: entry.blip.last().version == radar.version,
+    moved: entry.blip.last().version == radar.majorMinorVersion,
+    updated: entry.blip.last().version,
     link: path.relative(radar.outputDir, htmlFile),
     active: true
-  }
-
-  if (!blip.moved && entry.blip.length > 1) {
-    blip.moved = entry.blip[entry.blip.length - 2].ring !== blip.ring
   }
 
   findQuadrant(radar, sourceFile, (i, q) => blip.quadrant = i)

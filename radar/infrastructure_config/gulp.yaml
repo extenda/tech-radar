@@ -2,7 +2,7 @@ version: 1
 name: Gulp
 logo: https://upload.wikimedia.org/wikipedia/commons/7/72/Gulp.js_Logo.svg
 blip:
-  - version: "1.1.0"
+  - version: "2.0"
     ring: HOLD
 description: |
   Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something.

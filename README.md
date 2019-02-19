@@ -95,9 +95,9 @@ name: Entry name # Required
 shortname: Short # Optional. Use only if name is too long for the radar blip
 active: true # Optional. If set to `false`, the blip is hidden on the visual radar
 blip: # A list of blip positions. Add a new entry every time the blip moves
-  - version: "1.0.0" # Required. The MAJOR.MINOR.PATCH version for the blip
+  - version: "1.0" # Required. The MAJOR.MINOR version for the blip
     ring: ASSESS # Required. The position at version, One of ADOPT, TRIAL, ASSESS, HOLD
-  - version: "1.1.0"
+  - version: "2.0"
     ring: ADOPT
 description: |
   A required, short description of the technology.
