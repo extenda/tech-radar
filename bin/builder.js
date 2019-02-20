@@ -168,7 +168,7 @@ function createBlip(radar, entry, htmlFile, sourceFile) {
     quadrant: 0,
     since: entry.blip[0].version,
     ring: radar.rings.indexOf(entry.blip.last().ring),
-    moved: entry.blip.last().version == radar.majorMinorVersion,
+    moved: entry.blip.last().version === radar.majorMinorVersion,
     updated: entry.blip.last().version,
     link: path.relative(radar.outputDir, htmlFile),
     active: true
