@@ -55,12 +55,12 @@ jobs:
     steps:
       - checkout
       - npm_install
-      - run:
-          name: Set build version
-          command: |
-            git config user.name "CircleCI"
-            git config user.email "circleci@circleci.com"
-            sh bin/bump-version.sh
+      # - run:
+      #     name: Set build version
+      #     command: |
+      #       git config user.name "CircleCI"
+      #       git config user.email "circleci@circleci.com"
+      #       sh bin/bump-version.sh
       - run:
           name: Build radar
           command: npm run build
@@ -68,14 +68,14 @@ jobs:
       - run:
           name: Login on DockerHub
           command: echo "$DOCKER_PASSWORD" | docker login --username $DOCKER_USER --password-stdin
-      - run:
-          name: Deploy to DockerHub
-          command: |
-            TAG=$(node -p "require('./package.json').version")
-            docker tag extenda/tech-radar:$CIRCLE_SHA1 extenda/tech-radar:$TAG
-            docker tag extenda/tech-radar:$CIRCLE_SHA1 extenda/tech-radar:latest
-            docker push extenda/tech-radar:$TAG
-            docker push extenda/tech-radar:latest
+      # - run:
+      #     name: Deploy to DockerHub
+      #     command: |
+      #       TAG=$(node -p "require('./package.json').version")
+      #       docker tag extenda/tech-radar:$CIRCLE_SHA1 extenda/tech-radar:$TAG
+      #       docker tag extenda/tech-radar:$CIRCLE_SHA1 extenda/tech-radar:latest
+      #       docker push extenda/tech-radar:$TAG
+      #       docker push extenda/tech-radar:latest
 
 workflows:
   version: 2
@@ -88,6 +88,6 @@ workflows:
       - dockerhub:
           requires:
             - build
-          filters:
-            branches:
-              only: master
+          # filters:
+          #   branches:
+          #     only: master
