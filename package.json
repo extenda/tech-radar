@@ -1,33 +1,30 @@
 {
   "name": "tech-radar",
   "version": "0.0.1-local",
+  "private": true,
   "description": "Generator for Extenda Retail Technology Radar",
-  "main": "index.js",
+  "main": "src/js/index.js",
   "scripts": {
-    "build": "node bin/builder.js --clean --build",
-    "clean": "node bin/builder.js --clean",
-    "docker": "docker run --rm -it -p 3000:80 tech-radar",
-    "start": "node index.js",
+    "build": "node src/js/builder.js --clean --build",
+    "clean": "node src/js/builder.js --clean",
+    "start": "node src/js/index.js",
     "pip:install": "pip install --user -r .scripts/python_requirements.txt",
     "yaml:lint": "python .scripts/yaml_lint.py",
-    "yaml:validate": "python .scripts/yaml_validate.py",
-    "bump-version": "sh bin/bump-version.sh"
+    "yaml:validate": "python .scripts/yaml_validate.py"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com:extenda/tech-radar.git"
+  "repository": "github:extenda/tech-radar",
+  "author": {
+    "name": "Extenda Retail",
+    "email": "info@extendaretail.com",
+    "url": "https://extendaretail.com"
   },
-  "author": "Samuel Sjoberg",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/extenda/tech-radar/issues"
-  },
   "homepage": "https://github.com/extenda/tech-radar#readme",
   "devDependencies": {
     "conventional-changelog-angular": "^5.0.2",
     "conventional-recommended-bump": "^4.0.4",
     "fs-extra": "^7.0.1",
-    "handlebars": "^4.0.12",
+    "handlebars": "^4.1.0",
     "klaw-sync": "^6.0.0",
     "live-server": "^1.2.0",
     "markdown-it": "^8.4.2",

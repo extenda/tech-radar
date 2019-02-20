@@ -2,14 +2,15 @@
 
 const server = require('live-server')
 const watch = require('watch')
-const builder = require('./bin/builder')
-
+const builder = require('./builder')
+const path = require('path')
 const opts = {
   interval: 5,
   filter: path => {
-    return /^(app|radar|templates)/.test(path)
+    return /^(src|radar)/.test(path)
   }
 }
+
 watch.watchTree('.', opts, function(f, curr, prev) {
   console.log('Change detected. Rebuild radar')
   try {
