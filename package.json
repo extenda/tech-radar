@@ -6,9 +6,11 @@
   "scripts": {
     "build": "node bin/builder.js --clean --build",
     "clean": "node bin/builder.js --clean",
-    "docker:build": "sh bin/docker-build.sh",
     "docker": "docker run --rm -it -p 3000:80 tech-radar",
     "start": "node index.js",
+    "pip:install": "pip install --user -r .scripts/python_requirements.txt",
+    "yaml:lint": "python .scripts/yaml_lint.py",
+    "yaml:validate": "python .scripts/yaml_validate.py",
     "bump-version": "sh bin/bump-version.sh"
   },
   "repository": {
@@ -32,6 +34,7 @@
     "semver": "^5.6.0",
     "util": "^0.11.1",
     "watch": "^1.0.2",
-    "yaml": "^1.0.2"
+    "yaml": "^1.0.2",
+    "yaml-validator": "^2.0.0"
   }
 }

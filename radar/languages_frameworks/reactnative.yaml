@@ -5,6 +5,8 @@ blip:
   - version: "2.0"
     ring: ASSESS
 description: |
-  React Native lets you build mobile apps using only JavaScript. It uses the same design as React, letting you compose a rich mobile UI from declarative components.
+  React Native lets you build mobile apps using only JavaScript. It uses the same design as React,
+  letting you compose a rich mobile UI from declarative components.
 rationale: |
-  As an alternative to NativeSceript, React Native takes a more explicit approach to building apps on iOS and Android.
+  As an alternative to NativeSceript, React Native takes a more explicit approach to
+  building apps on iOS and Android.

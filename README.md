@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/extenda/tech-radar.svg?style=svg)](https://circleci.com/gh/extenda/tech-radar)
+
 # Extenda Retail Tech Radar
 
 This project contains the data points and a generator for the [Extenda Retail Tech Radar](http://tech-radar.extendaretail.com).
@@ -92,6 +94,7 @@ The format of a blip is as follows:
 ```yaml
 version: 1 # YAML format version (to cope with future changes)
 name: Entry name # Required
+logo: https://domain.com/logo.png # Optional logo URL
 shortname: Short # Optional. Use only if name is too long for the radar blip
 active: true # Optional. If set to `false`, the blip is hidden on the visual radar
 blip: # A list of blip positions. Add a new entry every time the blip moves
@@ -110,6 +113,25 @@ related: # Optional list of related entries
     file: my_entry.html # The entry filename
   - name: Second Entry
     file: file2.html
+```
+
+
+### Radar Blip Validation
+
+There's two scripts to validate radar entries. To use them, first install the required Python dependencies:
+
+```bash
+$ npm run pip:install
+```
+
+To run YAML lint, run the following:
+```
+$ npm run yaml:lint
+```
+
+And to validate the YAML against its schema definition, use:
+```
+$ npm run yaml:validate
 ```
 
 ### Docker

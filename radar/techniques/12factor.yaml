@@ -6,4 +6,4 @@ blip:
     ring: ADOPT
 description: |
   [The twelve-factor app](https://12factor.net/) is a methodology for building maintanable SaaS applications.
-#rationale: |
+rationale: |

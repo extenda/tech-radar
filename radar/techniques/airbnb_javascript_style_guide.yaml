@@ -7,4 +7,5 @@ blip:
 description: |
   [A mostly reasonable approach to JavaScript.](https://github.com/airbnb/javascript)
 rationale: |
-  To make our JavaScript consistent, readable, scalable and with a style guide that is well documented, updated and for free.
+  To make our JavaScript consistent, readable, scalable and with a style guide
+  that is well documented, updated and for free.

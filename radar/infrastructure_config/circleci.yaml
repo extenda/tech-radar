@@ -15,4 +15,4 @@ rationale: |
   access in-house resources such as the Nexus repository or SonarQube.
 related:
   - name: Jenkins Build Farm
-    link: jenkins_aws.html
+    file: jenkins_aws.html

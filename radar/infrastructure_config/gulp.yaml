@@ -5,6 +5,8 @@ blip:
   - version: "2.0"
     ring: HOLD
 description: |
-  Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something.
+  Gulp is a toolkit for automating painful or time-consuming tasks in your development
+  workflow, so you can stop messing around and build something.
 rationale: |
-  Our projects doesn't currently require any additional build tools or task managers outside of Webpack & NPM.
+  Our projects doesn't currently require any additional build tools or task managers
+  outside of Webpack & NPM.
