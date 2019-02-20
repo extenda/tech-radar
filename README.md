@@ -20,11 +20,12 @@ The radar content is maintained in the `radar` directory. To suggest changes or 
       - See [Development](#development) for more info
       - See [Semantic Versioning](#semantic-versioning) on how to format commit messages
   3. Open a pull request motivating the change
-  4. Post a link to your pull request in [#tech-radar](https://extendaretail.slack.com/channels/tech-radar)
+  4. The pull request is automatically published in [#tech-radar](https://extendaretail.slack.com/channels/tech-radar)
+  5. If approved, the pull request is merged by the [maintainers](#maintainers)
 
 ### Vote on Pull Requests
 
-To promote change, everyone is encouraged to vote on active pull requests. We use slack channel [#tech-radar](https://extendaretail.slack.com/channels/tech-radar) to discuss changes. In the end, pull requests are reviewed and merged by the Tech Radar maintainers.
+To promote change, everyone is encouraged to vote on active pull requests. We use the slack channel [#tech-radar](https://extendaretail.slack.com/channels/tech-radar) to discuss changes. In the end, pull requests are reviewed and merged by the Tech Radar [maintainers](#maintainers).
 
 ## Semantic Versioning
 
@@ -60,13 +61,6 @@ All commit messages in `master` should define type **type** of change. For chang
   - **fix**: for minor improvements to text on existing radar content
 
 The other type of changes are normally not used when modifying the radar blip contents.
-
-### Maintainers
-
-The Tech Radar maintainers are the members of the following teams:
-
-  - [radar-maintainers](https://github.com/orgs/extenda/teams/radar-maintainers)
-  - [admins](https://github.com/orgs/extenda/teams/admins)
 
 ## Development
 
@@ -115,22 +109,19 @@ related: # Optional list of related entries
     file: file2.html
 ```
 
-
-### Radar Blip Validation
-
-There's two scripts to validate radar entries. To use them, first install the required Python dependencies:
+There are two scripts to validate radar entries. To use them, first install the required Python dependencies:
 
 ```bash
 $ npm run pip:install
 ```
 
 To run YAML lint, run the following:
-```
+```bash
 $ npm run yaml:lint
 ```
 
 And to validate the YAML against its schema definition, use:
-```
+```bash
 $ npm run yaml:validate
 ```
 
@@ -160,6 +151,14 @@ $ docker run --rm -it -v $(pwd):/home -w /home -p 3000:3000 node:alpine sh -c "n
 
 The Tech Radar is released with a CI/CD pipeline, where every commit to `master` is deployed to production.
 Every build is automatically versioned according to commit messages adhering to the [angular convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines).
+
+## Maintainers
+
+The Tech Radar maintainers are the members of the following teams:
+
+  - [radar-maintainers](https://github.com/orgs/extenda/teams/radar-maintainers)
+  - [admins](https://github.com/orgs/extenda/teams/admins)
+
 
 ## Acknowledgements
 

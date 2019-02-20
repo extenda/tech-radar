@@ -20,12 +20,12 @@ function buildRadar(outputDir, radarDir, version, creationDate = new Date()) {
   fs.mkdirsSync(outputDir)
   fs.mkdirSync(path.join(outputDir, 'entries'))
 
-  handlebars.registerPartial('footer', handlebars.compile(fs.readFileSync('templates/footer.hbs', 'utf8')))
+  handlebars.registerPartial('footer', handlebars.compile(fs.readFileSync('src/templates/footer.hbs', 'utf8')))
   handlebars.registerHelper('markdown', value => md.render(value))
 
-  const entryPage = handlebars.compile(fs.readFileSync('templates/entry_page.hbs', 'utf8'))
-  const quadrantPage = handlebars.compile(fs.readFileSync('templates/quadrant_page.hbs', 'utf8'))
-  const radarPage = handlebars.compile(fs.readFileSync('templates/index.hbs', 'utf8'))
+  const entryPage = handlebars.compile(fs.readFileSync('src/templates/entry_page.hbs', 'utf8'))
+  const quadrantPage = handlebars.compile(fs.readFileSync('src/templates/quadrant_page.hbs', 'utf8'))
+  const radarPage = handlebars.compile(fs.readFileSync('src/templates/index.hbs', 'utf8'))
 
   var radar = radarModel.createModel(version)
   radar.date = dateFormat(creationDate)
@@ -96,7 +96,8 @@ function buildRadar(outputDir, radarDir, version, creationDate = new Date()) {
   if (outputDir == 'build') {
     // Copy static resources
     console.log('Copy resources')
-    fs.copySync('app', outputDir)
+    fs.copySync('src/resources', outputDir)
+    fs.copySync('src/css', path.join(outputDir, 'css'))
   }
 }
 

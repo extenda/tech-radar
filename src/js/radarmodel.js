@@ -1,5 +1,5 @@
 const util = require('util')
-const packageVersion = require('../package.json').version
+const packageVersion = require('../../package.json').version
 const semver = require('semver')
 
 // Tech radar object model. Used by the builder.

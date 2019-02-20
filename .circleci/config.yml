@@ -60,7 +60,7 @@ jobs:
           command: |
             git config user.name "CircleCI"
             git config user.email "circleci@circleci.com"
-            sh bin/bump-version.sh
+            sh .scripts/bump_version.sh
       - run:
           name: Build radar
           command: npm run build

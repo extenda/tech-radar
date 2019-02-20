@@ -9,7 +9,7 @@ if [ -z "$branch" ]; then
   branch=$(git rev-parse --abbrev-ref "$reference")
 fi
 
-git fetch --tags
+git fetch --tags || exit 1
 
 version=$(git describe --abbrev=0 --tags 2> /dev/null || echo '1.0.0')
 newVersion="$version"
@@ -20,8 +20,8 @@ tagged=$(git tag -l --points-at "$reference")
 if [ "$branch" = "master" ] && [ -z "$tagged" ]; then
   newVersion=$(npx semver -i "$(npx conventional-recommended-bump -p angular)" "$version")
   echo "Bump $version => $newVersion"
-  git tag -a "v$newVersion" -m "Release $newVersion"
-  git push origin "v$newVersion"
+  git tag -a "v$newVersion" -m "Release $newVersion" || exit 1
+  git push origin "v$newVersion" || exit 1
 fi
 
 npm version --no-git-tag-version "$newVersion"
