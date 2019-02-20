@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/extenda/tech-radar.svg?style=svg)](https://circleci.com/gh/extenda/tech-radar)
+
 # Extenda Retail Tech Radar
 
 This project contains the data points and a generator for the [Extenda Retail Tech Radar](http://tech-radar.extendaretail.com).
