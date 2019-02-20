@@ -67,7 +67,7 @@ jobs:
       - build_docker
       - run:
           name: Login on DockerHub
-          command: echo "$DOCKER_PASSWORD" | docker login --username $DOCKER_USER --password-stdin
+          command: echo "$DOCKER_PASSWORD" | docker login --username $DOCKER_USER --password-stdin
       # - run:
       #     name: Deploy to DockerHub
       #     command: |
