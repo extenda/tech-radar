@@ -1,7 +1,7 @@
 version: 1
 name: IAM SaaS
 blip:
-  - version: "1.1.0"
+  - version: "2.0"
     ring: ASSESS
 description: |
   A centralized, SaaS solution for Identity and Access Management (IAM) is necessary

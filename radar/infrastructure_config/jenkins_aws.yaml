@@ -1,7 +1,7 @@
 version: 1
 name: Jenkins Build Farm
 blip:
-  - version: "1.0.0"
+  - version: "1.0"
     ring: ADOPT
 description: |
   The [Jenkins Build Farm](https://jenkins.extenda.se) is a container-based, elastic build farm maintained by

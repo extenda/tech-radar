@@ -1,7 +1,7 @@
 version: 1
 name: Apache Maven
 blip:
-  - version: "1.1.0"
+  - version: "2.0"
     ring: ADOPT
 description: |
   Apache Maven is a build tool and dependency manager for JVM languages such as
