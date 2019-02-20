@@ -1,0 +1,44 @@
+name: radar-entry
+desc: Schema for the radar entries
+type: map
+mapping:
+  "version":
+    type: int
+  "name":
+    type: str
+    required: yes
+  "shortname":
+    type: str
+  "active":
+    type: bool
+  "blip":
+    type: seq
+    sequence:
+      - type: map
+        mapping:
+          "version":
+            type: str
+            required: yes
+            pattern: ^\d+\.\d+$
+          "ring":
+            type: str
+            required: yes
+            enum: [ADOPT, TRIAL, ASSSESS, HOLD]
+  "description":
+    type: str
+    required: yes
+  "rationale":
+    type: str
+    required: yes
+  "related":
+    type: seq
+    sequence:
+      - type: map
+        mapping:
+          "name":
+            type: str
+            required: yes
+          "file":
+            type: str
+            required: yes
+            pattern: \.html$

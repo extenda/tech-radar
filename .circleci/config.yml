@@ -1,0 +1,101 @@
+version: 2.1
+commands:
+  npm_install:
+    steps:
+      - restore_cache:
+          keys:
+            - &node_key node-v1-{{ checksum "package-lock.json" }}
+            - node-v1
+      - run: npm install
+      - save_cache:
+          key: *node_key
+          paths:
+            - node_modules
+  build_docker:
+    steps:
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Build Docker image
+          command: docker build --squash -t extenda/tech-radar:$CIRCLE_SHA1 .
+
+jobs:
+  yamllint:
+    docker:
+      - image: circleci/python
+    working_directory: ~/workspace
+    steps:
+      - checkout
+      - restore_cache:
+          key: &pip-key pip-v1-{{ arch }}
+      - run:
+          name: Pip install
+          command: |
+            pip install --user yamllint
+            pip install --user pykwalify
+      - save_cache:
+          key: *pip-key
+          paths:
+            - ~/.local/bin
+      - run:
+          name: YAML lint
+          command: ~/.local/bin/yamllint radar/*
+      - run:
+          name: Schema validation
+          command: python .scripts/validate_yaml.py
+
+  build:
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/workspace
+    steps:
+      - checkout
+      - npm_install
+      - run:
+          name: Build radar
+          command: npm run build
+      - build_docker
+
+  dockerhub:
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/workspace
+    steps:
+      - checkout
+      - npm_install
+      - run:
+          name: Set build version
+          command: |
+            git config user.name "CircleCI"
+            git config user.email "circleci@circleci.com"
+            sh bin/bump-version.sh
+      - run:
+          name: Build radar
+          command: npm run build
+      - build_docker
+      - run:
+          name: Login on DockerHub
+          command: echo "$DOCKER_PASSWORD" | docker login --username $DOCKER_USER --password-stdin
+      - run:
+          name: Deploy to DockerHub
+          command: |
+            TAG=$(node -p "require('./package.json').version")
+            docker tag extenda/tech-radar:$CIRCLE_SHA1 extenda/tech-radar:$TAG
+            docker tag extenda/tech-radar:$CIRCLE_SHA1 extenda/tech-radar:latest
+            docker push extenda/tech-radar:$TAG
+            docker push extenda/tech-radar:latest
+
+workflows:
+  version: 2
+  tech_radar:
+    jobs:
+      - yamllint
+      - build:
+          requires:
+            - yamllint
+      - dockerhub:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
