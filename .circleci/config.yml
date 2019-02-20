@@ -30,19 +30,17 @@ jobs:
           key: &pip-key pip-v1-{{ arch }}
       - run:
           name: Pip install
-          command: |
-            pip install --user yamllint
-            pip install --user pykwalify
+          command: pip install --user -r .scripts/python_requirements.txt
       - save_cache:
           key: *pip-key
           paths:
             - ~/.local/bin
       - run:
           name: YAML lint
-          command: ~/.local/bin/yamllint radar/*
+          command: python .scripts/yaml_lint.py
       - run:
           name: Schema validation
-          command: python .scripts/validate_yaml.py
+          command: python .scripts/yaml_validate.py
 
   build:
     docker:

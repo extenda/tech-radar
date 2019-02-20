@@ -8,7 +8,9 @@
     "clean": "node bin/builder.js --clean",
     "docker": "docker run --rm -it -p 3000:80 tech-radar",
     "start": "node index.js",
-    "validate": "node bin/blip-validator.js",
+    "pip:install": "pip install --user -r .scripts/python_requirements.txt",
+    "yaml:lint": "python .scripts/yaml_lint.py",
+    "yaml:validate": "python .scripts/yaml_validate.py",
     "bump-version": "sh bin/bump-version.sh"
   },
   "repository": {

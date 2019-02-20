@@ -6,30 +6,33 @@ mapping:
     type: int
   "name":
     type: str
-    required: yes
+    required: true
+  "logo":
+    type: str
   "shortname":
     type: str
   "active":
     type: bool
   "blip":
     type: seq
+    required: true
     sequence:
       - type: map
         mapping:
           "version":
             type: str
-            required: yes
+            required: true
             pattern: ^\d+\.\d+$
           "ring":
             type: str
-            required: yes
-            enum: [ADOPT, TRIAL, ASSSESS, HOLD]
+            required: true
+            enum: [ADOPT, TRIAL, ASSESS, HOLD]
   "description":
     type: str
-    required: yes
+    required: true
   "rationale":
     type: str
-    required: yes
+    required: true
   "related":
     type: seq
     sequence:
@@ -37,8 +40,8 @@ mapping:
         mapping:
           "name":
             type: str
-            required: yes
+            required: true
           "file":
             type: str
-            required: yes
-            pattern: \.html$
+            required: true
+            pattern: .*\.html$
