@@ -71,7 +71,7 @@ jobs:
       - run:
           name: Deploy to DockerHub
           command: |
-            TAG=$(node -p "require('./package.json').version")
+            TAG=v$(node -p "require('./package.json').version")
             docker tag extenda/tech-radar:$CIRCLE_SHA1 extenda/tech-radar:$TAG
             docker tag extenda/tech-radar:$CIRCLE_SHA1 extenda/tech-radar:latest
             docker push extenda/tech-radar:$TAG
