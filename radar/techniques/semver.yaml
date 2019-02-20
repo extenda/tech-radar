@@ -5,7 +5,8 @@ blip:
   - version: "1.0"
     ring: ADOPT
 description: |
-  In short, [semantic versioning](https://semver.org) is a versioning scheme where the following rules govern how versions change:
+  In short, [semantic versioning](https://semver.org) is a versioning scheme where
+  the following rules govern how versions change:
 
   > Given a version number MAJOR.MINOR.PATCH, increment the:
   > 1. MAJOR version when you make incompatible API changes,
@@ -20,4 +21,5 @@ rationale: |
     * A MINOR upgrade will introduce new functionality which may need to be configured, but nothing should break
     * A PATCH upgrade only contains bug fixes to existing features
 
-  Extenda Retail's [product versioning policy](https://docs.extenda.se/display/DEV/Product+versioning+policy) dictates that all software projects must use semantic versioning.
+  Extenda Retail's [product versioning policy](https://docs.extenda.se/display/DEV/Product+versioning+policy)
+  dictates that all software projects must use semantic versioning.
