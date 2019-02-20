@@ -52,7 +52,7 @@ For this project, use one of the follow values for **type**:
   - **fix**: A fix to existing radar content
   - **docs**: Documentation change, not related to radar content
   - **style**: Changes that do not affect the meaning of code (white-space, formatting)
-  - **perf**: A major, incompatible code change
+  - **perf**: A code change that improves performance
   - **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
 
 All commit messages in `master` should define type **type** of change. For changes to the radar contents, use:
