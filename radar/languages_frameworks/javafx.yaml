@@ -20,7 +20,7 @@ rationale: |
   should _not_ migrate to Java FX. Instead, consider swithing to a thin-client
   architecture.
 related:
-  - name: React.js
-    file: reactjs.html
-  - name: Vue.js
-    file: vuejs.html
+  - name: React
+    file: react.html
+  - name: Vue
+    file: vue.html
