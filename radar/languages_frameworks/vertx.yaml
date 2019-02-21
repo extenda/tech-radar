@@ -1,0 +1,25 @@
+version: 1
+name: Vert.x
+logo: https://vertx.io/assets/logo-sm.png
+blip:
+  - version: "1.0"
+    ring: TRIAL
+description: |
+  Eclipse Vert.x is a polyglot event-driven application framework that runs on the
+  Java Virtual Machine.
+
+  Vert.x contains several different components designed to make it easier for
+  you to write compelling reactive applications in a range of different languages.
+  It is a compelling approach to writing microservices!
+
+  As of version 3.6.0, Vert.x exposes its API in Java, JavaScript, Groovy, Ruby,
+  Scala, Kotlin and Ceylon.
+rationale: |
+  Vert.x is a very effective, highly performant framework where focus is on writing
+  small isolated classes that communicates via a shared bus; EventBus.
+  It has less "structure" than Spring Boot applications, in that it supplies
+  a set of tools and you are free to use them in the way you like.
+
+  It shares a lot of similarities with NodeJS; event loop, callbacks to name a few.
+
+  The Golden Rule; _"Don't Block the Event Loop"_
