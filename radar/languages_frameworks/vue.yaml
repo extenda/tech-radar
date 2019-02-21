@@ -7,5 +7,6 @@ blip:
 description: |
   Vue.js is an open-source JavaScript framework for building user interfaces and single-page applications.
 rationale: |
-  We currently use Vue as part of the NativeScript implementation in mobilepos-android. It's well suitable for single page apps
-  and comes with most of the parts needed, and what's not included usually has strict recommendations.
+  We currently use Vue as part of the NativeScript implementation in mobilepos-android.
+  It's well suitable for single page appsand comes with most of the parts needed,
+  and what's not included usually has strict recommendations.

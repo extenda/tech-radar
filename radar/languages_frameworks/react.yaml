@@ -5,8 +5,10 @@ blip:
   - version: "2.0"
     ring: TRIAL
 description: |
-  React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.
+  React is a JavaScript library for building user interfaces. It is maintained by
+  Facebook and a community of individual developers and companies.
   React can be used as a base in the development of single-page or mobile applications.
 rationale: |
-  We currently use React for prototyping the next POS client. React has many benefits over other frameworks in that it only focuses on the UI and
-  enforces strict, small and testable components.
+  We currently use React for prototyping the next POS client. React a big benefit
+  over other frameworks in that it only focuses on the UI and enforces strict,
+  small and testable components.
