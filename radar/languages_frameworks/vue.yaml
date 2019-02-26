@@ -2,7 +2,7 @@ version: 1
 name: Vue
 logo: https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg
 blip:
-  - version: "2.0"
+  - version: "2.2"
     ring: TRIAL
 description: |
   Vue.js is an open-source JavaScript framework for building user interfaces and single-page applications.

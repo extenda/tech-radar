@@ -2,7 +2,7 @@ version: 1
 name: React
 logo: https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg
 blip:
-  - version: "2.0"
+  - version: "2.2"
     ring: TRIAL
 description: |
   React is a JavaScript library for building user interfaces. It is maintained by
