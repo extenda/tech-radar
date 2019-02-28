@@ -1,7 +1,7 @@
 version: 1
 name: Kubernetes
 blip:
-  - version: "2.0"
+  - version: "2.3"
     ring: ADOPT
 description: |
   Kubernetes is a tool that enhances the capabilities of containers to create an easy configurable
@@ -11,9 +11,9 @@ description: |
   called "Minikube" useful for testing Kubernetes locally.
 rationale: |
   As a lot of development is progressing towards micro-services Kubernetes goes hand
-  in hand towards this goal. successfully configuring Kubernetes with micro-services
+  in hand towards this goal. successfully configuring Kubernetes with microservices
   would lead to near 100% uptime with lots of automatic functionality and therefore
   reducing resources needed for maintaining the up status of an organizations services.
 related:
-  - name: Docker
-    file: Docker.html
+  - name: docker
+    file: docker.html
