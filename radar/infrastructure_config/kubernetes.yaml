@@ -3,10 +3,10 @@ name: Kubernetes
 blip:
   - version: "2.0"
     ring: ADOPT
-description: |  
+description: |
   Kubernetes is a tool that enhances the capabilities of containers to create an easy configurable 
   environment with scalability. This will allow for automatic processing such as CI/CD pipelines
-  and noOps environments. 
+  and noOps environments.
   Kubernetes is mainly used for cloud functionality there is however a local version
   called "Minikube" useful for testing Kubernetes locally.
 rationale: |
