@@ -1,0 +1,21 @@
+version: 1
+name: Angular
+logo: https://angular.io/assets/images/logos/angular/angular.svg
+blip:
+  - version: "2.3"
+    ring: HOLD
+description: |
+  Angular is a development platform for building mobile and desktop web applications using
+  Typescript/JavaScript and other languages.
+rationale: |
+  Angular doesn't give us any benefits over current frameworks ([React](react.html) and [Vue](vue.html))
+  being used. Angular projects should be written using TypeScript and for that to make sense all our
+  JavaScript should use TypeScript to enable easy code reuse and competence sharing. We currently do not use
+  TypeScript.
+related:
+  - name: AngularJS
+    file: angularjs.html
+  - name: React
+    file: react.html
+  - name: Vue
+    file: vue.html
