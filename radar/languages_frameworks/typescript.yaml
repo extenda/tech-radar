@@ -2,7 +2,7 @@ version: 1
 name: TypeScript
 logo: https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png
 blip:
-  - version: "2.3"
+  - version: "2.4"
     ring: TRIAL
 description: |
   TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.

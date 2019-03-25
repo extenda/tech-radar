@@ -2,7 +2,7 @@ version: 1
 name: Angular
 logo: https://angular.io/assets/images/logos/angular/angular.png
 blip:
-  - version: "2.3"
+  - version: "2.4"
     ring: ADOPT
 description: |
   Angular is a platform for building mobile and desktop web applications.
