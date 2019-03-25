@@ -2,13 +2,17 @@ version: 1
 name: React
 logo: https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg
 blip:
-  - version: "2.2"
-    ring: TRIAL
+  - version: "2.3"
+    ring: ADOPT
 description: |
   React is a JavaScript library for building user interfaces. It is maintained by
   Facebook and a community of individual developers and companies.
-  React can be used as a base in the development of single-page or mobile applications.
 rationale: |
-  We currently use React for prototyping the next POS client. React a big benefit
-  over other frameworks in that it only focuses on the UI and enforces strict,
-  small and testable components.
+  React allows for light weight component based UI's, like POS clients. React is currently being
+  used in the new POS client, sharing code between React Native for mobile clients and Electron
+  for desktop.
+related:
+  - name: Angular
+    file: angular.html
+  - name: TypeScript
+    file: typescript.html

@@ -1,0 +1,16 @@
+version: 1
+name: TypeScript
+logo: https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png
+blip:
+  - version: "2.3"
+    ring: TRIAL
+description: |
+  TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
+rationale: |
+  For Angular projects TypeScript is a requirement, this blip is for React projects
+  using TypeScript.
+related:
+  - name: React
+    file: react.html
+  - name: Angular
+    file: angular.html
