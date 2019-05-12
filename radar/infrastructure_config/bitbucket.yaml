@@ -15,7 +15,8 @@ description: |
   marketed its services to professional developers with private proprietary
   software code, especially since being acquired by Atlassian in 2010. In
   February 2017, Bitbucket announced it had reached 6 million developers and 1
-  million teams on its platform. In April 2019 Atlassian announced that Bitbucket reached 10 million registered users and over 28 million repositories.
+  million teams on its platform.
+  In April 2019 Atlassian announced that Bitbucket reached 10 million registered users and over 28 million repositories.
 rationale: |
   We have standardized on GIT and Jira, so this is the repository chosen for
   Retail Suite. With its nice integration to Jira it offers the functionality
