@@ -1,0 +1,9 @@
+version: 1
+name: Redis
+blip:
+  - version: "1.0"
+    ring: TRIAL
+description: |
+  Redis is open source, in-memory data structure store, used as a database, cache or message broker, offering built-in replication. Most standard operation has time complexity O(1).
+rationale: |
+  Consider Redis when there's need of data caching, fast lookup or session handling.
