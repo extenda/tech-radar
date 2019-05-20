@@ -14,5 +14,5 @@ rationale: |
   To be able to achieve speed in development we need to reduce time spent on common resources for each microservice.
   By using Istio we can spend less time on infrastructure and more time on business logic.
 related:
-  - name: kubernetes
+  - name: Kubernetes
     file: kubernetes.html
