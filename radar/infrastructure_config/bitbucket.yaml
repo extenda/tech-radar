@@ -1,7 +1,7 @@
 version: 1
 name: Atlassian BitBucket
 blip:
-  - version: "2.5"
+  - version: "2.6"
     ring: ADOPT
 description: |
   Bitbucket is a web-based version control repository hosting service owned by
