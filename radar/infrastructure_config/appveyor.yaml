@@ -1,0 +1,17 @@
+version: 1
+name: Appveyor
+blip:
+  - version: "1.0"
+    ring: ASSESS
+description: |
+  Appveyor is an elastic SaaS CI/CD platform focused on the Microsoft development ecosystem. It's based on dockerized
+  ephemeral builds configured with `appveyor.yml` files following the [pipelines as code](pipelines_as_code.html)
+  principles.
+rationale: |
+  Appveyor is evaulated as an alternative to in-house Jenkins and TeamCity servers. Using a service such as Appveyor
+  would mean Extenda Retail no longer needs to maintain TeamCity and Jenkins CI servers and build agents, which present
+  significant adminstrative burden to run reliably at scale.
+
+related:
+  - name: Jenkins Build Farm
+    file: jenkins_aws.html
