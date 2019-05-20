@@ -1,11 +1,11 @@
-const fs = require('fs-extra')
-const klawSync = require('klaw-sync')
-const path = require('path')
-const yaml = require('yaml')
-const handlebars = require('handlebars')
-const md = require('markdown-it')()
-const radarModel = require('./radarmodel')
-const semver = require('semver')
+const fs = require('fs-extra');
+const klawSync = require('klaw-sync');
+const path = require('path');
+const yaml = require('yaml');
+const handlebars = require('handlebars');
+const md = require('markdown-it')();
+const radarModel = require('./radarmodel');
+const semver = require('semver');
 
 if (!Array.prototype.last) {
   Array.prototype.last = function() {
@@ -17,52 +17,52 @@ if (!Array.prototype.last) {
 function buildRadar(outputDir, radarDir, version, creationDate = new Date()) {
 
   // Ensure directories exist
-  fs.mkdirsSync(outputDir)
-  fs.mkdirSync(path.join(outputDir, 'entries'))
+  fs.mkdirsSync(outputDir);
+  fs.mkdirSync(path.join(outputDir, 'entries'));
 
-  handlebars.registerPartial('footer', handlebars.compile(fs.readFileSync('src/templates/footer.hbs', 'utf8')))
-  handlebars.registerHelper('markdown', value => md.render(value))
+  handlebars.registerPartial('footer', handlebars.compile(fs.readFileSync('src/templates/footer.hbs', 'utf8')));
+  handlebars.registerHelper('markdown', value => md.render(value));
 
-  const entryPage = handlebars.compile(fs.readFileSync('src/templates/entry_page.hbs', 'utf8'))
-  const quadrantPage = handlebars.compile(fs.readFileSync('src/templates/quadrant_page.hbs', 'utf8'))
-  const radarPage = handlebars.compile(fs.readFileSync('src/templates/index.hbs', 'utf8'))
+  const entryPage = handlebars.compile(fs.readFileSync('src/templates/entry_page.hbs', 'utf8'));
+  const quadrantPage = handlebars.compile(fs.readFileSync('src/templates/quadrant_page.hbs', 'utf8'));
+  const radarPage = handlebars.compile(fs.readFileSync('src/templates/index.hbs', 'utf8'));
 
-  var radar = radarModel.createModel(version)
-  radar.date = dateFormat(creationDate)
-  radar.radarDir = radarDir
-  radar.outputDir = outputDir
+  var radar = radarModel.createModel(version);
+  radar.date = dateFormat(creationDate);
+  radar.radarDir = radarDir;
+  radar.outputDir = outputDir;
 
-  console.log('Build radar', radar.version)
+  console.log('Build radar', radar.version);
 
-  console.log('  - Entries')
+  console.log('  - Entries');
 
   // Create all the entries pages and collect blips.
   for (var f of klawSync(radar.radarDir, { nodir: true, traverseAll: true, filter: p => path.extname(p.path) === '.yaml' })) {
-    var content = yaml.parse(fs.readFileSync(f.path, 'utf8'))
-    validateYaml(f.path, content)
-    var quadrantIndex = 0
+    var content = yaml.parse(fs.readFileSync(f.path, 'utf8'));
+    validateYaml(f.path, content);
+    var quadrantIndex = 0;
     findQuadrant(radar, f.path, (i, q) => {
-      content.quadrant = q
+      content.quadrant = q;
       quadrantIndex = i
-    })
+    });
 
-    content.title = radar.title
-    content.version = radar.version
-    content.date = dateFormat(creationDate)
+    content.title = radar.title;
+    content.version = radar.version;
+    content.date = dateFormat(creationDate);
 
-    const filename = path.join(outputDir, 'entries', path.basename(f.path, '.yaml') + '.html')
+    const filename = path.join(outputDir, 'entries', path.basename(f.path, '.yaml') + '.html');
 
     radar.quadrants[quadrantIndex][content.blip.last().ring.toLowerCase()].push({
       name: content.name,
       file: path.relative(outputDir, filename)
-    })
+    });
 
-    const blip = createBlip(radar, content, filename, f.path)
+    const blip = createBlip(radar, content, filename, f.path);
     if (blip.active) {
       radar.blips.push(blip)
     }
 
-    content.blip = blip
+    content.blip = blip;
 
     fs.writeFileSync(
       filename,
@@ -71,32 +71,32 @@ function buildRadar(outputDir, radarDir, version, creationDate = new Date()) {
   }
 
   // Create the quadrant index pages.
-  console.log('  - Quadrants')
+  console.log('  - Quadrants');
   for (var q of radar.quadrants) {
-    q.title = radar.title
-    q.version = radar.version
-    q.date = dateFormat(creationDate)
+    q.title = radar.title;
+    q.version = radar.version;
+    q.date = dateFormat(creationDate);
 
-    const sortFn = (a, b) => a.name.localeCompare(b.name)
-    q.adopt.sort(sortFn)
-    q.trial.sort(sortFn)
-    q.assess.sort(sortFn)
-    q.hold.sort(sortFn)
+    const sortFn = (a, b) => a.name.localeCompare(b.name);
+    q.adopt.sort(sortFn);
+    q.trial.sort(sortFn);
+    q.assess.sort(sortFn);
+    q.hold.sort(sortFn);
 
     fs.writeFileSync(path.join(outputDir, q.dirname + '.html'), quadrantPage(q))
   }
 
   // Create the main radar visualization
-  console.log('  - Radar visualization')
+  console.log('  - Radar visualization');
   if (radar.version === '0.0.1-local') {
     adjustBlipMovementForLocalBuild(radar.blips)
   }
-  fs.writeFileSync(path.join(outputDir, 'index.html'), radarPage(radar))
+  fs.writeFileSync(path.join(outputDir, 'index.html'), radarPage(radar));
 
-  if (outputDir == 'build') {
+  if (outputDir === 'build') {
     // Copy static resources
-    console.log('Copy resources')
-    fs.copySync('src/resources', outputDir)
+    console.log('Copy resources');
+    fs.copySync('src/resources', outputDir);
     fs.copySync('src/css', path.join(outputDir, 'css'))
   }
 }
@@ -117,10 +117,10 @@ function adjustBlipMovementForLocalBuild(blips) {
       return current
     }
     return result
-  })
+  });
 
-  const newestMajorMinor = `${newest.major}.${newest.minor}`
-  console.log(`  - devmode: Blip movements recalculated against version ${newestMajorMinor}`)
+  const newestMajorMinor = `${newest.major}.${newest.minor}`;
+  console.log(`  - devmode: Blip movements recalculated against version ${newestMajorMinor}`);
 
   // Now, adjust movements against newest version
   for (var blip of blips) {
@@ -130,10 +130,10 @@ function adjustBlipMovementForLocalBuild(blips) {
 }
 
 function findQuadrant(radar, sourceFile, callback) {
-  const quadrant = path.relative(radar.radarDir, path.dirname(sourceFile))
+  const quadrant = path.relative(radar.radarDir, path.dirname(sourceFile));
   for (const [i, q] of radar.quadrants.entries()) {
     if (q.dirname === quadrant) {
-      callback(i, q)
+      callback(i, q);
       break
     }
   }
@@ -173,19 +173,19 @@ function createBlip(radar, entry, htmlFile, sourceFile) {
     updated: entry.blip.last().version,
     link: path.relative(radar.outputDir, htmlFile),
     active: true
-  }
+  };
 
-  findQuadrant(radar, sourceFile, (i, q) => blip.quadrant = i)
+  findQuadrant(radar, sourceFile, (i, q) => blip.quadrant = i);
 
   if (entry.hasOwnProperty('active')) {
     blip.active = entry.active
   }
 
-  let ringName = entry.blip.last().ring
-  blip.ringName = ringName.charAt(0) + ringName.substr(1).toLowerCase()
+  let ringName = entry.blip.last().ring;
+  blip.ringName = ringName.charAt(0) + ringName.substr(1).toLowerCase();
 
   if (entry.blip.length > 1) {
-    blip.history = []
+    blip.history = [];
     for (var p of entry.blip) {
       blip.history.push({
         version: p.version,
@@ -198,14 +198,14 @@ function createBlip(radar, entry, htmlFile, sourceFile) {
 }
 
 function cleanAll(outputDir) {
-  console.log(`Clean ${outputDir}`)
+  console.log(`Clean ${outputDir}`);
   fs.removeSync(outputDir)
 }
 
 module.exports = {
   build: buildRadar,
   clean: cleanAll
-}
+};
 
 // Command-line entry point.
 process.argv.slice(2).forEach(function(val, index, array) {
@@ -215,4 +215,4 @@ process.argv.slice(2).forEach(function(val, index, array) {
   if (val === '--build') {
     buildRadar('build', 'radar')
   }
-})
+});
