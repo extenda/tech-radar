@@ -1,7 +1,7 @@
 version: 1
 name: Redis
 blip:
-  - version: "1.0"
+  - version: "2.6"
     ring: TRIAL
 description: |
   Redis is open source, in-memory data structure store, used as a database, cache or message broker, offering built-in replication. Most standard operation has time complexity O(1).
