@@ -1,7 +1,6 @@
-version: 1
 name: Kubernetes
 blip:
-  - version: "2.3"
+  - date: 2019-03-04
     ring: ADOPT
 description: |
   Kubernetes is a tool that enhances the capabilities of containers to create an easy configurable

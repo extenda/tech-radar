@@ -1,8 +1,7 @@
-version: 1
 name: Postman
 logo: https://www.getpostman.com/img/v2/logo-mark.svg
 blip:
-  - version: "2.0"
+  - date: 2019-02-20
     ring: ADOPT
 description: |
   Postman is an API testing and development tool. At the core are Postman Collections which

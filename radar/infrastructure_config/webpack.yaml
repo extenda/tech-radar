@@ -1,8 +1,7 @@
-version: 1
 name: Webpack
 logo: https://upload.wikimedia.org/wikipedia/commons/c/c1/Webpack.png
 blip:
-  - version: "2.0"
+  - date: 2019-02-20
     ring: ADOPT
 description: |
   Webpack is a module bundler. Its main purpose is to bundle JavaScript files for

@@ -1,8 +1,7 @@
-version: 1
 name: Git
 logo: https://git-scm.com/images/logos/2color-lightbg@2x.png
 blip:
-  - version: "2.5"
+  - date: 2019-05-15
     ring: ADOPT
 description: |
   Git is a free and open source distributed version control system designed to handle everything

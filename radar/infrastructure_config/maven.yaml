@@ -1,7 +1,6 @@
-version: 1
 name: Apache Maven
 blip:
-  - version: "2.0"
+  - date: 2019-02-20
     ring: ADOPT
 description: |
   Apache Maven is a build tool and dependency manager for JVM languages such as
