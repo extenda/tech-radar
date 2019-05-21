@@ -3,19 +3,16 @@
 const server = require('live-server');
 const watch = require('watch');
 const builder = require('./builder');
-const path = require('path');
+
 const opts = {
   interval: 5,
-  filter: path => {
-    return /^(src|radar)/.test(path);
-  },
+  filter: path => /^(src|radar)/.test(path),
 };
 
-watch.watchTree('.', opts, function(f, curr, prev) {
+watch.watchTree('.', opts, () => {
   console.log('Change detected. Rebuild radar');
   try {
-    builder.clean('build');
-    builder.build('build', 'radar');
+    builder.cleanBuild();
   } catch (e) {
     console.error('Failed to build radar. Will continue to try\n', e);
   }
