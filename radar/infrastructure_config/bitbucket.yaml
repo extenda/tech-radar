@@ -1,0 +1,23 @@
+version: 1
+name: Atlassian BitBucket
+blip:
+  - version: "2.6"
+    ring: ADOPT
+description: |
+  Bitbucket is a web-based version control repository hosting service owned by
+  Atlassian, for source code and development projects that use either Mercurial
+  (since launch) or Git (since October 2011) revision control systems. Bitbucket
+  offers both commercial plans and free accounts. It offers free accounts with
+  an unlimited number of private repositories (which can have up to five users
+  in the case of free accounts) as of September 2010. Bitbucket integrates with
+  other Atlassian software like Jira, HipChat, Confluence and Bamboo. It is
+  similar to GitHub, which primarily uses Git. Bitbucket has traditionally
+  marketed its services to professional developers with private proprietary
+  software code, especially since being acquired by Atlassian in 2010. In
+  February 2017, Bitbucket announced it had reached 6 million developers and 1
+  million teams on its platform.
+  In April 2019 Atlassian announced that Bitbucket reached 10 million registered users and over 28 million repositories.
+rationale: |
+  We have standardized on GIT and Jira, so this is the repository chosen for
+  Retail Suite. With its nice integration to Jira it offers the functionality
+  required for developers. The pricing is USD 2.0 per month per developer.
