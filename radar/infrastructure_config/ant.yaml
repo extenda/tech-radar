@@ -1,7 +1,6 @@
-version: 1
 name: Apache Ant
 blip:
-  - version: "1.0"
+  - date: 2018-03-20
     ring: HOLD
 description: |
   Apache Ant is a build tool designed to replace Make in early 2000. It is

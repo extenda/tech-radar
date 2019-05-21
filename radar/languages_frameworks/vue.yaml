@@ -1,13 +1,11 @@
-version: 1
 name: Vue
 logo: https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg
 blip:
-  - version: "2.2"
+  - date: 2019-02-26
     ring: TRIAL
-  - version: "2.4"
+  - date: 2019-03-29
     ring: HOLD
 description: |
   Vue.js is an open-source JavaScript framework for building user interfaces and single-page applications.
 rationale: |
   After deciding on React and Angular for the frameworks of choice there's no need for Vue.
-

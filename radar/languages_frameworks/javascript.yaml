@@ -1,7 +1,6 @@
-version: 1
 name: JavaScript
 blip:
-  - version: "2.0"
+  - date: 2019-02-20
     ring: ADOPT
 description: |
   JavaScript, often abbreviated as JS, is a high-level, interpreted programming language.
