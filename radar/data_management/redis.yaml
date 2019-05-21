@@ -1,7 +1,6 @@
-version: 1
 name: Redis
 blip:
-  - version: "2.6"
+  - date: 2019-05-21
     ring: TRIAL
 description: |
   Redis is open source, in-memory data structure store, used as a database, cache or message broker,

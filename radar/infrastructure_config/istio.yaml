@@ -1,8 +1,7 @@
-version: 1
 name: Istio
 logo: https://istio.io/img/istio-bluelogo-whitebackground-framed.svg
 blip:
-  - version: "2.6"
+  - date: 2019-05-21
     ring: ASSESS
 description: |
   Cloud platforms provide a wealth of benefits for the organizations that use them.
@@ -14,5 +13,4 @@ rationale: |
   To be able to achieve speed in development we need to reduce time spent on common resources for each microservice.
   By using Istio we can spend less time on infrastructure and more time on business logic.
 related:
-  - name: Kubernetes
-    file: kubernetes.html
+  - infrastructure_config/kubernetes.yaml
