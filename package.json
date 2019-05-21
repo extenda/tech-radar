@@ -5,8 +5,9 @@
   "description": "Generator for Extenda Retail Technology Radar",
   "main": "src/js/index.js",
   "scripts": {
-    "build": "node src/js/builder.js --clean --build",
-    "clean": "node src/js/builder.js --clean",
+    "build": "node -e \"require('./src/js/builder').cleanBuild()\"",
+    "clean": "node -e \"require('./src/js/builder').clean()\"",
+    "lint:js": "eslint src",
     "start": "node src/js/index.js",
     "pip:install": "pip install --user -r .scripts/python_requirements.txt",
     "yaml:lint": "python .scripts/yaml_lint.py",
@@ -20,9 +21,7 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/extenda/tech-radar#readme",
-  "devDependencies": {
-    "conventional-changelog-angular": "^5.0.2",
-    "conventional-recommended-bump": "^4.0.4",
+  "dependencies": {
     "fs-extra": "^7.0.1",
     "handlebars": "^4.1.0",
     "klaw-sync": "^6.0.0",
@@ -31,7 +30,29 @@
     "semver": "^5.6.0",
     "util": "^0.11.1",
     "watch": "^1.0.2",
-    "yaml": "^1.0.2",
-    "yaml-validator": "^2.0.0"
-  }
+    "yaml": "^1.0.2"
+  },
+  "devDependencies": {
+    "conventional-changelog-angular": "^5.0.2",
+    "conventional-recommended-bump": "^4.0.4",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "airbnb-base"
+    ],
+    "rules": {
+      "no-console": "off",
+      "no-restricted-syntax": "off"
+    }
+  },
+  "eslintIgnore": [
+    "src/resources/lib/**"
+  ]
 }

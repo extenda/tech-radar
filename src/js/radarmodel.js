@@ -1,39 +1,34 @@
 const util = require('util');
 const packageVersion = require('../../package.json').version;
-const semver = require('semver');
 
 // Tech radar object model. Used by the builder.
 module.exports = {
-  createModel: function(version) {
-    let radarVersion = version || packageVersion;
-    let semVersion = semver.coerce(radarVersion);
-    var radar = {
+  createModel: () => {
+    const radar = {
       title: 'Extenda Retail Tech Radar',
-      version: radarVersion,
-      majorMinorVersion: `${semVersion.major}.${semVersion.minor}`,
+      version: packageVersion,
 
       // Quadrants in the radar visualization order.
       quadrants: [
         {
           dirname: 'techniques',
-          name: 'Techniques'
+          name: 'Techniques',
         },
         {
           dirname: 'infrastructure_config',
-          name: 'Infrastructure & Configuration'
+          name: 'Infrastructure & Configuration',
         },
         {
           dirname: 'languages_frameworks',
-          name: 'Languages & Frameworks'
+          name: 'Languages & Frameworks',
         },
         {
           dirname: 'data_management',
-          name: 'Data Management'
+          name: 'Data Management',
         },
       ],
-
       // Quadrants in the order we want them in the navbar.
-      quadrantsNavigation: function() {
+      quadrantsNavigation: function quadrantsNavigation() {
         return [
           this.quadrants[2],
           this.quadrants[3],
@@ -41,7 +36,6 @@ module.exports = {
           this.quadrants[0],
         ];
       },
-
       rings: [
         'ADOPT',
         'TRIAL',
@@ -49,17 +43,17 @@ module.exports = {
         'HOLD',
       ],
       blips: [],
-      entries: function() {
+      entries: function entries() {
         return util.inspect(this.blips);
-      }
+      },
     };
 
-    for (var q of radar.quadrants) {
+    for (const q of radar.quadrants) {
       q.adopt = [];
       q.assess = [];
       q.trial = [];
       q.hold = [];
-    };
+    }
 
     return radar;
   },
