@@ -16,7 +16,5 @@ rationale:
   remove it. Apache Ant was never a general-purpose scripting language and is not
   ment to be available in production.
 related:
-  - name: Apache Maven
-    file: maven.html
-  - name: Gradle
-    file: gradle.html
+  - infrastructure_config/maven.yaml
+  - infrastructure_config/gradle.yaml

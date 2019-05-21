@@ -13,5 +13,4 @@ rationale: |
   However, CircleCI is *not* compatible with `Jenkinsfile`s and currently can't
   access in-house resources such as the Nexus repository or SonarQube.
 related:
-  - name: Jenkins Build Farm
-    file: jenkins_aws.html
+  - infrastructure_config/jenkins_aws.yaml

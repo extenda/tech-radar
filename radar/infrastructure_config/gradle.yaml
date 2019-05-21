@@ -16,7 +16,5 @@ rationale:
   example where it _is_ a better fit is Android, because the Google preferred
   build platform for Android is Gradle.
 related:
-  - name: Apache Ant
-    file: ant.html
-  - name: Apache Maven
-    file: maven.html
+  - infrastructure_config/ant.yaml
+  - infrastructure_config/maven.yaml

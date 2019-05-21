@@ -14,5 +14,4 @@ rationale: |
   would lead to near 100% uptime with lots of automatic functionality and therefore
   reducing resources needed for maintaining the up status of an organizations services.
 related:
-  - name: docker
-    file: docker.html
+  - infrastructure_config/docker.yaml

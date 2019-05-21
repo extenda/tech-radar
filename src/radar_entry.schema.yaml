@@ -33,12 +33,5 @@ mapping:
   "related":
     type: seq
     sequence:
-      - type: map
-        mapping:
-          "name":
-            type: str
-            required: true
-          "file":
-            type: str
-            required: true
-            pattern: .*\.html$
+      - type: str
+        pattern: .*\.yaml$

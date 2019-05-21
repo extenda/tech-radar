@@ -10,5 +10,4 @@ rationale: |
   REST services with Jersey and JAX-RS 1.x. Use other frameworks that supports
   asynchrous requests.
 related:
-  - name: Spring Boot 2
-    file: spring_boot2.html
+  - languages_frameworks/spring_boot2.yaml

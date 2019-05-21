@@ -13,7 +13,5 @@ rationale: |
   All teams should move away from manually configured pipeliens. Treat your
   build pipeline as code, for example in a `Jenkinsfile`.
 related:
-  - name: Jenkins AWS
-    file: jenkins_aws.html
-  - name: CircleCI
-    file: circleci.html
+  - infrastructure_config/jenkins_aws.yaml
+  - infrastructure_config/circleci.yaml

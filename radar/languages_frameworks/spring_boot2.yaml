@@ -22,9 +22,6 @@ rationale: |
   out there. If you're going for reactive paradigms, you may find that other
   frameworks such as [Vert.x](vertx.html) serves you better.
 related:
-  - name: NodeJS
-    file: nodejs.html
-  - name: Spring Framework
-    file: spring_framework.html
-  - name: Vert.x
-    file: vertx.html
+  - languages_frameworks/nodejs.yaml
+  - languages_frameworks/spring_framework.yaml
+  - languages_frameworks/vertx.yaml

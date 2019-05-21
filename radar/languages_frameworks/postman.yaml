@@ -15,5 +15,4 @@ rationale: |
   Our main interest in Postman at the moment is as a testing platform and an IDE
   to help during development. We don't see it as a source for documenting our APIs.
 related:
-  - name: OpenAPI (Swagger)
-    file: openapi.html
+  - languages_frameworks/openapi.yaml

@@ -18,7 +18,5 @@ rationale: |
   It also lacks a way to share contract definitions in other ways than dependency
   management through a repository.
 related:
-  - name: Consumer Contract Testing
-    file: consumer_contract_testing.html
-  - name: Spring Boot 2
-    file: spring_boot2.html
+  - techniques/consumer_contract_testing.yaml
+  - languages_frameworks/spring_boot2.yaml
