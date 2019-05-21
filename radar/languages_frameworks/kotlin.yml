@@ -1,5 +1,6 @@
 version: 1
 name: Kotlin
+blip:
   - version: "2.6"
     ring: ADOPT
 description: |

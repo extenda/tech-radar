@@ -15,7 +15,8 @@ description: |
   It also includes many features that make it cloud-native friendly such as service discovery
   and circuit breaking.
 rationale:
-  Powerful framework with very low runtime cost. Can run on a 10 MB heap using Java/Kotlin, and is very well suited for microservices. 
+  Powerful framework with very low runtime cost. Can run on a 10 MB heap using Java/Kotlin,
+  and is very well suited for microservices.
 related:
   - name: Java
     file: java.html
