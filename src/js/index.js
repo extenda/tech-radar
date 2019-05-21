@@ -7,7 +7,7 @@ const path = require('path');
 const opts = {
   interval: 5,
   filter: path => {
-    return /^(src|radar)/.test(path)
+    return /^(src|radar)/.test(path);
   },
 };
 
@@ -27,5 +27,5 @@ server.start({
   watch: 'build',
   open: false,
   wait: 1000,
-  logLevel: 0
+  logLevel: 0,
 });
