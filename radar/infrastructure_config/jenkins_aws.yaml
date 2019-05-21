@@ -13,5 +13,4 @@ rationale: |
   or [SonarQube](https://sonar.extenda.io) the Jenkins Build Farm is the
   best CI/CD platform that can be used.
 related:
-  - name: CircleCI
-    file: circleci.html
+  - infrastructure_config/circleci.yaml

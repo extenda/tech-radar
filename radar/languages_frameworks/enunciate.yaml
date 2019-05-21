@@ -10,5 +10,4 @@ rationale: |
   Avoid Enunciate as it hasn't taken of, doesn't include any formal specification
   and is inferior in tooling compared to Open API (Swagger).
 related:
-  - name: OpenAPI (Swagger)
-    file: openapi.html
+  - languages_frameworks/openapi.yaml

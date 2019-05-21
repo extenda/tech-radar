@@ -18,7 +18,5 @@ rationale: |
   With the exception of Extenda Retail POS all POS solution products are built
   with Maven.
 related:
-  - name: Apache Ant
-    file: ant.html
-  - name: Gradle
-    file: gradle.html
+  - infrastructure_config/ant.yaml
+  - infrastructure_config/gradle.yaml
