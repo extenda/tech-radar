@@ -1,7 +1,6 @@
-version: 1
 name: Cake
 blip:
-  - version: "1.0"
+  - date: 2019-05-21
     ring: ASSESS
 description: |
   Cake (C# Make) is a cross-platform build automation system with a C# DSL for tasks such as compiling code, copying
@@ -12,7 +11,5 @@ rationale: |
   NuGet, ILMerge, WiX and SignTool out of the box.
 
 related:
-  - name: Apache Maven
-    file: maven.html
-  - name: Gradle
-    file: gradle.html
+  - infrastructure_config/maven.yaml
+  - infrastructure_config/gradle.yaml
