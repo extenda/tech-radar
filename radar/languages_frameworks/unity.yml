@@ -1,0 +1,10 @@
+version: 1
+name: Unity
+blip:
+  - version: "2.6"
+    ring: ADOPT
+description: |
+  Unity container is an open source IoC container for .NET applications supported by Microsoft. It is a lightweight and extensible IoC container.
+related:
+  - name: LinFu
+    file: linfu.html

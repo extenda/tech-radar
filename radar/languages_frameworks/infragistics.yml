@@ -1,0 +1,12 @@
+version: 1
+name: Infragistics
+blip:
+  - version: "2.6"
+    ring: ASSESS
+description: |
+  Fast and beautiful UI controls and time-saving tools for developers and UX pros
+rationale:
+  Extensive UI component package for building Angular apps using the Ignite UI for Angular, including the fastest Angular data grid on the marked
+related:
+  - name: DevExpress
+    file: devexpress.html

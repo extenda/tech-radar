@@ -1,0 +1,9 @@
+version: 1
+name: Moq
+blip:
+  - version: "2.6"
+    ring: ADOPT
+description: |
+  Moq is a mocking framework for C#/.NET. It is used in unit testing to isolate your class under test from its dependencies and ensure that the proper methods on the dependent objects are being called. For more information on mocking you may want to look at the Wikipedia article on Mock Objects
+rationale:
+  We want to enable developers to use mocking when testing. 

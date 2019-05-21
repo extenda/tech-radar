@@ -1,0 +1,12 @@
+version: 1
+name: Elastic Machine Learning
+blip:
+  - version: "2.6"
+    ring: ASSESS
+description: |
+  Addon to Kibana to leverage machine learning algorithms to anticipate expected results and find data outliers.
+rationale:
+  Machine learning for identifying patterns in data located in ElasticSearch. It can be used to analyze several different sources and find outliers and patterns and ot identify anomalies across many different sources.
+related:
+  - name: Kibana
+    file: kibana.html

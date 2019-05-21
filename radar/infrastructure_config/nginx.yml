@@ -1,0 +1,14 @@
+version: 1
+name: Nginx
+blip:
+  - version: "2.6"
+    ring: ASSESS
+description: |
+  [nginx](https://www.nginx.com/) is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
+rationale:
+  We need to look into reverse proxies and load balancers. The product/service should be easy to setup and use regardless of k8s or Docker.
+related:
+  - name: Traefik
+    file: traefik.html
+  - name: HAProxy
+    file: haproxy.html

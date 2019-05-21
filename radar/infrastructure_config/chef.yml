@@ -1,0 +1,14 @@
+version: 1
+name: Chef
+blip:
+  - version: "2.6"
+    ring: ASSESS
+description: |
+  [Chef](https://www.chef.io/) is a configuration management tool written in Ruby and Erlang.
+rationale:
+  We need to look into configuration management tools.
+related:
+  - name: Ansible
+    file: ansible.html
+  - name: Puppet
+    file: puppet.html

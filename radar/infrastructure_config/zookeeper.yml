@@ -1,0 +1,16 @@
+version: 1
+name: ZooKeeper
+blip:
+  - version: "2.6"
+    ring: ASSESS
+description: |
+  [ZooKeeper](https://zookeeper.apache.org/) is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services.
+rationale:
+  We need to take a closer look into how to store and manage configuration etc. ZooKeeper is one of the options.
+related:
+  - name: Consul
+    file: consul.html
+  - name: etcd
+    file: etcd.html
+  - name: Kafka
+    file: kafka.html

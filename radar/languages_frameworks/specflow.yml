@@ -1,0 +1,12 @@
+version: 1
+name: SpecFlow
+blip:
+  - version: "2.6"
+    ring: ADOPT
+description: |
+  [SpecFlow](https://specflow.org/) is a testing framework which supports Behaviour Driven Development (BDD). It lets us define application behaviour in plain meaningful English text using a simple grammar defined by a language called Gherkin.
+rationale:
+  Enables QA Engineers to test WebAPIs
+related:
+  - name: Selenium
+    file: selenium.html

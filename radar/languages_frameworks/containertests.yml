@@ -1,0 +1,12 @@
+version: 1
+name: ContainerTests
+blip:
+  - version: "2.6"
+    ring: TRIAL
+description: |
+  Library for handling containerized test-databases with a simple API. Prerequisite: Docker must be installed locally. If the database image is not found, the library will download these while running the tests.
+rationale:
+  Enabling integration testing where we can run required services and infrastructure in containers. This will enable a stabile sandbox environment for every test run.
+related:
+  - name: Ductus.FluentDocker
+    file: ductus_fluentdocker.html
