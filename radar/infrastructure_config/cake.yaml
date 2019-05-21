@@ -1,0 +1,18 @@
+version: 1
+name: Cake
+blip:
+  - version: "1.0"
+    ring: ASSESS
+description: |
+  Cake (C# Make) is a cross-platform build automation system with a C# DSL for tasks such as compiling code, copying
+  files and folders, running unit tests, compressing files and building NuGet packages.
+rationale: |
+  Regardless if you're building on your own machine, or building on a CI system, Cake is built to behave in the same
+  way. Cake supports the most common tools used during builds such as MSBuild, .NET Core CLI, MSTest, xUnit, NUnit,
+  NuGet, ILMerge, WiX and SignTool out of the box.
+
+related:
+  - name: Apache Maven
+    file: maven.html
+  - name: Gradle
+    file: gradle.html
