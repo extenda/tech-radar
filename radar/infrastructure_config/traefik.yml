@@ -6,7 +6,8 @@ blip:
 description: |
   [traefik](https://traefik.io/) is a reverse proxy / load balancer.
 rationale:
-  We need to look into reverse proxies and load balancers. The product/service should be easy to setup and use regardless of k8s or Docker.
+  We need to look into reverse proxies and load balancers.
+  The product/service should be easy to setup and use regardless of k8s or Docker.
 related:
   - name: Nginx
     file: nginx.html

@@ -4,6 +4,9 @@ blip:
   - version: "2.6"
     ring: ADOPT
 description: |
-  NET Core is a free and open-source managed computer software framework for the Windows, Linux, and macOS operating systems.
+  NET Core is a free and open-source managed computer software framework for the Windows,
+  Linux, and macOS operating systems.
 rationale:
-  Enabling us to make Web APIs/microservises that can run on Linux and Windows. It also enables containerization of said APIs/microservices.
+  Enabling us to make Web APIs/microservises that can run on Linux and Windows.
+  It also enables containerization of said APIs/microservices.
+

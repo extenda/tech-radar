@@ -4,7 +4,8 @@ blip:
   - version: "2.6"
     ring: ADOPT
 description: |
-  [BitBucket](https://bitbucket.org/) is a web-based version control repository hosting service owned by Atlassian, for source code and development projects that use either Mercurial or Git revision control systems.
+  [BitBucket](https://bitbucket.org/) is a web-based version control repository hosting service owned by Atlassian,
+  for source code and development projects that use either Mercurial or Git revision control systems.
 rationale:
   Source control with great code review support and Jira integration 
 related:

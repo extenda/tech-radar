@@ -6,7 +6,8 @@ blip:
 description: |
   Visualisation tool for Elastic stack
 rationale:
-  Together with the other parts of the Elastic stack enables us to visualize our logs and system health in a centralized location
+  Together with the other parts of the Elastic stack enables us to visualize our logs
+  and system health in a centralized location
 related:
   - name: Beats
     file: beats.html

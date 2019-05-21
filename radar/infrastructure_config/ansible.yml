@@ -4,7 +4,8 @@ blip:
   - version: "2.6"
     ring: ASSESS
 description: |
-  [Ansible](https://github.com/ansible/ansible) is an open-source software provisioning, configuration management, and application-deployment tool.
+  [Ansible](https://github.com/ansible/ansible) is an open-source software provisioning,
+  configuration management, and application-deployment tool.
 rationale:
   We need to look into configuration management tools.
 related:
