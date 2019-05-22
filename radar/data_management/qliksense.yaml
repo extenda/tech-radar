@@ -4,18 +4,18 @@ blip:
   - date: 2019-05-22
     ring: ADOPT
 description: |
-  Qlik Sense is a business intelligence (BI) and visual analytics platform that 
-  supports dashboards, custom and embedded analytics, and self-service 
+  Qlik Sense is a business intelligence (BI) and visual analytics platform that
+  supports dashboards, custom and embedded analytics, and self-service
   visualization.
-  Qlik’s Associative Engine indexes and understands the relationships between all 
-  the values in your data. There are no pre-aggregated data models or predefined 
+  Qlik’s Associative Engine indexes and understands the relationships between all
+  the values in your data. There are no pre-aggregated data models or predefined
   queries to limit discovery.
 rationale: |
-  Qlik Sense is based on the original product QlikView, running on Windows. Qlik 
-  Sense is in use at Extenda Retail in its analytics platform for Customer Cloud 
-  / Relevate. The solution is deployed on high performing Windows servers in the 
-  Google Cloud Platform. 
-  In April 2019 Qlik announced the general availablitity of Qlik Sense Enterprise 
+  Qlik Sense is based on the original product QlikView, running on Windows. Qlik
+  Sense is in use at Extenda Retail in its analytics platform for Customer Cloud
+  / Relevate. The solution is deployed on high performing Windows servers in the
+  Google Cloud Platform.
+  In April 2019 Qlik announced the general availablitity of Qlik Sense Enterprise
   for Kubernetes clusters using containers. This version would offer a much more
   scalable solution, to provide BI as a services for our clients.
 related:
