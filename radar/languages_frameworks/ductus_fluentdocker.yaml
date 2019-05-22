@@ -1,0 +1,14 @@
+name: Ductus.FluentDocker
+shortname: FluentDocker
+blip:
+  - date: 2019-05-22
+    ring: ADOPT
+description: |
+  FluentDocker is a library to interact with docker-machine, docker-compose and docker.
+  It supports the docker for windows, docker for mac, docker machine, and native linux
+  (however only limited tests on Linux and Mac).
+rationale:
+  Enabling integration testing where we can run required services and infrastructure in containers.
+  This will enable a stabile sandbox environment for every test run.
+related:
+  - languages_frameworks/containertests.yaml

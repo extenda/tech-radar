@@ -1,8 +1,7 @@
-version: 1
 name: NativeScript
 logo: https://www.nativescript.org/images/default-source/logos/nativescript-logo.png?sfvrsn=2
 blip:
-  - version: "2.0"
+  - date: 2019-02-20
     ring: TRIAL
 description: |
   Open source framework for building truly native mobile apps with Angular, Vue.js, TypeScript, or JavaScript.

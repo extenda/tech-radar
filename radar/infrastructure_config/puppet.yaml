@@ -1,0 +1,12 @@
+name: Puppet
+blip:
+  - date: 2019-05-22
+    ring: ASSESS
+description: |
+  [Puppet](https://puppet.com/) is an open-core software configuration management tool.
+rationale:
+  We need to look into configuration management tools.
+related:
+  - infrastructure_config/ansible.yaml
+  - infrastructure_config/chef.yaml
+  - infrastructure_config/saltstack.yaml

@@ -1,8 +1,7 @@
-version: 1
 name: Angular
 logo: https://angular.io/assets/images/logos/angular/angular.png
 blip:
-  - version: "2.4"
+  - date: 2019-03-29
     ring: ADOPT
 description: |
   Angular is a platform for building mobile and desktop web applications.
@@ -12,7 +11,5 @@ rationale: |
   for an easier transition from backend to frontend and with a complete set
   of tooling it enables us to build large scale web applications.
 related:
-  - name: React
-    file: react.html
-  - name: TypeScript
-    file: typescript.html
+  - languages_frameworks/react.yaml
+  - languages_frameworks/typescript.yaml

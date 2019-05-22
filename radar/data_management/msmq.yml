@@ -1,9 +1,0 @@
-version: 1
-name: MSMQ
-blip:
-  - version: "2.6"
-    ring: HOLD
-description: |
-  Microsoft Message Queuing or MSMQ is a message queue implementation developed by Microsoft
-  and deployed in its Windows Server operating systems since Windows NT 4 and Windows 95.
-  Windows Server 2016 and Windows 10 also includes this component.

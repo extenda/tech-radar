@@ -1,8 +1,7 @@
-version: 1
 name: Grunt
 logo: https://gruntjs.com/img/grunt-logo.svg
 blip:
-  - version: "2.0"
+  - date: 2019-02-20
     ring: HOLD
 description: |
   The JavaScript task runner.

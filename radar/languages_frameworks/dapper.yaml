@@ -1,0 +1,11 @@
+name: Dapper
+blip:
+  - date: 2019-05-22
+    ring: ADOPT
+description: |
+  Sql object mapper extension library
+rationale:
+  Lightweight sql extensions with dynamic object handling. Easy to use with POCOs and hand coded sql.
+related:
+  - data_management/mssql.yaml
+  - data_management/sqlite.yaml

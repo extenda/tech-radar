@@ -1,8 +1,7 @@
-version: 1
 name: Vert.x
 logo: https://vertx.io/assets/logo-sm.png
 blip:
-  - version: "1.0"
+  - date: 2018-03-20
     ring: TRIAL
 description: |
   Eclipse Vert.x is a polyglot event-driven application framework that runs on the

@@ -15,6 +15,12 @@ for file in glob.glob("radar/**/*.yaml"):
     except Exception as e:
         print("ERROR - " + file + "\n" + e.msg)
         exitCode += 1
+
+for file in glob.glob("radar/**/*.yml"):
+  print("ERROR - " + file + "\nIncorrect extension, rename to '.yaml'")
+  exitCode +=1
+
 if exitCode > 0:
     print(str(exitCode) + " validation error(s).")
+
 exit(exitCode)

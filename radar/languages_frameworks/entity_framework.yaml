@@ -1,0 +1,11 @@
+name: Entity Framework
+blip:
+  - date: 2019-05-22
+    ring: HOLD
+description: |
+  [Entity Framework](https://docs.microsoft.com/en-us/ef/) is an open source
+  object-relational mapping framework for ADO.NET. It was a part of .NET Framework,
+  but since Entity framework version 6 it is separated from .NET framework.
+rationale: |
+  An easy to use ORM, good for small projects with low amount of data and performance needs.
+  For bigger projects where speed is key, something else should be used.

@@ -1,0 +1,12 @@
+name: Traefik
+blip:
+  - date: 2019-05-22
+    ring: ASSESS
+description: |
+  [traefik](https://traefik.io/) is a reverse proxy / load balancer.
+rationale:
+  We need to look into reverse proxies and load balancers.
+  The product/service should be easy to setup and use regardless of k8s or Docker.
+related:
+  - infrastructure_config/nginx.yaml
+  - infrastructure_config/haproxy.yaml

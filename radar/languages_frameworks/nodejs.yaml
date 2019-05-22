@@ -1,8 +1,7 @@
-version: 1
 name: Node.js
 logo: https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg
 blip:
-  - version: "1.0"
+  - date: 2018-03-20
     ring: TRIAL
 description: |
   _Node.js_ is javascript on the server. It is asynchronous and event driven

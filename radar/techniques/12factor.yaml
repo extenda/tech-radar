@@ -1,9 +1,14 @@
-version: 1
 name: Twelve-factor app
 shortname: 12-factor app
 blip:
-  - version: "1.0"
+  - date: 2018-03-20
     ring: ADOPT
 description: |
   [The twelve-factor app](https://12factor.net/) is a methodology for building maintanable SaaS applications.
 rationale: |
+  We want to follow the best-practices established in the twelve-factor manifest to make our products easier to
+  maintain and deploy.
+
+  Two areas in which to start improvements are:
+    * Configuration from env vars
+    * Logging

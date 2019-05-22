@@ -1,0 +1,18 @@
+name: Microservices
+blip:
+  - date: 2019-05-22
+    ring: ASSESS
+description: |
+  Microservices are a software development technique — a variant of the service-oriented architecture
+  architectural style that structures an application as a collection of loosely coupled services.
+  In a microservices architecture, services are fine-grained and the protocols are lightweight.
+rationale: |
+  Microservices as a distributed system of autonomous services enables us to
+
+    * Move faster with independent deploys of services
+    * Organize as autonomous teams that owns a service end-to-end
+    * Choose the best technology to solve a business requirement
+    * Scale each service independently
+
+  It also comes with a lot of challenges releated to distributed systems, but overall, the benifits of
+  microservices outweighs the drawbacks.

@@ -1,7 +1,6 @@
-version: 1
 name: Spinnaker
 blip:
-  - version: "3.7"
+  - date: 2019-05-22
     ring: ADOPT
 description: |
   Spinnaker is an open-source, multi-cloud continuous delivery platform
@@ -11,7 +10,5 @@ rationale: |
   It helps us move to a Continuous Deployment (CD) model and
   it can deploy to and manage clusters simultaneously across multiple cloud providers.
 related:
-  - name: Docker
-    file: docker.html
-  - name: Kubernetes
-    file: kubernetes.html
+  - infrastructure_config/docker.yaml
+  - infrastructure_config/kubernetes.yaml

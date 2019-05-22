@@ -1,7 +1,6 @@
-version: 1
 name: Knative
 blip:
-  - version: "2.6"
+  - date: 2019-05-21
     ring: ASSESS
 description: |
   Knative, delivers an essential set of components to build and run serverless applications on Kubernetes.
@@ -11,7 +10,5 @@ description: |
 rationale: |
   Knative offers us a way to run serverless without locking in to a specific cloud provider.
 related:
-  - name: Kubernetes
-    file: kubernetes.html
-  - name: Istio
-    file: istio.html
+  - infrastructure_config/kubernetes.yaml
+  - infrastructure_config/istio.yaml

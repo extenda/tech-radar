@@ -30,7 +30,7 @@
       <div class="row">
         <div class="badges">
           <span class="badge {{blip.ringName}}"><i class="fa fa-map-marker"></i> {{blip.ringName}}</span>
-          <span class="badge">Since <i class="fa fa-tag"></i> {{blip.since}}</span>
+          <span class="badge"><i class="fa fa-clock-o"></i> {{blip.since}}</span>
           {{#unless blip.active}}
           <span class="badge inactive"><i class="fa fa-warning"></i> Inactive</span>
           {{/unless}}
@@ -52,9 +52,9 @@
         {{/if}}
         {{#if blip.history}}
         <h2>History</h2>
-        <ul>
+        <ul class="history">
           {{#each blip.history}}
-          <li><i class="fa fa-tag"></i> {{version}} - {{ringName}}</li>
+          <li><i class="fa fa-calendar"></i> {{date}} - {{ringName}}</li>
           {{/each}}
         </ul>
         {{/if}}

@@ -2,8 +2,6 @@ name: radar-entry
 desc: Schema for the radar entries
 type: map
 mapping:
-  "version":
-    type: int
   "name":
     type: str
     required: true
@@ -19,10 +17,9 @@ mapping:
     sequence:
       - type: map
         mapping:
-          "version":
-            type: str
+          "date":
+            type: date
             required: true
-            pattern: ^\d+\.\d+$
           "ring":
             type: str
             required: true
@@ -36,12 +33,5 @@ mapping:
   "related":
     type: seq
     sequence:
-      - type: map
-        mapping:
-          "name":
-            type: str
-            required: true
-          "file":
-            type: str
-            required: true
-            pattern: .*\.html$
+      - type: str
+        pattern: .*\.yaml$
