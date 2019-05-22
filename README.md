@@ -62,6 +62,13 @@ All commit messages in `master` should define type **type** of change. For chang
 
 The other type of changes are normally not used when modifying the radar blip contents.
 
+For bumping `MAJOR` version you need to add **BREAKING CHANGE** in the footer, as an example:
+```
+chore: Bumping major version
+
+BREAKING CHANGE: This will trigger `major` bump.
+```
+
 ## Development
 
 Start by installing dependencies:
