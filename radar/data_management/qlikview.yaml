@@ -11,4 +11,4 @@ rationale: |
   be avoided.
 related:
   - name: Qlik Sense
-    file: qliksense.html
+    file: qliksense.yaml

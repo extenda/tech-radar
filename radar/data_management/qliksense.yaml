@@ -20,4 +20,4 @@ rationale: |
   scalable solution, to provide BI as a services for our clients.
 related:
   - name: QlikView
-    file: qlikview.html
+    file: qlikview.yaml
