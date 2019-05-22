@@ -1,0 +1,23 @@
+version: 1
+name: Xamarin
+logo: https://upload.wikimedia.org/wikipedia/commons/f/f2/Xamarin-logo.svg
+blip:
+  - version: "1.0"
+    ring: ADOPT
+description: |
+  Xamarin is a Microsoft-maintained framework for cross-platform development and deployment of mobile applications.
+  With a C#-shared code base, developers can use Xamarin tools to write native Android, iOS, and Windows applications with
+  native user interfaces and share code across multiple platforms, including Windows and macOS.
+  According to Xamarin, over 1.4 million developers were using Xamarin's products in 120 countries around the world as
+  of Apil 2017.
+
+rationale: |
+  There are many reasons we use Xamarin at Extenda Retail. A primary rational is that Xamarin adopts the
+  philosophy of code once, run everywhere and is a big time saver and quality assurer when developing mobile
+  applications. This reduces the need for multiple dedicated platform specific development and deployment teams.
+
+  When developing with Xamarin one gets the added benefit of having application versioning be synchronized between
+  platforms.
+
+  Xamarin has some limitations and should not be the framework of choice when applications with performance focus
+  or low level functionality, such as 3d graphics and low level sensor data manipulation, is of importance.
