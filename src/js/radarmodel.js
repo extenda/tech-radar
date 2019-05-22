@@ -1,4 +1,3 @@
-const util = require('util');
 const packageVersion = require('../../package.json').version;
 
 // Tech radar object model. Used by the builder.
@@ -44,7 +43,7 @@ module.exports = {
       ],
       blips: [],
       entries: function entries() {
-        return util.inspect(this.blips);
+        return JSON.stringify(this.blips, null, 2);
       },
     };
 
