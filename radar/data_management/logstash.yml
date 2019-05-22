@@ -1,0 +1,14 @@
+version: 1
+name: LogStash
+blip:
+  - version: "2.6"
+    ring: ASSESS
+description: |
+  Enrichment of ingested data.
+rationale:
+  Allows ingested data to easily be enriched with data before being added to ElasticSearch
+related:
+  - name: Beats
+    file: beats.html
+  - name: Kibana
+    file: kibana.html

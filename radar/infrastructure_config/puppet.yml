@@ -1,0 +1,14 @@
+version: 1
+name: Puppet
+blip:
+  - version: "2.6"
+    ring: ASSESS
+description: |
+  [Puppet](https://puppet.com/) is an open-core software configuration management tool.
+rationale:
+  We need to look into configuration management tools.
+related:
+  - name: Ansible
+    file: ansible.html
+  - name: Chef
+    file: chef.html

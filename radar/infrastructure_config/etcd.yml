@@ -1,0 +1,14 @@
+version: 1
+name: etcd
+blip:
+  - version: "2.6"
+    ring: TRIAL
+description: |
+  [etcd](https://coreos.com/etcd/) is a distributed key value store.
+rationale:
+  We need to take a closer look into how to store and manage configuration etc. Etcd is one of the options.
+related:
+  - name: Consul
+    file: consul.html
+  - name: ZooKeeper
+    file: zookeeper.html
