@@ -11,16 +11,16 @@ module.exports = {
       // Quadrants in the radar visualization order.
       quadrants: [
         {
-          dirname: 'techniques',
-          name: 'Techniques',
+          dirname: 'languages_frameworks',
+          name: 'Languages & Frameworks',
         },
         {
           dirname: 'infrastructure_config',
           name: 'Infrastructure & Configuration',
         },
         {
-          dirname: 'languages_frameworks',
-          name: 'Languages & Frameworks',
+          dirname: 'techniques',
+          name: 'Techniques',
         },
         {
           dirname: 'data_management',
