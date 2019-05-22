@@ -1,0 +1,19 @@
+version: 1
+name: Kotlin
+blip:
+  - version: "2.6"
+    ring: ADOPT
+description: |
+  Kotlin has experienced an accelerated rate of adoption and rapid growth of tooling support.
+  Some of the reasons behind its popularity are its concise syntax, null safety,
+  ease of transition from Java and interoperability with other JVM-based languages in general,
+  and that it doubles as a great introductory language to functional programming.
+  With JetBrains adding the ability to compile Kotlin to native binaries on multiple platforms,
+  as well as transpile to JavaScript,
+  we believe it has the potential of much wider use by the larger community of mobile and native application
+  developers.
+rationale:
+  Modern alternative to Java, very productive and powerful language.
+related:
+  - name: Java
+    file: java.html

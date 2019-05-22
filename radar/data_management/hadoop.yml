@@ -1,0 +1,12 @@
+version: 1
+name: Hadoop
+blip:
+  - version: "2.6"
+    ring: ASSESS
+description: |
+  [Hadoop](https://hadoop.apache.org/) is a collection of open-source software utilities that facilitate
+  using a network of many computers to solve problems involving massive amounts of data and computation.
+  It provides a software framework for distributed storage and processing of big data
+  using the MapReduce programming model
+rationale:
+  Could be used as an archive or cold storage solution for historical data

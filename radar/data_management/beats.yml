@@ -1,0 +1,14 @@
+version: 1
+name: Beats
+blip:
+  - version: "2.6"
+    ring: ASSESS
+description: |
+  Ingesting data from several different sources directly into ElasticSearch
+rationale:
+  Standard components for ingesting data with ease. Ships the data to ElasticSearch or LogStash.
+related:
+  - name: LogStash
+    file: logstash.html
+  - name: Kibana
+    file: kibana.html
