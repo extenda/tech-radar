@@ -4,9 +4,10 @@ blip:
     ring: ADOPT
 description: |
   GitHub brings teams together to work through problems, move ideas forward,
-  and learn from each other along the way. GitHub provides access control and several
-  collaboration features such as bug tracking, feature requests, task management,
-  and wikis for every project.
+  and learn from each other along the way. GitHub is a webapp designed for
+  programmers to collaboratively build their code. GitHub provides access control
+  and several collaboration features such as bug tracking, feature requests,
+  task management, and wikis for every project.
 
   GitHub offers plans for enterprise, team, pro and free accounts which are commonly
   used to host open-source software projects. As of January 2019, GitHub offers
@@ -14,4 +15,4 @@ description: |
 rationale: |
   Using GitHub makes it easier to collaborate with colleagues and peers
   and look back at previous versions of your work. We have many integrations to github
-  from other tools, e.g spinnaker, sonarcube, jenkins.
+  from other tools, e.g Spinnaker, Sonarcube, Jenkins.
