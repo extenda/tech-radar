@@ -1,4 +1,3 @@
-version: 1
 name: Infragistics
 blip:
   - date: 2019-05-22
@@ -6,7 +5,7 @@ blip:
 description: |
   Fast and beautiful UI controls and time-saving tools for developers and UX pros
 rationale:
-  Extensive UI component package for building Angular apps using the Ignite UI for Angular,
-  including the fastest Angular data grid on the marked
+  A powerful and extensive component library that will minimize the need to maintain and develop our own components.
+  It will also keep our modules more consistent
 related:
   - languages_frameworks/devexpress.yaml

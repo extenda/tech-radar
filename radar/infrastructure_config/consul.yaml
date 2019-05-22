@@ -8,4 +8,4 @@ rationale:
   We need to take a closer look into how to store and manage configuration etc. Consul is one of the options.
 related:
   - infrastructure_config/etcd.yaml
-  - data_managemenet/zookeeper.yaml
+  - data_management/zookeeper.yaml

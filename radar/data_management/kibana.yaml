@@ -9,4 +9,4 @@ rationale:
   and system health in a centralized location
 related:
   - data_management/beats.yaml
-  - data_managemenet/logstash.yaml
+  - data_management/logstash.yaml
