@@ -19,5 +19,4 @@ rationale: |
   for Kubernetes clusters using containers. This version would offer a much more
   scalable solution, to provide BI as a services for our clients.
 related:
-  - name: QlikView
-    file: qlikview.yaml
+  - data_management/qlikview.yaml

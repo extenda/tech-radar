@@ -10,5 +10,4 @@ rationale: |
   Analytics are developed in the newer version Qlik Sense, and QlikView should
   be avoided.
 related:
-  - name: Qlik Sense
-    file: qliksense.yaml
+  - data_management/qliksense.yaml
