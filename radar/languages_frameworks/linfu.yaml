@@ -4,5 +4,7 @@ blip:
     ring: HOLD
 description: |
   Dependency injection framework.
+rationale: |
+  LinFu should not be used. Instead use Unity or DI fron .NET Core.
 related:
   - languages_frameworks/unity.yaml
