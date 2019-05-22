@@ -1,0 +1,8 @@
+name: Microservices
+blip:
+  - date: 2019-05-22
+    ring: ASSESS
+description: |
+  Microservices are a software development technique—a variant of the service-oriented architecture
+  architectural style that structures an application as a collection of loosely coupled services.
+  In a microservices architecture, services are fine-grained and the protocols are lightweight.

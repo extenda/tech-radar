@@ -1,9 +1,0 @@
-version: 1
-name: .NET Framework
-blip:
-  - version: "2.6"
-    ring: HOLD
-description: |
-  Software framework that runs on Windows
-rationale:
-  Enabling us to make software for the Windows platform.

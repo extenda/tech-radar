@@ -1,0 +1,8 @@
+name: xUnit
+blip:
+  - date: 2019-05-22
+    ring: ADOPT
+description: |
+  [xunit](https://xunit.net/) is a free, open source, community-focused unit testing tool for the .NET Framework
+rationale:
+  Easy to use test framework with google community support.

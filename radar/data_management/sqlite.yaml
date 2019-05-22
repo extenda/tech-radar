@@ -1,0 +1,11 @@
+name: Sqlite
+blip:
+  - date: 2019-05-22
+    ring: ADOPT
+description: |
+  Lightweight and self-contained database
+rationale:
+  We want some service or WebAPIs to have a self-contained database
+related:
+  - data_management/mssql.yaml
+  - data_management/mysql.yaml

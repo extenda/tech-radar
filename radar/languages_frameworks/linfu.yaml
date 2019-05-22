@@ -1,0 +1,8 @@
+name: LinFu
+blip:
+  - date: 2019-05-22
+    ring: HOLD
+description: |
+  Dependency injection framework.
+related:
+  - languages_frameworks/unity.yaml

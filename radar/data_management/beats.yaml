@@ -1,0 +1,11 @@
+name: Beats
+blip:
+  - date: 2019-05-22
+    ring: ASSESS
+description: |
+  Ingesting data from several different sources directly into ElasticSearch
+rationale:
+  Standard components for ingesting data with ease. Ships the data to ElasticSearch or LogStash.
+related:
+  - data_management/logstash.yaml
+  - data_management/kibana.yaml

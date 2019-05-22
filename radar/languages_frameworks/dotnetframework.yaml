@@ -1,0 +1,8 @@
+name: .NET Framework
+blip:
+  - date: 2019-05-22
+    ring: HOLD
+description: |
+  Software framework that runs on Windows
+rationale:
+  Enabling us to make software for the Windows platform.

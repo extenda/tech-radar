@@ -1,0 +1,8 @@
+name: Entity Framework
+blip:
+  - date: 2019-05-22
+    ring: HOLD
+description: |
+  [Entity Framework](https://docs.microsoft.com/en-us/ef/) is an open source
+  object-relational mapping framework for ADO.NET. It was a part of .NET Framework,
+  but since Entity framework version 6 it is separated from .NET framework.
