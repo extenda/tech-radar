@@ -15,5 +15,3 @@ rationale: |
   Using GitHub makes it easier to collaborate with colleagues and peers
   and look back at previous versions of your work. We have many integrations to github
   from other tools, e.g spinnaker, sonarcube, jenkins.
-related:
-  - infrastructure_config/git.yaml
