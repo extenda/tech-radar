@@ -5,3 +5,5 @@ blip:
     ring: HOLD
 description: |
   Software framework that runs on Windows
+rationale:
+  Enabling us to make software for the Windows platform.

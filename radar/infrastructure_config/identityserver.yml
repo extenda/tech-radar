@@ -2,7 +2,7 @@ version: 1
 name: IdentityServer
 blip:
   - version: "2.6"
-    ring: ADOPT
+    ring: HOLD
 description: |
   [IdentityServer](http://docs.identityserver.io/en/latest/) is an OpenID Connect
   and OAuth 2.0 framework for ASP.NET Core.

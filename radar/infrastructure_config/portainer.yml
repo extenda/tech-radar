@@ -2,7 +2,7 @@ version: 1
 name: Portainer
 blip:
   - version: "2.6"
-    ring: TRIAL
+    ring: HOLD
 description: |
   [Portainer](https://www.portainer.io/) is a Docker and Docker Swarm manager.
 rationale:

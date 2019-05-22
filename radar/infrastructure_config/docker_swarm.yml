@@ -2,7 +2,7 @@ version: 1
 name: Docker Swarm
 blip:
   - version: "2.6"
-    ring: TRIAL
+    ring: ASSESS
 description: |
   [Docker Swarm](https://docs.docker.com/engine/swarm/) is a clustering and scheduling tool for Docker containers.
   With Swarm, IT administrators and developers can establish and manage a cluster of Docker nodes
