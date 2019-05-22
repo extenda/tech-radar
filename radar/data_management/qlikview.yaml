@@ -6,9 +6,9 @@ description: |
   QlikView is an in-memory, business intelligence tool.
 rationale: |
   QlikView is used at Extenda Retail for Customer Cloud's original analytics
-  solution, still used by clients, deployed in Google Cloud. Future versions of 
-  Analytics are developed in the newer version Qlik Sense, and QlikView should 
+  solution, still used by clients, deployed in Google Cloud. Future versions of
+  Analytics are developed in the newer version Qlik Sense, and QlikView should
   be avoided.
 related:
   - name: Qlik Sense
-    file: qliksense.html 
+    file: qliksense.html
