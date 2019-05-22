@@ -1,0 +1,17 @@
+version: 1
+name: Spinnaker
+blip:
+  - version: "3.7"
+    ring: ADOPT
+description: |
+  Spinnaker is an open-source, multi-cloud continuous delivery platform
+  that helps you release software changes with high velocity and confidence.
+rationale: |
+  Spinnaker helps us deploy software changes quickly, safely, and automatically.
+  It helps us move to a Continuous Deployment (CD) model and
+  it can deploy to and manage clusters simultaneously across multiple cloud providers.
+related:
+  - name: Docker
+    file: docker.html
+  - name: Kubernetes
+    file: kubernetes.html
