@@ -1,7 +1,6 @@
-version: 1
 name: Kubernetes
 blip:
-  - version: "2.3"
+  - date: 2019-03-04
     ring: ADOPT
 description: |
   Kubernetes is a tool that enhances the capabilities of containers to create an easy configurable
@@ -15,5 +14,4 @@ rationale: |
   would lead to near 100% uptime with lots of automatic functionality and therefore
   reducing resources needed for maintaining the up status of an organizations services.
 related:
-  - name: docker
-    file: docker.html
+  - infrastructure_config/docker.yaml

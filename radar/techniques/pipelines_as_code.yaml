@@ -1,7 +1,6 @@
-version: 1
 name: Pipelines as code
 blip:
-  - version: "1.0"
+  - date: 2018-03-20
     ring: ADOPT
 description: |
   _Pipelines as code_ is defining the build and deployment pipeline through
@@ -14,7 +13,5 @@ rationale: |
   All teams should move away from manually configured pipeliens. Treat your
   build pipeline as code, for example in a `Jenkinsfile`.
 related:
-  - name: Jenkins AWS
-    file: jenkins_aws.html
-  - name: CircleCI
-    file: circleci.html
+  - infrastructure_config/jenkins_aws.yaml
+  - infrastructure_config/circleci.yaml

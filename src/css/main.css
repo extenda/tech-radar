@@ -107,6 +107,10 @@ ul.breadcrumb {
   overflow: hidden;
 }
 
+ul.history {
+  list-style: none;
+}
+
 .breadcrumb li, li.radar-root {
   float: left;
   padding-left: 6px;

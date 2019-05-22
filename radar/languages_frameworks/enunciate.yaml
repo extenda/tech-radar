@@ -1,7 +1,6 @@
-version: 1
 name: Enunciate
 blip:
-  - version: "1.0"
+  - date: 2018-03-20
     ring: HOLD
 description: |
   Enunciate is a framework to create HTML documentation and client APIs for your
@@ -11,5 +10,4 @@ rationale: |
   Avoid Enunciate as it hasn't taken of, doesn't include any formal specification
   and is inferior in tooling compared to Open API (Swagger).
 related:
-  - name: OpenAPI (Swagger)
-    file: openapi.html
+  - languages_frameworks/openapi.yaml

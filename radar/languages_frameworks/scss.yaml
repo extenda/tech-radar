@@ -1,8 +1,7 @@
-version: 1
 name: SCSS
 logo: https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg
 blip:
-  - version: "2.0"
+  - date: 2019-02-20
     ring: ADOPT
 description: |
   Sass 3 introduces a new syntax known as SCSS which is fully compatible with the

@@ -1,8 +1,7 @@
-version: 1
 name: JavaFX
 logo: https://upload.wikimedia.org/wikipedia/en/c/cc/JavaFX_Logo.png
 blip:
-  - version: "1.0"
+  - date: 2018-03-20
     ring: HOLD
 description: |
   JavaFX is a desktop application platform by Oracle. It is intended to replace
@@ -20,7 +19,5 @@ rationale: |
   should _not_ migrate to Java FX. Instead, consider swithing to a thin-client
   architecture.
 related:
-  - name: React
-    file: react.html
-  - name: Vue
-    file: vue.html
+  - languages_frameworks/react.yaml
+  - languages_frameworks/vue.yaml

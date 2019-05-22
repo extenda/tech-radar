@@ -1,8 +1,7 @@
-version: 1
 name: Postman
 logo: https://www.getpostman.com/img/v2/logo-mark.svg
 blip:
-  - version: "2.0"
+  - date: 2019-02-20
     ring: ADOPT
 description: |
   Postman is an API testing and development tool. At the core are Postman Collections which
@@ -16,5 +15,4 @@ rationale: |
   Our main interest in Postman at the moment is as a testing platform and an IDE
   to help during development. We don't see it as a source for documenting our APIs.
 related:
-  - name: OpenAPI (Swagger)
-    file: openapi.html
+  - languages_frameworks/openapi.yaml

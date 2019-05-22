@@ -1,8 +1,7 @@
-version: 1
 name: Consumer-Driven Contract Testing
 shortname: Contract Testing
 blip:
-  - version: "2.3"
+  - date: 2019-03-04
     ring: ASSESS
 description: |
   [Consumer-driven contract testing](https://www.martinfowler.com/articles/consumerDrivenContracts.html)
@@ -24,7 +23,5 @@ rationale: |
   that its output matches the consumer contract. This test allows the provider
   to discover any contract-breaking changes.
 related:
-  - name: Pact
-    file: pact.html
-  - name: Spring Cloud Contract
-    file: spring_cloud_contract.html
+  - languages_frameworks/pact.yaml
+  - languages_frameworks/spring_cloud_contract.yaml

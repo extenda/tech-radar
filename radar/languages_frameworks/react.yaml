@@ -1,10 +1,9 @@
-version: 1
 name: React
 logo: https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg
 blip:
-  - version: "2.2"
+  - date: 2019-02-26
     ring: TRIAL
-  - version: "2.4"
+  - date: 2019-03-29
     ring: ADOPT
 description: |
   React is a JavaScript library for building user interfaces. It is maintained by
@@ -14,7 +13,5 @@ rationale: |
   used in the new POS client, sharing code between React Native for mobile clients and Electron
   for desktop.
 related:
-  - name: Angular
-    file: angular.html
-  - name: TypeScript
-    file: typescript.html
+  - languages_frameworks/angular.yaml
+  - languages_frameworks/typescript.yaml

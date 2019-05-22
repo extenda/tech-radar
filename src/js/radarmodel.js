@@ -1,66 +1,60 @@
-const util = require('util')
-const packageVersion = require('../../package.json').version
-const semver = require('semver')
+const util = require('util');
+const packageVersion = require('../../package.json').version;
 
 // Tech radar object model. Used by the builder.
 module.exports = {
-  createModel: function(version) {
-    let radarVersion = version || packageVersion
-    let semVersion = semver.coerce(radarVersion)
-    var radar = {
+  createModel: () => {
+    const radar = {
       title: 'Extenda Retail Tech Radar',
-      version: radarVersion,
-      majorMinorVersion: `${semVersion.major}.${semVersion.minor}`,
+      version: packageVersion,
 
       // Quadrants in the radar visualization order.
       quadrants: [
         {
-          dirname: 'techniques',
-          name: 'Techniques'
+          dirname: 'languages_frameworks',
+          name: 'Languages & Frameworks',
         },
         {
           dirname: 'infrastructure_config',
-          name: 'Infrastructure & Configuration'
+          name: 'Infrastructure & Configuration',
         },
         {
-          dirname: 'languages_frameworks',
-          name: 'Languages & Frameworks'
+          dirname: 'techniques',
+          name: 'Techniques',
         },
         {
           dirname: 'data_management',
-          name: 'Data Management'
-        }
+          name: 'Data Management',
+        },
       ],
-
       // Quadrants in the order we want them in the navbar.
-      quadrantsNavigation: function() {
+      quadrantsNavigation: function quadrantsNavigation() {
         return [
           this.quadrants[2],
           this.quadrants[3],
           this.quadrants[1],
-          this.quadrants[0]
-        ]
+          this.quadrants[0],
+        ];
       },
-
       rings: [
         'ADOPT',
         'TRIAL',
         'ASSESS',
-        'HOLD'
+        'HOLD',
       ],
       blips: [],
-      entries: function() {
-        return util.inspect(this.blips)
-      }
+      entries: function entries() {
+        return util.inspect(this.blips);
+      },
+    };
+
+    for (const q of radar.quadrants) {
+      q.adopt = [];
+      q.assess = [];
+      q.trial = [];
+      q.hold = [];
     }
 
-    for (var q of radar.quadrants) {
-      q.adopt = []
-      q.assess = []
-      q.trial = []
-      q.hold = []
-    }
-
-    return radar
-  }
-}
+    return radar;
+  },
+};

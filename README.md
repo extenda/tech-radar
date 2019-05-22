@@ -86,15 +86,14 @@ Each blip (entry) on the radar is stored in a YAML file under the `radar` direct
 
 The format of a blip is as follows:
 ```yaml
-version: 1 # YAML format version (to cope with future changes)
 name: Entry name # Required
 logo: https://domain.com/logo.png # Optional logo URL
 shortname: Short # Optional. Use only if name is too long for the radar blip
 active: true # Optional. If set to `false`, the blip is hidden on the visual radar
 blip: # A list of blip positions. Add a new entry every time the blip moves
-  - version: "1.0" # Required. The MAJOR.MINOR version for the blip
-    ring: ASSESS # Required. The position at version, One of ADOPT, TRIAL, ASSESS, HOLD
-  - version: "2.0"
+  - date: 2019-05-21 # Required. The date the blip is created or changed
+    ring: ASSESS # Required. The position at date, One of ADOPT, TRIAL, ASSESS, HOLD
+  - date: 2019-05-25
     ring: ADOPT
 description: |
   A required, short description of the technology.
@@ -103,10 +102,7 @@ rationale: |
   A required rationale to explain why the technology is assessed in its current ring.
   This entry can be multiple lines and supports Markdown.
 related: # Optional list of related entries
-  - name: My Entry # The entry name
-    file: my_entry.html # The entry filename
-  - name: Second Entry
-    file: file2.html
+  - techniques/semver.yaml # Relative path of related entry from radar dir.
 ```
 
 There are two scripts to validate radar entries. To use them, first install the required Python dependencies:

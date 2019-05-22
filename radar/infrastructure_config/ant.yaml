@@ -1,7 +1,6 @@
-version: 1
 name: Apache Ant
 blip:
-  - version: "1.0"
+  - date: 2018-03-20
     ring: HOLD
 description: |
   Apache Ant is a build tool designed to replace Make in early 2000. It is
@@ -17,7 +16,5 @@ rationale:
   remove it. Apache Ant was never a general-purpose scripting language and is not
   ment to be available in production.
 related:
-  - name: Apache Maven
-    file: maven.html
-  - name: Gradle
-    file: gradle.html
+  - infrastructure_config/maven.yaml
+  - infrastructure_config/gradle.yaml

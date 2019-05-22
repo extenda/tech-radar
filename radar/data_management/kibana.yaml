@@ -1,0 +1,12 @@
+name: Kibana
+blip:
+  - date: 2019-05-22
+    ring: ADOPT
+description: |
+  Visualisation tool for Elastic stack
+rationale:
+  Together with the other parts of the Elastic stack enables us to visualize our logs
+  and system health in a centralized location
+related:
+  - data_management/beats.yaml
+  - data_management/logstash.yaml

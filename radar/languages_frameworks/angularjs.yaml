@@ -1,8 +1,7 @@
-version: 1
 name: AngularJS
 logo: https://angularjs.org/img/AngularJS-large.png
 blip:
-  - version: "2.3"
+  - date: 2019-03-04
     ring: HOLD
 description: |
   AngularJS lets you write client-side web applications as if you had a smarter browser.

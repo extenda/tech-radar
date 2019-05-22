@@ -1,0 +1,10 @@
+name: Nlog
+blip:
+  - date: 2019-05-22
+    ring: ASSESS
+description: |
+  Logging framework for .Net
+rationale:
+  Look into Nlog as an alternative to log4net
+related:
+  - languages_frameworks/log4net.yaml

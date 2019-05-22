@@ -1,8 +1,7 @@
-version: 1
 name: Spring Cloud Contract
 logo: https://spring.io/img/homepage/icon-spring-cloud.svg
 blip:
-  - version: "2.0"
+  - date: 2018-03-20
     ring: ASSESS
 description: |
   Spring Cloud Contract is a framework to implement [consumer-driven contract testing](consumer_contract_testing.html)
@@ -19,7 +18,5 @@ rationale: |
   It also lacks a way to share contract definitions in other ways than dependency
   management through a repository.
 related:
-  - name: Consumer Contract Testing
-    file: consumer_contract_testing.html
-  - name: Spring Boot 2
-    file: spring_boot2.html
+  - techniques/consumer_contract_testing.yaml
+  - languages_frameworks/spring_boot2.yaml

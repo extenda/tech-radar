@@ -1,9 +1,8 @@
-version: 1
 name: AWS Lambda
 blip:
-  - version: "1.0"
+  - date: 2018-03-20
     ring: TRIAL
-  - version: "2.0"
+  - date: 2019-02-20
     ring: HOLD
 description: |
   AWS Lambdas are serverless functions managed by AWS and automatically scaled

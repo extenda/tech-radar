@@ -1,16 +1,5 @@
 version: 2.1
 commands:
-  npm_install:
-    steps:
-      - restore_cache:
-          keys:
-            - &node_key node-v1-{{ checksum "package-lock.json" }}
-            - node-v1
-      - run: npm install
-      - save_cache:
-          key: *node_key
-          paths:
-            - node_modules
   build_docker:
     steps:
       - setup_remote_docker:
@@ -42,11 +31,19 @@ jobs:
     working_directory: ~/workspace
     steps:
       - checkout
-      - npm_install
+      - run: npm ci
+      - run:
+          name: Lint Javascript
+          command: |
+            npm run lint:js -- \
+              --format junit \
+              --output-file test-results/eslint/TEST-eslint.xml
       - run:
           name: Build radar
           command: npm run build
       - build_docker
+      - store_test_results:
+          path: test-results
 
   dockerhub:
     docker:
@@ -54,7 +51,7 @@ jobs:
     working_directory: ~/workspace
     steps:
       - checkout
-      - npm_install
+      - run: npm ci
       - run:
           name: Set build version
           command: |

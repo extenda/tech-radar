@@ -1,10 +1,9 @@
-version: 1
 name: Spring Boot 2
 logo: https://spring.io/img/homepage/icon-spring-boot.svg
 blip:
-  - version: "1.0"
+  - date: 2018-03-20
     ring: ASSESS
-  - version: "2.0"
+  - date: 2019-02-20
     ring: TRIAL
 description: |
   Spring Boot 2 is an opioninated Spring library to create Spring application quickly.
@@ -23,9 +22,6 @@ rationale: |
   out there. If you're going for reactive paradigms, you may find that other
   frameworks such as [Vert.x](vertx.html) serves you better.
 related:
-  - name: NodeJS
-    file: nodejs.html
-  - name: Spring Framework
-    file: spring_framework.html
-  - name: Vert.x
-    file: vertx.html
+  - languages_frameworks/nodejs.yaml
+  - languages_frameworks/spring_framework.yaml
+  - languages_frameworks/vertx.yaml

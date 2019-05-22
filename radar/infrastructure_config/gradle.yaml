@@ -1,7 +1,6 @@
-version: 1
 name: Gradle
 blip:
-  - version: "2.0"
+  - date: 2019-02-20
     ring: HOLD
 description: |
   Gradle is a build system and dependency manager for JVM languages such as Java, Groovy and Android.
@@ -17,7 +16,5 @@ rationale:
   example where it _is_ a better fit is Android, because the Google preferred
   build platform for Android is Gradle.
 related:
-  - name: Apache Ant
-    file: ant.html
-  - name: Apache Maven
-    file: maven.html
+  - infrastructure_config/ant.yaml
+  - infrastructure_config/maven.yaml

@@ -1,7 +1,6 @@
-version: 1
 name: Terraform
 blip:
-  - version: "1.0"
+  - date: 2018-03-20
     ring: ADOPT
 description: |
   HashiCorp Terraform allows you to declare infrastructure as code.
@@ -9,5 +8,4 @@ rationale:
   Terraform is the preferred IoC configuration tool in use at Extenda Retail.
   It is for example  used by IS/IT and for all our AWS services.
 related:
-  - name: Infrastructure as code
-    file: infrastructure_as_code.html
+  - techniques/infrastructure_as_code.yaml

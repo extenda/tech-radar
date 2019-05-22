@@ -1,7 +1,6 @@
-version: 1
 name: Appveyor
 blip:
-  - version: "1.0"
+  - date: 2019-05-21
     ring: ASSESS
 description: |
   Appveyor is an elastic SaaS CI/CD platform focused on the Microsoft development ecosystem. It's based on dockerized
@@ -13,5 +12,4 @@ rationale: |
   significant adminstrative burden to run reliably at scale.
 
 related:
-  - name: Jenkins Build Farm
-    file: jenkins_aws.html
+  - infrastructure_config/jenkins_aws.yaml

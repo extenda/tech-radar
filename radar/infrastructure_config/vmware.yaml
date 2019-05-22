@@ -1,7 +1,6 @@
-version: 1
 name: VM Ware
 blip:
-  - version: "1.0"
+  - date: 2018-03-20
     ring: HOLD
 description: |
   VM Ware is a software to run and manage virtual machines. VM Ware has been for

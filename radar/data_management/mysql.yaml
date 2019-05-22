@@ -1,7 +1,6 @@
-version: 1
 name: MySQL
 blip:
-  - version: "2.0"
+  - date: 2019-02-20
     ring: HOLD
 description: |
   MySQL is a relational database by Oracle.

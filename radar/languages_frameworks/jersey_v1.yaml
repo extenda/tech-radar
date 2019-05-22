@@ -1,7 +1,6 @@
-version: 1
 name: Jersey 1.x
 blip:
-  - version: "1.0"
+  - date: 2018-03-20
     ring: HOLD
 description: |
   Jersey 1.x is the reference implementation for JAX-RS 1. It is a framework
@@ -11,5 +10,4 @@ rationale: |
   REST services with Jersey and JAX-RS 1.x. Use other frameworks that supports
   asynchrous requests.
 related:
-  - name: Spring Boot 2
-    file: spring_boot2.html
+  - languages_frameworks/spring_boot2.yaml
