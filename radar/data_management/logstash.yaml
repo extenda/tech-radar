@@ -4,8 +4,9 @@ blip:
     ring: ASSESS
 description: |
   Enrichment of ingested data.
-rationale:
+rationale: |
   Allows ingested data to easily be enriched with data before being added to ElasticSearch
 related:
+  - data_management/elasticsearch.yaml
   - data_management/beats.yaml
   - data_management/kibana.yaml
