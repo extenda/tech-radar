@@ -20,3 +20,6 @@ rationale: |
   We have standardized on GIT and Jira, so this is the repository chosen for
   Retail Suite. With its nice integration to Jira it offers the functionality
   required for developers. The pricing is USD 2.0 per month per developer.
+related:
+  - infrastructure_config/git.yaml
+  - infrastructure_config/github.yaml

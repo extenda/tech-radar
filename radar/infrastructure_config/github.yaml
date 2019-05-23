@@ -1,4 +1,4 @@
-name: Github
+name: GitHub
 blip:
   - date: 2019-05-22
     ring: ADOPT
@@ -16,3 +16,6 @@ rationale: |
   Using GitHub makes it easier to collaborate with colleagues and peers
   and look back at previous versions of your work. We have many integrations to github
   from other tools, e.g Spinnaker, Sonarcube, Jenkins.
+related:
+  - infrastructure_config/git.yaml
+  - infrastructure_config/bitbucket.yaml
