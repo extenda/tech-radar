@@ -1,6 +1,8 @@
 name: Elasticsearch
 blip:
   - date: 2018-03-20
+    ring: TRIAL
+  - date: 2019-05-23
     ring: ADOPT
 description: |
   Elasticsearch is a distributed, massivily scalable search engine.
