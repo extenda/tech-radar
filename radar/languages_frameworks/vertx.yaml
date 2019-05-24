@@ -3,6 +3,8 @@ logo: https://vertx.io/assets/logo-sm.png
 blip:
   - date: 2018-03-20
     ring: TRIAL
+  - date: 2018-05-24
+    ring: ADOPT
 description: |
   Eclipse Vert.x is a polyglot event-driven application framework that runs on the
   Java Virtual Machine.
