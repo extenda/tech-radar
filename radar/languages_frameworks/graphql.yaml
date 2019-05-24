@@ -1,0 +1,24 @@
+name: GraphQL
+logo: https://graphql.org/img/logo.svg
+blip:
+  - date: 2018-05-24
+    ring: ASSESS
+description: |
+  GraphQL is a query language for APIs and a runtime for fulfilling those queries
+  with your existing data. GraphQL provides a complete and understandable description
+  of the data in your API, gives clients the power to ask for exactly what they need
+  and nothing more, makes it easier to evolve APIs over time, and enables powerful
+  developer tools.
+rationale: |
+  As more and more of our services are broken down, more APIs will evolve, and the
+  key here is "evolve" - it is very hard to create an API once, and stick to it.
+  By making the API "dynamic" in the way that GraphQL works, we can have long-living
+  APIs that spans multiple versions, yet still supports future extensions.
+
+  It is also very effective to always fetch only the data you really need from a
+  source of data, which can be of any type. DB, web endpoint or even a file..
+  Also, as with e.g. REST, you need to fetch data in multiple requests to build
+  one view. In GraphQL you can build an API that supports that view, and many more,
+  all in "one endpoint".
+related:
+  - languages_frameworks/pact.yaml
