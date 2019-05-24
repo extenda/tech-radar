@@ -4,8 +4,8 @@ blip:
     ring: ADOPT
 description: |
   [JasperSoft](https://www.jaspersoft.com/embedded-bi/) is a stand-alone and embeddable business intelligence
-  suite from TIBCO, used for reporting and analysis. It provides functionality for devloping pixel perfect reports,
+  suite from TIBCO, used for reporting and analysis. It provides functionality for developing pixel perfect reports,
   in addition to adhoc reporting and dashboard development for endusers.
 rationale:
-  JasperServer is embeded into Extenda Retail Suite (OEM license). It provides Retail Suite with seamless integrated
-  functionality for reporting and analysis, including features such as ad-hoc, dashboards and scehduling.
+  JasperServer is embedded into Extenda Retail Suite (OEM license). It provides Retail Suite with seamless integrated
+  functionality for reporting and analysis, including features such as ad-hoc, dashboards and scheduling.
