@@ -9,4 +9,4 @@ description: |
 rationale:
   Enables QA Engineers to test WebAPIs
 related:
-  - languages_frameworks/selenium.yaml
+  - system_frameworks_techniques/selenium.yaml

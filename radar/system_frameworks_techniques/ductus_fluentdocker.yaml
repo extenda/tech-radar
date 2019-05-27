@@ -11,4 +11,4 @@ rationale:
   Enabling integration testing where we can run required services and infrastructure in containers.
   This will enable a stabile sandbox environment for every test run.
 related:
-  - languages_frameworks/containertests.yaml
+  - system_frameworks_techniques/containertests.yaml

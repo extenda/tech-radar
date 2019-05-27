@@ -19,5 +19,5 @@ rationale: |
   should _not_ migrate to Java FX. Instead, consider swithing to a thin-client
   architecture.
 related:
-  - languages_frameworks/react.yaml
-  - languages_frameworks/vue.yaml
+  - languages_language_frameworks/react.yaml
+  - languages_language_frameworks/vue.yaml

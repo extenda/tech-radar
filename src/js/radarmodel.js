@@ -10,29 +10,29 @@ module.exports = {
       // Quadrants in the radar visualization order.
       quadrants: [
         {
-          dirname: 'languages_frameworks',
-          name: 'Languages & Frameworks',
+          dirname: 'data_management',
+          name: 'Data Management',
         },
         {
           dirname: 'infrastructure_config',
           name: 'Infrastructure & Configuration',
         },
         {
-          dirname: 'techniques',
-          name: 'Techniques',
+          dirname: 'languages_language_frameworks',
+          name: 'Languages & Language Frameworks',
         },
         {
-          dirname: 'data_management',
-          name: 'Data Management',
+          dirname: 'system_frameworks_techniques',
+          name: 'Frameworks & Techniques',
         },
       ],
       // Quadrants in the order we want them in the navbar.
       quadrantsNavigation: function quadrantsNavigation() {
         return [
+          this.quadrants[0],
+          this.quadrants[1],
           this.quadrants[2],
           this.quadrants[3],
-          this.quadrants[1],
-          this.quadrants[0],
         ];
       },
       rings: [

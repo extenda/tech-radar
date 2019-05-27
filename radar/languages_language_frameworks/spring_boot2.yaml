@@ -22,6 +22,6 @@ rationale: |
   out there. If you're going for reactive paradigms, you may find that other
   frameworks such as [Vert.x](vertx.html) serves you better.
 related:
-  - languages_frameworks/nodejs.yaml
-  - languages_frameworks/spring_framework.yaml
-  - languages_frameworks/vertx.yaml
+  - languages_language_frameworks/nodejs.yaml
+  - languages_language_frameworks/spring_framework.yaml
+  - languages_language_frameworks/vertx.yaml

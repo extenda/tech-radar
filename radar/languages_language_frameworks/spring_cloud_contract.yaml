@@ -18,5 +18,5 @@ rationale: |
   It also lacks a way to share contract definitions in other ways than dependency
   management through a repository.
 related:
-  - techniques/consumer_contract_testing.yaml
-  - languages_frameworks/spring_boot2.yaml
+  - system_frameworks_techniques/consumer_contract_testing.yaml
+  - languages_language_frameworks/spring_boot2.yaml

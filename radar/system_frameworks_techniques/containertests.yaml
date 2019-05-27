@@ -10,4 +10,4 @@ rationale:
   Enabling integration testing where we can run required services and infrastructure in containers.
   This will enable a stabile sandbox environment for every test run.
 related:
-  - languages_frameworks/ductus_fluentdocker.yaml
+  - system_frameworks_techniques/ductus_fluentdocker.yaml

@@ -7,4 +7,4 @@ description: |
 rationale:
   De facto standard logging framework in RS
 related:
-  - languages_frameworks/nlog.yaml
+  - languages_language_frameworks/nlog.yaml

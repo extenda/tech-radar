@@ -7,4 +7,4 @@ description: |
 rationale:
   Look into Nlog as an alternative to log4net
 related:
-  - languages_frameworks/log4net.yaml
+  - languages_language_frameworks/log4net.yaml

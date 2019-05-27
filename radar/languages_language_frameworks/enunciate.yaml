@@ -10,4 +10,4 @@ rationale: |
   Avoid Enunciate as it hasn't taken of, doesn't include any formal specification
   and is inferior in tooling compared to Open API (Swagger).
 related:
-  - languages_frameworks/openapi.yaml
+  - languages_language_frameworks/openapi.yaml
