@@ -19,7 +19,7 @@ module.exports = {
         },
         {
           dirname: 'languages_language_frameworks',
-          name: 'Languages & Libraries',
+          name: 'Languages & Language Frameworks',
         },
         {
           dirname: 'system_frameworks_techniques',
