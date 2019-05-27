@@ -2,6 +2,8 @@ name: Appveyor
 blip:
   - date: 2019-05-21
     ring: ASSESS
+  - date: 2019-05-27
+    ring: TRIAL
 description: |
   Appveyor is an elastic SaaS CI/CD platform focused on the Microsoft development ecosystem. It's based on dockerized
   ephemeral builds configured with `appveyor.yml` files following the [pipelines as code](pipelines_as_code.html)
