@@ -8,4 +8,4 @@ description: |
 rationale: |
   Enables dependency injection on the .NET platform.
 related:
-  - languages_frameworks/linfu.yaml
+  - dev/linfu.yaml

@@ -18,12 +18,12 @@ module.exports = {
           name: 'CI/CD & Infrastructure',
         },
         {
-          dirname: 'languages_frameworks',
-          name: 'Languages & Frameworks',
+          dirname: 'dev',
+          name: 'Development',
         },
         {
-          dirname: 'techniques_tools',
-          name: 'Techniques & Tools',
+          dirname: 'qa',
+          name: 'Quality Assurance',
         },
       ],
       // Quadrants in the order we want them in the navbar.

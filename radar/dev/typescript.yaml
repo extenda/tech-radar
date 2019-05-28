@@ -9,5 +9,5 @@ rationale: |
   For Angular projects TypeScript is a requirement, this blip is for React projects
   using TypeScript.
 related:
-  - languages_frameworks/react.yaml
-  - languages_frameworks/angular.yaml
+  - dev/react.yaml
+  - dev/angular.yaml

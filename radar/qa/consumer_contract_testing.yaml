@@ -23,5 +23,5 @@ rationale: |
   that its output matches the consumer contract. This test allows the provider
   to discover any contract-breaking changes.
 related:
-  - techniques_tools/pact.yaml
-  - languages_frameworks/spring_cloud_contract.yaml
+  - qa/pact.yaml
+  - dev/spring_cloud_contract.yaml

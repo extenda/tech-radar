@@ -14,4 +14,4 @@ description: |
 rationale:
   Modern alternative to Java, very productive and powerful language.
 related:
-  - languages_frameworks/java.yaml
+  - dev/java.yaml

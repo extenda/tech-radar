@@ -8,4 +8,4 @@ description: |
 rationale:
   We want a way to trace web and database traffic that is also compliant with OpenTracing.
 related:
-  - techniques_tools/opentracing.yaml
+  - qa/opentracing.yaml

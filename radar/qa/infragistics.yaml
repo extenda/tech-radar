@@ -8,4 +8,4 @@ rationale:
   A powerful and extensive component library that will minimize the need to maintain and develop our own components.
   It will also keep our modules more consistent
 related:
-  - techniques_tools/devexpress.yaml
+  - qa/devexpress.yaml

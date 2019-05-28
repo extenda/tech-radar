@@ -20,4 +20,4 @@ rationale: |
 
   Pact can define contracts for both REST and messaging APIs.
 related:
-  - techniques_tools/consumer_contract_testing.yaml
+  - qa/consumer_contract_testing.yaml

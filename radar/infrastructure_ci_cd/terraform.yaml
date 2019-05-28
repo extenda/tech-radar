@@ -8,4 +8,4 @@ rationale:
   Terraform is the preferred IoC configuration tool in use at Extenda Retail.
   It is for example  used by IS/IT and for all our AWS services.
 related:
-  - techniques_tools/infrastructure_as_code.yaml
+  - qa/infrastructure_as_code.yaml

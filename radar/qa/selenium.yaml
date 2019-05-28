@@ -9,4 +9,4 @@ description: |
 rationale:
   Enables QA Engineers to test Web front-end
 related:
-  - techniques_tools/specflow.yaml
+  - qa/specflow.yaml
