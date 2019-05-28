@@ -24,4 +24,4 @@ rationale: |
   to discover any contract-breaking changes.
 related:
   - qa/pact.yaml
-  - dev/spring_cloud_contract.yaml
+  - qa/spring_cloud_contract.yaml

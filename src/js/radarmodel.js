@@ -29,10 +29,10 @@ module.exports = {
       // Quadrants in the order we want them in the navbar.
       quadrantsNavigation: function quadrantsNavigation() {
         return [
-          this.quadrants[0],
           this.quadrants[2],
           this.quadrants[3],
           this.quadrants[1],
+          this.quadrants[0],
         ];
       },
       rings: [

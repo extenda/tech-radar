@@ -7,4 +7,4 @@ description: |
 rationale:
   Used to help speed up UI development for desktop applications
 related:
-  - qa/infragistics.yaml
+  - dev/infragistics.yaml
