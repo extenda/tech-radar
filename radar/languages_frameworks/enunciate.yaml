@@ -1,0 +1,13 @@
+name: Enunciate
+blip:
+  - date: 2018-03-20
+    ring: HOLD
+description: |
+  Enunciate is a framework to create HTML documentation and client APIs for your
+  REST service implemented with Java. The documentation is generated from source
+  code and supports JAX-RS and Spring MVC to mention a few.
+rationale: |
+  Avoid Enunciate as it hasn't taken of, doesn't include any formal specification
+  and is inferior in tooling compared to Open API (Swagger).
+related:
+  - languages_frameworks/openapi.yaml

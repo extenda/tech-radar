@@ -1,0 +1,23 @@
+name: JavaFX
+logo: https://upload.wikimedia.org/wikipedia/en/c/cc/JavaFX_Logo.png
+blip:
+  - date: 2018-03-20
+    ring: HOLD
+description: |
+  JavaFX is a desktop application platform by Oracle. It is intended to replace
+  Swing and AWT for Java desktop applications.
+
+  With JDK 11, Oracle will no longer bundle JavaFX with Java itself. Oracle
+  hopes to accelerate community contributions via Open JDK by doing so. They
+  will support JavaFX with Java 8 to a least 2022.
+rationale: |
+  Oracle indicates that Java FX won't get much attention going forward, hence we
+  should consider other frameworks for new products.
+
+  Existing products built on Java FX are not expected to take action to migrate
+  away from Java FX. But Java desktop applications built on for example Swing
+  should _not_ migrate to Java FX. Instead, consider swithing to a thin-client
+  architecture.
+related:
+  - languages_frameworks/react.yaml
+  - languages_frameworks/vue.yaml

@@ -14,16 +14,16 @@ module.exports = {
           name: 'Data Management',
         },
         {
-          dirname: 'infrastructure_config',
+          dirname: 'infrastructure_ci_cd',
           name: 'Infrastructure & Configuration',
         },
         {
-          dirname: 'languages_language_frameworks',
-          name: 'Languages & Language Frameworks',
+          dirname: 'languages_frameworks',
+          name: 'Languages & Frameworks',
         },
         {
-          dirname: 'system_frameworks_techniques',
-          name: 'Frameworks & Techniques',
+          dirname: 'techniques_tools',
+          name: 'Techniques & Tools',
         },
       ],
       // Quadrants in the order we want them in the navbar.

@@ -1,0 +1,15 @@
+name: Angular
+logo: https://angular.io/assets/images/logos/angular/angular.png
+blip:
+  - date: 2019-03-29
+    ring: ADOPT
+description: |
+  Angular is a platform for building mobile and desktop web applications.
+rationale: |
+  Angular is a complete web application framework running on TypeScript. With
+  a convention over configuration approach and TypeScript as a requirement it allows
+  for an easier transition from backend to frontend and with a complete set
+  of tooling it enables us to build large scale web applications.
+related:
+  - languages_frameworks/react.yaml
+  - languages_frameworks/typescript.yaml

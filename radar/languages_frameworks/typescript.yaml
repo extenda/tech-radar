@@ -1,0 +1,13 @@
+name: TypeScript
+logo: https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png
+blip:
+  - date: 2019-03-29
+    ring: TRIAL
+description: |
+  TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
+rationale: |
+  For Angular projects TypeScript is a requirement, this blip is for React projects
+  using TypeScript.
+related:
+  - languages_frameworks/react.yaml
+  - languages_frameworks/angular.yaml

@@ -1,0 +1,17 @@
+name: Pipelines as code
+blip:
+  - date: 2018-03-20
+    ring: ADOPT
+description: |
+  _Pipelines as code_ is defining the build and deployment pipeline through
+  code instead of using the CI/CD tool's interface. Examples of systems with
+  this functionality include:
+    - Jenkins CI
+    - CircleCI
+    - Travis CI
+rationale: |
+  All teams should move away from manually configured pipeliens. Treat your
+  build pipeline as code, for example in a `Jenkinsfile`.
+related:
+  - infrastructure_ci_cd/jenkins_aws.yaml
+  - infrastructure_ci_cd/circleci.yaml

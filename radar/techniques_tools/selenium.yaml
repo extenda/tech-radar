@@ -1,0 +1,12 @@
+name: Selenium
+blip:
+  - date: 2019-05-22
+    ring: ADOPT
+description: |
+  [Selenium](https://www.seleniumhq.org/) is a portable framework for testing web applications.
+  Selenium provides a playback tool for authoring functional tests without the need to learn a test
+  scripting language.
+rationale:
+  Enables QA Engineers to test Web front-end
+related:
+  - techniques_tools/specflow.yaml
