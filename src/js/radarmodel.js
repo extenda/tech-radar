@@ -15,7 +15,7 @@ module.exports = {
         },
         {
           dirname: 'infrastructure_ci_cd',
-          name: 'Infrastructure & Configuration',
+          name: 'CI/CD & Infrastructure',
         },
         {
           dirname: 'languages_frameworks',
