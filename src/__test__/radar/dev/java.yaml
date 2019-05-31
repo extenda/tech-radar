@@ -1,0 +1,10 @@
+name: Java
+blip:
+  - date: 2018-03-20
+    ring: ADOPT
+description: |
+  Description
+rationale: |
+  Rationale
+related:
+  - dev/php.yaml

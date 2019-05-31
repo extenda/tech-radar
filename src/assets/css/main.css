@@ -164,20 +164,22 @@ ul.history {
 }
 
 ul.adopt, ul.assess, ul.trial, ul.hold {
-  border-left: 3px solid #43a047;
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: #43a047;
   padding-left: 8px;
 }
 
 ul.trial {
-  border-color: #c0ca33;
+  border-left-color: #c0ca33;
 }
 
-ul.assess {
-  border-color: #fbdb84;
+ul.assess {
+  border-left-color: #fbdb84;
 }
 
 ul.hold {
-  border-color: #bf360c;
+  border-left-color: #bf360c;
 }
 
 li {
