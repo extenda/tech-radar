@@ -39,6 +39,9 @@ jobs:
               --format junit \
               --output-file test-results/eslint/TEST-eslint.xml
       - run:
+          name: Unit tests
+          command: npm test -- --ci --runInBand
+      - run:
           name: Build radar
           command: npm run build
       - build_docker

@@ -2,7 +2,7 @@
 
 # Extenda Retail Tech Radar
 
-This project contains the data points and a generator for the [Extenda Retail Tech Radar](http://tech-radar.extendaretail.com).
+This project contains the data points and a generator for the [Extenda Retail Tech Radar](https://tech-radar.extendaretail.com).
 
 The Tech Radar aims to inspire and support teams at Extenda Retail to pick the best technologies for their projects.
 It is way to share experience and knowledge between the teams and to create transparency about the technology direction of Extenda Retail. The Tech Radar also becomes a list of dos and don'ts, what to try and to avoid in order to increase success.
@@ -85,7 +85,8 @@ To start a development server that automatically refresh as you make changes to 
 ```bash
 $ npm start
 ```
-The Tech Radar is now running on http://localhost:3000
+This will open the Tech Radar in your default browser.
+The radar is running on http://localhost:8080.
 
 ### Radar Blip Format
 
@@ -140,14 +141,14 @@ $ docker build -t tech-radar .
 And to run a container, you'd run it in a way similar to this:
 
 ```bash
-$ docker run --rm -it -p 3000:80 tech-radar
+$ docker run --rm -it -p 8080:80 tech-radar
 ```
-The Tech Radar would now be available at http://localhost:3000
+The Tech Radar would now be available at http://localhost:8080
 
 It is also possible to run the development server in Docker:
 
 ```bash
-$ docker run --rm -it -v $(pwd):/home -w /home -p 3000:3000 node:alpine sh -c "npm i; npm start"
+$ docker run --rm -it -v $(pwd):/home -w /home -p 8080:8080 node:alpine sh -c "npm i; npm start"
 ```
 
 ## Release Process

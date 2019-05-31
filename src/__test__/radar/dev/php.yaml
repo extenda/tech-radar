@@ -1,0 +1,10 @@
+name: PHP
+blip:
+  - date: 2004-01-01
+    ring: ADOPT
+  - date: 2018-03-20
+    ring: HOLD
+description: |
+  Description
+rationale: |
+  Rationale
