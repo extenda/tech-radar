@@ -10,20 +10,20 @@ module.exports = {
       // Quadrants in the radar visualization order.
       quadrants: [
         {
-          dirname: 'languages_frameworks',
-          name: 'Languages & Frameworks',
-        },
-        {
-          dirname: 'infrastructure_config',
-          name: 'Infrastructure & Configuration',
-        },
-        {
-          dirname: 'techniques',
-          name: 'Techniques',
-        },
-        {
           dirname: 'data_management',
           name: 'Data Management',
+        },
+        {
+          dirname: 'infrastructure_ci_cd',
+          name: 'CI/CD & Infrastructure',
+        },
+        {
+          dirname: 'dev',
+          name: 'Development',
+        },
+        {
+          dirname: 'qa',
+          name: 'Quality Assurance',
         },
       ],
       // Quadrants in the order we want them in the navbar.

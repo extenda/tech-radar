@@ -1,0 +1,22 @@
+name: Apache Maven
+blip:
+  - date: 2019-02-20
+    ring: ADOPT
+description: |
+  Apache Maven is a build tool and dependency manager for JVM languages such as
+  Java, Groovy or Android. It is implemented in Java and configured in XML. Everything
+  in Apache Maven is configured as plugins implemented in Java. The plugin ecosystem
+  is extremely large.
+rationale: |
+  Extenda Retail is heavily invested in Maven with a lot of tooling and custom
+  plugins developed to optimize our development processes and CI pipelines. Examples include
+
+    * Licenses Maven Plugin
+    * Translation Maven plugin
+    * Branch Version Maven Extension
+
+  With the exception of Extenda Retail POS all POS solution products are built
+  with Maven.
+related:
+  - infrastructure_ci_cd/ant.yaml
+  - infrastructure_ci_cd/gradle.yaml

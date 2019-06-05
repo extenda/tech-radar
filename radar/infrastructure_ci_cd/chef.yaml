@@ -1,0 +1,12 @@
+name: Chef
+blip:
+  - date: 2019-05-22
+    ring: ASSESS
+description: |
+  [Chef](https://www.chef.io/) is a configuration management tool written in Ruby and Erlang.
+rationale:
+  We need to look into configuration management tools.
+related:
+  - infrastructure_ci_cd/ansible.yaml
+  - infrastructure_ci_cd/puppet.yaml
+  - infrastructure_ci_cd/saltstack.yaml

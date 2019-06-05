@@ -1,0 +1,10 @@
+name: DevExpress
+blip:
+  - date: 2019-05-22
+    ring: HOLD
+description: |
+  UI framework for WinForm, WPF, and web.
+rationale:
+  Used to help speed up UI development for desktop applications
+related:
+  - dev/infragistics.yaml
