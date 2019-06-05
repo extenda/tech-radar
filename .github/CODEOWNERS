@@ -2,5 +2,5 @@
 # https://help.github.com/articles/about-codeowners/
 # Order is important, the last matching pattern takes the most precedence.
 
-*                                           @sasjo
+*                                           @extenda/radar-maintainers @sasjo
 /manifests/ cloudbuild.yaml                 @tasseri
