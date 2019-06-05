@@ -109,7 +109,7 @@ rationale: |
   A required rationale to explain why the technology is assessed in its current ring.
   This entry can be multiple lines and supports Markdown.
 related: # Optional list of related entries
-  - techniques/semver.yaml # Relative path of related entry from radar dir.
+  - qa/semver.yaml # Relative path of related entry from radar dir.
 ```
 
 There are two scripts to validate radar entries. To use them, first install the required Python dependencies:

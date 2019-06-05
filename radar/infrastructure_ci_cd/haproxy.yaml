@@ -1,0 +1,13 @@
+name: HAProxy
+blip:
+  - date: 2019-05-22
+    ring: ASSESS
+description: |
+  [HAProxy](http://www.haproxy.org/) is a high availability load balancer and proxy server
+  for TCP and HTTP-based applications that spreads requests across multiple servers.
+rationale:
+  We need to look into reverse proxies and load balancers.
+  The product/service should be easy to setup and use regardless of k8s or Docker.
+related:
+  - infrastructure_ci_cd/traefik.yaml
+  - infrastructure_ci_cd/nginx.yaml

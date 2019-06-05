@@ -10,5 +10,5 @@ rationale:
   ZooKeeper is one of the options.
 related:
   - data_management/kafka.yaml
-  - infrastructure_config/consul.yaml
-  - infrastructure_config/etcd.yaml
+  - infrastructure_ci_cd/consul.yaml
+  - infrastructure_ci_cd/etcd.yaml

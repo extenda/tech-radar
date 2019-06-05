@@ -1,0 +1,27 @@
+name: Consumer-Driven Contract Testing
+shortname: Contract Testing
+blip:
+  - date: 2019-03-04
+    ring: ASSESS
+description: |
+  [Consumer-driven contract testing](https://www.martinfowler.com/articles/consumerDrivenContracts.html)
+  is a way to ensure that services (such as an API provider and a client) can communicate with each other.
+  Without contract testing, the only way to know that services can communicate is by using
+  expensive and brittle integration tests.
+rationale: |
+  In a microservice architecture we need a way to test the contracts between our
+  collaborating services. Testing against live providers is slow, brittle and
+  technically challenging. The alternative, with mocks and test doubles can lead
+  to the danger of mocks becoming out-of-sync when the provider is changed.
+  Consumer contract testing is a way to prevent this from happening.
+
+  With consumer-driven contract testing, the consumer defines the API interactions
+  and writes integration tests against this contract. This allows the consumer
+  to build isolated, stable tests against the API contract.
+
+  Next, the provider *must also* test against the same consumer contract verify
+  that its output matches the consumer contract. This test allows the provider
+  to discover any contract-breaking changes.
+related:
+  - qa/pact.yaml
+  - qa/spring_cloud_contract.yaml
