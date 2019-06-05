@@ -1,0 +1,11 @@
+name: Consul
+blip:
+  - date: 2019-05-22
+    ring: ASSESS
+description: |
+  [Consul](https://www.consul.io/) is a service for service discovery, segmentation and configuration.
+rationale:
+  We need to take a closer look into how to store and manage configuration etc. Consul is one of the options.
+related:
+  - infrastructure_ci_cd/etcd.yaml
+  - data_management/zookeeper.yaml

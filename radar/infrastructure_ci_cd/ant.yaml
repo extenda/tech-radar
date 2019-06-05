@@ -1,0 +1,20 @@
+name: Apache Ant
+blip:
+  - date: 2018-03-20
+    ring: HOLD
+description: |
+  Apache Ant is a build tool designed to replace Make in early 2000. It is
+  implemented in Java, configured with XML and primarily used to configure
+  builds of Java applications. It allows for custom tasks to be implemented using a Java API.
+rationale:
+  There's no reason to use Apache Ant in modern CI build systems. Apache Ant has
+  no native support for dependency management, which makes it really difficult
+  to configure builds for modern applications. It is also missing out on existing
+  integrations available in modern build tools such as Maven or Gradle.
+
+  Products that ship Apache Ant as part of the distribution should work _activily_ to
+  remove it. Apache Ant was never a general-purpose scripting language and is not
+  ment to be available in production.
+related:
+  - infrastructure_ci_cd/maven.yaml
+  - infrastructure_ci_cd/gradle.yaml

@@ -3,4 +3,3 @@
 # Order is important, the last matching pattern takes the most precedence.
 
 *                                           @extenda/radar-maintainers @sasjo
-/manifests/ cloudbuild.yaml                 @tasseri
