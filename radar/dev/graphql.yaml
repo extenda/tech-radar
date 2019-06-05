@@ -21,4 +21,4 @@ rationale: |
   one view. In GraphQL you can build an API that supports that view, and many more,
   all in "one endpoint".
 related:
-  - languages_frameworks/pact.yaml
+  - qa/pact.yaml
