@@ -1,4 +1,5 @@
 [![CircleCI](https://circleci.com/gh/extenda/tech-radar.svg?style=svg)](https://circleci.com/gh/extenda/tech-radar)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=extenda_tech-radar&metric=alert_status)](https://sonarcloud.io/dashboard?id=extenda_tech-radar)
 
 # Extenda Retail Tech Radar
 

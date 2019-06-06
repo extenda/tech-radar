@@ -40,13 +40,34 @@ jobs:
               --output-file test-results/eslint/TEST-eslint.xml
       - run:
           name: Unit tests
-          command: npm test -- --ci --runInBand
+          command: npm test -- --ci --runInBand --coverage
       - run:
           name: Build radar
           command: npm run build
       - build_docker
       - store_test_results:
           path: test-results
+      - persist_to_workspace:
+          root: ~/workspace
+          paths:
+            - test-results
+            - coverage
+
+  sonar:
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/workspace
+    steps:
+      - checkout
+      - run: npm ci
+      - attach_workspace:
+          at: ~/workspace
+      - run:
+          name: SonarCloud analysis
+          command: sh .scripts/sonarcloud.sh
+      - run:
+          name: Check quality gate
+          command: sh .scripts/sonarcloud_quality_gate.sh
 
   dockerhub:
     docker:
@@ -85,10 +106,15 @@ workflows:
       - build:
           requires:
             - yamllint
+      - sonar:
+          context: sonarcloud
+          requires:
+            - build
       - dockerhub:
           context: dockerhub
           requires:
             - build
+            - sonar
           filters:
             branches:
               only: master
