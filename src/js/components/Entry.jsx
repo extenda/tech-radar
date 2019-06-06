@@ -5,7 +5,7 @@ import Markdown from 'react-markdown';
 import radarService from '../modules/radarService';
 import Icon from './Icon';
 
-const Related = (props) => {
+export const Related = (props) => {
   const { related } = props;
   if (related.length === 0) {
     return null;
@@ -33,7 +33,7 @@ Related.defaultProps = {
   related: [],
 };
 
-const History = (props) => {
+export const History = (props) => {
   const { history } = props;
   if (history.length === 0) {
     return null;
@@ -64,7 +64,7 @@ History.defaultProps = {
   history: [],
 };
 
-const Badge = (props) => {
+export const Badge = (props) => {
   const { className, icon, text } = props;
   return (
     <span className={`badge ${className}`}>
