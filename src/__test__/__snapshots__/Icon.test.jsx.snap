@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Icon /> It renders icon with space after 1`] = `
+<Fragment>
+  <i
+    className="fa fa-test"
+  />
+   
+</Fragment>
+`;
+
+exports[`<Icon /> It renders icon with space before and after 1`] = `
+<Fragment>
+   
+  <i
+    className="fa fa-test"
+  />
+   
+</Fragment>
+`;

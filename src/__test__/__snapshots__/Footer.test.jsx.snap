@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> It renders the footer 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="container"
+  >
+    <p
+      className="footer-text"
+    >
+      Test
+       
+      0.0.1-local
+      , 
+      5 June 2019
+      <Dot />
+      <Icon
+        name="copyright"
+        spaceBefore={false}
+      />
+      <a
+        href="https://extendaretail.com"
+      >
+        Extenda Retail
+      </a>
+      <br />
+      Maintained at
+      <Icon
+        name="github"
+        spaceBefore={true}
+      />
+      <a
+        href="https://github.com/extenda/tech-radar"
+      >
+        GitHub
+      </a>
+      <Dot />
+      Discuss in
+      <Icon
+        name="slack"
+        spaceBefore={true}
+      />
+      <a
+        href="https://extendaretail.slack.com/channels/tech-radar"
+      >
+        tech-radar
+      </a>
+      <br />
+      The Tech Radar Generator is licensed under
+       
+      <a
+        href="https://github.com/extenda/tech-radar/blob/master/LICENSE"
+      >
+        MIT
+      </a>
+      <Dot />
+      Thanks to Zalando for the
+       
+      <a
+        href="https://github.com/zalando/tech-radar"
+      >
+        radar visualization
+      </a>
+    </p>
+  </div>
+</footer>
+`;
