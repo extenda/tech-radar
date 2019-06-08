@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<History /> It renders history entries 1`] = `
+<Fragment>
+  <h2>
+    History
+  </h2>
+  <ul
+    className="history"
+  >
+    <li
+      key="Jan 1, 2004"
+    >
+      <Icon
+        name="calendar"
+        spaceBefore={false}
+      />
+      Jan 1, 2004
+       - 
+      Adopt
+    </li>
+    <li
+      key="Mar 20, 2018"
+    >
+      <Icon
+        name="calendar"
+        spaceBefore={false}
+      />
+      Mar 20, 2018
+       - 
+      Hold
+    </li>
+  </ul>
+</Fragment>
+`;
+
+exports[`<History /> It renders nothing for missing history 1`] = `""`;

@@ -1,8 +1,6 @@
 import { firstBy } from 'thenby';
 import { pick } from './utils';
 
-// Do we need the fetch-polyfill?
-
 class RadarService {
   init = () => fetch('/js/radar.json')
     .then(response => response.json())

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Badge /> It renders badge with extra className 1`] = `
+<span
+  className="badge my-test"
+>
+  <Icon
+    name="test"
+    spaceBefore={false}
+  />
+  test
+</span>
+`;
+
+exports[`<Badge /> It renders badge with icon 1`] = `
+<span
+  className="badge "
+>
+  <Icon
+    name="test"
+    spaceBefore={false}
+  />
+  test
+</span>
+`;

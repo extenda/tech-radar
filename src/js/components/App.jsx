@@ -25,10 +25,7 @@ export default class App extends Component {
     });
   };
 
-  componentDidMount = () => {
-    radarService.init()
-      .then(this.radarDidLoad);
-  };
+  componentDidMount = () => radarService.init().then(this.radarDidLoad);
 
   render = () => {
     const { loading } = this.state;

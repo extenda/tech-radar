@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Related /> It renders nothing for no relations 1`] = `""`;
+
+exports[`<Related /> It renders related entries 1`] = `
+<Fragment>
+  <h2>
+    Related
+  </h2>
+  <ul>
+    <li
+      key="php.html"
+    >
+      <Link
+        to="php.html"
+      >
+        PHP
+      </Link>
+    </li>
+  </ul>
+</Fragment>
+`;
