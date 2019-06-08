@@ -9,9 +9,11 @@ const logger = log({ name: 'radar' });
 
 const outputPath = path.resolve(__dirname, 'build');
 
+const radarDir = path.join(__dirname, 'radar');
+
 const buildRadar = () => {
   logger.info('Build JSON radar');
-  return radarBuilder.build();
+  return radarBuilder.build(radarDir);
 };
 
 module.exports = {

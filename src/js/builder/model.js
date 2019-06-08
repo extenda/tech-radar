@@ -29,7 +29,6 @@ const RADAR_DATE = new Date();
 module.exports = {
   title: 'Extenda Retail Tech Radar',
   version: packageVersion,
-  radarDir: process.env.RADAR_DIR || 'radar',
   date: RADAR_DATE,
   formattedDate: dateFormat(RADAR_DATE),
   newAgeThreshold: THIRTY_DAYS,

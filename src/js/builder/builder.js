@@ -7,13 +7,13 @@ const { pick } = require('../modules/utils');
 
 const BUILD_DIR = 'build/js';
 
-const build = () => {
+const build = (radarDir) => {
   fs.mkdirsSync(BUILD_DIR);
   const json = pick(radar, 'title', 'version', 'formattedDate', 'quadrants', 'quadrantsNavBar', 'rings');
   json.entries = [];
 
   // Read entries from YAML files.
-  reader.collectEntries(entry => json.entries.push(entry));
+  reader.collectEntries(radarDir, entry => json.entries.push(entry));
 
   // Sort entries by quadrant, ring and name.
   json.entries.sort(firstBy('quadrant')

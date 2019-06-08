@@ -75,12 +75,14 @@ const createBlip = (entry) => {
   return blip;
 };
 
-const collectEntries = (callback) => {
+const collectEntries = (radarDir, callback) => {
   const klawOpts = {
     nodir: true,
     traverseAll: true,
     filter: p => path.extname(p.path) === '.yaml',
   };
+
+  radar.radarDir = radarDir;
 
   klawSync(radar.radarDir, klawOpts).forEach((f) => {
     const entry = yaml.parse(fs.readFileSync(f.path, 'utf8'));
