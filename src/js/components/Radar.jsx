@@ -16,6 +16,7 @@ export default class Radar extends Component {
     const { history } = this.props;
     const radar = radarService.model;
     const blips = radarService.listBlips();
+
     visualize({
       svg_id: 'radar',
       width: 1450,
@@ -47,6 +48,7 @@ export default class Radar extends Component {
 
   render = () => {
     const radar = radarService.model;
+
     return (
       <React.Fragment>
         <h1 className="center">

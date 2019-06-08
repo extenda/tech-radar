@@ -25,6 +25,7 @@ export default class Quadrant extends Component {
   render = () => {
     const { match } = this.props;
     const quadrant = radarService.getQuadrant(match.params.quadrant);
+
     return (
       <div className="container">
         <h1>{quadrant.name}</h1>

@@ -10,12 +10,8 @@ exports[`<Footer /> It renders the footer 1`] = `
     <p
       className="footer-text"
     >
-      Test
-       
-      0.0.1-local
-      , 
-      5 June 2019
-      <Dot />
+      Test 0.0.1-local, 5 June 2019
+       &#8729; 
       <Icon
         name="copyright"
         spaceBefore={false}
@@ -36,7 +32,7 @@ exports[`<Footer /> It renders the footer 1`] = `
       >
         GitHub
       </a>
-      <Dot />
+       &#8729; 
       Discuss in
       <Icon
         name="slack"
@@ -55,7 +51,7 @@ exports[`<Footer /> It renders the footer 1`] = `
       >
         MIT
       </a>
-      <Dot />
+       &#8729; 
       Thanks to Zalando for the
        
       <a

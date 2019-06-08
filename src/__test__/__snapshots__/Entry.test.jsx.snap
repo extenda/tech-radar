@@ -1,86 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Entry /> <Badge /> It renders badge with extra className 1`] = `
-<span
-  className="badge my-test"
->
-  <Icon
-    name="test"
-    spaceBefore={false}
-  />
-  test
-</span>
-`;
-
-exports[`<Entry /> <Badge /> It renders badge with icon 1`] = `
-<span
-  className="badge "
->
-  <Icon
-    name="test"
-    spaceBefore={false}
-  />
-  test
-</span>
-`;
-
-exports[`<Entry /> <History /> It renders history entries 1`] = `
-<Fragment>
-  <h2>
-    History
-  </h2>
-  <ul
-    className="history"
-  >
-    <li
-      key="Jan 1, 2004"
-    >
-      <Icon
-        name="calendar"
-        spaceBefore={false}
-      />
-      Jan 1, 2004
-       - 
-      Adopt
-    </li>
-    <li
-      key="Mar 20, 2018"
-    >
-      <Icon
-        name="calendar"
-        spaceBefore={false}
-      />
-      Mar 20, 2018
-       - 
-      Hold
-    </li>
-  </ul>
-</Fragment>
-`;
-
-exports[`<Entry /> <History /> It renders nothing for missing history 1`] = `""`;
-
-exports[`<Entry /> <Related /> It renders nothing for no relations 1`] = `""`;
-
-exports[`<Entry /> <Related /> It renders related entries 1`] = `
-<Fragment>
-  <h2>
-    Related
-  </h2>
-  <ul>
-    <li
-      key="php.html"
-    >
-      <Link
-        to="php.html"
-      >
-        PHP
-      </Link>
-    </li>
-  </ul>
-</Fragment>
-`;
-
 exports[`<Entry /> It renders entry with history 1`] = `
 <div
   className="container"
@@ -94,6 +13,11 @@ exports[`<Entry /> It renders entry with history 1`] = `
       <h1>
         PHP
       </h1>
+      <img
+        alt="PHP"
+        className="entry-logo"
+        src="https://www.php.net/images/logos/php-logo.svg"
+      />
     </div>
   </div>
   <div
@@ -236,6 +160,178 @@ exports[`<Entry /> It renders entry with related links 1`] = `
     />
     <History
       history={Array []}
+    />
+  </div>
+</div>
+`;
+
+exports[`<Entry /> It renders inactive badge 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="entry-container"
+    >
+      <h1 />
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="badges"
+    >
+      <Badge
+        className="Hold"
+        icon="map-marker"
+        text="Hold"
+      />
+      <Badge
+        className=""
+        icon="clock-o"
+        text="Jan 1, 1970"
+      />
+      <Badge
+        className="inactive"
+        icon="warning"
+        text="Inactive"
+      />
+    </div>
+    <div
+      className="twelve.columns"
+    >
+      <ReactMarkdown
+        astPlugins={Array []}
+        escapeHtml={true}
+        plugins={Array []}
+        rawSourcePos={false}
+        renderers={Object {}}
+        skipHtml={false}
+        source="Description"
+        sourcePos={false}
+        transformLinkUri={[Function]}
+      />
+    </div>
+    <h2>
+      Rationale
+    </h2>
+    <ReactMarkdown
+      astPlugins={Array []}
+      escapeHtml={true}
+      plugins={Array []}
+      rawSourcePos={false}
+      renderers={Object {}}
+      skipHtml={false}
+      source="Rationale"
+      sourcePos={false}
+      transformLinkUri={[Function]}
+    />
+    <Related
+      related={Array []}
+    />
+    <History
+      history={
+        Array [
+          Object {
+            "date": "Jan 1, 1970",
+            "ringName": "Adopt",
+          },
+          Object {
+            "date": "Mar 20, 2018",
+            "ringName": "Hold",
+          },
+        ]
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`<Entry /> It renders logotype if present 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="entry-container"
+    >
+      <h1>
+        PHP
+      </h1>
+      <img
+        alt="PHP"
+        className="entry-logo"
+        src="https://www.php.net/images/logos/php-logo.svg"
+      />
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="badges"
+    >
+      <Badge
+        className="Hold"
+        icon="map-marker"
+        text="Hold"
+      />
+      <Badge
+        className=""
+        icon="clock-o"
+        text="Jan 1, 2004"
+      />
+    </div>
+    <div
+      className="twelve.columns"
+    >
+      <ReactMarkdown
+        astPlugins={Array []}
+        escapeHtml={true}
+        plugins={Array []}
+        rawSourcePos={false}
+        renderers={Object {}}
+        skipHtml={false}
+        source="Description"
+        sourcePos={false}
+        transformLinkUri={[Function]}
+      />
+    </div>
+    <h2>
+      Rationale
+    </h2>
+    <ReactMarkdown
+      astPlugins={Array []}
+      escapeHtml={true}
+      plugins={Array []}
+      rawSourcePos={false}
+      renderers={Object {}}
+      skipHtml={false}
+      source="Rationale"
+      sourcePos={false}
+      transformLinkUri={[Function]}
+    />
+    <Related
+      related={Array []}
+    />
+    <History
+      history={
+        Array [
+          Object {
+            "date": "Jan 1, 2004",
+            "ringName": "Adopt",
+          },
+          Object {
+            "date": "Mar 20, 2018",
+            "ringName": "Hold",
+          },
+        ]
+      }
     />
   </div>
 </div>

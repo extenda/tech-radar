@@ -11,7 +11,7 @@ const { MemoryRouter } = reactRouter;
 // eslint-disable-next-line react/prop-types
 const mockRouter = initialEntry => ({ children }) => (
   <MemoryRouter initialEntries={[initialEntry]}>
-    { children }
+    {children}
   </MemoryRouter>
 );
 
@@ -62,26 +62,23 @@ describe('<App />', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('It renders the radar on / route', () => {
+  test('It renders the radar on / route', async () => {
     reactRouter.BrowserRouter = mockRouter('/');
-    const component = mount(<App />);
-    component.instance().radarDidLoad();
+    const component = await mount(<App />);
     component.update();
     expect(component.find(Radar)).toHaveLength(1);
   });
 
-  test('It renders quadrant on /*.html route', () => {
+  test('It renders quadrant on /*.html route', async () => {
     reactRouter.BrowserRouter = mockRouter('/dev.html');
-    const component = mount(<App />);
-    component.instance().radarDidLoad();
+    const component = await mount(<App />);
     component.update();
     expect(component.find(Quadrant)).toHaveLength(1);
   });
 
-  test('It renders entry on /entries/*.html route', () => {
+  test('It renders entry on /entries/*.html route', async () => {
     reactRouter.BrowserRouter = mockRouter('/entries/java.html');
-    const component = mount(<App />);
-    component.instance().radarDidLoad();
+    const component = await mount(<App />);
     component.update();
     expect(component.find(Entry)).toHaveLength(1);
   });

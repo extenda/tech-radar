@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 const Icon = (props) => {
   const { name, spaceBefore } = props;
+
   return (
     <React.Fragment>
       {spaceBefore && (
@@ -15,10 +16,12 @@ const Icon = (props) => {
     </React.Fragment>
   );
 };
+
 Icon.propTypes = {
   name: PropTypes.string.isRequired,
   spaceBefore: PropTypes.bool,
 };
+
 Icon.defaultProps = {
   spaceBefore: true,
 };
