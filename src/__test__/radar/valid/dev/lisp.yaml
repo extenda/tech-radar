@@ -1,0 +1,12 @@
+name: Common Lisp
+shortname: Lisp
+active: false
+blip:
+  - date: 1970-01-01
+    ring: ADOPT
+  - date: 2018-03-20
+    ring: HOLD
+description: |
+  Description
+rationale: |
+  Rationale

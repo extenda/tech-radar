@@ -5,7 +5,7 @@ import radarService from '../js/modules/radarService';
 
 describe('RadarService', () => {
   beforeAll(async () => {
-    await build(path.resolve(__dirname, 'radar'));
+    await build(path.resolve(__dirname, 'radar/valid'));
 
     global.fetch = jest.fn().mockImplementationOnce(() => Promise.resolve({
       json: () => fs.readFile(path.resolve(__dirname, '../../build/js/radar.json'), 'utf-8')

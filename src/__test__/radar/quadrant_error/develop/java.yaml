@@ -1,10 +1,7 @@
-name: Lisp
-active: false
+name: Java
 blip:
-  - date: 1970-01-01
-    ring: ADOPT
   - date: 2018-03-20
-    ring: HOLD
+    ring: ADOPT
 description: |
   Description
 rationale: |
