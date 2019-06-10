@@ -1,45 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Entry /> It renders entry with history 1`] = `
-<div
-  className="container"
->
+<Fragment>
+  <Navigation
+    entry={
+      Object {
+        "name": "PHP",
+      }
+    }
+    home={null}
+    quadrant={
+      Object {
+        "dirname": "dev",
+        "name": "Development",
+      }
+    }
+  />
   <div
-    className="row"
+    className="container"
   >
     <div
-      className="entry-container"
+      className="row"
     >
-      <h1>
-        PHP
-      </h1>
-      <img
-        alt="PHP"
-        className="entry-logo"
-        src="https://www.php.net/images/logos/php-logo.svg"
-      />
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="badges"
-    >
-      <Badge
-        className="Hold"
-        icon="map-marker"
-        text="Hold"
-      />
-      <Badge
-        className=""
-        icon="clock-o"
-        text="Jan 1, 2004"
-      />
+      <div
+        className="entry-container"
+      >
+        <h1>
+          PHP
+        </h1>
+        <img
+          alt="PHP"
+          className="entry-logo"
+          src="https://www.php.net/images/logos/php-logo.svg"
+        />
+      </div>
     </div>
     <div
-      className="twelve.columns"
+      className="row"
     >
+      <div
+        className="badges"
+      >
+        <Badge
+          className="Hold"
+          icon="map-marker"
+          text="Hold"
+        />
+        <Badge
+          className=""
+          icon="clock-o"
+          text="Jan 1, 2004"
+        />
+      </div>
+      <div
+        className="twelve.columns"
+      >
+        <ReactMarkdown
+          astPlugins={Array []}
+          escapeHtml={true}
+          plugins={Array []}
+          rawSourcePos={false}
+          renderers={Object {}}
+          skipHtml={false}
+          source="Description"
+          sourcePos={false}
+          transformLinkUri={[Function]}
+        />
+      </div>
+      <h2>
+        Rationale
+      </h2>
       <ReactMarkdown
         astPlugins={Array []}
         escapeHtml={true}
@@ -47,81 +77,97 @@ exports[`<Entry /> It renders entry with history 1`] = `
         rawSourcePos={false}
         renderers={Object {}}
         skipHtml={false}
-        source="Description"
+        source="Rationale"
         sourcePos={false}
         transformLinkUri={[Function]}
       />
+      <Related
+        related={Array []}
+      />
+      <History
+        history={
+          Array [
+            Object {
+              "date": "Jan 1, 2004",
+              "ringName": "Adopt",
+            },
+            Object {
+              "date": "Mar 20, 2018",
+              "ringName": "Hold",
+            },
+          ]
+        }
+      />
     </div>
-    <h2>
-      Rationale
-    </h2>
-    <ReactMarkdown
-      astPlugins={Array []}
-      escapeHtml={true}
-      plugins={Array []}
-      rawSourcePos={false}
-      renderers={Object {}}
-      skipHtml={false}
-      source="Rationale"
-      sourcePos={false}
-      transformLinkUri={[Function]}
-    />
-    <Related
-      related={Array []}
-    />
-    <History
-      history={
-        Array [
-          Object {
-            "date": "Jan 1, 2004",
-            "ringName": "Adopt",
-          },
-          Object {
-            "date": "Mar 20, 2018",
-            "ringName": "Hold",
-          },
-        ]
-      }
-    />
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`<Entry /> It renders entry with related links 1`] = `
-<div
-  className="container"
->
+<Fragment>
+  <Navigation
+    entry={
+      Object {
+        "name": "Java",
+      }
+    }
+    home={null}
+    quadrant={
+      Object {
+        "dirname": "dev",
+        "name": "Development",
+      }
+    }
+  />
   <div
-    className="row"
+    className="container"
   >
     <div
-      className="entry-container"
+      className="row"
     >
-      <h1>
-        Java
-      </h1>
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="badges"
-    >
-      <Badge
-        className="Adopt"
-        icon="map-marker"
-        text="Adopt"
-      />
-      <Badge
-        className=""
-        icon="clock-o"
-        text="Mar 20, 2018"
-      />
+      <div
+        className="entry-container"
+      >
+        <h1>
+          Java
+        </h1>
+      </div>
     </div>
     <div
-      className="twelve.columns"
+      className="row"
     >
+      <div
+        className="badges"
+      >
+        <Badge
+          className="Adopt"
+          icon="map-marker"
+          text="Adopt"
+        />
+        <Badge
+          className=""
+          icon="clock-o"
+          text="Mar 20, 2018"
+        />
+      </div>
+      <div
+        className="twelve.columns"
+      >
+        <ReactMarkdown
+          astPlugins={Array []}
+          escapeHtml={true}
+          plugins={Array []}
+          rawSourcePos={false}
+          renderers={Object {}}
+          skipHtml={false}
+          source="Description"
+          sourcePos={false}
+          transformLinkUri={[Function]}
+        />
+      </div>
+      <h2>
+        Rationale
+      </h2>
       <ReactMarkdown
         astPlugins={Array []}
         escapeHtml={true}
@@ -129,80 +175,98 @@ exports[`<Entry /> It renders entry with related links 1`] = `
         rawSourcePos={false}
         renderers={Object {}}
         skipHtml={false}
-        source="Description"
+        source="Rationale"
         sourcePos={false}
         transformLinkUri={[Function]}
       />
+      <Related
+        related={
+          Array [
+            Object {
+              "file": "php.html",
+              "name": "PHP",
+            },
+          ]
+        }
+      />
+      <History
+        history={Array []}
+      />
     </div>
-    <h2>
-      Rationale
-    </h2>
-    <ReactMarkdown
-      astPlugins={Array []}
-      escapeHtml={true}
-      plugins={Array []}
-      rawSourcePos={false}
-      renderers={Object {}}
-      skipHtml={false}
-      source="Rationale"
-      sourcePos={false}
-      transformLinkUri={[Function]}
-    />
-    <Related
-      related={
-        Array [
-          Object {
-            "file": "php.html",
-            "name": "PHP",
-          },
-        ]
-      }
-    />
-    <History
-      history={Array []}
-    />
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`<Entry /> It renders inactive badge 1`] = `
-<div
-  className="container"
->
+<Fragment>
+  <Navigation
+    entry={
+      Object {
+        "name": "Lisp",
+      }
+    }
+    home={null}
+    quadrant={
+      Object {
+        "dirname": "dev",
+        "name": "Development",
+      }
+    }
+  />
   <div
-    className="row"
+    className="container"
   >
     <div
-      className="entry-container"
+      className="row"
     >
-      <h1 />
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="badges"
-    >
-      <Badge
-        className="Hold"
-        icon="map-marker"
-        text="Hold"
-      />
-      <Badge
-        className=""
-        icon="clock-o"
-        text="Jan 1, 1970"
-      />
-      <Badge
-        className="inactive"
-        icon="warning"
-        text="Inactive"
-      />
+      <div
+        className="entry-container"
+      >
+        <h1>
+          Lisp
+        </h1>
+      </div>
     </div>
     <div
-      className="twelve.columns"
+      className="row"
     >
+      <div
+        className="badges"
+      >
+        <Badge
+          className="Hold"
+          icon="map-marker"
+          text="Hold"
+        />
+        <Badge
+          className=""
+          icon="clock-o"
+          text="Jan 1, 1970"
+        />
+        <Badge
+          className="inactive"
+          icon="warning"
+          text="Inactive"
+        />
+      </div>
+      <div
+        className="twelve.columns"
+      >
+        <ReactMarkdown
+          astPlugins={Array []}
+          escapeHtml={true}
+          plugins={Array []}
+          rawSourcePos={false}
+          renderers={Object {}}
+          skipHtml={false}
+          source="Description"
+          sourcePos={false}
+          transformLinkUri={[Function]}
+        />
+      </div>
+      <h2>
+        Rationale
+      </h2>
       <ReactMarkdown
         astPlugins={Array []}
         escapeHtml={true}
@@ -210,86 +274,102 @@ exports[`<Entry /> It renders inactive badge 1`] = `
         rawSourcePos={false}
         renderers={Object {}}
         skipHtml={false}
-        source="Description"
+        source="Rationale"
         sourcePos={false}
         transformLinkUri={[Function]}
       />
+      <Related
+        related={Array []}
+      />
+      <History
+        history={
+          Array [
+            Object {
+              "date": "Jan 1, 1970",
+              "ringName": "Adopt",
+            },
+            Object {
+              "date": "Mar 20, 2018",
+              "ringName": "Hold",
+            },
+          ]
+        }
+      />
     </div>
-    <h2>
-      Rationale
-    </h2>
-    <ReactMarkdown
-      astPlugins={Array []}
-      escapeHtml={true}
-      plugins={Array []}
-      rawSourcePos={false}
-      renderers={Object {}}
-      skipHtml={false}
-      source="Rationale"
-      sourcePos={false}
-      transformLinkUri={[Function]}
-    />
-    <Related
-      related={Array []}
-    />
-    <History
-      history={
-        Array [
-          Object {
-            "date": "Jan 1, 1970",
-            "ringName": "Adopt",
-          },
-          Object {
-            "date": "Mar 20, 2018",
-            "ringName": "Hold",
-          },
-        ]
-      }
-    />
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`<Entry /> It renders logotype if present 1`] = `
-<div
-  className="container"
->
+<Fragment>
+  <Navigation
+    entry={
+      Object {
+        "name": "PHP",
+      }
+    }
+    home={null}
+    quadrant={
+      Object {
+        "dirname": "dev",
+        "name": "Development",
+      }
+    }
+  />
   <div
-    className="row"
+    className="container"
   >
     <div
-      className="entry-container"
+      className="row"
     >
-      <h1>
-        PHP
-      </h1>
-      <img
-        alt="PHP"
-        className="entry-logo"
-        src="https://www.php.net/images/logos/php-logo.svg"
-      />
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="badges"
-    >
-      <Badge
-        className="Hold"
-        icon="map-marker"
-        text="Hold"
-      />
-      <Badge
-        className=""
-        icon="clock-o"
-        text="Jan 1, 2004"
-      />
+      <div
+        className="entry-container"
+      >
+        <h1>
+          PHP
+        </h1>
+        <img
+          alt="PHP"
+          className="entry-logo"
+          src="https://www.php.net/images/logos/php-logo.svg"
+        />
+      </div>
     </div>
     <div
-      className="twelve.columns"
+      className="row"
     >
+      <div
+        className="badges"
+      >
+        <Badge
+          className="Hold"
+          icon="map-marker"
+          text="Hold"
+        />
+        <Badge
+          className=""
+          icon="clock-o"
+          text="Jan 1, 2004"
+        />
+      </div>
+      <div
+        className="twelve.columns"
+      >
+        <ReactMarkdown
+          astPlugins={Array []}
+          escapeHtml={true}
+          plugins={Array []}
+          rawSourcePos={false}
+          renderers={Object {}}
+          skipHtml={false}
+          source="Description"
+          sourcePos={false}
+          transformLinkUri={[Function]}
+        />
+      </div>
+      <h2>
+        Rationale
+      </h2>
       <ReactMarkdown
         astPlugins={Array []}
         escapeHtml={true}
@@ -297,42 +377,28 @@ exports[`<Entry /> It renders logotype if present 1`] = `
         rawSourcePos={false}
         renderers={Object {}}
         skipHtml={false}
-        source="Description"
+        source="Rationale"
         sourcePos={false}
         transformLinkUri={[Function]}
       />
+      <Related
+        related={Array []}
+      />
+      <History
+        history={
+          Array [
+            Object {
+              "date": "Jan 1, 2004",
+              "ringName": "Adopt",
+            },
+            Object {
+              "date": "Mar 20, 2018",
+              "ringName": "Hold",
+            },
+          ]
+        }
+      />
     </div>
-    <h2>
-      Rationale
-    </h2>
-    <ReactMarkdown
-      astPlugins={Array []}
-      escapeHtml={true}
-      plugins={Array []}
-      rawSourcePos={false}
-      renderers={Object {}}
-      skipHtml={false}
-      source="Rationale"
-      sourcePos={false}
-      transformLinkUri={[Function]}
-    />
-    <Related
-      related={Array []}
-    />
-    <History
-      history={
-        Array [
-          Object {
-            "date": "Jan 1, 2004",
-            "ringName": "Adopt",
-          },
-          Object {
-            "date": "Mar 20, 2018",
-            "ringName": "Hold",
-          },
-        ]
-      }
-    />
   </div>
-</div>
+</Fragment>
 `;

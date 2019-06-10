@@ -5,42 +5,47 @@ import radarService from '../modules/radarService';
 import Related from './entry/Related';
 import History from './entry/History';
 import Badge from './entry/Badge';
+import Navigation from './Navigation';
 
 const Entry = (props) => {
   const { match } = props;
   const entry = radarService.getEntry(match.params.id);
+  const quadrant = radarService.model.quadrants.find(q => q.dirname === entry.quadrant.dirname);
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="entry-container">
-          <h1>{entry.name}</h1>
-          {entry.logo && (
-            <img src={entry.logo} alt={entry.name} className="entry-logo" />
+    <React.Fragment>
+      <Navigation quadrant={quadrant} entry={{ name: entry.name }} />
+      <div className="container">
+        <div className="row">
+          <div className="entry-container">
+            <h1>{entry.name}</h1>
+            {entry.logo && (
+              <img src={entry.logo} alt={entry.name} className="entry-logo" />
+            )}
+          </div>
+        </div>
+        <div className="row">
+          <div className="badges">
+            <Badge className={entry.blip.ringName} icon="map-marker" text={entry.blip.ringName} />
+            <Badge icon="clock-o" text={entry.blip.since} />
+            {(entry.blip.active === false) && (
+              <Badge className="inactive" icon="warning" text="Inactive" />
+            )}
+          </div>
+          <div className="twelve.columns">
+            <Markdown source={entry.description} />
+          </div>
+          {entry.rationale && (
+            <React.Fragment>
+              <h2>Rationale</h2>
+              <Markdown source={entry.rationale} />
+            </React.Fragment>
           )}
+          <Related related={entry.related} />
+          <History history={entry.blip.history} />
         </div>
       </div>
-      <div className="row">
-        <div className="badges">
-          <Badge className={entry.blip.ringName} icon="map-marker" text={entry.blip.ringName} />
-          <Badge icon="clock-o" text={entry.blip.since} />
-          {(entry.blip.active === false) && (
-            <Badge className="inactive" icon="warning" text="Inactive" />
-          )}
-        </div>
-        <div className="twelve.columns">
-          <Markdown source={entry.description} />
-        </div>
-        {entry.rationale && (
-          <React.Fragment>
-            <h2>Rationale</h2>
-            <Markdown source={entry.rationale} />
-          </React.Fragment>
-        )}
-        <Related related={entry.related} />
-        <History history={entry.blip.history} />
-      </div>
-    </div>
+    </React.Fragment>
   );
 };
 

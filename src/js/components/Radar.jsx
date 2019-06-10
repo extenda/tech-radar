@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { visualize } from '../lib/radar';
 import radarService from '../modules/radarService';
 import Icon from './Icon';
+import Navigation from './Navigation';
 import { pick } from '../modules/utils';
 
 export default class Radar extends Component {
@@ -51,6 +52,7 @@ export default class Radar extends Component {
 
     return (
       <React.Fragment>
+        <Navigation home={radar.quadrantsNavBar} />
         <h1 className="center">
           {radar.title}
           &nbsp;

@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navigation /> It renders entry breadcrumbs 1`] = `
+<nav
+  className="navbar"
+  role="navigation"
+>
+  <ul
+    className="breadcrumb"
+  >
+    <li>
+      <Link
+        to="/"
+      >
+        Tech Radar
+      </Link>
+      <Icon
+        name="angle-right"
+        spaceBefore={true}
+      />
+    </li>
+    <li>
+      <Link
+        to="/test1.html"
+      >
+        Test1
+      </Link>
+      <Icon
+        name="angle-right"
+        spaceBefore={true}
+      />
+    </li>
+    <li>
+      Entry
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`<Navigation /> It renders home menu 1`] = `
+<nav
+  className="navbar"
+  role="navigation"
+>
+  <ul
+    className="quadrants"
+  >
+    <li
+      className="radar-root"
+    >
+      <Link
+        to="/"
+      >
+        Tech Radar
+      </Link>
+      <Icon
+        name="rss"
+        spaceBefore={true}
+      />
+    </li>
+    <li
+      key="test1"
+    >
+      <Link
+        to="/test1.html"
+      >
+        Test 1
+      </Link>
+    </li>
+    <li
+      key="test2"
+    >
+      <Link
+        to="/test2.html"
+      >
+        Test 2
+      </Link>
+    </li>
+    <li
+      key="test3"
+    >
+      <Link
+        to="/test3.html"
+      >
+        Test 3
+      </Link>
+    </li>
+    <li
+      key="test4"
+    >
+      <Link
+        to="/test4.html"
+      >
+        Test 4
+      </Link>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`<Navigation /> It renders quadrant breadcrumbs 1`] = `
+<nav
+  className="navbar"
+  role="navigation"
+>
+  <ul
+    className="breadcrumb"
+  >
+    <li>
+      <Link
+        to="/"
+      >
+        Tech Radar
+      </Link>
+      <Icon
+        name="angle-right"
+        spaceBefore={true}
+      />
+    </li>
+    <li>
+      Test1
+    </li>
+  </ul>
+</nav>
+`;

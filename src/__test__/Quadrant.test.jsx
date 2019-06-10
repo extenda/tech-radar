@@ -5,6 +5,7 @@ import Quadrant from '../js/components/Quadrant';
 jest.mock('../js/modules/radarService', () => ({
   getQuadrant: () => ({
     name: 'Test',
+    dirname: 'test1',
     adopt: [
       { name: 'A - 1', filename: '1.html' },
       { name: 'B - 2', filename: '2.html' },

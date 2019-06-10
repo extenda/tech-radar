@@ -24,8 +24,9 @@ const mockEntries = {
     filename: 'java.html',
   },
   lisp: {
-    label: 'Lisp',
+    name: 'Lisp',
     blip: {
+      label: 'Lisp',
       quadrant: 2,
       since: 'Jan 1, 1970',
       ring: 3,
@@ -69,6 +70,11 @@ const mockEntries = {
 
 jest.mock('../js/modules/radarService', () => ({
   getEntry: entry => mockEntries[entry],
+  model: {
+    quadrants: [
+      { name: 'Development', dirname: 'dev' },
+    ],
+  },
 }));
 
 describe('<Entry />', () => {

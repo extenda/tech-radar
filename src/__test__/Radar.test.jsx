@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import { shallow, mount } from 'enzyme';
 import Radar from '../js/components/Radar';
 
@@ -55,13 +56,23 @@ describe('<Radar />', () => {
   });
 
   test('It renders the radar blips in SVG', () => {
-    mount(<Radar history={{ push: jest.fn() }} />, { attachTo: window.domNode });
+    mount(
+      <MemoryRouter>
+        <Radar history={{ push: jest.fn() }} />
+      </MemoryRouter>,
+      { attachTo: window.domNode },
+    );
     expect(document.querySelectorAll('g.blip')).toHaveLength(2);
   });
 
   test('It is possible to click radar blips', () => {
     const clickFn = jest.fn();
-    mount(<Radar history={{ push: clickFn }} />, { attachTo: window.domNode });
+    mount(
+      <MemoryRouter>
+        <Radar history={{ push: clickFn }} />
+      </MemoryRouter>,
+      { attachTo: window.domNode },
+    );
     document.querySelectorAll('g.blip')[0].dispatchEvent(new Event('click'));
     expect(clickFn.mock.calls.length).toEqual(1);
   });

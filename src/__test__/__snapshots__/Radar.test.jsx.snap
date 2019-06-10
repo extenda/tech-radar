@@ -2,6 +2,11 @@
 
 exports[`<Radar /> It renders the SVG radar and description 1`] = `
 <Fragment>
+  <Navigation
+    entry={null}
+    home={null}
+    quadrant={null}
+  />
   <h1
     className="center"
   >
