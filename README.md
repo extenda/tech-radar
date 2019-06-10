@@ -3,7 +3,7 @@
 
 # Extenda Retail Tech Radar
 
-This project contains the data points and a generator for the [Extenda Retail Tech Radar](https://tech-radar.extendaretail.com).
+This project contains the data points and a web frontend for the [Extenda Retail Tech Radar](https://tech-radar.extendaretail.com).
 
 The Tech Radar aims to inspire and support teams at Extenda Retail to pick the best technologies for their projects.
 It is way to share experience and knowledge between the teams and to create transparency about the technology direction of Extenda Retail. The Tech Radar also becomes a list of dos and don'ts, what to try and to avoid in order to increase success.
