@@ -2,7 +2,7 @@ import React from 'react';
 import radarService from '../modules/radarService';
 import Icon from './Icon';
 
-const dotSeparator = ' &#8729; ';
+const dotSeparator = ' \u2219 ';
 
 const Footer = () => {
   const { title, version, formattedDate } = radarService.model;
