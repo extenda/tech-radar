@@ -2,9 +2,34 @@
 
 exports[`<Radar /> It renders the SVG radar and description 1`] = `
 <Fragment>
+  <Navigation
+    entry={null}
+    home={
+      Array [
+        Object {
+          "dirname": "test1",
+          "name": "Test 1",
+        },
+        Object {
+          "dirname": "test2",
+          "name": "Test 2",
+        },
+        Object {
+          "dirname": "dev",
+          "name": "Development",
+        },
+        Object {
+          "dirname": "test4",
+          "name": "Test 4",
+        },
+      ]
+    }
+    quadrant={null}
+  />
   <h1
     className="center"
   >
+    Test
      
     <span
       className="version"
@@ -13,6 +38,7 @@ exports[`<Radar /> It renders the SVG radar and description 1`] = `
         name="tag"
         spaceBefore={true}
       />
+      0.0.1-local
     </span>
   </h1>
   <div

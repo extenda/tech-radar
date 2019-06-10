@@ -10,7 +10,7 @@ exports[`<Footer /> It renders the footer 1`] = `
     <p
       className="footer-text"
     >
-      Test 0.0.1-local, 5 June 2019
+      Test 0.0.1-local, 5 June, 2019
        &#8729; 
       <Icon
         name="copyright"
