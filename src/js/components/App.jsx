@@ -39,26 +39,11 @@ export default class App extends Component {
     return (
       <React.Fragment>
         <BrowserRouter>
-          <React.Fragment>
-            <nav className="navbar" role="navigation">
-              <ul className="quadrants">
-                <li className="radar-root">
-                  <NavLink to="/">Tech Radar</NavLink>
-                  <i className="fa fa-rss" />
-                </li>
-                {radar.quadrantsNavBar.map(quadrant => (
-                  <li key={quadrant.dirname}>
-                    <NavLink to={`/${quadrant.dirname}.html`}>{quadrant.name}</NavLink>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-            <Switch>
-              <Route exact path="/" component={Radar} />
-              <Route path="/entries/:id" component={Entry} />
-              <Route path="/:quadrant.html" component={Quadrant} />
-            </Switch>
-          </React.Fragment>
+          <Switch>
+            <Route exact path="/" component={Radar} />
+            <Route path="/entries/:id" component={Entry} />
+            <Route path="/:quadrant.html" component={Quadrant} />
+          </Switch>
         </BrowserRouter>
         <Footer />
       </React.Fragment>

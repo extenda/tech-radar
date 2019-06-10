@@ -1,104 +1,116 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Quadrant /> It renders as expected 1`] = `
-<div
-  className="container"
->
-  <h1>
-    Test
-  </h1>
+<Fragment>
+  <Navigation
+    entry={null}
+    home={null}
+    quadrant={
+      Object {
+        "dirname": "test1",
+        "name": "Test",
+      }
+    }
+  />
   <div
-    className="row"
+    className="container"
   >
+    <h1>
+      Test
+    </h1>
     <div
-      className="one-half column"
+      className="row"
     >
-      <h2>
-        Adopt
-      </h2>
-      <ul
-        className="adopt"
+      <div
+        className="one-half column"
       >
-        <li
-          key="1.html"
+        <h2>
+          Adopt
+        </h2>
+        <ul
+          className="adopt"
         >
-          <Link
-            to="/entries/1.html"
+          <li
+            key="1.html"
           >
-            A - 1
-          </Link>
-        </li>
-        <li
-          key="2.html"
-        >
-          <Link
-            to="/entries/2.html"
+            <Link
+              to="/entries/1.html"
+            >
+              A - 1
+            </Link>
+          </li>
+          <li
+            key="2.html"
           >
-            B - 2
-          </Link>
-        </li>
-      </ul>
-      <h2>
-        Trial
-      </h2>
-      <ul
-        className="trial"
-      />
-    </div>
-    <div
-      className="one-half column"
-    >
-      <h2>
-        Assess
-      </h2>
-      <ul
-        className="assess"
+            <Link
+              to="/entries/2.html"
+            >
+              B - 2
+            </Link>
+          </li>
+        </ul>
+        <h2>
+          Trial
+        </h2>
+        <ul
+          className="trial"
+        />
+      </div>
+      <div
+        className="one-half column"
       >
-        <li
-          key="3.html"
+        <h2>
+          Assess
+        </h2>
+        <ul
+          className="assess"
         >
-          <Link
-            to="/entries/3.html"
+          <li
+            key="3.html"
           >
-            C - 3
-          </Link>
-        </li>
-      </ul>
-      <h2>
-        Hold
-      </h2>
-      <ul
-        className="hold"
-      >
-        <li
-          key="4.html"
+            <Link
+              to="/entries/3.html"
+            >
+              C - 3
+            </Link>
+          </li>
+        </ul>
+        <h2>
+          Hold
+        </h2>
+        <ul
+          className="hold"
         >
-          <Link
-            to="/entries/4.html"
+          <li
+            key="4.html"
           >
-            D - 4
-          </Link>
-        </li>
-        <li
-          key="5.html"
-        >
-          <Link
-            to="/entries/5.html"
+            <Link
+              to="/entries/4.html"
+            >
+              D - 4
+            </Link>
+          </li>
+          <li
+            key="5.html"
           >
-            E - 5
-          </Link>
-        </li>
-        <li
-          key="6.html"
-        >
-          <Link
-            to="/entries/6.html"
+            <Link
+              to="/entries/5.html"
+            >
+              E - 5
+            </Link>
+          </li>
+          <li
+            key="6.html"
           >
-            F - 6
-          </Link>
-        </li>
-      </ul>
+            <Link
+              to="/entries/6.html"
+            >
+              F - 6
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
+</Fragment>
 `;

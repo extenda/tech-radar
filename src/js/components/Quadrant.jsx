@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Navigation from './Navigation';
 import radarService from '../modules/radarService';
 
 export default class Quadrant extends Component {
@@ -27,25 +28,28 @@ export default class Quadrant extends Component {
     const quadrant = radarService.getQuadrant(match.params.quadrant);
 
     return (
-      <div className="container">
-        <h1>{quadrant.name}</h1>
-        <div className="row">
-          <div className="one-half column">
-            <h2>Adopt</h2>
-            {this.renderEntriesList(quadrant, 'adopt')}
+      <React.Fragment>
+        <Navigation quadrant={{ name: quadrant.name, dirname: quadrant.dirname }} />
+        <div className="container">
+          <h1>{quadrant.name}</h1>
+          <div className="row">
+            <div className="one-half column">
+              <h2>Adopt</h2>
+              {this.renderEntriesList(quadrant, 'adopt')}
 
-            <h2>Trial</h2>
-            {this.renderEntriesList(quadrant, 'trial')}
-          </div>
-          <div className="one-half column">
-            <h2>Assess</h2>
-            {this.renderEntriesList(quadrant, 'assess')}
+              <h2>Trial</h2>
+              {this.renderEntriesList(quadrant, 'trial')}
+            </div>
+            <div className="one-half column">
+              <h2>Assess</h2>
+              {this.renderEntriesList(quadrant, 'assess')}
 
-            <h2>Hold</h2>
-            {this.renderEntriesList(quadrant, 'hold')}
+              <h2>Hold</h2>
+              {this.renderEntriesList(quadrant, 'hold')}
+            </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   };
 }
