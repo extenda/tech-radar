@@ -21,8 +21,8 @@ const buildRelatedLinks = (entry) => {
           name: linked.name,
         });
       } catch (err) {
-        // eslint-disable-next-line no-console
-        console.error(`Related file not found: ${file}`, err.message);
+        const source = entry.filename.replace('.html', '.yaml');
+        throw new Error(`${source} - Related file not found: ${file}`);
       }
     });
     return related.sort((a, b) => a.name.localeCompare(b.name));
