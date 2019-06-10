@@ -82,8 +82,9 @@ module.exports = {
     filename: '[name].bundle.js',
   },
   plugins: [
-    compiler => compiler.hooks.done.tap('RadarBuilderPlugin', async () => {
-      await buildRadar();
+    // Build the radar YAMLs on first run, then watch for changes in dev-server.
+    compiler => compiler.hooks.beforeRun.tapAsync('RadarBuilderPlugin', (params, callback) => {
+      buildRadar().then(callback);
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
