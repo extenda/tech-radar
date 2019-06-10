@@ -10,5 +10,5 @@ description: |
 rationale:
   Was put on hold in favor of Git.
 related:
-  - infrastructure_ci_cd/git.yaml
+  - dev/git.yaml
   - infrastructure_ci_cd/bitbucket.yaml
