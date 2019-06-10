@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Link } from 'react-router-dom';
-import Navigation from '../js/components/Navigation';
+import Navigation from '../src/js/components/Navigation';
 
 describe('<Navigation />', () => {
   test('It renders home menu', () => {

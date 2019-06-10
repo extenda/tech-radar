@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme/build';
-import Badge from '../js/components/entry/Badge';
+import Badge from '../src/js/components/entry/Badge';
 
 describe('<Badge />', () => {
   test('It renders badge with icon', () => {

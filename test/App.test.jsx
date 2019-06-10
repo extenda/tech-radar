@@ -1,10 +1,10 @@
 import React from 'react';
 import * as reactRouter from 'react-router-dom';
 import { shallow, mount } from 'enzyme';
-import App from '../js/components/App';
-import Radar from '../js/components/Radar';
-import Entry from '../js/components/Entry';
-import Quadrant from '../js/components/Quadrant';
+import App from '../src/js/components/App';
+import Radar from '../src/js/components/Radar';
+import Entry from '../src/js/components/Entry';
+import Quadrant from '../src/js/components/Quadrant';
 
 const { MemoryRouter } = reactRouter;
 
@@ -15,25 +15,25 @@ const mockRouter = initialEntry => ({ children }) => (
   </MemoryRouter>
 );
 
-jest.mock('../js/components/Radar', () => () => (
+jest.mock('../src/js/components/Radar', () => () => (
   <div>
     Radar
   </div>
 ));
 
-jest.mock('../js/components/Entry', () => () => (
+jest.mock('../src/js/components/Entry', () => () => (
   <div>
     Entry
   </div>
 ));
 
-jest.mock('../js/components/Quadrant', () => () => (
+jest.mock('../src/js/components/Quadrant', () => () => (
   <div>
     Quadrant
   </div>
 ));
 
-jest.mock('../js/modules/radarService');
+jest.mock('../src/js/modules/radarService');
 
 describe('<App />', () => {
   test('It renders nothing before radar is loaded', () => {

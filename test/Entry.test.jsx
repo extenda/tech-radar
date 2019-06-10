@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Entry from '../js/components/Entry';
+import Entry from '../src/js/components/Entry';
 
-jest.mock('../js/modules/radarService');
+jest.mock('../src/js/modules/radarService');
 
 describe('<Entry />', () => {
   test('It renders entry with related links', () => {

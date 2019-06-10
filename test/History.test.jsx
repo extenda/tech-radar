@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme/build';
-import History from '../js/components/entry/History';
+import History from '../src/js/components/entry/History';
 
 const history = [
   { date: 'Jan 1, 2004', ringName: 'Adopt' },
