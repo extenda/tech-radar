@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Icon from '../js/components/Icon';
+import Icon from '../src/js/components/Icon';
 
 describe('<Icon />', () => {
   test('It renders icon with space before and after', () => {

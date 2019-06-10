@@ -1,9 +1,9 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { shallow, mount } from 'enzyme';
-import Radar from '../js/components/Radar';
+import Radar from '../src/js/components/Radar';
 
-jest.mock('../js/modules/radarService');
+jest.mock('../src/js/modules/radarService');
 
 describe('<Radar />', () => {
   beforeAll(() => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Quadrant from '../js/components/Quadrant';
+import Quadrant from '../src/js/components/Quadrant';
 
-jest.mock('../js/modules/radarService');
+jest.mock('../src/js/modules/radarService');
 
 describe('<Quadrant />', () => {
   test('It groups entries by ring', () => {

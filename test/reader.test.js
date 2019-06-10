@@ -1,5 +1,5 @@
 const path = require('path');
-const reader = require('../js/builder/reader');
+const reader = require('../src/js/builder/reader');
 
 describe('YAML Reader', () => {
   test('It can traverse all entries', () => {
