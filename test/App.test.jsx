@@ -5,6 +5,7 @@ import App from '../src/js/components/App';
 import Radar from '../src/js/components/Radar';
 import Entry from '../src/js/components/Entry';
 import Quadrant from '../src/js/components/Quadrant';
+import NotFound from '../src/js/components/NotFound';
 
 const { MemoryRouter } = reactRouter;
 
@@ -30,6 +31,12 @@ jest.mock('../src/js/components/Entry', () => () => (
 jest.mock('../src/js/components/Quadrant', () => () => (
   <div>
     Quadrant
+  </div>
+));
+
+jest.mock('../src/js/components/NotFound', () => () => (
+  <div>
+    NotFound
   </div>
 ));
 
@@ -61,5 +68,12 @@ describe('<App />', () => {
     const component = await mount(<App />);
     component.update();
     expect(component.find(Entry)).toHaveLength(1);
+  });
+
+  test('It renders not found for invalid URL', async () => {
+    reactRouter.BrowserRouter = mockRouter('/notfound');
+    const component = await mount(<App />);
+    component.update();
+    expect(component.find(NotFound)).toHaveLength(1);
   });
 });

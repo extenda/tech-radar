@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Navigation from './Navigation';
+import NotFound from './NotFound';
 import radarService from '../modules/radarService';
 
 export default class Quadrant extends Component {
@@ -26,6 +27,10 @@ export default class Quadrant extends Component {
   render = () => {
     const { match } = this.props;
     const quadrant = radarService.getQuadrant(match.params.quadrant);
+
+    if (!quadrant) {
+      return (<NotFound />);
+    }
 
     return (
       <React.Fragment>

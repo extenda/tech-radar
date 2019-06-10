@@ -9,6 +9,7 @@ import Radar from './Radar';
 import Entry from './Entry';
 import Quadrant from './Quadrant';
 import Footer from './Footer';
+import NotFound from './NotFound';
 import radarService from '../modules/radarService';
 
 export default class App extends Component {
@@ -34,8 +35,6 @@ export default class App extends Component {
       return null;
     }
 
-    const radar = radarService.model;
-
     return (
       <React.Fragment>
         <BrowserRouter>
@@ -43,6 +42,7 @@ export default class App extends Component {
             <Route exact path="/" component={Radar} />
             <Route path="/entries/:id" component={Entry} />
             <Route path="/:quadrant.html" component={Quadrant} />
+            <Route path="*" component={NotFound} />
           </Switch>
         </BrowserRouter>
         <Footer />
