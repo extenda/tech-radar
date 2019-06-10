@@ -42,7 +42,7 @@ const Navigation = (props) => {
           <Link to="/">Tech Radar</Link>
           <Icon name="rss" />
         </li>
-        {home && home.map(q => (
+        {home.map(q => (
           <li key={q.dirname}>
             <Link to={`/${q.dirname}.html`}>{q.name}</Link>
           </li>

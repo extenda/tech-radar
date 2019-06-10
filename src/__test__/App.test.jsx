@@ -33,27 +33,7 @@ jest.mock('../js/components/Quadrant', () => () => (
   </div>
 ));
 
-jest.mock('../js/modules/radarService', () => {
-  const quadrants = [
-    { name: 'Test 1', dirname: 'test1' },
-    { name: 'Test 2', dirname: 'test2' },
-    { name: 'Test 3', dirname: 'test3' },
-    { name: 'Test 4', dirname: 'test4' },
-  ];
-  return {
-    init: () => Promise.resolve(true),
-    listBlips: jest.fn(() => []),
-    getQuadrant: jest.fn(),
-    getEntry: jest.fn(),
-    model: {
-      title: 'Test',
-      formattedDate: '4 June, 2019',
-      version: '0.0.1-local',
-      quadrants,
-      quadrantsNavBar: quadrants,
-    },
-  };
-});
+jest.mock('../js/modules/radarService');
 
 describe('<App />', () => {
   test('It renders nothing before radar is loaded', () => {

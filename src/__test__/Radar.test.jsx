@@ -3,40 +3,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { shallow, mount } from 'enzyme';
 import Radar from '../js/components/Radar';
 
-jest.mock('../js/modules/radarService', () => ({
-  listBlips: () => [
-    {
-      label: 'Java',
-      quadrant: 2,
-      ring: 0,
-      moved: false,
-      link: '/entries/java.html',
-      active: true,
-    },
-    {
-      label: 'PHP',
-      quadrant: 2,
-      ring: 3,
-      moved: false,
-      link: '/entries/php.html',
-      active: true,
-    },
-  ],
-  model: {
-    quadrants: [
-      { name: 'Test 1', dirname: 'test1' },
-      { name: 'Test 2', dirname: 'test2' },
-      { name: 'Test 3', dirname: 'test3' },
-      { name: 'Test 4', dirname: 'test4' },
-    ],
-    rings: [
-      'ADOPT',
-      'TRIAL',
-      'ASSESS',
-      'HOLD',
-    ],
-  },
-}));
+jest.mock('../js/modules/radarService');
 
 describe('<Radar />', () => {
   beforeAll(() => {

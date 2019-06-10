@@ -2,25 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Quadrant from '../js/components/Quadrant';
 
-jest.mock('../js/modules/radarService', () => ({
-  getQuadrant: () => ({
-    name: 'Test',
-    dirname: 'test1',
-    adopt: [
-      { name: 'A - 1', filename: '1.html' },
-      { name: 'B - 2', filename: '2.html' },
-    ],
-    trial: [],
-    assess: [
-      { name: 'C - 3', filename: '3.html' },
-    ],
-    hold: [
-      { name: 'D - 4', filename: '4.html' },
-      { name: 'E - 5', filename: '5.html' },
-      { name: 'F - 6', filename: '6.html' },
-    ],
-  }),
-}));
+jest.mock('../js/modules/radarService');
 
 describe('<Quadrant />', () => {
   test('It groups entries by ring', () => {
