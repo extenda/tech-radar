@@ -90,6 +90,7 @@ const collectEntries = (radarDir, callback) => {
     entry.filename = htmlFile(f.path);
     entry.blip = createBlip(entry);
     entry.related = buildRelatedLinks(entry);
+    entry.tags = entry.tags ? entry.tags.map(t => t.toLowerCase()) : [];
     callback(entry);
   });
 };

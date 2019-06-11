@@ -33,4 +33,10 @@ describe('<Navigation />', () => {
     expect(component.find(Link)).toHaveLength(2);
     expect(component).toMatchSnapshot();
   });
+
+  test('It renders tag breadcrumbs', () => {
+    const component = shallow(<Navigation tag="java" />);
+    expect(component.find(Link)).toHaveLength(1);
+    expect(component).toMatchSnapshot();
+  });
 });

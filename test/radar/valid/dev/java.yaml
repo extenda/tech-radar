@@ -8,3 +8,8 @@ rationale: |
   Rationale
 related:
   - dev/php.yaml
+  - dev/lisp.yaml
+tags:
+  - java
+  - 90's
+  - web

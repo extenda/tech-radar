@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter,
-  NavLink,
   Switch,
   Route,
 } from 'react-router-dom';
@@ -10,6 +9,7 @@ import Entry from './Entry';
 import Quadrant from './Quadrant';
 import Footer from './Footer';
 import NotFound from './NotFound';
+import TagList from './TagList';
 import radarService from '../modules/radarService';
 
 export default class App extends Component {
@@ -42,6 +42,7 @@ export default class App extends Component {
             <Route exact path="/" component={Radar} />
             <Route path="/entries/:id" component={Entry} />
             <Route path="/:quadrant.html" component={Quadrant} />
+            <Route path="/tags/:tag.html" component={TagList} />
             <Route path="*" component={NotFound} />
           </Switch>
         </BrowserRouter>

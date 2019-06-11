@@ -17,6 +17,7 @@ exports[`<Entry /> It renders entry with history 1`] = `
         "name": "Development",
       }
     }
+    tag={null}
   />
   <div
     className="container"
@@ -55,7 +56,7 @@ exports[`<Entry /> It renders entry with history 1`] = `
         />
       </div>
       <div
-        className="twelve.columns"
+        className="twelve columns"
       >
         <ReactMarkdown
           astPlugins={Array []}
@@ -68,35 +69,46 @@ exports[`<Entry /> It renders entry with history 1`] = `
           sourcePos={false}
           transformLinkUri={[Function]}
         />
+        <h2>
+          Rationale
+        </h2>
+        <ReactMarkdown
+          astPlugins={Array []}
+          escapeHtml={true}
+          plugins={Array []}
+          rawSourcePos={false}
+          renderers={Object {}}
+          skipHtml={false}
+          source="Rationale"
+          sourcePos={false}
+          transformLinkUri={[Function]}
+        />
+        <Related
+          related={Array []}
+        />
+        <History
+          history={
+            Array [
+              Object {
+                "date": "Jan 1, 2004",
+                "ringName": "Adopt",
+              },
+              Object {
+                "date": "Mar 20, 2018",
+                "ringName": "Hold",
+              },
+            ]
+          }
+        />
       </div>
-      <h2>
-        Rationale
-      </h2>
-      <ReactMarkdown
-        astPlugins={Array []}
-        escapeHtml={true}
-        plugins={Array []}
-        rawSourcePos={false}
-        renderers={Object {}}
-        skipHtml={false}
-        source="Rationale"
-        sourcePos={false}
-        transformLinkUri={[Function]}
-      />
-      <Related
-        related={Array []}
-      />
-      <History
-        history={
+    </div>
+    <div
+      className="u-pull-right"
+    >
+      <Tags
+        tags={
           Array [
-            Object {
-              "date": "Jan 1, 2004",
-              "ringName": "Adopt",
-            },
-            Object {
-              "date": "Mar 20, 2018",
-              "ringName": "Hold",
-            },
+            "90's",
           ]
         }
       />
@@ -120,6 +132,7 @@ exports[`<Entry /> It renders entry with related links 1`] = `
         "name": "Development",
       }
     }
+    tag={null}
   />
   <div
     className="container"
@@ -153,7 +166,7 @@ exports[`<Entry /> It renders entry with related links 1`] = `
         />
       </div>
       <div
-        className="twelve.columns"
+        className="twelve columns"
       >
         <ReactMarkdown
           astPlugins={Array []}
@@ -166,33 +179,45 @@ exports[`<Entry /> It renders entry with related links 1`] = `
           sourcePos={false}
           transformLinkUri={[Function]}
         />
+        <h2>
+          Rationale
+        </h2>
+        <ReactMarkdown
+          astPlugins={Array []}
+          escapeHtml={true}
+          plugins={Array []}
+          rawSourcePos={false}
+          renderers={Object {}}
+          skipHtml={false}
+          source="Rationale"
+          sourcePos={false}
+          transformLinkUri={[Function]}
+        />
+        <Related
+          related={
+            Array [
+              Object {
+                "file": "php.html",
+                "name": "PHP",
+              },
+            ]
+          }
+        />
+        <History
+          history={Array []}
+        />
       </div>
-      <h2>
-        Rationale
-      </h2>
-      <ReactMarkdown
-        astPlugins={Array []}
-        escapeHtml={true}
-        plugins={Array []}
-        rawSourcePos={false}
-        renderers={Object {}}
-        skipHtml={false}
-        source="Rationale"
-        sourcePos={false}
-        transformLinkUri={[Function]}
-      />
-      <Related
-        related={
+    </div>
+    <div
+      className="u-pull-right"
+    >
+      <Tags
+        tags={
           Array [
-            Object {
-              "file": "php.html",
-              "name": "PHP",
-            },
+            "90's",
+            "java",
           ]
         }
-      />
-      <History
-        history={Array []}
       />
     </div>
   </div>
@@ -214,6 +239,7 @@ exports[`<Entry /> It renders inactive badge 1`] = `
         "name": "Development",
       }
     }
+    tag={null}
   />
   <div
     className="container"
@@ -252,7 +278,7 @@ exports[`<Entry /> It renders inactive badge 1`] = `
         />
       </div>
       <div
-        className="twelve.columns"
+        className="twelve columns"
       >
         <ReactMarkdown
           astPlugins={Array []}
@@ -265,37 +291,44 @@ exports[`<Entry /> It renders inactive badge 1`] = `
           sourcePos={false}
           transformLinkUri={[Function]}
         />
+        <h2>
+          Rationale
+        </h2>
+        <ReactMarkdown
+          astPlugins={Array []}
+          escapeHtml={true}
+          plugins={Array []}
+          rawSourcePos={false}
+          renderers={Object {}}
+          skipHtml={false}
+          source="Rationale"
+          sourcePos={false}
+          transformLinkUri={[Function]}
+        />
+        <Related
+          related={Array []}
+        />
+        <History
+          history={
+            Array [
+              Object {
+                "date": "Jan 1, 1970",
+                "ringName": "Adopt",
+              },
+              Object {
+                "date": "Mar 20, 2018",
+                "ringName": "Hold",
+              },
+            ]
+          }
+        />
       </div>
-      <h2>
-        Rationale
-      </h2>
-      <ReactMarkdown
-        astPlugins={Array []}
-        escapeHtml={true}
-        plugins={Array []}
-        rawSourcePos={false}
-        renderers={Object {}}
-        skipHtml={false}
-        source="Rationale"
-        sourcePos={false}
-        transformLinkUri={[Function]}
-      />
-      <Related
-        related={Array []}
-      />
-      <History
-        history={
-          Array [
-            Object {
-              "date": "Jan 1, 1970",
-              "ringName": "Adopt",
-            },
-            Object {
-              "date": "Mar 20, 2018",
-              "ringName": "Hold",
-            },
-          ]
-        }
+    </div>
+    <div
+      className="u-pull-right"
+    >
+      <Tags
+        tags={Array []}
       />
     </div>
   </div>
@@ -317,6 +350,7 @@ exports[`<Entry /> It renders logotype if present 1`] = `
         "name": "Development",
       }
     }
+    tag={null}
   />
   <div
     className="container"
@@ -355,7 +389,7 @@ exports[`<Entry /> It renders logotype if present 1`] = `
         />
       </div>
       <div
-        className="twelve.columns"
+        className="twelve columns"
       >
         <ReactMarkdown
           astPlugins={Array []}
@@ -368,35 +402,46 @@ exports[`<Entry /> It renders logotype if present 1`] = `
           sourcePos={false}
           transformLinkUri={[Function]}
         />
+        <h2>
+          Rationale
+        </h2>
+        <ReactMarkdown
+          astPlugins={Array []}
+          escapeHtml={true}
+          plugins={Array []}
+          rawSourcePos={false}
+          renderers={Object {}}
+          skipHtml={false}
+          source="Rationale"
+          sourcePos={false}
+          transformLinkUri={[Function]}
+        />
+        <Related
+          related={Array []}
+        />
+        <History
+          history={
+            Array [
+              Object {
+                "date": "Jan 1, 2004",
+                "ringName": "Adopt",
+              },
+              Object {
+                "date": "Mar 20, 2018",
+                "ringName": "Hold",
+              },
+            ]
+          }
+        />
       </div>
-      <h2>
-        Rationale
-      </h2>
-      <ReactMarkdown
-        astPlugins={Array []}
-        escapeHtml={true}
-        plugins={Array []}
-        rawSourcePos={false}
-        renderers={Object {}}
-        skipHtml={false}
-        source="Rationale"
-        sourcePos={false}
-        transformLinkUri={[Function]}
-      />
-      <Related
-        related={Array []}
-      />
-      <History
-        history={
+    </div>
+    <div
+      className="u-pull-right"
+    >
+      <Tags
+        tags={
           Array [
-            Object {
-              "date": "Jan 1, 2004",
-              "ringName": "Adopt",
-            },
-            Object {
-              "date": "Mar 20, 2018",
-              "ringName": "Hold",
-            },
+            "90's",
           ]
         }
       />

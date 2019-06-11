@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TagsInput /> It can render input 1`] = `
+<ReactTags
+  addOnBlur={false}
+  allowBackspace={true}
+  allowNew={false}
+  autofocus={true}
+  autoresize={true}
+  clearInputOnDelete={true}
+  delimiterChars={Array []}
+  delimiters={
+    Array [
+      9,
+      13,
+    ]
+  }
+  handleAddition={[Function]}
+  handleDelete={[Function]}
+  inputAttributes={Object {}}
+  maxSuggestionsLength={6}
+  minQueryLength={2}
+  placeholder="Filter radar by tags"
+  suggestions={
+    Array [
+      Object {
+        "id": 1,
+        "name": "java",
+      },
+      Object {
+        "id": 2,
+        "name": "php",
+      },
+    ]
+  }
+  suggestionsFilter={null}
+  tagComponent={null}
+  tags={Array []}
+/>
+`;
