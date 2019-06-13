@@ -13,3 +13,6 @@ rationale: |
 related:
   - dev/react.yaml
   - dev/typescript.yaml
+tags:
+  - javascript
+  - web

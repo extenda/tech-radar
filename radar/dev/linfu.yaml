@@ -8,3 +8,5 @@ rationale: |
   LinFu should not be used. Instead use Unity or DI fron .NET Core.
 related:
   - dev/unity.yaml
+tags:
+  - dotnet

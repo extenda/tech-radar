@@ -13,3 +13,7 @@ rationale:
   Developers can use distributed tracing to help debug and optimize their code.
 related:
   - qa/jaeger.yaml
+tags:
+  - cloud
+  - devops
+  - trace

@@ -11,3 +11,6 @@ rationale: |
 related:
   - dev/react.yaml
   - dev/angular.yaml
+tags:
+  - javascript
+  - web

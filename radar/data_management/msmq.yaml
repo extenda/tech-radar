@@ -13,3 +13,6 @@ rationale: |
   MSMQ can still be used for legacy services and components on .NET Framework.
 related:
   - data_management/kafka.yaml
+tags:
+  - dotnet
+  - messaging

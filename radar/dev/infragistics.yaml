@@ -9,3 +9,6 @@ rationale:
   It will also keep our modules more consistent
 related:
   - dev/devexpress.yaml
+tags:
+  - javascript
+  - dotnet

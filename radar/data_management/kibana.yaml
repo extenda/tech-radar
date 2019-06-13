@@ -11,3 +11,6 @@ related:
   - data_management/elasticsearch.yaml
   - data_management/beats.yaml
   - data_management/logstash.yaml
+tags:
+  - log
+  - trace

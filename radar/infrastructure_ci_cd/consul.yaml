@@ -9,3 +9,6 @@ rationale:
 related:
   - infrastructure_ci_cd/etcd.yaml
   - data_management/zookeeper.yaml
+tags:
+  - cloud
+  - devops

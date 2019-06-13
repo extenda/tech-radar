@@ -9,3 +9,8 @@ rationale: |
   We're currently evaluating NativeScript as a framework for mobile (Android, iOS) clients in mobilepos, the goal
   is to find a framework that allows code sharing, rapid development and prototyping for everything between
   phones and large scale displays.
+tags:
+  - android
+  - ios
+  - javascript
+  - mobile

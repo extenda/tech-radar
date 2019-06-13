@@ -9,3 +9,6 @@ description: |
   Vue.js is an open-source JavaScript framework for building user interfaces and single-page applications.
 rationale: |
   After deciding on React and Angular for the frameworks of choice there's no need for Vue.
+tags:
+  - javascript
+  - web

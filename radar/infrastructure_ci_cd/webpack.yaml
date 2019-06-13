@@ -9,3 +9,6 @@ description: |
   just about any resource or asset.
 rationale: |
   A very widely used bundler with a large amount of customization and tooling.
+tags:
+  - build
+  - javascript

@@ -8,3 +8,6 @@ rationale:
   Look into Nlog as an alternative to log4net
 related:
   - dev/log4net.yaml
+tags:
+  - dotnet
+  - log

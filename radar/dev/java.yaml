@@ -23,3 +23,5 @@ rationale: |
   For existing systems, it is important to start to upgrade to the next LTS
   release after Java 8 (at this time Java 11). We must make sure our products
   work on supported Java versions and don't lag behind on Java 8 after EOL.
+tags:
+  - java

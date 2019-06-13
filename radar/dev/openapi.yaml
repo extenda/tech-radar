@@ -11,3 +11,9 @@ rationale: |
   Use OpenAPI specifications as the primary way to share REST API specifications
   both internally and externally. Swagger is the most known implementation and we
   recommend it is used for all REST APIs.
+tags:
+  - api
+  - dotnet
+  - java
+  - javascript
+  - web

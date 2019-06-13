@@ -18,3 +18,6 @@ rationale:
 related:
   - infrastructure_ci_cd/maven.yaml
   - infrastructure_ci_cd/gradle.yaml
+tags:
+  - build
+  - java

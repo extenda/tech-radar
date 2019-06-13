@@ -12,3 +12,7 @@ rationale:
   We found the TeamCity UI better than Jenkins
 related:
   - infrastructure_ci_cd/jenkins_aws.yaml
+tags:
+  - build
+  - dotnet
+  - java
