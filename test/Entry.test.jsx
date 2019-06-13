@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Entry from '../src/js/components/Entry';
+import NotFound from '../src/js/components/NotFound';
 
 jest.mock('../src/js/modules/radarService');
 
@@ -28,6 +29,13 @@ describe('<Entry />', () => {
     const match = { params: { id: 'lisp' } };
     const component = shallow(<Entry match={match} />);
     expect(component.find('.inactive')).toHaveLength(1);
+    expect(component).toMatchSnapshot();
+  });
+
+  test('It renders Not Found for missing entry', () => {
+    const match = { params: { id: 'missing' } };
+    const component = shallow(<Entry match={match} />);
+    expect(component.find(NotFound)).toHaveLength(1);
     expect(component).toMatchSnapshot();
   });
 });

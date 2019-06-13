@@ -11,7 +11,7 @@ exports[`<Footer /> It renders the footer 1`] = `
       className="footer-text"
     >
       Test 0.0.1-local, 5 June, 2019
-       &#8729; 
+       ∙ 
       <Icon
         name="copyright"
         spaceBefore={false}
@@ -32,7 +32,7 @@ exports[`<Footer /> It renders the footer 1`] = `
       >
         GitHub
       </a>
-       &#8729; 
+       ∙ 
       Discuss in
       <Icon
         name="slack"
@@ -51,7 +51,7 @@ exports[`<Footer /> It renders the footer 1`] = `
       >
         MIT
       </a>
-       &#8729; 
+       ∙ 
       Thanks to Zalando for the
        
       <a

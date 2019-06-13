@@ -6,10 +6,16 @@ import Related from './entry/Related';
 import History from './entry/History';
 import Badge from './entry/Badge';
 import Navigation from './Navigation';
+import NotFound from './NotFound';
 
 const Entry = (props) => {
   const { match } = props;
   const entry = radarService.getEntry(match.params.id);
+  if (!entry) {
+    return (
+      <NotFound />
+    );
+  }
   const quadrant = radarService.model.quadrants.find(q => q.dirname === entry.quadrant.dirname);
 
   return (
