@@ -11,3 +11,6 @@ rationale:
   Open source authentication solution that provides framework for most authentication types like OpenIdConnect,
   Active Directory, Local login and ws federation.
   Higly configurable solution with support for many login schemes.
+tags:
+  - dotnet
+  - security

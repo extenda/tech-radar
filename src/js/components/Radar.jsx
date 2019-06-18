@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { visualize } from '../lib/radar';
+import SvgRadar from '../lib/radar';
 import radarService from '../modules/radarService';
 import Icon from './Icon';
 import Navigation from './Navigation';
+import TagsInput from './TagsInput';
 import { pick } from '../modules/utils';
 
 export default class Radar extends Component {
@@ -13,12 +14,22 @@ export default class Radar extends Component {
     }).isRequired,
   };
 
-  renderRadar = () => {
-    const { history } = this.props;
-    const radar = radarService.model;
-    const blips = radarService.listBlips();
+  constructor(props) {
+    super(props);
 
-    visualize({
+    this.svgRadar = this.createSvgRadar();
+
+    this.state = {
+      tags: [],
+    };
+  }
+
+  createSvgRadar = () => {
+    const { history } = this.props;
+
+    const radar = radarService.model;
+
+    return new SvgRadar({
       svg_id: 'radar',
       width: 1450,
       height: 1000,
@@ -36,11 +47,29 @@ export default class Radar extends Component {
         { name: 'Hold', color: '#bf360c' },
       ],
       print_layout: true,
-      entries: blips,
       linkOnClick: (link) => {
         history.push(link);
       },
     });
+  };
+
+  renderRadar = () => {
+    this.svgRadar.renderBackground();
+    this.renderBlips();
+  };
+
+  renderBlips = () => {
+    const { tags } = this.state;
+
+    this.svgRadar.renderEntries(
+      radarService.listBlips(tags),
+    );
+  };
+
+  onFilter = (tags) => {
+    this.setState({
+      tags: tags.map(t => t.name),
+    }, this.renderBlips);
   };
 
   componentDidMount = () => {
@@ -61,6 +90,9 @@ export default class Radar extends Component {
             {radar.version}
           </span>
         </h1>
+        <div className="tags-filter">
+          <TagsInput onFilter={this.onFilter} tags={radarService.listTags()} />
+        </div>
         <div className="svg-radar">
           <svg id="radar" />
         </div>

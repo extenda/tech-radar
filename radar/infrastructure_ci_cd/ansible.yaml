@@ -11,3 +11,5 @@ related:
   - infrastructure_ci_cd/chef.yaml
   - infrastructure_ci_cd/puppet.yaml
   - infrastructure_ci_cd/saltstack.yaml
+tags:
+  - devops

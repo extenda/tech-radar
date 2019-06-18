@@ -9,3 +9,5 @@ rationale:
 related:
   - data_management/mssql.yaml
   - data_management/sqlite.yaml
+tags:
+  - dotnet

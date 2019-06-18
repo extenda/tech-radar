@@ -12,3 +12,5 @@ rationale: |
 related:
   - infrastructure_ci_cd/docker.yaml
   - infrastructure_ci_cd/kubernetes.yaml
+tags:
+  - devops

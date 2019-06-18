@@ -25,3 +25,5 @@ rationale: |
 related:
   - qa/pact.yaml
   - qa/spring_cloud_contract.yaml
+tags:
+  - test

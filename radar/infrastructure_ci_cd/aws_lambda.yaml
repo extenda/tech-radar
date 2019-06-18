@@ -14,3 +14,7 @@ rationale: |
   Google Cloud can be used.
 
   There is no requirement to convert existing solutions built on AWS Lambda.
+tags:
+  - cloud
+  - java
+  - javascript

@@ -11,3 +11,5 @@ rationale:
   if the containers can run in k8s they should in theory also be able to run in Docker Swarm
 related:
   - infrastructure_ci_cd/docker.yaml
+tags:
+  - docker

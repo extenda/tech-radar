@@ -9,3 +9,7 @@ description: |
   using the MapReduce programming model
 rationale:
   Could be used as an archive or cold storage solution for historical data
+tags:
+  - bi
+  - dotnet
+  - java

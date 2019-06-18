@@ -9,3 +9,6 @@ rationale:
 related:
   - infrastructure_ci_cd/docker.yaml
   - infrastructure_ci_cd/docker_swarm.yaml
+tags:
+  - devops
+  - docker

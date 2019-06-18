@@ -13,3 +13,6 @@ rationale: |
   Because of it's loosely typed nature and plethora of misinformation online on how to write proper JS we have
   strict and unapologetic best practices for how JS projects should be structured and how the code should be written
   and quality assured.
+tags:
+  - javascript
+  - web

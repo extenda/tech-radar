@@ -12,3 +12,5 @@ related:
   - data_management/kafka.yaml
   - infrastructure_ci_cd/consul.yaml
   - infrastructure_ci_cd/etcd.yaml
+tags:
+  - devops

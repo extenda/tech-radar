@@ -15,3 +15,6 @@ rationale: |
     * Is a relational database the best fit?
     * If cloud, look for cloud native solutions - don't spin up MySQL
     * Thin clients can't depend on a local MySQL database
+tags:
+  - java
+  - sql

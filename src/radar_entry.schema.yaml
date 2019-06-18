@@ -35,3 +35,7 @@ mapping:
     sequence:
       - type: str
         pattern: .*\.yaml$
+  "tags":
+    type: seq
+    sequence:
+      - type: str

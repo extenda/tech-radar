@@ -14,3 +14,8 @@ rationale: |
   By using Istio we can spend less time on infrastructure and more time on business logic.
 related:
   - infrastructure_ci_cd/kubernetes.yaml
+tags:
+  - cloud
+  - docker
+  - k8s
+  - security

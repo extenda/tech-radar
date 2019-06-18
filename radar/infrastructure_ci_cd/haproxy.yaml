@@ -11,3 +11,5 @@ rationale:
 related:
   - infrastructure_ci_cd/traefik.yaml
   - infrastructure_ci_cd/nginx.yaml
+tags:
+  - devops

@@ -14,3 +14,8 @@ rationale: |
   access in-house resources such as the Nexus repository or SonarQube.
 related:
   - infrastructure_ci_cd/jenkins_aws.yaml
+tags:
+  - build
+  - java
+  - javascript
+  - saas

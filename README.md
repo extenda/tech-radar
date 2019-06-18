@@ -112,6 +112,9 @@ rationale: |
   This entry can be multiple lines and supports Markdown.
 related: # Optional list of related entries
   - qa/semver.yaml # Relative path of related entry from radar dir.
+tags: # Optional list of tags.
+  - devops # one lowercase word or kebab-case
+  - test
 ```
 
 There are two scripts to validate radar entries. To use them, first install the required Python dependencies:

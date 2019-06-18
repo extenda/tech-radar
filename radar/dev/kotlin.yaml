@@ -15,3 +15,5 @@ rationale:
   Modern alternative to Java, very productive and powerful language.
 related:
   - dev/java.yaml
+tags:
+  - java

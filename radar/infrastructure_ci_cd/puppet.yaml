@@ -10,3 +10,5 @@ related:
   - infrastructure_ci_cd/ansible.yaml
   - infrastructure_ci_cd/chef.yaml
   - infrastructure_ci_cd/saltstack.yaml
+tags:
+  - devops

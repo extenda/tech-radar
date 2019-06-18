@@ -11,3 +11,6 @@ rationale: |
   asynchrous requests.
 related:
   - dev/spring_boot2.yaml
+tags:
+  - java
+  - api

@@ -12,3 +12,6 @@ rationale:
   This will enable a stabile sandbox environment for every test run.
 related:
   - qa/containertests.yaml
+tags:
+  - docker
+  - dotnet

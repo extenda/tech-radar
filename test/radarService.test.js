@@ -22,7 +22,12 @@ describe('RadarService', () => {
 
   test('It can list active blips', () => {
     const blips = radarService.listBlips();
-    expect(blips.length).toEqual(2);
+    expect(blips).toHaveLength(2);
+  });
+
+  test('It can filter blips by tags', () => {
+    const blips = radarService.listBlips(['java']);
+    expect(blips).toHaveLength(1);
   });
 
   test('It can load a quadrant with sorted entries', () => {
@@ -47,25 +52,40 @@ describe('RadarService', () => {
 
   test('It can list all active entries in quadrant', () => {
     const entries = radarService.listEntries('dev', '*');
-    expect(entries.length).toEqual(2);
-    expect(entries[0].meta).toBeUndefined();
-    expect(entries[0].$loki).toBeUndefined();
+    expect(entries).toHaveLength(2);
   });
 
   test('It can list all inactive entries in quadrant', () => {
     const entries = radarService.listEntries('dev', '*', false);
-    expect(entries.length).toEqual(1);
+    expect(entries).toHaveLength(1);
   });
 
   test('It can list entries by quadrant and ring', () => {
     const entries = radarService.listEntries('dev', 0);
-    expect(entries.length).toEqual(1);
+    expect(entries).toHaveLength(1);
   });
 
   test('It can get entity by filename', () => {
     const entry = radarService.getEntry('java.html');
     expect(entry.name).toEqual('Java');
-    expect(entry.meta).toBeUndefined();
-    expect(entry.$loki).toBeUndefined();
+  });
+
+  test('It can list unique tags', () => {
+    const tags = radarService.listTags();
+    expect(tags).toHaveLength(3);
+
+    tags.sort((a, b) => a.localeCompare(b));
+    expect(tags).toEqual(['90\'s', 'java', 'web']);
+  });
+
+  test('It can list entries by tag', () => {
+    const entries = radarService.listEntriesByTag('java');
+    expect(entries).toHaveLength(1);
+    expect(entries[0].name).toEqual('Java');
+  });
+
+  test('It returns empty array for invalid tag', () => {
+    const entries = radarService.listEntriesByTag('invalid');
+    expect(entries).toHaveLength(0);
   });
 });

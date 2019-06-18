@@ -10,8 +10,31 @@ class RadarService {
 
   getEntry = filename => this.model.entries.find(entry => entry.filename === filename);
 
-  listBlips = () => this.model.entries.filter(entry => entry.blip.active)
-    .map(entry => pick(entry.blip, 'label', 'quadrant', 'ring', 'link', 'moved', 'active'));
+  listBlips = (tags = []) => {
+    const entryFilter = (entry) => {
+      if (!entry.blip.active) {
+        return false;
+      }
+
+      if (tags && tags.length > 0) {
+        // Return true if entry includes all filter tags.
+        return tags.every(tag => entry.tags.includes(tag));
+      }
+
+      return true;
+    };
+
+    return this.model.entries.filter(entryFilter)
+      .map(entry => pick(entry.blip, 'label', 'quadrant', 'ring', 'link', 'moved', 'active'));
+  };
+
+  listTags = () => {
+    const tags = [];
+    this.model.entries.forEach((entry) => {
+      tags.push(...entry.tags);
+    });
+    return [...new Set(tags)];
+  };
 
   listEntries = (quadrant, ring, active = true) => {
     const filters = [
@@ -27,6 +50,10 @@ class RadarService {
       .filter(entry => filters.every(filter => filter(entry)))
       .sort(firstBy('name'));
   };
+
+  listEntriesByTag = tag => this.model.entries
+    .filter(entry => entry.tags.includes(tag))
+    .sort(firstBy('name'));
 
   getQuadrant = (dirname) => {
     const qi = this.model.quadrants.findIndex(q => q.dirname === dirname);

@@ -9,3 +9,7 @@ description: |
   may run either on the same computer or on another computer across a network.
 rationale: |
   Persistent storage on the Microsoft Platform. Consider alternatives for new microservices.
+tags:
+  - dotnet
+  - java
+  - sql

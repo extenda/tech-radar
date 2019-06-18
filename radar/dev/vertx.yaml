@@ -22,3 +22,5 @@ rationale: |
   It shares a lot of similarities with NodeJS; event loop, callbacks to name a few.
 
   The Golden Rule; _"Don't Block the Event Loop"_
+tags:
+  - java

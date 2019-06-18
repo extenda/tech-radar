@@ -10,3 +10,7 @@ related:
   - data_management/elasticsearch.yaml
   - data_management/logstash.yaml
   - data_management/kibana.yaml
+tags:
+  - devops
+  - log
+  - trace

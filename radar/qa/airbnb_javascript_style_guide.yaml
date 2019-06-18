@@ -8,3 +8,5 @@ description: |
 rationale: |
   To make our JavaScript consistent, readable, scalable and with a style guide
   that is well documented, updated and for free.
+tags:
+  - javascript

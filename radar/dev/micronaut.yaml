@@ -18,3 +18,5 @@ rationale:
   and is very well suited for microservices.
 related:
   - dev/java.yaml
+tags:
+  - java
