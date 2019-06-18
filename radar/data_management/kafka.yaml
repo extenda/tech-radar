@@ -15,3 +15,7 @@ rationale:
   The built in commit log can be regarded as the source-of-truth for several entities.
   The power of real-time streaming can enable Retail Suite to process vast amounts of data faster
   and more precise than today.
+tags:
+  - java
+  - dotnet
+  - messaging

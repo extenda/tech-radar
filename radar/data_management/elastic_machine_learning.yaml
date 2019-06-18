@@ -12,3 +12,5 @@ rationale:
   and to identify anomalies across many different sources.
 related:
   - data_management/kibana.yaml
+tags:
+  - bi

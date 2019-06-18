@@ -12,3 +12,6 @@ rationale: |
 related:
   - infrastructure_ci_cd/kubernetes.yaml
   - infrastructure_ci_cd/istio.yaml
+tags:
+  - devops
+  - k8s

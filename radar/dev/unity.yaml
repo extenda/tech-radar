@@ -9,3 +9,5 @@ rationale: |
   Enables dependency injection on the .NET platform.
 related:
   - dev/linfu.yaml
+tags:
+  - dotnet

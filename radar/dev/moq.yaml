@@ -8,3 +8,6 @@ description: |
   that the proper methods on the dependent objects are being called.
 rationale:
   We want to enable developers to use mocking when testing.
+tags:
+  - dotnet
+  - test

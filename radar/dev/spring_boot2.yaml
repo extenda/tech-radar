@@ -25,3 +25,6 @@ related:
   - dev/nodejs.yaml
   - dev/spring_framework.yaml
   - dev/vertx.yaml
+tags:
+  - java
+  - spring

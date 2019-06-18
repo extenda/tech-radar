@@ -12,3 +12,7 @@ rationale: |
   Two areas in which to start improvements are:
     * Configuration from env vars
     * Logging
+tags:
+  - devops
+  - dotnet
+  - java

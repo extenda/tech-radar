@@ -22,3 +22,5 @@ rationale: |
   all in "one endpoint".
 related:
   - qa/pact.yaml
+tags:
+  - api

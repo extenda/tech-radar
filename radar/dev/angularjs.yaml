@@ -10,3 +10,6 @@ description: |
 rationale: |
   AngularJS is not being developed any more and is in LTS mode. No new project should use
   this framework for any reason.
+tags:
+  - javascript
+  - web

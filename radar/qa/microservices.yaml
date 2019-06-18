@@ -16,3 +16,9 @@ rationale: |
 
   It also comes with a lot of challenges releated to distributed systems, but overall, the benifits of
   microservices outweighs the drawbacks.
+tags:
+  - cloud
+  - docker
+  - dotnet
+  - java
+  - k8s

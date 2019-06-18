@@ -21,3 +21,6 @@ rationale: |
 related:
   - dev/react.yaml
   - dev/vue.yaml
+tags:
+  - java
+  - desktop

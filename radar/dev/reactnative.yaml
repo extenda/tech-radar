@@ -9,3 +9,9 @@ description: |
 rationale: |
   As an alternative to NativeSceript, React Native takes a more explicit approach to
   building apps on iOS and Android.
+tags:
+  - android
+  - ios
+  - javascript
+  - mobile
+  - web

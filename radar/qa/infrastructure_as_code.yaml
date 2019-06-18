@@ -11,3 +11,5 @@ description: |
 rationale: |
   Treat your infrastructure as code and automate creating it and destroying it.
   This becomes especially important in a cloud-environment.
+tags:
+  - devops

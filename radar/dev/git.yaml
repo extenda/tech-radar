@@ -12,3 +12,5 @@ rationale: |
   Git has proven to have all capabilities needed without being hard to learn or use which makes it the obvious choice.
 related:
   - infrastructure_ci_cd/bitbucket.yaml
+tags:
+  - scm

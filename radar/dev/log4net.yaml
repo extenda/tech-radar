@@ -8,3 +8,6 @@ rationale:
   De facto standard logging framework in RS
 related:
   - dev/nlog.yaml
+tags:
+  - dotnet
+  - log

@@ -10,3 +10,5 @@ rationale:
 related:
   - infrastructure_ci_cd/nginx.yaml
   - infrastructure_ci_cd/haproxy.yaml
+tags:
+  - devops

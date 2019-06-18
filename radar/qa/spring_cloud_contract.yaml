@@ -20,3 +20,8 @@ rationale: |
 related:
   - qa/consumer_contract_testing.yaml
   - dev/spring_boot2.yaml
+tags:
+  - api
+  - java
+  - spring
+  - test

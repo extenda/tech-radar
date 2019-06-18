@@ -15,3 +15,5 @@ rationale: |
 
   We have started storing RPM artifacts in an S3 YUM repository, but are still to
   utilize dependencies properly and allow customers to fetch them.
+tags:
+  - devops

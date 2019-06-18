@@ -6,3 +6,6 @@ description: |
   [xunit](https://xunit.net/) is a free, open source, community-focused unit testing tool for the .NET Framework
 rationale:
   Easy to use test framework with google community support.
+tags:
+  - dotnet
+  - test

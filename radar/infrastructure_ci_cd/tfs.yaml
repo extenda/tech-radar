@@ -12,3 +12,6 @@ rationale:
 related:
   - dev/git.yaml
   - infrastructure_ci_cd/bitbucket.yaml
+tags:
+  - scm
+  - dotnet

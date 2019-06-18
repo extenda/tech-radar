@@ -16,3 +16,7 @@ rationale: |
   alternatives such as for example _Spock_.
     * Java
     * Python
+tags:
+  - e2e
+  - java
+  - test

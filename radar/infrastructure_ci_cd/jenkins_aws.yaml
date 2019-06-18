@@ -14,3 +14,6 @@ rationale: |
   best CI/CD platform that can be used.
 related:
   - infrastructure_ci_cd/circleci.yaml
+tags:
+  - build
+  - java

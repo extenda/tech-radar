@@ -15,3 +15,5 @@ rationale: |
 related:
   - infrastructure_ci_cd/jenkins_aws.yaml
   - infrastructure_ci_cd/circleci.yaml
+tags:
+  - devops

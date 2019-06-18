@@ -10,3 +10,9 @@ rationale:
   Enables QA Engineers to test Web front-end
 related:
   - qa/specflow.yaml
+tags:
+  - dotnet
+  - e2e
+  - java
+  - test
+  - web

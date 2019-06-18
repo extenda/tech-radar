@@ -8,3 +8,5 @@ rationale:
   Used to help speed up UI development for desktop applications
 related:
   - dev/infragistics.yaml
+tags:
+  - dotnet
