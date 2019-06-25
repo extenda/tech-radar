@@ -112,6 +112,10 @@ workflows:
           context: sonarcloud
           requires:
             - build
+          filters:
+            branches:
+              # Don't run Sonar on forked PRs
+              ignore: /^pull\/.*$/
       - dockerhub:
           context: dockerhub
           requires:
