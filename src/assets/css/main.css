@@ -194,9 +194,6 @@ ul.tags {
   list-style: none;
 }
 
-ul.tags li {
-}
-
 .entry-tag {
   display: inline-block;
   box-sizing: border-box;
