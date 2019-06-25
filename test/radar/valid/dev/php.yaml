@@ -8,6 +8,10 @@ description: |
   Description
 rationale: |
   Rationale
+license:
+  open-source:
+    name: BSD-2 # Not completely true, but we want the test!
+    link: https://www.php.net/license/3_01.txt
 tags:
   - 90's
   - Web
