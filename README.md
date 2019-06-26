@@ -160,7 +160,7 @@ The following open source license names are valid for use in the radar blips.
 | EDL-1.0     | Eclipse Distribution License (EDL) Version 1.0                   |
 | LGPL-2.1    | GNU Lesser General Public License (LGPL) Version 2.1             |
 | LGPL-3.0    | GNU Lesser General Public License (LGPL) Version 3.0             |
-| GPL-CPE     | GNU General Public License (GPL) with the Classpath Exception    |
+| GPL-CE      | GNU General Public License (GPL) with the Classpath Exception    |
 | MIT         | The MIT License                                                  |
 | MPL-1.0     | Mozilla Public License (MPL) Version 1.0                         |
 | MPL-1.1     | Mozilla Public License (MPL) Version 1.1                         |

@@ -78,7 +78,7 @@ describe('RadarService', () => {
       'bsd',
       'bsd-2',
       'commercial',
-      'gpl-cpe',
+      'gpl-ce',
       'java',
       'open-source',
       'web',

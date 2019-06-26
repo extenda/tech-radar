@@ -14,7 +14,7 @@ describe('YAML Reader', () => {
     expect(entries.find(entry => entry.name === 'Java').tags).toEqual([
       '90\'s',
       'commercial',
-      'gpl-cpe',
+      'gpl-ce',
       'java',
       'open-source',
       'web',

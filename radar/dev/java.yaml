@@ -25,7 +25,7 @@ rationale: |
   work on supported Java versions and don't lag behind on Java 8 after EOL.
 license:
   open-source:
-    name: GPL-CPE
+    name: GPL-CE
     link: https://openjdk.java.net/legal/gplv2+ce.html
   commercial: |
     Oracle JRE requires a commercial license from Oracle to be used on POS workstations and servers.
