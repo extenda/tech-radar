@@ -120,6 +120,10 @@ const collectEntries = (radarDir, callback) => {
     entry.blip = createBlip(entry);
     entry.related = buildRelatedLinks(entry);
     entry.tags = createTags(entry);
+    if (entry.license && entry.license['open-source']) {
+      entry.license.openSource = entry.license['open-source'];
+      delete entry.license['open-source'];
+    }
     callback(entry);
   });
 };

@@ -6,8 +6,10 @@ import Related from './entry/Related';
 import History from './entry/History';
 import Badge from './entry/Badge';
 import Tags from './entry/Tags';
+import License from './entry/License';
 import Navigation from './Navigation';
 import NotFound from './NotFound';
+import LicenseBadges from './entry/LicenseBadges';
 
 const Entry = (props) => {
   const { match } = props;
@@ -38,6 +40,7 @@ const Entry = (props) => {
             {(entry.blip.active === false) && (
               <Badge className="inactive" icon="warning" text="Inactive" />
             )}
+            <LicenseBadges license={entry.license} />
           </div>
           <div className="twelve columns">
             <Markdown source={entry.description} />
@@ -47,6 +50,7 @@ const Entry = (props) => {
                 <Markdown source={entry.rationale} />
               </React.Fragment>
             )}
+            <License license={entry.license} />
             <Related related={entry.related} />
             <History history={entry.blip.history} />
           </div>
