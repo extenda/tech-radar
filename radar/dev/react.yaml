@@ -15,7 +15,7 @@ rationale: |
 license:
   open-source:
     name: MIT
-    link: https://github.com/facebook/react/blob/master/LICENSE
+    link: https://raw.githubusercontent.com/facebook/react/master/LICENSE
 related:
   - dev/angular.yaml
   - dev/typescript.yaml
