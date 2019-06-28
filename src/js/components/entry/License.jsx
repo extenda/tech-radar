@@ -25,6 +25,13 @@ const OS_LICENSES = {
   Public: 'Public Domain',
 };
 
+const COMMERCIAL_DEFAULT_TEXT = {
+  Google: 'Use of this software requires a license for Google Cloud Platform.',
+};
+
+const commercialDescription = commercial => commercial.description
+  || COMMERCIAL_DEFAULT_TEXT[commercial.company];
+
 const License = (props) => {
   const { license: { openSource, commercial } } = props;
 
@@ -48,15 +55,23 @@ const License = (props) => {
               ? <a href={openSource.link}>{OS_LICENSES[openSource.name]}</a>
               : OS_LICENSES[openSource.name]}
           </p>
+          {openSource.description && (
+            <Markdown source={openSource.description} />
+          )}
         </div>
       )}
       {commercial && (
         <div>
           <strong>
             <Icon name="exclamation-triangle" />
-            Available for use with a commercial agreement.
+            Available for use with a commercial agreement from
+            {' '}
+            {commercial.company}
+            .
           </strong>
-          <Markdown source={commercial} />
+          {commercialDescription(commercial) && (
+            <Markdown source={commercialDescription(commercial)} />
+          )}
         </div>
       )}
     </React.Fragment>
@@ -68,8 +83,12 @@ License.propTypes = {
     openSource: PropTypes.shape({
       name: PropTypes.string.isRequired,
       link: PropTypes.string,
+      description: PropTypes.string,
     }),
-    commercial: PropTypes.string,
+    commercial: PropTypes.shape({
+      company: PropTypes.string.isRequired,
+      description: PropTypes.string,
+    }),
   }),
 };
 

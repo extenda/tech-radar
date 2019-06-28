@@ -12,10 +12,12 @@ rationale: |
     * If cloud, look for cloud native solutions - don't spin up MySQL
     * Thin clients can't depend on a local MySQL database
 license:
-  commercial: |
-    Commercial use of MySQL requires a license agreement with Oracle and places
-    restrictions on how MySQL is installed and used and which driver packages
-    we can use to connect from our software.
+  commercial:
+    company: Oracle
+    description: |
+      Commercial use of MySQL requires a license agreement with Oracle and places
+      restrictions on how MySQL is installed and used and which driver packages
+      we can use to connect from our software.
 tags:
   - java
   - sql

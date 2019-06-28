@@ -11,7 +11,30 @@ exports[`<License /> It renders commercial license 1`] = `
         name="exclamation-triangle"
         spaceBefore={true}
       />
-      Available for use with a commercial agreement.
+      Available for use with a commercial agreement from
+       
+      Oracle
+      .
+    </strong>
+  </div>
+</Fragment>
+`;
+
+exports[`<License /> It renders commercial license with description 1`] = `
+<Fragment>
+  <h2>
+    License
+  </h2>
+  <div>
+    <strong>
+      <Icon
+        name="exclamation-triangle"
+        spaceBefore={true}
+      />
+      Available for use with a commercial agreement from
+       
+      Oracle
+      .
     </strong>
     <ReactMarkdown
       astPlugins={Array []}
@@ -51,19 +74,11 @@ exports[`<License /> It renders dual license 1`] = `
         name="exclamation-triangle"
         spaceBefore={true}
       />
-      Available for use with a commercial agreement.
+      Available for use with a commercial agreement from
+       
+      Oracle
+      .
     </strong>
-    <ReactMarkdown
-      astPlugins={Array []}
-      escapeHtml={true}
-      plugins={Array []}
-      rawSourcePos={false}
-      renderers={Object {}}
-      skipHtml={false}
-      source="License text."
-      sourcePos={false}
-      transformLinkUri={[Function]}
-    />
   </div>
 </Fragment>
 `;
@@ -86,6 +101,37 @@ exports[`<License /> It renders open-source license 1`] = `
     <p>
       The MIT License
     </p>
+  </div>
+</Fragment>
+`;
+
+exports[`<License /> It renders open-source license with description 1`] = `
+<Fragment>
+  <h2>
+    License
+  </h2>
+  <div>
+    <strong>
+      <Icon
+        name="check"
+        spaceBefore={true}
+      />
+      Available for use under an open-source license.
+    </strong>
+    <p>
+      The MIT License
+    </p>
+    <ReactMarkdown
+      astPlugins={Array []}
+      escapeHtml={true}
+      plugins={Array []}
+      rawSourcePos={false}
+      renderers={Object {}}
+      skipHtml={false}
+      source="OSS Desc"
+      sourcePos={false}
+      transformLinkUri={[Function]}
+    />
   </div>
 </Fragment>
 `;

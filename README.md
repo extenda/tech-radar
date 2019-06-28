@@ -112,12 +112,17 @@ rationale: |
   This entry can be multiple lines and supports Markdown.
 license: # Optional, but recommended to always include
   # Only if open source
-  opensource:
-    name: MIT # Valid enum open-source name (from enum)
+  open-source:
+    name: MIT # Required open-source license. Must match enum in schema.
     link: http://github.com/org/repo/LICENSE # Optional link to license
+    description: |
+      Optional description of the open source license. Do not use unless something must be explained,
+      for example with dual licenses. Supports markdown.
   # Only if commercial
-  commercial: |
-    Describe the commercial license using Markdown.
+  commercial:
+    company: Google # Required company name. Must match enum in schema.
+    description: |
+      Optional description of the commercial license that supports Markdown.
 related: # Optional list of related entries
   - qa/semver.yaml # Relative path of related entry from radar dir.
 tags: # Optional list of tags.
@@ -141,7 +146,7 @@ And to validate the YAML against its schema definition, use:
 $ npm run yaml:validate
 ```
 
-### Open Source License Listings
+### Supported Open-Source Licenses
 
 The following open source license names are valid for use in the radar blips.
 
@@ -171,6 +176,20 @@ If you find a library with a license that isn't in this list it must be analyzed
 The list only contains license types analyzed for compliance with Extenda Retail products.
 
 For projects with multiple licenses, select the most permissible one and make sure it is compatible with Extenda Retail's licensing.
+
+### Supported Commercial Licenses
+
+The following companies are valid for use with commercial licenses.
+
+  * Amazon
+  * Google
+  * Jaspersoft
+  * Microsoft
+  * Oracle
+  * Qlik
+  * Tanuki Software
+
+If you add a radar entry that requires a license from some other company, this means the company must be added to the tech-radar model and schemas.
 
 ### Docker
 

@@ -17,6 +17,7 @@ describe('YAML Reader', () => {
       'gpl-ce',
       'java',
       'open-source',
+      'oracle',
       'web',
     ]);
 

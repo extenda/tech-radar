@@ -30,7 +30,9 @@ describe('<LicenseBadges />', () => {
     const component = shallow(
       <LicenseBadges
         license={{
-          commercial: 'The commercial agreement.',
+          commercial: {
+            company: 'Oracle',
+          },
         }}
       />,
     );
@@ -43,7 +45,9 @@ describe('<LicenseBadges />', () => {
     const component = shallow(
       <LicenseBadges
         license={{
-          commercial: 'The commercial agreement.',
+          commercial: {
+            company: 'Oracle',
+          },
           openSource: {
             name: 'MIT',
             link: 'https://license.com',

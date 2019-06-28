@@ -63,8 +63,25 @@ mapping:
           "link":
             type: str
             pattern: ^http(s)?://.*$
+          "description":
+            type: str
       "commercial":
-        type: str
+        type: map
+        mapping:
+          "company":
+            type: str
+            required: true
+            enum: [
+              Amazon,
+              Google,
+              Jaspersoft,
+              Microsoft,
+              Oracle,
+              Qlik,
+              "Tanuki Software",
+            ]
+          "description":
+            type: str
   "related":
     type: seq
     sequence:

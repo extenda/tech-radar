@@ -80,6 +80,7 @@ const createLicenseTags = (entry) => {
   const { license } = entry;
   if (license && license.commercial) {
     tags.push('commercial');
+    tags.push(license.commercial.company.toLowerCase());
   }
 
   if (license && license['open-source']) {

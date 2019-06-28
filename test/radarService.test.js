@@ -72,7 +72,7 @@ describe('RadarService', () => {
 
   test('It can list unique tags', () => {
     const tags = radarService.listTags();
-    expect(tags).toHaveLength(8);
+    expect(tags).toHaveLength(9);
     expect(tags).toEqual([
       '90\'s',
       'bsd',
@@ -81,6 +81,7 @@ describe('RadarService', () => {
       'gpl-ce',
       'java',
       'open-source',
+      'oracle',
       'web',
     ]);
   });

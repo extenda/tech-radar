@@ -27,10 +27,11 @@ license:
   open-source:
     name: GPL-CE
     link: https://openjdk.java.net/legal/gplv2+ce.html
-  commercial: |
-    Oracle JRE requires a commercial license from Oracle to be used on POS workstations and servers.
-    This license includes SLAs from Oracle.
-    OpenJDK does not require any license and is released on GPL with a classpath exception, which means we can use it
-    to run our commercial applications.
+  commercial:
+    company: Oracle
+    description: |
+      Oracle JRE requires a commercial license from Oracle to be used on POS workstations and servers.
+      This license includes SLAs from Oracle. OpenJDK does not require any license and is released on
+      GPL with a classpath exception, which means we can use it to run our commercial applications.
 tags:
   - java
