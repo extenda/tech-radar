@@ -1,0 +1,18 @@
+name: Liquibase
+blip:
+  - date: 2019-06-30
+    ring: ADOPT
+description: |
+  [Liquibase](https://www.liquibase.org) is a tool to evolve your database schema continously.
+rationale: |
+  With liquibase, database schema migration is part of the everyday development. The schema is evolved using change sets
+  that are executed by Liquibase to migrate the schema to the latest version. This means that the schema is continously
+  migrated and no after-the-fact database migration scripts are ever needed.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://raw.githubusercontent.com/liquibase/liquibase/master/LICENSE.txt
+tags:
+  - java
+  - scm
+  - sql
