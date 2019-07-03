@@ -30,8 +30,64 @@ mapping:
   "rationale":
     type: str
     required: true
+  "license":
+    type: map
+    mapping:
+      "open-source":
+        type: map
+        mapping:
+          "name":
+            type: str
+            required: true
+            enum: [
+              Apache-1.1,
+              Apache-2.0,
+              BSD-2,
+              BSD-3,
+              BSD-4,
+              BSD-style,
+              CC0,
+              CDDL-1.0,
+              CDDL-1.1,
+              LGPL-2.1,
+              LGPL-3.0,
+              EPL-1.0,
+              EDL-1.0,
+              GPL-CE,
+              MIT,
+              MPL-1.0,
+              MPL-1.1,
+              MPL-2.0,
+              Public,
+            ]
+          "link":
+            type: str
+            pattern: ^http(s)?://.*$
+          "description":
+            type: str
+      "commercial":
+        type: map
+        mapping:
+          "company":
+            type: str
+            required: true
+            enum: [
+              Amazon,
+              Google,
+              Jaspersoft,
+              Microsoft,
+              Oracle,
+              Qlik,
+              "Tanuki Software",
+            ]
+          "description":
+            type: str
   "related":
     type: seq
     sequence:
       - type: str
         pattern: .*\.yaml$
+  "tags":
+    type: seq
+    sequence:
+      - type: str

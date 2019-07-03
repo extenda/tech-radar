@@ -11,3 +11,8 @@ rationale: |
   We see many usages for Docker. As we're entering the cloud, we need to explore
   it for production. The other primary focus so far has been to use Docker for
   self-contained exploratory testing.
+tags:
+  - cloud
+  - devops
+  - docker
+  - k8s

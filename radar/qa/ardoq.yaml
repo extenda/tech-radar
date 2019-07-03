@@ -1,0 +1,18 @@
+name: Ardoq
+blip:
+  - date: 2019-06-20
+    ring: ASSESS
+description: |
+  Ardoq is a collaborative, easy-to-use and intuitive tool for documenting your projects,
+  business processes, applications, services, infrastructure or anything else that you can document in a structured way.
+rationale: |
+  We have identified a gap within our technical documentation.
+  Details of dependencies and architecture are low and process diagrams are either lacking or not updated.
+  We need a tool that assists in capturing this information, with minimum effort and maximum value to an audience.
+  As the organization is about to go into a huge phase of change on an architecture level
+  we also need a tool that helps us keep track of the technical platform in real-time.
+  Ardoq appears to cover both of these requirements.
+  We will run a Proof of Concept on a real module of Retail Suite to see if the tool fits our working method
+  and gives a good ROI.
+tags:
+  - documentation

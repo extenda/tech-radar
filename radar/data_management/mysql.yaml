@@ -6,12 +6,18 @@ description: |
   MySQL is a relational database by Oracle.
 rationale: |
   MySQL is in use at Extenda Retail, for example to store reference data.
-  Commercial use of MySQL requires a license agreement with Oracle and places
-  restrictions on how MySQL is installed and used and which driver packages
-  we can use to connect from our software.
-
-  Future solutions should look for alternatives to MySQL.
+  Future solutions should look for alternatives to MySQL due to footprint and licensing.
 
     * Is a relational database the best fit?
     * If cloud, look for cloud native solutions - don't spin up MySQL
     * Thin clients can't depend on a local MySQL database
+license:
+  commercial:
+    company: Oracle
+    description: |
+      Commercial use of MySQL requires a license agreement with Oracle and places
+      restrictions on how MySQL is installed and used and which driver packages
+      we can use to connect from our software.
+tags:
+  - java
+  - sql

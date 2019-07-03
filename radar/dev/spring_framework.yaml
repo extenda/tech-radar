@@ -16,3 +16,6 @@ rationale: |
   But, if you are about to build a new microservice, consider something else
   than Spring Framework. There are lots of alternatives that are faster, smaller
   and quicker to develop.
+tags:
+  - java
+  - spring

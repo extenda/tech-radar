@@ -7,3 +7,6 @@ description: |
   The JavaScript task runner.
 rationale: |
   Our projects doesn't currently require any additional build tools or task managers outside of Webpack & NPM.
+tags:
+  - build
+  - javascript

@@ -17,6 +17,7 @@ exports[`<Entry /> It renders entry with history 1`] = `
         "name": "Development",
       }
     }
+    tag={null}
   />
   <div
     className="container"
@@ -46,16 +47,26 @@ exports[`<Entry /> It renders entry with history 1`] = `
         <Badge
           className="Hold"
           icon="map-marker"
+          link={null}
           text="Hold"
         />
         <Badge
           className=""
           icon="clock-o"
+          link={null}
           text="Jan 1, 2004"
+        />
+        <LicenseBadges
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
       </div>
       <div
-        className="twelve.columns"
+        className="twelve columns"
       >
         <ReactMarkdown
           astPlugins={Array []}
@@ -68,35 +79,54 @@ exports[`<Entry /> It renders entry with history 1`] = `
           sourcePos={false}
           transformLinkUri={[Function]}
         />
+        <h2>
+          Rationale
+        </h2>
+        <ReactMarkdown
+          astPlugins={Array []}
+          escapeHtml={true}
+          plugins={Array []}
+          rawSourcePos={false}
+          renderers={Object {}}
+          skipHtml={false}
+          source="Rationale"
+          sourcePos={false}
+          transformLinkUri={[Function]}
+        />
+        <License
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
+        />
+        <Related
+          related={Array []}
+        />
+        <History
+          history={
+            Array [
+              Object {
+                "date": "Jan 1, 2004",
+                "ringName": "Adopt",
+              },
+              Object {
+                "date": "Mar 20, 2018",
+                "ringName": "Hold",
+              },
+            ]
+          }
+        />
       </div>
-      <h2>
-        Rationale
-      </h2>
-      <ReactMarkdown
-        astPlugins={Array []}
-        escapeHtml={true}
-        plugins={Array []}
-        rawSourcePos={false}
-        renderers={Object {}}
-        skipHtml={false}
-        source="Rationale"
-        sourcePos={false}
-        transformLinkUri={[Function]}
-      />
-      <Related
-        related={Array []}
-      />
-      <History
-        history={
+    </div>
+    <div
+      className="u-pull-right"
+    >
+      <Tags
+        tags={
           Array [
-            Object {
-              "date": "Jan 1, 2004",
-              "ringName": "Adopt",
-            },
-            Object {
-              "date": "Mar 20, 2018",
-              "ringName": "Hold",
-            },
+            "90's",
           ]
         }
       />
@@ -120,6 +150,7 @@ exports[`<Entry /> It renders entry with related links 1`] = `
         "name": "Development",
       }
     }
+    tag={null}
   />
   <div
     className="container"
@@ -144,16 +175,26 @@ exports[`<Entry /> It renders entry with related links 1`] = `
         <Badge
           className="Adopt"
           icon="map-marker"
+          link={null}
           text="Adopt"
         />
         <Badge
           className=""
           icon="clock-o"
+          link={null}
           text="Mar 20, 2018"
+        />
+        <LicenseBadges
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
       </div>
       <div
-        className="twelve.columns"
+        className="twelve columns"
       >
         <ReactMarkdown
           astPlugins={Array []}
@@ -166,33 +207,53 @@ exports[`<Entry /> It renders entry with related links 1`] = `
           sourcePos={false}
           transformLinkUri={[Function]}
         />
-      </div>
-      <h2>
-        Rationale
-      </h2>
-      <ReactMarkdown
-        astPlugins={Array []}
-        escapeHtml={true}
-        plugins={Array []}
-        rawSourcePos={false}
-        renderers={Object {}}
-        skipHtml={false}
-        source="Rationale"
-        sourcePos={false}
-        transformLinkUri={[Function]}
-      />
-      <Related
-        related={
-          Array [
+        <h2>
+          Rationale
+        </h2>
+        <ReactMarkdown
+          astPlugins={Array []}
+          escapeHtml={true}
+          plugins={Array []}
+          rawSourcePos={false}
+          renderers={Object {}}
+          skipHtml={false}
+          source="Rationale"
+          sourcePos={false}
+          transformLinkUri={[Function]}
+        />
+        <License
+          license={
             Object {
-              "file": "php.html",
-              "name": "PHP",
-            },
+              "commercial": null,
+              "openSource": null,
+            }
+          }
+        />
+        <Related
+          related={
+            Array [
+              Object {
+                "file": "php.html",
+                "name": "PHP",
+              },
+            ]
+          }
+        />
+        <History
+          history={Array []}
+        />
+      </div>
+    </div>
+    <div
+      className="u-pull-right"
+    >
+      <Tags
+        tags={
+          Array [
+            "90's",
+            "java",
           ]
         }
-      />
-      <History
-        history={Array []}
       />
     </div>
   </div>
@@ -214,6 +275,7 @@ exports[`<Entry /> It renders inactive badge 1`] = `
         "name": "Development",
       }
     }
+    tag={null}
   />
   <div
     className="container"
@@ -238,21 +300,32 @@ exports[`<Entry /> It renders inactive badge 1`] = `
         <Badge
           className="Hold"
           icon="map-marker"
+          link={null}
           text="Hold"
         />
         <Badge
           className=""
           icon="clock-o"
+          link={null}
           text="Jan 1, 1970"
         />
         <Badge
           className="inactive"
           icon="warning"
+          link={null}
           text="Inactive"
+        />
+        <LicenseBadges
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
       </div>
       <div
-        className="twelve.columns"
+        className="twelve columns"
       >
         <ReactMarkdown
           astPlugins={Array []}
@@ -265,37 +338,52 @@ exports[`<Entry /> It renders inactive badge 1`] = `
           sourcePos={false}
           transformLinkUri={[Function]}
         />
+        <h2>
+          Rationale
+        </h2>
+        <ReactMarkdown
+          astPlugins={Array []}
+          escapeHtml={true}
+          plugins={Array []}
+          rawSourcePos={false}
+          renderers={Object {}}
+          skipHtml={false}
+          source="Rationale"
+          sourcePos={false}
+          transformLinkUri={[Function]}
+        />
+        <License
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
+        />
+        <Related
+          related={Array []}
+        />
+        <History
+          history={
+            Array [
+              Object {
+                "date": "Jan 1, 1970",
+                "ringName": "Adopt",
+              },
+              Object {
+                "date": "Mar 20, 2018",
+                "ringName": "Hold",
+              },
+            ]
+          }
+        />
       </div>
-      <h2>
-        Rationale
-      </h2>
-      <ReactMarkdown
-        astPlugins={Array []}
-        escapeHtml={true}
-        plugins={Array []}
-        rawSourcePos={false}
-        renderers={Object {}}
-        skipHtml={false}
-        source="Rationale"
-        sourcePos={false}
-        transformLinkUri={[Function]}
-      />
-      <Related
-        related={Array []}
-      />
-      <History
-        history={
-          Array [
-            Object {
-              "date": "Jan 1, 1970",
-              "ringName": "Adopt",
-            },
-            Object {
-              "date": "Mar 20, 2018",
-              "ringName": "Hold",
-            },
-          ]
-        }
+    </div>
+    <div
+      className="u-pull-right"
+    >
+      <Tags
+        tags={Array []}
       />
     </div>
   </div>
@@ -317,6 +405,7 @@ exports[`<Entry /> It renders logotype if present 1`] = `
         "name": "Development",
       }
     }
+    tag={null}
   />
   <div
     className="container"
@@ -346,16 +435,26 @@ exports[`<Entry /> It renders logotype if present 1`] = `
         <Badge
           className="Hold"
           icon="map-marker"
+          link={null}
           text="Hold"
         />
         <Badge
           className=""
           icon="clock-o"
+          link={null}
           text="Jan 1, 2004"
+        />
+        <LicenseBadges
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
       </div>
       <div
-        className="twelve.columns"
+        className="twelve columns"
       >
         <ReactMarkdown
           astPlugins={Array []}
@@ -368,35 +467,54 @@ exports[`<Entry /> It renders logotype if present 1`] = `
           sourcePos={false}
           transformLinkUri={[Function]}
         />
+        <h2>
+          Rationale
+        </h2>
+        <ReactMarkdown
+          astPlugins={Array []}
+          escapeHtml={true}
+          plugins={Array []}
+          rawSourcePos={false}
+          renderers={Object {}}
+          skipHtml={false}
+          source="Rationale"
+          sourcePos={false}
+          transformLinkUri={[Function]}
+        />
+        <License
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
+        />
+        <Related
+          related={Array []}
+        />
+        <History
+          history={
+            Array [
+              Object {
+                "date": "Jan 1, 2004",
+                "ringName": "Adopt",
+              },
+              Object {
+                "date": "Mar 20, 2018",
+                "ringName": "Hold",
+              },
+            ]
+          }
+        />
       </div>
-      <h2>
-        Rationale
-      </h2>
-      <ReactMarkdown
-        astPlugins={Array []}
-        escapeHtml={true}
-        plugins={Array []}
-        rawSourcePos={false}
-        renderers={Object {}}
-        skipHtml={false}
-        source="Rationale"
-        sourcePos={false}
-        transformLinkUri={[Function]}
-      />
-      <Related
-        related={Array []}
-      />
-      <History
-        history={
+    </div>
+    <div
+      className="u-pull-right"
+    >
+      <Tags
+        tags={
           Array [
-            Object {
-              "date": "Jan 1, 2004",
-              "ringName": "Adopt",
-            },
-            Object {
-              "date": "Mar 20, 2018",
-              "ringName": "Hold",
-            },
+            "90's",
           ]
         }
       />

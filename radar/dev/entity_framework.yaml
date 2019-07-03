@@ -9,3 +9,5 @@ description: |
 rationale: |
   An easy to use ORM, good for small projects with low amount of data and performance needs.
   For bigger projects where speed is key, something else should be used.
+tags:
+  - dotnet

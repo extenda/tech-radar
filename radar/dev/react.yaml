@@ -12,6 +12,13 @@ rationale: |
   React allows for lightweight component based UI's, like POS clients. React is currently being
   used in the new POS client, sharing code between React Native for mobile clients and Electron
   for desktop.
+license:
+  open-source:
+    name: MIT
+    link: https://raw.githubusercontent.com/facebook/react/master/LICENSE
 related:
   - dev/angular.yaml
   - dev/typescript.yaml
+tags:
+  - javascript
+  - web

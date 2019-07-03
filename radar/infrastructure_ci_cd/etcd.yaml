@@ -9,3 +9,5 @@ rationale:
 related:
   - infrastructure_ci_cd/consul.yaml
   - data_management/zookeeper.yaml
+tags:
+  - devops

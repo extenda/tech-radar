@@ -10,3 +10,5 @@ rationale: |
   Node.js is supported by all cloud provides and is essential in serverless and
   cloud native solutions. It is also a vital part of the front-end stack and a
   candidate for backend-for-frontend services.
+tags:
+  - javascript

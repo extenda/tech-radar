@@ -9,3 +9,7 @@ rationale:
 related:
   - data_management/mssql.yaml
   - data_management/mysql.yaml
+tags:
+  - dotnet
+  - java
+  - sql

@@ -5,8 +5,11 @@ import radarService from '../modules/radarService';
 import Related from './entry/Related';
 import History from './entry/History';
 import Badge from './entry/Badge';
+import Tags from './entry/Tags';
+import License from './entry/License';
 import Navigation from './Navigation';
 import NotFound from './NotFound';
+import LicenseBadges from './entry/LicenseBadges';
 
 const Entry = (props) => {
   const { match } = props;
@@ -37,18 +40,23 @@ const Entry = (props) => {
             {(entry.blip.active === false) && (
               <Badge className="inactive" icon="warning" text="Inactive" />
             )}
+            <LicenseBadges license={entry.license} />
           </div>
-          <div className="twelve.columns">
+          <div className="twelve columns">
             <Markdown source={entry.description} />
+            {entry.rationale && (
+              <React.Fragment>
+                <h2>Rationale</h2>
+                <Markdown source={entry.rationale} />
+              </React.Fragment>
+            )}
+            <License license={entry.license} />
+            <Related related={entry.related} />
+            <History history={entry.blip.history} />
           </div>
-          {entry.rationale && (
-            <React.Fragment>
-              <h2>Rationale</h2>
-              <Markdown source={entry.rationale} />
-            </React.Fragment>
-          )}
-          <Related related={entry.related} />
-          <History history={entry.blip.history} />
+        </div>
+        <div className="u-pull-right">
+          <Tags tags={entry.tags} />
         </div>
       </div>
     </React.Fragment>

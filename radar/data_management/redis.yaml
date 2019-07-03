@@ -7,3 +7,7 @@ description: |
   offering built-in replication. Most standard operation has time complexity O(1).
 rationale: |
   Consider Redis when there's need of data caching, fast lookup or session handling.
+tags:
+  - dotnet
+  - java
+  - nosql

@@ -13,3 +13,7 @@ related:
   - data_management/kibana.yaml
   - data_management/beats.yaml
   - data_management/logstash.yaml
+tags:
+  - bi
+  - dotnet
+  - java

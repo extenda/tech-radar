@@ -10,3 +10,7 @@ rationale:
   Enables QA Engineers to test WebAPIs
 related:
   - qa/selenium.yaml
+tags:
+  - dotnet
+  - e2e
+  - test

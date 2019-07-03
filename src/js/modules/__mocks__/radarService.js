@@ -25,6 +25,10 @@ const mockEntries = {
     ],
     quadrant: { index: 2, dirname: 'dev' },
     filename: 'java.html',
+    tags: [
+      '90\'s',
+      'java',
+    ],
   },
   lisp: {
     name: 'Lisp',
@@ -46,6 +50,7 @@ const mockEntries = {
     rationale: 'Rationale',
     quadrant: { index: 2, dirname: 'dev' },
     filename: 'lisp.html',
+    tags: [],
   },
   php: {
     name: 'PHP',
@@ -68,29 +73,40 @@ const mockEntries = {
     rationale: 'Rationale',
     quadrant: { index: 2, dirname: 'dev' },
     filename: 'php.html',
+    tags: [
+      '90\'s',
+    ],
   },
 };
 
+const mockBlips = [
+  {
+    label: 'Java',
+    quadrant: 2,
+    ring: 0,
+    moved: false,
+    link: '/entries/java.html',
+    active: true,
+  },
+  {
+    label: 'PHP',
+    quadrant: 2,
+    ring: 3,
+    moved: false,
+    link: '/entries/php.html',
+    active: true,
+  },
+];
+
 export default {
   init: () => Promise.resolve(true),
-  listBlips: () => [
-    {
-      label: 'Java',
-      quadrant: 2,
-      ring: 0,
-      moved: false,
-      link: '/entries/java.html',
-      active: true,
-    },
-    {
-      label: 'PHP',
-      quadrant: 2,
-      ring: 3,
-      moved: false,
-      link: '/entries/php.html',
-      active: true,
-    },
-  ],
+  listBlips: (tags = []) => {
+    if (tags.length === 1 && tags[0] === 'java') {
+      return [mockBlips[0]];
+    }
+    return mockBlips;
+  },
+  listTags: () => ['90\'s', 'java'],
   getQuadrant: (dirname) => {
     if (dirname === 'missing') {
       return null;
@@ -113,6 +129,12 @@ export default {
         { name: 'F - 6', filename: '6.html' },
       ],
     };
+  },
+  listEntriesByTag: (tag) => {
+    if (tag === 'java') {
+      return [mockEntries.java];
+    }
+    return [];
   },
   getEntry: entry => mockEntries[entry],
   model: {

@@ -25,6 +25,7 @@ exports[`<NotFound /> It renders not found 1`] = `
       ]
     }
     quadrant={null}
+    tag={null}
   />
   <div
     className="container"

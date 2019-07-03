@@ -15,3 +15,9 @@ rationale: |
   reducing resources needed for maintaining the up status of an organizations services.
 related:
   - infrastructure_ci_cd/docker.yaml
+tags:
+  - cloud
+  - devops
+  - docker
+  - k8s
+  - saas

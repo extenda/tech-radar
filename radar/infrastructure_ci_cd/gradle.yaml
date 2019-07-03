@@ -18,3 +18,7 @@ rationale:
 related:
   - infrastructure_ci_cd/ant.yaml
   - infrastructure_ci_cd/maven.yaml
+tags:
+  - build
+  - java
+  - android

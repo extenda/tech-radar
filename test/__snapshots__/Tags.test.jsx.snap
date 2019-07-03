@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tags /> It renders a list of tags 1`] = `
+<Fragment>
+  <Icon
+    name="tags"
+    spaceBefore={true}
+  />
+  <button
+    className="entry-tag"
+    key="a"
+    type="button"
+  >
+    <Link
+      to="/tags/a.html"
+    >
+      a
+    </Link>
+  </button>
+  <button
+    className="entry-tag"
+    key="b"
+    type="button"
+  >
+    <Link
+      to="/tags/b.html"
+    >
+      b
+    </Link>
+  </button>
+  <button
+    className="entry-tag"
+    key="c"
+    type="button"
+  >
+    <Link
+      to="/tags/c.html"
+    >
+      c
+    </Link>
+  </button>
+</Fragment>
+`;
+
+exports[`<Tags /> It renders nothing for no tags 1`] = `""`;

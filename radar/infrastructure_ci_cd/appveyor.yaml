@@ -15,3 +15,7 @@ rationale: |
 
 related:
   - infrastructure_ci_cd/jenkins_aws.yaml
+tags:
+  - build
+  - dotnet
+  - saas

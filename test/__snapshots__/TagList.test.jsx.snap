@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TagList /> It can list tagged entries 1`] = `
+<Fragment>
+  <Navigation
+    entry={null}
+    home={null}
+    quadrant={null}
+    tag="java"
+  />
+  <div
+    className="container"
+  >
+    <h1>
+      <Icon
+        name="tag"
+        spaceBefore={true}
+      />
+      java
+    </h1>
+    <ul>
+      <li
+        key="Java"
+      >
+        <Link
+          to="/entries/java.html"
+        >
+          Java
+        </Link>
+      </li>
+    </ul>
+  </div>
+</Fragment>
+`;

@@ -20,3 +20,5 @@ rationale: |
   scalable solution, to provide BI as a services for our clients.
 related:
   - data_management/qlikview.yaml
+tags:
+  - bi

@@ -9,3 +9,6 @@ description: |
 rationale:
   JasperServer is embedded into Extenda Retail Suite (OEM license). It provides Retail Suite with seamless integrated
   functionality for reporting and analysis, including features such as ad-hoc, dashboards and scheduling.
+tags:
+  - bi
+  - dotnet

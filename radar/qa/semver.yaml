@@ -22,3 +22,8 @@ rationale: |
 
   Extenda Retail's [product versioning policy](https://docs.extenda.se/display/DEV/Product+versioning+policy)
   dictates that all software projects must use semantic versioning.
+tags:
+  - devops
+  - dotnet
+  - java
+  - test

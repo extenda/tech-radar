@@ -11,3 +11,6 @@ rationale: |
   and is inferior in tooling compared to Open API (Swagger).
 related:
   - dev/openapi.yaml
+tags:
+  - java
+  - api

@@ -9,3 +9,5 @@ rationale:
   It is for example  used by IS/IT and for all our AWS services.
 related:
   - qa/infrastructure_as_code.yaml
+tags:
+  - devops

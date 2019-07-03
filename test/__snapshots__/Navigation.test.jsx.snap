@@ -8,7 +8,9 @@ exports[`<Navigation /> It renders entry breadcrumbs 1`] = `
   <ul
     className="breadcrumb"
   >
-    <li>
+    <li
+      key="home"
+    >
       <Link
         to="/"
       >
@@ -19,7 +21,9 @@ exports[`<Navigation /> It renders entry breadcrumbs 1`] = `
         spaceBefore={true}
       />
     </li>
-    <li>
+    <li
+      key="test1"
+    >
       <Link
         to="/test1.html"
       >
@@ -30,7 +34,9 @@ exports[`<Navigation /> It renders entry breadcrumbs 1`] = `
         spaceBefore={true}
       />
     </li>
-    <li>
+    <li
+      key="Entry"
+    >
       Entry
     </li>
   </ul>
@@ -106,7 +112,9 @@ exports[`<Navigation /> It renders quadrant breadcrumbs 1`] = `
   <ul
     className="breadcrumb"
   >
-    <li>
+    <li
+      key="home"
+    >
       <Link
         to="/"
       >
@@ -117,8 +125,40 @@ exports[`<Navigation /> It renders quadrant breadcrumbs 1`] = `
         spaceBefore={true}
       />
     </li>
-    <li>
+    <li
+      key="test1"
+    >
       Test1
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`<Navigation /> It renders tag breadcrumbs 1`] = `
+<nav
+  className="navbar"
+  role="navigation"
+>
+  <ul
+    className="breadcrumb"
+  >
+    <li
+      key="home"
+    >
+      <Link
+        to="/"
+      >
+        Tech Radar
+      </Link>
+      <Icon
+        name="angle-right"
+        spaceBefore={true}
+      />
+    </li>
+    <li
+      key="java"
+    >
+      java
     </li>
   </ul>
 </nav>

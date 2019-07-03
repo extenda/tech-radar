@@ -64,7 +64,9 @@ jobs:
           at: ~/workspace
       - run:
           name: SonarCloud analysis
-          command: sh .scripts/sonarcloud.sh
+          command: |
+            sed -i.bak 's#'$(pwd)/'##g' ./coverage/lcov.info
+            sh .scripts/sonarcloud.sh
       - run:
           name: Check quality gate
           command: sh .scripts/sonarcloud_quality_gate.sh
@@ -110,6 +112,10 @@ workflows:
           context: sonarcloud
           requires:
             - build
+          filters:
+            branches:
+              # Don't run Sonar on forked PRs
+              ignore: /^pull\/.*$/
       - dockerhub:
           context: dockerhub
           requires:

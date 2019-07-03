@@ -25,6 +25,7 @@ exports[`<Radar /> It renders the SVG radar and description 1`] = `
       ]
     }
     quadrant={null}
+    tag={null}
   />
   <h1
     className="center"
@@ -41,6 +42,19 @@ exports[`<Radar /> It renders the SVG radar and description 1`] = `
       0.0.1-local
     </span>
   </h1>
+  <div
+    className="tags-filter"
+  >
+    <TagsInput
+      onFilter={[Function]}
+      tags={
+        Array [
+          "90's",
+          "java",
+        ]
+      }
+    />
+  </div>
   <div
     className="svg-radar"
   >

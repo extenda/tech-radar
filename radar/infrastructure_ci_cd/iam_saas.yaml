@@ -24,3 +24,7 @@ rationale: |
   provides a JWT containing the user with active roles for the application.
   The application is then free to evaulate these roles against its internal set
   of permissions.
+tags:
+  - cloud
+  - saas
+  - security

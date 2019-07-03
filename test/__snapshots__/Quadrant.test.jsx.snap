@@ -11,6 +11,7 @@ exports[`<Quadrant /> It renders as expected 1`] = `
         "name": "Test",
       }
     }
+    tag={null}
   />
   <div
     className="container"

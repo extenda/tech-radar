@@ -2,6 +2,8 @@ name: Cake
 blip:
   - date: 2019-05-21
     ring: ASSESS
+  - date: 2019-06-10
+    ring: TRIAL
 description: |
   Cake (C# Make) is a cross-platform build automation system with a C# DSL for tasks such as compiling code, copying
   files and folders, running unit tests, compressing files and building NuGet packages.
@@ -13,3 +15,6 @@ rationale: |
 related:
   - infrastructure_ci_cd/maven.yaml
   - infrastructure_ci_cd/gradle.yaml
+tags:
+  - build
+  - dotnet

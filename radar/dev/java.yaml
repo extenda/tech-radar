@@ -23,3 +23,15 @@ rationale: |
   For existing systems, it is important to start to upgrade to the next LTS
   release after Java 8 (at this time Java 11). We must make sure our products
   work on supported Java versions and don't lag behind on Java 8 after EOL.
+license:
+  open-source:
+    name: GPL-CE
+    link: https://openjdk.java.net/legal/gplv2+ce.html
+  commercial:
+    company: Oracle
+    description: |
+      Oracle JRE requires a commercial license from Oracle to be used on POS workstations and servers.
+      This license includes SLAs from Oracle. OpenJDK does not require any license and is released on
+      GPL with a classpath exception, which means we can use it to run our commercial applications.
+tags:
+  - java

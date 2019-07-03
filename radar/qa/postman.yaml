@@ -16,3 +16,6 @@ rationale: |
   to help during development. We don't see it as a source for documenting our APIs.
 related:
   - dev/openapi.yaml
+tags:
+  - api
+  - test

@@ -9,3 +9,13 @@ description: |
 rationale: |
   As an alternative to NativeSceript, React Native takes a more explicit approach to
   building apps on iOS and Android.
+license:
+  open-source:
+    name: MIT
+    link: https://raw.githubusercontent.com/facebook/react-native/master/LICENSE
+tags:
+  - android
+  - ios
+  - javascript
+  - mobile
+  - web

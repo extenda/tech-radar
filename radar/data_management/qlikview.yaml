@@ -11,3 +11,5 @@ rationale: |
   be avoided.
 related:
   - data_management/qliksense.yaml
+tags:
+  - bi

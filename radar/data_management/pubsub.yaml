@@ -3,18 +3,30 @@ blip:
   - date: 2019-06-13
     ring: ADOPT
 description: |
-  [Cloud Pub/Sub](https://cloud.google.com/pubsub/architecture) is a fully-managed real-time messaging service that allows you to send and receive messages between independent applications.
+  [Cloud Pub/Sub](https://cloud.google.com/pubsub/architecture) is a fully-managed real-time messaging service.
+  That allows you to send and receive messages between independent applications.
 
-  By providing many-to-many, asynchronous messaging that decouples senders and receivers, it allows for secure and highly available communication among independently written applications.
+  By providing many-to-many, asynchronous messaging that decouples senders and receivers,
+  it allows for secure and highly available communication among independently written applications.
 rationale: |
-  Pub/Sub brings the flexibility and reliability of enterprise message-oriented middleware to the cloud. At the same time, Cloud Pub/Sub is a scalable, durable event ingestion and delivery system that serves as a foundation for modern stream analytics pipelines.
-  Cloud Pub/Sub delivers low-latency, durable messaging that helps developers quickly integrate systems hosted on the Google Cloud Platform and externally
-
-  The service is provided and managed by Google Cloud.
-  This means that the cost and need for involvement on an operational level is eliminated.
-  Maintained by Google Clouds SREs (Site Reliability Engineers), the system stays up and running efficiently with no worries about [uptime](https://cloud.google.com/pubsub/sla).
-  More in-depth data processing is possible with [Apache Beam](https://beam.apache.org/documentation/sdks/python-streaming/).
-
+  Pub/Sub brings the flexibility and reliability of enterprise messaging to Extenda Retail.
+  It will provide us with a scalable, durable event ingestion and delivery system.
+  This will make sure that we have a good foundation for building modern streaming messaging pipelines.
+  For developers Cloud Pub/Sub delivers low-latency, durable messaging that can quickly be integrated with other systems
+  hosted on the Google Cloud Platform and external sources.
 related:
   - data_management/kafka.yaml
   - data_management/msmq.yaml
+license:
+  commercial:
+    company: Google
+    description: |
+      The service is provided and managed by Google Cloud.
+      This means that the cost and need for involvement on an operational level is eliminated.
+      Instead we pay a premium on service usage instead.
+      Maintained by Google Clouds SREs (Site Reliability Engineers),
+      the system stays up and running efficiently with no worries about uptime,
+      read the [SLA](https://cloud.google.com/pubsub/sla) for more information about the uptime guarantee.
+tags:
+  - messaging
+  - google

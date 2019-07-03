@@ -163,6 +163,11 @@ ul.history {
   color: white;
 }
 
+.badge.license {
+  background: #fefefe;
+  border: 1px solid #cfd8dc;
+}
+
 ul.adopt, ul.assess, ul.trial, ul.hold {
   border-left-width: 3px;
   border-left-style: solid;
@@ -188,4 +193,39 @@ li {
 
 p {
   margin-bottom: 1rem;
+}
+
+ul.tags {
+  list-style: none;
+}
+
+.entry-tag {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 8px 3px;
+
+  border: 1px solid #D1D1D1;
+  border-radius: 2px;
+  background: #F1F1F1;
+
+  /* match the font styles */
+  font-size: inherit;
+  line-height: inherit;
+
+  /* Reset inherited button props. */
+  padding: 0 6px;
+  letter-spacing: normal;
+  text-transform: none;
+  font-weight: normal;
+  height: auto !important;
+}
+
+.entry-tag:hover,
+.entry-tag:focus {
+  border-color: #B1B1B1;
+}
+
+.entry-tag a {
+  color: #333;
+  text-decoration: none;
 }

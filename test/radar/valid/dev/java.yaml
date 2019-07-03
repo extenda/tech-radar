@@ -6,5 +6,19 @@ description: |
   Description
 rationale: |
   Rationale
+license:
+  open-source:
+    name: GPL-CE
+    link: https://openjdk.java.net/legal/gplv2+ce.html
+  commercial:
+    company: Oracle
+    description: |
+      Oracle JRE requires a commercial license to run on POS workstations and servers.
+      OpenJDK does not require this.
 related:
   - dev/php.yaml
+  - dev/lisp.yaml
+tags:
+  - java
+  - 90's
+  - web

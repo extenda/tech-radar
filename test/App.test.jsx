@@ -6,6 +6,7 @@ import Radar from '../src/js/components/Radar';
 import Entry from '../src/js/components/Entry';
 import Quadrant from '../src/js/components/Quadrant';
 import NotFound from '../src/js/components/NotFound';
+import TagList from '../src/js/components/TagList';
 
 const { MemoryRouter } = reactRouter;
 
@@ -37,6 +38,12 @@ jest.mock('../src/js/components/Quadrant', () => () => (
 jest.mock('../src/js/components/NotFound', () => () => (
   <div>
     NotFound
+  </div>
+));
+
+jest.mock('../src/js/components/TagList', () => () => (
+  <div>
+    TagList
   </div>
 ));
 
@@ -75,5 +82,12 @@ describe('<App />', () => {
     const component = await mount(<App />);
     component.update();
     expect(component.find(NotFound)).toHaveLength(1);
+  });
+
+  test('It renders tag list no /tags/*.html route', async () => {
+    reactRouter.BrowserRouter = mockRouter('/tags/java.html');
+    const component = await mount(<App />);
+    component.update();
+    expect(component.find(TagList)).toHaveLength(1);
   });
 });

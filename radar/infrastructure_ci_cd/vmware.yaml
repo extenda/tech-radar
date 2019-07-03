@@ -8,3 +8,5 @@ description: |
 rationale: |
   Avoid VM Ware and switch to modern and more efficient solutions such as Docker.
   If not possible to use Docker, use Vagrant instead, don't resort to VM Ware.
+tags:
+  - devops

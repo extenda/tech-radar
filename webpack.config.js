@@ -1,4 +1,6 @@
+const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const log = require('webpack-log');
 const path = require('path');
@@ -36,8 +38,7 @@ module.exports = {
     },
   },
   entry: {
-    'js/app': './src/js/index.jsx',
-    'css/main': './src/assets/css/main.css',
+    app: './src/js/index.jsx',
   },
   module: {
     rules: [
@@ -77,9 +78,19 @@ module.exports = {
   node: {
     fs: 'empty',
   },
+  optimization: {
+    minimizer: [
+      new TerserJSPlugin({}),
+      new OptimizeCSSAssetsPlugin({}),
+    ],
+  },
   output: {
     path: outputPath,
-    filename: '[name].bundle.js',
+    filename: 'js/[name].bundle.js',
+  },
+  performance: {
+    maxEntrypointSize: 307200,
+    maxAssetSize: 307200,
   },
   plugins: [
     // Build the radar YAMLs on first run, then watch for changes in dev-server.
@@ -87,7 +98,7 @@ module.exports = {
       buildRadar().then(callback);
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: 'css/[name].css',
     }),
     new CopyPlugin([
       { from: './src/assets/index.html', to: outputPath },
