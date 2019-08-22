@@ -1,4 +1,4 @@
-name: GraalVM Community Edition
+name: Graal VM Community Edition
 blip:
   - date: 2019-08-21
     ring: TRIAL
@@ -8,7 +8,7 @@ description: |
   Native images compiled with GraalVM ahead-of-time improve
   the startup time and reduce the memory footprint of JVM-based applications.
 rationale:
-  GraalVM combinde with a optimized framework such as Quarkus gives us containers optmizied for cloud.
+  Graal VM combined with a optimized framework such as Quarkus gives us containers optmizied for cloud.
   With sub-second startup times we can scale effectively and fast.
 license:
   opensource:
