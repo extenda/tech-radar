@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LicenseBadges /> It renders commercial badge 1`] = `
+<Fragment>
+  <Badge
+    className="license"
+    icon="balance-scale"
+    link={null}
+    text="Commercial"
+  />
+</Fragment>
+`;
+
+exports[`<LicenseBadges /> It renders no badges for missing license 1`] = `<Fragment />`;
+
+exports[`<LicenseBadges /> It renders open-source badge 1`] = `
+<Fragment>
+  <Badge
+    className="license"
+    icon="balance-scale"
+    link="https://license.com"
+    text="MIT"
+  />
+</Fragment>
+`;

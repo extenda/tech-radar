@@ -29,11 +29,12 @@ class RadarService {
   };
 
   listTags = () => {
-    const tags = [];
+    const tags = new Set();
     this.model.entries.forEach((entry) => {
-      tags.push(...entry.tags);
+      entry.tags.every(tag => tags.add(tag));
     });
-    return [...new Set(tags)];
+
+    return [...tags].sort((a, b) => a.localeCompare(b));
   };
 
   listEntries = (quadrant, ring, active = true) => {

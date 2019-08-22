@@ -47,12 +47,22 @@ exports[`<Entry /> It renders entry with history 1`] = `
         <Badge
           className="Hold"
           icon="map-marker"
+          link={null}
           text="Hold"
         />
         <Badge
           className=""
           icon="clock-o"
+          link={null}
           text="Jan 1, 2004"
+        />
+        <LicenseBadges
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
       </div>
       <div
@@ -82,6 +92,14 @@ exports[`<Entry /> It renders entry with history 1`] = `
           source="Rationale"
           sourcePos={false}
           transformLinkUri={[Function]}
+        />
+        <License
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
         <Related
           related={Array []}
@@ -157,12 +175,22 @@ exports[`<Entry /> It renders entry with related links 1`] = `
         <Badge
           className="Adopt"
           icon="map-marker"
+          link={null}
           text="Adopt"
         />
         <Badge
           className=""
           icon="clock-o"
+          link={null}
           text="Mar 20, 2018"
+        />
+        <LicenseBadges
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
       </div>
       <div
@@ -192,6 +220,14 @@ exports[`<Entry /> It renders entry with related links 1`] = `
           source="Rationale"
           sourcePos={false}
           transformLinkUri={[Function]}
+        />
+        <License
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
         <Related
           related={
@@ -264,17 +300,28 @@ exports[`<Entry /> It renders inactive badge 1`] = `
         <Badge
           className="Hold"
           icon="map-marker"
+          link={null}
           text="Hold"
         />
         <Badge
           className=""
           icon="clock-o"
+          link={null}
           text="Jan 1, 1970"
         />
         <Badge
           className="inactive"
           icon="warning"
+          link={null}
           text="Inactive"
+        />
+        <LicenseBadges
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
       </div>
       <div
@@ -304,6 +351,14 @@ exports[`<Entry /> It renders inactive badge 1`] = `
           source="Rationale"
           sourcePos={false}
           transformLinkUri={[Function]}
+        />
+        <License
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
         <Related
           related={Array []}
@@ -380,12 +435,22 @@ exports[`<Entry /> It renders logotype if present 1`] = `
         <Badge
           className="Hold"
           icon="map-marker"
+          link={null}
           text="Hold"
         />
         <Badge
           className=""
           icon="clock-o"
+          link={null}
           text="Jan 1, 2004"
+        />
+        <LicenseBadges
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
       </div>
       <div
@@ -415,6 +480,14 @@ exports[`<Entry /> It renders logotype if present 1`] = `
           source="Rationale"
           sourcePos={false}
           transformLinkUri={[Function]}
+        />
+        <License
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
         <Related
           related={Array []}

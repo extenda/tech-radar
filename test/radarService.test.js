@@ -72,10 +72,18 @@ describe('RadarService', () => {
 
   test('It can list unique tags', () => {
     const tags = radarService.listTags();
-    expect(tags).toHaveLength(3);
-
-    tags.sort((a, b) => a.localeCompare(b));
-    expect(tags).toEqual(['90\'s', 'java', 'web']);
+    expect(tags).toHaveLength(9);
+    expect(tags).toEqual([
+      '90\'s',
+      'bsd',
+      'bsd-2',
+      'commercial',
+      'gpl-ce',
+      'java',
+      'open-source',
+      'oracle',
+      'web',
+    ]);
   });
 
   test('It can list entries by tag', () => {
