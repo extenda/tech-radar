@@ -1,0 +1,22 @@
+name: Quarkus
+blip:
+  - date: 2019-08-21
+    ring: TRIAL
+description: |
+  A Kubernetes Native Java stack tailored for GraalVM & OpenJDK HotSpot,
+  crafted from the best of breed Java libraries and standards.
+  As much processing as possible is done at build time,
+  so your application will only contain the classes that are actually needed at runtime.
+rationale:
+  Quarkus let us build applications that are tailored for Cloud and Kubernetes.
+  With a framework like this we can build fast and elastic services with ease.
+license:
+  opensource:
+    name: Apache-2.0
+    link: https://github.com/quarkusio/quarkus/blob/master/LICENSE.txt
+related:
+  - dev/java.yaml
+  - dev/graalvm.yaml
+  - infrastructure_ci_cd/kubernetes.yaml
+tags:
+  - java

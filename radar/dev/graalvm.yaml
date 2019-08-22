@@ -1,0 +1,22 @@
+name: GraalVM Community Edition
+blip:
+  - date: 2019-08-21
+    ring: TRIAL
+description: |
+  GraalVM is a universal virtual machine for running applications written in
+  JavaScript, JVM-based languages like Java, LLVM-based languages such as C and C++, and other languages.
+  Native images compiled with GraalVM ahead-of-time improve
+  the startup time and reduce the memory footprint of JVM-based applications.
+rationale:
+  GraalVM combinde with a optimized framework such as Quarkus gives us containers optmizied for cloud.
+  With sub-second startup times we can scale effectively and fast.
+license:
+  opensource:
+    name: GPL-CE
+    link: https://github.com/oracle/graal/blob/master/LICENSE
+related:
+  - dev/java.yaml
+  - dev/quarkus.yaml
+tags:
+  - java
+  - javascript
