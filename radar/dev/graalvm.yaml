@@ -11,7 +11,7 @@ rationale:
   Graal VM combined with a optimized framework such as Quarkus gives us containers optmizied for cloud.
   With sub-second startup times we can scale effectively and fast.
 license:
-  opensource:
+  open-source:
     name: GPL-CE
     link: https://github.com/oracle/graal/blob/master/LICENSE
 related:

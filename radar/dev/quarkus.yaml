@@ -11,7 +11,7 @@ rationale:
   Quarkus let us build applications that are tailored for Cloud and Kubernetes.
   With a framework like this we can build fast and elastic services with ease.
 license:
-  opensource:
+  open-source:
     name: Apache-2.0
     link: https://github.com/quarkusio/quarkus/blob/master/LICENSE.txt
 related:
