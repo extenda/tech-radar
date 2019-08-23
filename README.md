@@ -98,10 +98,9 @@ The format of a blip is as follows:
 name: Entry name # Required
 logo: https://domain.com/logo.png # Optional logo URL
 shortname: Short # Optional. Use only if name is too long for the radar blip
-active: true # Optional. If set to `false`, the blip is hidden on the visual radar
 blip: # A list of blip positions. Add a new entry every time the blip moves
   - date: 2019-05-21 # Required. The date the blip is created or changed
-    ring: ASSESS # Required. The position at date, One of ADOPT, TRIAL, ASSESS, HOLD
+    ring: ASSESS # Required. The position at date, One of ADOPT, TRIAL, ASSESS, HOLD, ARCHIVE
   - date: 2019-05-25
     ring: ADOPT
 description: |

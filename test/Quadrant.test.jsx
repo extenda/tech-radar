@@ -28,4 +28,10 @@ describe('<Quadrant />', () => {
     expect(component.find(NotFound)).toHaveLength(1);
     expect(component).toMatchSnapshot();
   });
+
+  test('It renders inactive style for archived entries', () => {
+    const match = { params: { quadrant: 'test' } };
+    const component = shallow(<Quadrant match={match} />);
+    expect(component.find('.inactive')).toHaveLength(1);
+  });
 });

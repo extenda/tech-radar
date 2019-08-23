@@ -25,10 +25,10 @@ describe('<Entry />', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('It renders inactive badge', () => {
+  test('It renders inactive statement', () => {
     const match = { params: { id: 'lisp' } };
     const component = shallow(<Entry match={match} />);
-    expect(component.find('.inactive')).toHaveLength(1);
+    expect(component.find('.inactive-note')).toHaveLength(1);
     expect(component).toMatchSnapshot();
   });
 
