@@ -188,6 +188,7 @@ The following companies are valid for use with commercial licenses.
   * Oracle
   * Qlik
   * Tanuki Software
+  * UXDivers
 
 If you add a radar entry that requires a license from some other company, this means the company must be added to the tech-radar model and schemas.
 
