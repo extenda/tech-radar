@@ -22,19 +22,18 @@ rationale: |
   Lots of nice looking datavisualization and many other UI controls. Take a look at their website for more info,
   or download their demo app from Google Play store or Apples Appstore.
 
-  LICENSE COST
-    * One-Time-cost of 599 for 1 app or 1899 USD for up to 5 apps
-    * Unlimited numbers of developers
-    * Includes 1 year of Grial UI updates related to Xamarin.Forms updates, bugfixes and minor improvements.
-    * Update subscription can be extended at the costs of 50% of license cost per year - or it can be maintained by
-    ourselves.
-
 license:
   commercial:
     company: UXDivers
     description: |
-      Commercial use of Grail UI Kit requires a one-time-cost license agreement with UXDivers
-      at the cost of USD 599 for 1 named app or USD 1899 for up to 5 named apps.
+      Commercial use of Grail UI Kit requires a one-time-cost license agreement with UXDivers.
+
+      LICENSE COST
+        * One-Time-cost of 599 for 1 app or 1899 USD for up to 5 apps
+        * Unlimited numbers of developers
+        * Includes 1 year of Grial UI updates related to Xamarin.Forms updates, bugfixes and minor improvements.
+        * Update subscription can be extended at the costs of 50% of license cost per year - or it can be maintained by
+        ourselves.
 
 tags:
   - xamarin
