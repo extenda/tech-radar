@@ -29,6 +29,13 @@ rationale: |
     * Update subscription can be extended at the costs of 50% of license cost per year - or it can be maintained by
     ourselves.
 
+license:
+  commercial:
+    company: UXDivers
+    description: |
+      Commercial use of Grail UI Kit requires a one-time-cost license agreement with UXDivers
+      at the cost of USD 599 for 1 named app or USD 1899 for up to 5 named apps.
+
 tags:
   - xamarin
   - mobile
