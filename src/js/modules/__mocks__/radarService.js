@@ -44,6 +44,7 @@ const mockEntries = {
       history: [
         { date: 'Jan 1, 1970', ringName: 'Adopt' },
         { date: 'Mar 20, 2018', ringName: 'Hold' },
+        { date: 'Aug 23, 2019', ringName: 'Archive' },
       ],
     },
     description: 'Description',
@@ -116,17 +117,17 @@ export default {
       name: 'Test',
       dirname: 'test1',
       adopt: [
-        { name: 'A - 1', filename: '1.html' },
-        { name: 'B - 2', filename: '2.html' },
+        { name: 'A - 1', filename: '1.html', active: true },
+        { name: 'B - 2', filename: '2.html', active: true },
       ],
       trial: [],
       assess: [
-        { name: 'C - 3', filename: '3.html' },
+        { name: 'C - 3', filename: '3.html', active: true },
       ],
       hold: [
-        { name: 'D - 4', filename: '4.html' },
-        { name: 'E - 5', filename: '5.html' },
-        { name: 'F - 6', filename: '6.html' },
+        { name: 'D - 4', filename: '4.html', active: true },
+        { name: 'E - 5', filename: '5.html', active: true },
+        { name: 'F - 6', filename: '6.html', active: false },
       ],
     };
   },

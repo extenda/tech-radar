@@ -60,8 +60,11 @@ const createBlip = (entry) => {
     active: true,
   };
 
-  if (typeof entry.active !== 'undefined') {
-    blip.active = entry.active;
+  if (last(entry.blip).ring === 'ARCHIVE') {
+    blip.active = false;
+    const archiveRing = entry.blip[entry.blip.length - 2].ring;
+    blip.ring = radar.rings.indexOf(archiveRing);
+    blip.ringName = ringName(archiveRing);
   }
 
   if (entry.blip.length > 1) {
