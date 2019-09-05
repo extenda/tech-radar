@@ -4,8 +4,9 @@ blip:
   - date: 2019-08-27
     ring: ASSESS
 description: |
-  _Grial UI Kit 3.0_ is the most complete Xamarin.Forms UI kit created by the well known UXDivers.
-  It can be implemented in existing apps or used to get a fast time to market on new apps.
+  [Grial UI Kit 3.0](https://grialkit.com/) is the most complete Xamarin.Forms UI kit created
+  by the well known UXDivers. It can be implemented in existing apps or used to get a fast time
+  to market on new apps.
 
     * +90 XAML pages (with subtle animations)
     * 15 UI Controls
@@ -13,8 +14,6 @@ description: |
     * 6 base themes (easy to customize Extenda Retail theme by adding HEX colors)
     * Phone and tablet support (incl. different resolutions+screen rotation)
     * Include GorillaPlayer for quickly seeing UI changes on-the-fly while developing.
-
-  _LINK_: https://grialkit.com/
 
 rationale: |
   Grial UI Kit 3.0 will offer an easy way of building and maintaining Xamarin.Forms based mobile apps with a great
@@ -28,7 +27,7 @@ license:
     description: |
       Commercial use of Grail UI Kit requires a one-time-cost license agreement with UXDivers.
 
-      LICENSE COST
+      **License Cost**
         * One-Time-cost of 599 for 1 app or 1899 USD for up to 5 apps
         * Unlimited numbers of developers
         * Includes 1 year of Grial UI updates related to Xamarin.Forms updates, bugfixes and minor improvements.
