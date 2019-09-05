@@ -1,4 +1,5 @@
 name: Graal VM Community Edition
+shortname: Graal VM
 blip:
   - date: 2019-08-21
     ring: TRIAL
@@ -16,6 +17,7 @@ license:
     link: https://github.com/oracle/graal/blob/master/LICENSE
 related:
   - dev/java.yaml
+  - dev/micronaut.yaml
   - dev/quarkus.yaml
 tags:
   - java
