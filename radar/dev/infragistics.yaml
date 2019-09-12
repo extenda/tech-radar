@@ -2,6 +2,8 @@ name: Infragistics
 blip:
   - date: 2019-05-22
     ring: ASSESS
+  - date: 2019-09-12
+    ring: TRIAL
 description: |
   Fast and beautiful UI controls and time-saving tools for developers and UX pros
 rationale:
