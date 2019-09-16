@@ -1,0 +1,24 @@
+name: Scandit Barcode Scanning SDK
+shortname: Scandit SDK
+blip:
+  - date: 2019-09-16
+    ring: TRIAL
+description: |
+  Scandit SDK is a cross-platform barcode scanner and data-capture solution.
+  It is available for iOS, Android, Windows and Web and uses the camera to
+  capture barcodes.
+
+  Scandit also offers capabilities around augmented reality.
+rationale: |
+  Scandit SDK solves barcode scanning on all mobile platforms, allowing us to
+  focus on our core business offerings instead of implementing and integrating
+  barcode scanner technology ourselves. When compared to native Android and iOS
+  barcode APIs, the Scandit SDK is more configurable and a lot faster.
+license:
+  commercial:
+    company: Scandit
+    description: |
+      Scandit SDK must be licensed for each application. The license rates are
+      negotiated directly between Extenda Retail and Scandit.
+tags:
+  - mobile
