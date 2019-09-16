@@ -1,0 +1,17 @@
+name: PostgreSQL
+blip:
+  - date: 2019-06-24
+    ring: TRIAL
+description: |
+    PostgreSQL is a powerful, open source object-relational database system
+    that uses and extends the SQL language combined with many features that
+    safely store and scale the most complicated data workloads. The origins
+    of PostgreSQL date back to 1986 as part of the POSTGRES project at the
+    University of California at Berkeley and has more than 30 years of
+    active development on the core platform.
+rationale: |
+  Persistent storage on the Google Cloud Platform.
+tags:
+  - dotnet
+  - java
+  - sql

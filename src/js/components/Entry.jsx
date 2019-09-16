@@ -6,8 +6,11 @@ import Related from './entry/Related';
 import History from './entry/History';
 import Badge from './entry/Badge';
 import Tags from './entry/Tags';
+import License from './entry/License';
 import Navigation from './Navigation';
 import NotFound from './NotFound';
+import LicenseBadges from './entry/LicenseBadges';
+import Icon from './Icon';
 
 const Entry = (props) => {
   const { match } = props;
@@ -23,6 +26,20 @@ const Entry = (props) => {
     <React.Fragment>
       <Navigation quadrant={quadrant} entry={{ name: entry.name }} />
       <div className="container">
+        {(entry.blip.active === false) && (
+          <div className="row">
+            <div className="twelve columns inactive-note">
+              <strong>
+                <Icon name="exclamation-triangle" />
+                Not active on the current version!
+              </strong>
+              <br />
+              This blip is not on the current version of the radar. If it was recently archived it
+              is likely that it is still relevant. If the blip is older it might no longer be
+              relevant or our assessment of it might be different today.
+            </div>
+          </div>
+        )}
         <div className="row">
           <div className="entry-container">
             <h1>{entry.name}</h1>
@@ -35,9 +52,7 @@ const Entry = (props) => {
           <div className="badges">
             <Badge className={entry.blip.ringName} icon="map-marker" text={entry.blip.ringName} />
             <Badge icon="clock-o" text={entry.blip.since} />
-            {(entry.blip.active === false) && (
-              <Badge className="inactive" icon="warning" text="Inactive" />
-            )}
+            <LicenseBadges license={entry.license} />
           </div>
           <div className="twelve columns">
             <Markdown source={entry.description} />
@@ -47,6 +62,7 @@ const Entry = (props) => {
                 <Markdown source={entry.rationale} />
               </React.Fragment>
             )}
+            <License license={entry.license} />
             <Related related={entry.related} />
             <History history={entry.blip.history} />
           </div>

@@ -8,6 +8,22 @@ describe('YAML Reader', () => {
     expect(callback.mock.calls.length).toEqual(3);
   });
 
+  test('It maps licenses to tags', () => {
+    const entries = [];
+    reader.collectEntries(path.resolve(__dirname, 'radar/valid'), entry => entries.push(entry));
+    expect(entries.find(entry => entry.name === 'Java').tags).toEqual([
+      '90\'s',
+      'commercial',
+      'gpl-ce',
+      'java',
+      'open-source',
+      'oracle',
+      'web',
+    ]);
+
+    expect(entries.find(entry => entry.name === 'PHP').tags).toContain('bsd');
+  });
+
   test('It throws error on invalid relations', () => {
     expect(
       () => reader.collectEntries(path.resolve(__dirname, 'radar/ref_error'), jest.fn()),

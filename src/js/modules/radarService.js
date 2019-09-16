@@ -29,18 +29,22 @@ class RadarService {
   };
 
   listTags = () => {
-    const tags = [];
+    const tags = new Set();
     this.model.entries.forEach((entry) => {
-      tags.push(...entry.tags);
+      entry.tags.every(tag => tags.add(tag));
     });
-    return [...new Set(tags)];
+
+    return [...tags].sort((a, b) => a.localeCompare(b));
   };
 
   listEntries = (quadrant, ring, active = true) => {
     const filters = [
       entry => entry.quadrant.dirname === quadrant,
-      entry => entry.blip.active === active,
     ];
+
+    if (active) {
+      filters.push(entry => entry.blip.active === active);
+    }
 
     if (ring !== '*') {
       filters.push(entry => entry.blip.ring === ring);
@@ -60,10 +64,13 @@ class RadarService {
     if (qi >= 0) {
       const quadrant = { ...this.model.quadrants[qi] };
       this.model.rings.forEach((ring, index) => {
-        quadrant[ring.toLowerCase()] = this.listEntries(quadrant.dirname, index)
-          .map(entry => pick(entry, 'name', 'filename'));
+        quadrant[ring.toLowerCase()] = this.listEntries(quadrant.dirname, index, false)
+          .map((entry) => {
+            const out = pick(entry, 'name', 'filename');
+            out.active = entry.blip.active;
+            return out;
+          });
       });
-      quadrant.inactive = this.listEntries(quadrant.dirname, '*', false);
       return quadrant;
     }
     return undefined;

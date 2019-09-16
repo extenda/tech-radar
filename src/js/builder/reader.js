@@ -60,8 +60,11 @@ const createBlip = (entry) => {
     active: true,
   };
 
-  if (typeof entry.active !== 'undefined') {
-    blip.active = entry.active;
+  if (last(entry.blip).ring === 'ARCHIVE') {
+    blip.active = false;
+    const archiveRing = entry.blip[entry.blip.length - 2].ring;
+    blip.ring = radar.rings.indexOf(archiveRing);
+    blip.ringName = ringName(archiveRing);
   }
 
   if (entry.blip.length > 1) {
@@ -73,6 +76,36 @@ const createBlip = (entry) => {
   }
 
   return blip;
+};
+
+const createLicenseTags = (entry) => {
+  const tags = [];
+  const { license } = entry;
+  if (license && license.commercial) {
+    tags.push('commercial');
+    tags.push(license.commercial.company.toLowerCase());
+  }
+
+  if (license && license['open-source']) {
+    const { 'open-source': { name } } = license;
+    tags.push('open-source');
+    tags.push(name.toLowerCase());
+
+    const reg = /^(.*)-[0-9\\.]+$/;
+    if (reg.test(name)) {
+      // Tag with the base license, excluding version/style
+      tags.push(name.match(reg)[1].toLowerCase());
+    }
+  }
+
+  return tags;
+};
+
+const createTags = (entry) => {
+  const tags = entry.tags ? entry.tags.map(t => t.toLowerCase()) : [];
+  tags.push(...createLicenseTags(entry));
+  tags.sort((a, b) => a.localeCompare(b));
+  return tags;
 };
 
 const collectEntries = (radarDir, callback) => {
@@ -90,7 +123,11 @@ const collectEntries = (radarDir, callback) => {
     entry.filename = htmlFile(f.path);
     entry.blip = createBlip(entry);
     entry.related = buildRelatedLinks(entry);
-    entry.tags = entry.tags ? entry.tags.map(t => t.toLowerCase()) : [];
+    entry.tags = createTags(entry);
+    if (entry.license && entry.license['open-source']) {
+      entry.license.openSource = entry.license['open-source'];
+      delete entry.license['open-source'];
+    }
     callback(entry);
   });
 };

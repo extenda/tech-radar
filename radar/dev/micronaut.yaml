@@ -17,6 +17,7 @@ rationale:
   Powerful framework with very low runtime cost. Can run on a 10 MB heap using Java/Kotlin,
   and is very well suited for microservices.
 related:
+  - dev/graalvm.yaml
   - dev/java.yaml
 tags:
   - java

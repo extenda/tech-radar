@@ -98,10 +98,9 @@ The format of a blip is as follows:
 name: Entry name # Required
 logo: https://domain.com/logo.png # Optional logo URL
 shortname: Short # Optional. Use only if name is too long for the radar blip
-active: true # Optional. If set to `false`, the blip is hidden on the visual radar
 blip: # A list of blip positions. Add a new entry every time the blip moves
   - date: 2019-05-21 # Required. The date the blip is created or changed
-    ring: ASSESS # Required. The position at date, One of ADOPT, TRIAL, ASSESS, HOLD
+    ring: ASSESS # Required. The position at date, One of ADOPT, TRIAL, ASSESS, HOLD, ARCHIVE
   - date: 2019-05-25
     ring: ADOPT
 description: |
@@ -110,6 +109,19 @@ description: |
 rationale: |
   A required rationale to explain why the technology is assessed in its current ring.
   This entry can be multiple lines and supports Markdown.
+license: # Optional, but recommended to always include
+  # Only if open source
+  open-source:
+    name: MIT # Required open-source license. Must match enum in schema.
+    link: http://github.com/org/repo/LICENSE # Optional link to license
+    description: |
+      Optional description of the open source license. Do not use unless something must be explained,
+      for example with dual licenses. Supports markdown.
+  # Only if commercial
+  commercial:
+    company: Google # Required company name. Must match enum in schema.
+    description: |
+      Optional description of the commercial license that supports Markdown.
 related: # Optional list of related entries
   - qa/semver.yaml # Relative path of related entry from radar dir.
 tags: # Optional list of tags.
@@ -132,6 +144,52 @@ And to validate the YAML against its schema definition, use:
 ```bash
 $ npm run yaml:validate
 ```
+
+### Supported Open-Source Licenses
+
+The following open source license names are valid for use in the radar blips.
+
+| Name        | Description                                                      |
+| ----------- | ---------------------------------------------------------------- |
+| Apache-1.1  | Apache Software License Version 1.1                              |
+| Apache-2.0  | Apache Software License Version 2.0                              |
+| BSD-2       | Simplified BSD License (BSD 2-Clause License)                    |
+| BSD-3       | New BSD License (BSD 3-Clause License)                           |
+| BSD-4       | Original BSD License (BSD 4-Clause License)                      |
+| BSD-style   | BSD-style license, see project license for details               |
+| CC0         | Creative Commons Public Domain                                   |
+| CDDL-1.0    | Common Development and Distribution License (CDDL) Version 1.0   |
+| CDDL-1.1    | Common Development and Distribution License (CDDL) Version 1.1   |
+| EPL-1.0     | Eclipse Public License (EPL) Version 1.0                         |
+| EDL-1.0     | Eclipse Distribution License (EDL) Version 1.0                   |
+| LGPL-2.1    | GNU Lesser General Public License (LGPL) Version 2.1             |
+| LGPL-3.0    | GNU Lesser General Public License (LGPL) Version 3.0             |
+| GPL-CE      | GNU General Public License (GPL) with the Classpath Exception    |
+| MIT         | The MIT License                                                  |
+| MPL-1.0     | Mozilla Public License (MPL) Version 1.0                         |
+| MPL-1.1     | Mozilla Public License (MPL) Version 1.1                         |
+| MPL-2.0     | Mozilla Public License (MPL) Version 2.0                         |
+| Public      | Public Domain                                                    |
+
+If you find a library with a license that isn't in this list it must be analyzed in detail.
+The list only contains license types analyzed for compliance with Extenda Retail products.
+
+For projects with multiple licenses, select the most permissible one and make sure it is compatible with Extenda Retail's licensing.
+
+### Supported Commercial Licenses
+
+The following companies are valid for use with commercial licenses.
+
+  * Amazon
+  * Google
+  * Jaspersoft
+  * Microsoft
+  * Oracle
+  * Qlik
+  * Tanuki Software
+  * UXDivers
+
+If you add a radar entry that requires a license from some other company, this means the company must be added to the tech-radar model and schemas.
 
 ### Docker
 

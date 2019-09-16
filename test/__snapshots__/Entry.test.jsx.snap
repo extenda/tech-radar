@@ -47,12 +47,22 @@ exports[`<Entry /> It renders entry with history 1`] = `
         <Badge
           className="Hold"
           icon="map-marker"
+          link={null}
           text="Hold"
         />
         <Badge
           className=""
           icon="clock-o"
+          link={null}
           text="Jan 1, 2004"
+        />
+        <LicenseBadges
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
       </div>
       <div
@@ -82,6 +92,14 @@ exports[`<Entry /> It renders entry with history 1`] = `
           source="Rationale"
           sourcePos={false}
           transformLinkUri={[Function]}
+        />
+        <License
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
         <Related
           related={Array []}
@@ -157,12 +175,22 @@ exports[`<Entry /> It renders entry with related links 1`] = `
         <Badge
           className="Adopt"
           icon="map-marker"
+          link={null}
           text="Adopt"
         />
         <Badge
           className=""
           icon="clock-o"
+          link={null}
           text="Mar 20, 2018"
+        />
+        <LicenseBadges
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
       </div>
       <div
@@ -192,6 +220,14 @@ exports[`<Entry /> It renders entry with related links 1`] = `
           source="Rationale"
           sourcePos={false}
           transformLinkUri={[Function]}
+        />
+        <License
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
         <Related
           related={
@@ -224,7 +260,7 @@ exports[`<Entry /> It renders entry with related links 1`] = `
 </Fragment>
 `;
 
-exports[`<Entry /> It renders inactive badge 1`] = `
+exports[`<Entry /> It renders inactive statement 1`] = `
 <Fragment>
   <Navigation
     entry={
@@ -248,6 +284,23 @@ exports[`<Entry /> It renders inactive badge 1`] = `
       className="row"
     >
       <div
+        className="twelve columns inactive-note"
+      >
+        <strong>
+          <Icon
+            name="exclamation-triangle"
+            spaceBefore={true}
+          />
+          Not active on the current version!
+        </strong>
+        <br />
+        This blip is not on the current version of the radar. If it was recently archived it is likely that it is still relevant. If the blip is older it might no longer be relevant or our assessment of it might be different today.
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
         className="entry-container"
       >
         <h1>
@@ -264,17 +317,22 @@ exports[`<Entry /> It renders inactive badge 1`] = `
         <Badge
           className="Hold"
           icon="map-marker"
+          link={null}
           text="Hold"
         />
         <Badge
           className=""
           icon="clock-o"
+          link={null}
           text="Jan 1, 1970"
         />
-        <Badge
-          className="inactive"
-          icon="warning"
-          text="Inactive"
+        <LicenseBadges
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
       </div>
       <div
@@ -305,6 +363,14 @@ exports[`<Entry /> It renders inactive badge 1`] = `
           sourcePos={false}
           transformLinkUri={[Function]}
         />
+        <License
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
+        />
         <Related
           related={Array []}
         />
@@ -318,6 +384,10 @@ exports[`<Entry /> It renders inactive badge 1`] = `
               Object {
                 "date": "Mar 20, 2018",
                 "ringName": "Hold",
+              },
+              Object {
+                "date": "Aug 23, 2019",
+                "ringName": "Archive",
               },
             ]
           }
@@ -380,12 +450,22 @@ exports[`<Entry /> It renders logotype if present 1`] = `
         <Badge
           className="Hold"
           icon="map-marker"
+          link={null}
           text="Hold"
         />
         <Badge
           className=""
           icon="clock-o"
+          link={null}
           text="Jan 1, 2004"
+        />
+        <LicenseBadges
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
       </div>
       <div
@@ -415,6 +495,14 @@ exports[`<Entry /> It renders logotype if present 1`] = `
           source="Rationale"
           sourcePos={false}
           transformLinkUri={[Function]}
+        />
+        <License
+          license={
+            Object {
+              "commercial": null,
+              "openSource": null,
+            }
+          }
         />
         <Related
           related={Array []}
