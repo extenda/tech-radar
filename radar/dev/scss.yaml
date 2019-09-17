@@ -13,5 +13,9 @@ rationale: |
 
   As with JavaScript we enforce strict rules for how our SCSS and CSS is written, this helps
   keep quality high and code between projects consistent.
+license:
+  open-source:
+    name: MIT
+    link: https://github.com/duojs/sass/blob/master/license
 tags:
   - web

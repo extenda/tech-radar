@@ -13,6 +13,10 @@ description: |
   developers.
 rationale:
   Modern alternative to Java, very productive and powerful language.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/JetBrains/kotlin/blob/master/license/LICENSE.txt
 related:
   - dev/java.yaml
 tags:

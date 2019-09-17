@@ -12,6 +12,10 @@ rationale: |
   As long as your build depends on internal resources such as [Nexus](https://nexus.extenda.io)
   or [SonarQube](https://sonar.extenda.io) the Jenkins Build Farm is the
   best CI/CD platform that can be used.
+license:
+  open-source:
+    name: MIT
+    link: https://jenkins.io/license/
 related:
   - infrastructure_ci_cd/circleci.yaml
 tags:

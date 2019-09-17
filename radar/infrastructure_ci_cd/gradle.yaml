@@ -15,6 +15,10 @@ rationale:
   To use Gradle, make sure to _really motivate_ why it is a better fit. A good
   example where it _is_ a better fit is Android, because the Google preferred
   build platform for Android is Gradle.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/gradle/gradle/blob/master/LICENSE
 related:
   - infrastructure_ci_cd/ant.yaml
   - infrastructure_ci_cd/maven.yaml

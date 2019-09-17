@@ -11,6 +11,10 @@ rationale: |
   We see many usages for Docker. As we're entering the cloud, we need to explore
   it for production. The other primary focus so far has been to use Docker for
   self-contained exploratory testing.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/moby/moby/blob/master/LICENSE
 tags:
   - cloud
   - devops

@@ -1,5 +1,5 @@
 name: Qlik Sense
-logo: https://git-scm.com/images/logos/2color-lightbg@2x.png
+logo: https://qlik.imgix.net/us/-/media/images/qlik/global/qlik-logo-2x.png?h=94&w=308&la=en&hash=12D34BE69FB9D59C6EDDABEBCF836731652ED83B
 blip:
   - date: 2019-05-22
     ring: ADOPT
@@ -18,6 +18,11 @@ rationale: |
   In April 2019 Qlik announced the general availablitity of Qlik Sense Enterprise
   for Kubernetes clusters using containers. This version would offer a much more
   scalable solution, to provide BI as a services for our clients.
+license:
+  commercial:
+    company: Qlik
+    description: |
+      Using Qlick Sense requires a license from Qlik.
 related:
   - data_management/qlikview.yaml
 tags:

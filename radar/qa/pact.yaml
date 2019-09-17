@@ -1,4 +1,5 @@
 name: Pact
+logo: https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LC2AYrI9MJa-_aAjE1u%2F-LanAsvj8t2Fxhd55l37%2F-LanAtusxEP3HvJVJxsd%2Fpact-logo.png?generation=1553489437517488&alt=media
 blip:
   - date: 2019-03-04
     ring: ASSESS
@@ -19,6 +20,10 @@ rationale: |
   versioned contracts to help determine if all participants around a contract are releasable.
 
   Pact can define contracts for both REST and messaging APIs.
+license:
+  open-source:
+    name: MIT
+    link: https://github.com/pact-foundation/pact.io/blob/documentation/LICENSE
 related:
   - qa/consumer_contract_testing.yaml
 tags:

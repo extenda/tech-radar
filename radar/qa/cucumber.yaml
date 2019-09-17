@@ -1,5 +1,5 @@
 name: Cucumber
-logo: https://docs.cucumber.io/img/cucumber-logo.png
+logo: https://images.squarespace-cdn.com/content/5b64cabf5b409bbf05dbd8b3/1533374962103-DW5OWEVBWJHAQMGQL98V/cucumber-black-512.png?content-type=image%2Fpng
 blip:
   - date: 2018-03-20
     ring: ADOPT
@@ -16,6 +16,10 @@ rationale: |
   alternatives such as for example _Spock_.
     * Java
     * Python
+license:
+  open-source:
+    name: MIT
+    link: https://github.com/cucumber/cucumber/blob/master/LICENSE
 tags:
   - e2e
   - java
