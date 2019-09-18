@@ -77,7 +77,8 @@ mapping:
               Oracle,
               Qlik,
               "Tanuki Software",
-              UXDivers
+              UXDivers,
+              Infragistics
             ]
           "description":
             type: str
