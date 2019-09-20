@@ -13,6 +13,14 @@ rationale: |
   in hand towards this goal. successfully configuring Kubernetes with microservices
   would lead to near 100% uptime with lots of automatic functionality and therefore
   reducing resources needed for maintaining the up status of an organizations services.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/kubernetes/kubernetes/blob/master/LICENSE
+  commercial:
+    company: Google
+    description: |
+      Use of Google Kubernetes Engine (GKE) requires a license for Google Cloud Platform.
 related:
   - infrastructure_ci_cd/docker.yaml
 tags:

@@ -10,6 +10,10 @@ rationale: |
   a convention over configuration approach and TypeScript as a requirement it allows
   for an easier transition from backend to frontend and with a complete set
   of tooling it enables us to build large scale web applications.
+license:
+  open-source:
+    name: MIT
+    link: https://github.com/angular/angular/blob/master/LICENSE
 related:
   - dev/react.yaml
   - dev/typescript.yaml

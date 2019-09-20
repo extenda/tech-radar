@@ -21,6 +21,10 @@ rationale: |
   While great for REST services, Spring Boot 2 is not the _fastest_ framework
   out there. If you're going for reactive paradigms, you may find that other
   frameworks such as [Vert.x](vertx.html) serves you better.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/spring-projects/spring-boot/blob/master/LICENSE.txt
 related:
   - dev/nodejs.yaml
   - dev/spring_framework.yaml

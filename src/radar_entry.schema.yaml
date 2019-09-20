@@ -71,6 +71,10 @@ mapping:
             required: true
             enum: [
               Amazon,
+              AppVeyor,
+              Atlassian,
+              CircleCI,
+              GitHub,
               Google,
               Infragistics,
               Jaspersoft,

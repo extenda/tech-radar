@@ -178,18 +178,8 @@ For projects with multiple licenses, select the most permissible one and make su
 
 ### Supported Commercial Licenses
 
-The following companies are valid for use with commercial licenses.
-
-  * Amazon
-  * Google
-  * Jaspersoft
-  * Microsoft
-  * Oracle
-  * Qlik
-  * Tanuki Software
-  * UXDivers
-
-If you add a radar entry that requires a license from some other company, this means the company must be added to the tech-radar model and schemas.
+The list of companies allowed for commercial use are maintained in the [src/radar_entry.schema.yaml](src/radar_entry.schema.yaml) file.
+If you add a radar entry that requires a license from some other company, this means the company must be added to the schema.
 
 ### Docker
 

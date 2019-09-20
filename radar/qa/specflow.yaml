@@ -7,7 +7,11 @@ description: |
   It lets us define application behaviour in plain meaningful English text using a simple grammar
   defined by a language called Gherkin.
 rationale:
-  Enables QA Engineers to test WebAPIs
+  Enables QA Engineers to test WebAPIs.
+license:
+  open-source:
+    name: BSD-3
+    link: https://github.com/techtalk/SpecFlow/blob/master/LICENSE.txt
 related:
   - qa/selenium.yaml
 tags:

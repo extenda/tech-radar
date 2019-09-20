@@ -22,5 +22,9 @@ rationale: |
   It shares a lot of similarities with NodeJS; event loop, callbacks to name a few.
 
   The Golden Rule; _"Don't Block the Event Loop"_
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/eclipse-vertx/vert.x/blob/master/LICENSE.md
 tags:
   - java

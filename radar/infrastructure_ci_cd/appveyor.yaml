@@ -12,7 +12,11 @@ rationale: |
   Appveyor is evaulated as an alternative to in-house Jenkins and TeamCity servers. Using a service such as Appveyor
   would mean Extenda Retail no longer needs to maintain TeamCity and Jenkins CI servers and build agents, which present
   significant adminstrative burden to run reliably at scale.
-
+license:
+  commercial:
+    company: AppVeyor
+    description: |
+      Building private repositories requires a paid subscription with AppVeyor.
 related:
   - infrastructure_ci_cd/jenkins_aws.yaml
 tags:

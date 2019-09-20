@@ -9,6 +9,10 @@ description: |
   just about any resource or asset.
 rationale: |
   A very widely used bundler with a large amount of customization and tooling.
+license:
+  open-source:
+    name: MIT
+    link: https://github.com/webpack/webpack/blob/master/LICENSE
 tags:
   - build
   - javascript
