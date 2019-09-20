@@ -72,6 +72,7 @@ mapping:
             enum: [
               Amazon,
               Google,
+              Infragistics,
               Jaspersoft,
               Microsoft,
               Oracle,

@@ -2,11 +2,21 @@ name: Infragistics
 blip:
   - date: 2019-05-22
     ring: ASSESS
+  - date: 2019-09-12
+    ring: TRIAL
 description: |
   Fast and beautiful UI controls and time-saving tools for developers and UX pros
 rationale:
   A powerful and extensive component library that will minimize the need to maintain and develop our own components.
   It will also keep our modules more consistent
+license:
+  commercial:
+    company: Infragistics
+    description: |
+      Licensing options for several versions of the component library available.
+      Currently $695 for Angular, $695 for React, $799 for Xamarin,
+      $899 for WPF, $1.495 for Professional, $1.995 for Ultimate.
+      Licensing pr developer.
 related:
   - dev/devexpress.yaml
 tags:
