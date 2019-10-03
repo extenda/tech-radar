@@ -12,6 +12,10 @@ description: |
 rationale: |
   To be able to achieve speed in development we need to reduce time spent on common resources for each microservice.
   By using Istio we can spend less time on infrastructure and more time on business logic.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/istio/istio/blob/master/LICENSE
 related:
   - infrastructure_ci_cd/kubernetes.yaml
 tags:

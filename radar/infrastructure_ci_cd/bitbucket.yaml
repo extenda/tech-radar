@@ -1,4 +1,5 @@
 name: Atlassian BitBucket
+shortname: BitBucket
 blip:
   - date: 2019-05-21
     ring: ADOPT
@@ -19,7 +20,12 @@ description: |
 rationale: |
   We have standardized on GIT and Jira, so this is the repository chosen for
   Retail Suite. With its nice integration to Jira it offers the functionality
-  required for developers. The pricing is USD 2.0 per month per developer.
+  required for developers.
+license:
+  commercial:
+    company: Atlassian
+    description: |
+      The pricing for BitBucket Cloud is $2.00/m per seat.
 related:
   - dev/git.yaml
   - infrastructure_ci_cd/github.yaml

@@ -7,11 +7,16 @@ description: |
   configured with `.circleci/config.yml` files following the [pipelines as code](pipelines_as_code.html) principles.
 rationale: |
   CircleCI is evaulated as an alternative to the in-house Jenkins AWS. Using a
-  service such as CircleCI would mean Extenda no longer need to manage and scale
+  service such as CircleCI would mean Extenda Retail no longer need to manage and scale
   the Jenkins AWS build cluster.
 
   However, CircleCI is *not* compatible with `Jenkinsfile`s and currently can't
   access in-house resources such as the Nexus repository or SonarQube.
+license:
+  commercial:
+    company: CircleCI
+    description: |
+      CircleCI is free for open-source projects but requires a paid plan for private projects.
 related:
   - infrastructure_ci_cd/jenkins_aws.yaml
 tags:

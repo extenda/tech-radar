@@ -35,12 +35,13 @@ describe('RadarService', () => {
     expect(quadrant).toMatchObject({
       dirname: 'dev',
       adopt: [
-        { name: 'Java', filename: 'java.html' },
+        { name: 'Java', filename: 'java.html', active: true },
       ],
       assess: [],
       trial: [],
       hold: [
-        { name: 'PHP', filename: 'php.html' },
+        { name: 'Common Lisp', filename: 'lisp.html', active: false },
+        { name: 'PHP', filename: 'php.html', active: true },
       ],
     });
   });
@@ -55,9 +56,9 @@ describe('RadarService', () => {
     expect(entries).toHaveLength(2);
   });
 
-  test('It can list all inactive entries in quadrant', () => {
+  test('It can list all active and inactive entries in quadrant', () => {
     const entries = radarService.listEntries('dev', '*', false);
-    expect(entries).toHaveLength(1);
+    expect(entries).toHaveLength(3);
   });
 
   test('It can list entries by quadrant and ring', () => {

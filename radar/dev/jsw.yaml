@@ -1,0 +1,30 @@
+name: Java Service Wrapper
+logo: https://wrapper.tanukisoftware.com/doc/images/jsw-logo.jpg?20190730145704
+blip:
+  - date: 2019-08-26
+    ring: HOLD
+description: |
+  Java Service Wrapper is a cross-platform solution to run java
+  applications as services on Windows, Linux and MacOS.
+rationale: |
+  The Java Service Wrapper is licensed by Extenda Retail to use whenever
+  there is a need to run a Java application as a service. This is an
+  important feature for on-prem and data center services that must run as
+  system services.
+
+  With the current movement to containerized, cloud services, the need for
+  a service wrapper will decline. In containers, the application simply runs
+  as is and the wrapper is no longer needed.
+
+  For legacy, or occational on-prem applications, the service wrapper may still
+  prove useful. If a Java application must run as a service, use the wrapper,
+  but only use it if containerization isn't an option.
+license:
+  commercial:
+    company: Tanuki Software
+    description: |
+      The Java Service Wrapper can be used with any Java application, but
+      requires a valid license file to run. This is generated from the
+      license management on Tanuki Software's website.
+tags:
+  - java
