@@ -4,13 +4,15 @@ blip:
     ring: TRIAL
 description: |
   Kustomize introduces a template-free way to customize application configuration for Kubernetes.
-  Simplifies the use of off-the-shelf applications. Built into kubectl as apply -k.
+  Simplifies the use of off-the-shelf applications.
+  Built into kubectl as apply -k and as a template engine in Spinnaker.
 rationale: |
   With Kustomize we can reduce the amount of boilerplate code and adhere to the DRY principal.
   Kustomize has been adopted by the Kubernetes project and is built-in into the CLI.
   Since it is built in we should use it before other tools such as Helm for templating.
 related:
   - infrastructure_ci_cd/kubernetes.yaml
+  - infrastructure_ci_cd/spinnaker.yaml
 tags:
   - k8s
   - template
