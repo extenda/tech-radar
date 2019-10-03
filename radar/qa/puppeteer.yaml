@@ -1,0 +1,27 @@
+name: Puppeteer
+logo: https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png
+blip:
+  - date: 2019-10-03
+    ring: ASSESS
+description: |
+  Puppeteer is an automation library which provides a high-level API to control Chrome or Chromium.
+  Puppeteer runs headless by default, but can be configured to run full (non-headless) Chrome or Chromium.
+rationale: |
+  Puppeteer is a fast, modern alternative to tools like Selenium and Appium. If you only need to run end-to-end tests
+  in Chrome, consider Puppeteer for its ease of use and stable APIs.
+
+  Puppeteer really shines when used with [jest-puppeteer](https://github.com/smooth-code/jest-puppeteer).
+  The test library will handle waits for you and there's no need to manually delay async assertions.
+
+  Puppeteer is developed by the Google Chrome team, which means it is always up to date with Chrome.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/GoogleChrome/puppeteer/blob/master/LICENSE
+related:
+  - qa/selenium.yaml
+tags:
+  - e2e
+  - javascript
+  - test
+  - web
