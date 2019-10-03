@@ -1,4 +1,4 @@
-name: Knative
+name: Kustomize
 blip:
   - date: 2019-10-03
     ring: TRIAL
