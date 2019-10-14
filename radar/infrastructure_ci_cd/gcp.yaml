@@ -24,6 +24,8 @@ license:
       Use of this software requires a license for Google Cloud Platform.
 related:
   - infrastructure_ci_cd/gce.yaml
+  - infrastructure_ci_cd/gcf.yaml
+  - infrastructure_ci_cd/kubernetes.yaml
 tags:
   - cloud
   - gcp
