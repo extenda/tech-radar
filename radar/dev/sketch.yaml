@@ -1,0 +1,42 @@
+name: Sketch
+
+logo: https://www.sketch.com/images/pages/press/app-icon-sketch-mac.jpg
+
+blip:
+  - date: 2019-10-14
+    ring: TRIAL
+
+description: |
+  Sketch is a graphics software for Mac used primarily for designing UI and UX of
+  mobile apps and web. The software was built from the ground up for designing
+  interactive interfaces. It creates live comps so that clients can preview what
+  happens when they click, swipe, or tap your design on their desktop, laptop,
+  tablet, or phone.
+
+  The designs can be saved in the popular PNG, JPG, TIFF, WebP, etc., formats.
+  Work created in Sketch is utilized by app engineers to design mobile apps and
+  by web developers convert designs into websites
+
+rationale: |
+  [Sketch](www.sketch.com) will offer an easy way of designing UI and generating graphics
+  for use in apps and front end projects. The process of design and asset generation is
+  significantly faster the other graphic software, e.g Photoshop, through the use of
+  symbols that can be styled and reused in all elements of a design.
+
+  Sketch is rapidly becoming the go-to tool for web and app designers and adopting the
+  software and workflow will give Extenda Retail an edge in frontend and app development.
+
+license:
+  commercial:
+    company: Sketch
+    description: |
+      Commercial use of Sketch requires a yearly license subscription.
+
+      **License Cost**
+        * A yearly cost of 99 USD for a personal license
+        * A yerly cost of 89 USD per device for a scalable per device license
+
+tags:
+  - ui
+  - ux
+  - design
