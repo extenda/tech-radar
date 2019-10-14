@@ -15,7 +15,7 @@ rationale: |
   would lead to near 100% uptime with lots of automatic functionality and therefore
   reducing resources needed for maintaining the up status of an organizations services.
 
-  By leveraging Google Cloud we can use Google Kubernetes Engine (GKE) to run or masters.
+  By leveraging Google Cloud we can use Google Kubernetes Engine (GKE) to run our masters.
   This will reduce the amount of time that we need to use managing a cluster by ourselves.
   GKE runs Google Compute Engine instances for your cluster and has the master as a service.
 license:
