@@ -1,4 +1,8 @@
 version: 2.1
+
+orbs:
+  sonarcloud: extendaretail/sonarcloud@dev:alpha
+
 commands:
   build_docker:
     steps:
@@ -47,11 +51,7 @@ jobs:
       - build_docker
       - store_test_results:
           path: test-results
-      - persist_to_workspace:
-          root: ~/workspace
-          paths:
-            - test-results
-            - coverage
+      - sonarcloud/store_test_results
 
   sonar:
     docker:
@@ -59,17 +59,10 @@ jobs:
     working_directory: ~/workspace
     steps:
       - checkout
-      - run: npm ci
       - attach_workspace:
-          at: ~/workspace
-      - run:
-          name: SonarCloud analysis
-          command: |
-            sed -i.bak 's#'$(pwd)/'##g' ./coverage/lcov.info
-            sh .scripts/sonarcloud.sh
-      - run:
-          name: Check quality gate
-          command: sh .scripts/sonarcloud_quality_gate.sh
+          at: .
+      - sonarcloud/scan_with_npm
+      - sonarcloud/check_quality_gate
 
   dockerhub:
     docker:
