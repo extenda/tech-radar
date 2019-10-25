@@ -183,8 +183,7 @@ If you add a radar entry that requires a license from some other company, this m
 
 ### Docker
 
-The Tech Radar is packaged into a Docker image. The image is automatically built
-on `package`, but can also be built manually.
+The Tech Radar is packaged into a Docker image. To build the radar, use this command:
 
 ```bash
 $ docker build -t tech-radar .
