@@ -51,7 +51,11 @@ jobs:
       - build_docker
       - store_test_results:
           path: test-results
-      - sonarcloud/store_test_results
+      - persist_to_workspace:
+          root: ~/workspace
+          paths:
+            - test-results
+            - coverage
 
   sonar:
     docker:
@@ -60,7 +64,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: .
+          at: ~/workspace
       - sonarcloud/scan_with_npm
       - sonarcloud/check_quality_gate
 
