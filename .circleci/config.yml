@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  sonarcloud: extendaretail/sonarcloud@dev:alpha
+  sonarcloud: extendaretail/sonarcloud@0.0.2
 
 commands:
   build_docker:
