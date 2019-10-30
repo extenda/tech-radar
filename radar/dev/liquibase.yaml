@@ -8,10 +8,15 @@ rationale: |
   With liquibase, database schema migration is part of the everyday development. The schema is evolved using change sets
   that are executed by Liquibase to migrate the schema to the latest version. This means that the schema is continously
   migrated and no after-the-fact database migration scripts are ever needed.
+
+  If only a single DBMS is to be supported and your project can take the little bit of added risk, consider
+  [Flyway CE](flyway.html) as an alternative to Liquibase.
 license:
   open-source:
     name: Apache-2.0
     link: https://raw.githubusercontent.com/liquibase/liquibase/master/LICENSE.txt
+related:
+  - dev/flyway.yaml
 tags:
   - java
   - scm
