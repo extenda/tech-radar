@@ -10,6 +10,10 @@ description: |
 rationale: |
   With Jib we dont need to rebuild the whole Java application only the layers that changed.
   Also we don't need a specific Dockerfiles meaning one less syntax to learn and handle.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/GoogleContainerTools/jib/blob/master/LICENSE
 related:
   - infrastructure_ci_cd/maven.yaml
   - dev/java.yaml
