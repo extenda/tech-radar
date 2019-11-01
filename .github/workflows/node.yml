@@ -5,6 +5,8 @@ on: [push]
 jobs:
   build:
 
+      needs: yamllint
+
       runs-on: ubuntu-latest
 
       steps:
