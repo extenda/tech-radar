@@ -1,9 +1,9 @@
-name: Python package
+name: Python
 
 on: [push]
 
 jobs:
-  build:
+  yamllint:
 
     runs-on: ubuntu-latest
 
