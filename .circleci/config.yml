@@ -105,6 +105,9 @@ workflows:
       - build:
           requires:
             - yamllint
+          filters:
+            branches:
+              ignore: 'feature/github-actions'
       - sonar:
           context: sonarcloud
           requires:
