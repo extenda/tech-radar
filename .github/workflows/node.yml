@@ -24,3 +24,5 @@ jobs:
         run: npm test -- --ci --runInBand --coverage
       - name: Build radar
         run: npm run build
+      - name: Build Docker image
+        run: docker build -t extenda/tech-radar:GITHUB_SHA .
