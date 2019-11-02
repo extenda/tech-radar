@@ -50,13 +50,16 @@ jobs:
       - name: Build radar
         run: npm run build
       - name: Build Docker image
-        run: docker build -t extenda/tech-radar-test:GITHUB_SHA .
+        env:
+          GITHUB_SHA: ${{ github.sha }}
+        run: docker build -t extenda/tech-radar-test:"$GITHUB_SHA" .
       #Only deploy to dockerhub if we are on master branch
       - name: Dockerhub publish
         if: github.ref == 'refs/heads/feature/github-actions'
         env:
+          GITHUB_SHA: ${{ github.sha }}
           DOCKERHUB_USERNAME: sclausson
           DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
         run: |
             echo "$DOCKERHUB_PASSWORD" | docker login --username "$DOCKERHUB_USERNAME" --password-stdin
-            docker push extenda/tech-radar-test:GITHUB_SHA
+            docker push extenda/tech-radar-test:"$GITHUB_SHA"
