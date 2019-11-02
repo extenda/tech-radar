@@ -1,0 +1,34 @@
+name: pull-request
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronized]
+    branches:
+      - master
+
+jobs:
+  sonarCloud:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: NPM Install
+        run: npm ci
+      - name: Lint javascript
+        run: |
+            npm run lint:js -- \
+              --format junit \
+              --output-file test-results/eslint/TEST-eslint.xml
+      - name: Unit tests
+        run: npm test -- --ci --runInBand --coverage
+
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
