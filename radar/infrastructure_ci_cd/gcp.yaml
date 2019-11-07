@@ -1,0 +1,33 @@
+name: GCP Infrastructure
+shortname: GCP Infra
+logo: https://cloud.google.com/_static/87a95081a4/images/cloud/cloud-logo.svg
+blip:
+  - date: 2019-10-14
+    ring: ADOPT
+description: |
+  This blip contains the common services that we can use within GCP.
+  Services deemed to be core services:
+
+    * VPC network
+    * Network services
+    * Container Registry
+    * Storage
+    * Network Security
+    * IAM & Admin
+rationale: |
+  Since we have chosen to go with Google Cloud,
+  This blip represent all services that are considered to be part of the core package for GCP.
+  Therefore all the services gathered here are consolidated into a single blip for brewity.
+license:
+  commercial:
+    company: Google
+    description: |
+      Use of this software requires a license for Google Cloud Platform.
+related:
+  - infrastructure_ci_cd/gce.yaml
+  - infrastructure_ci_cd/gcf.yaml
+  - infrastructure_ci_cd/kubernetes.yaml
+tags:
+  - cloud
+  - gcp
+  - google

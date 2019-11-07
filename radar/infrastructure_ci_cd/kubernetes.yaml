@@ -1,4 +1,5 @@
 name: Kubernetes
+logo: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png
 blip:
   - date: 2019-03-04
     ring: ADOPT
@@ -13,6 +14,10 @@ rationale: |
   in hand towards this goal. successfully configuring Kubernetes with microservices
   would lead to near 100% uptime with lots of automatic functionality and therefore
   reducing resources needed for maintaining the up status of an organizations services.
+
+  By leveraging Google Cloud we can use Google Kubernetes Engine (GKE) to run our masters.
+  This will reduce the amount of time that we need to use managing a cluster by ourselves.
+  GKE runs Google Compute Engine instances for your cluster and has the master as a service.
 license:
   open-source:
     name: Apache-2.0
@@ -23,6 +28,8 @@ license:
       Use of Google Kubernetes Engine (GKE) requires a license for Google Cloud Platform.
 related:
   - infrastructure_ci_cd/docker.yaml
+  - infrastructure_ci_cd/gcp.yaml
+  - infrastructure_ci_cd/gce.yaml
 tags:
   - cloud
   - devops

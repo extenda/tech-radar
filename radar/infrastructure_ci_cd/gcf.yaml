@@ -1,0 +1,31 @@
+name: Cloud Functions
+logo: https://cloud.google.com/images/serverless/cloud-functions.svg
+blip:
+  - date: 2019-10-14
+    ring: TRIAL
+description: |
+  Google Cloud Functions is a serverless execution environment for building and connecting cloud services.
+  With Cloud Functions you write functions that are attached to events emitted from your infrastructure and services.
+  Your Cloud Function is triggered when an event being watched is fired.
+rationale: |
+  Serverless functions removes the nontrivial effort that goes into server and OS configuration and orchestration.
+  These systems cost very little to operate and have inbuilt scaling features.
+  While serverless architectures have significant benefits, there are drawbacks too:
+
+    * Deploying
+    * Managing and sharing code across services is more complex
+    * local or offline testing is more difficult if not impossible.
+
+license:
+  commercial:
+    company: Google
+    description: |
+      Use of this software requires a license for Google Cloud Platform.
+related:
+  - infrastructure_ci_cd/gcp.yaml
+  - infrastructure_ci_cd/knative.yaml
+tags:
+  - cloud
+  - gcp
+  - faas
+  - google
