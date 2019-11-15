@@ -2,6 +2,8 @@ name: "Github Actions"
 blip:
   - date: 2019-11-01
     ring: ASSESS
+  - date: 2019-11-15
+    ring: TRIAL
 description: |
   GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and
   deploy your code right from GitHub.
