@@ -1,0 +1,26 @@
+name: Flyway Community Edition
+shortname: Flyway CE
+logo: https://flywaydb.org/assets/logo/flyway-logo-tm.png
+blip:
+  - date: 2019-10-30
+    ring: ASSESS
+description: |
+  [Flyway Community Edition](https://www.flywaydb.org) is a tool to evolve your database schema continously.
+rationale: |
+  With Flyway, database schema migration is part of the everyday development. The schema is evolved with plain SQL
+  change sets that are executed by Flyway. This means that the schema is continously
+  migrated and no after-the-fact database migration scripts are ever needed.
+
+  Flyway Community Edition is available under Apache-2.0 terms. There's also paid licenses that includes more
+  advanced features and extended support. The features in Community Edition should be enough for what we want
+  to use the tool for.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://raw.githubusercontent.com/liquibase/liquibase/master/LICENSE.txt
+related:
+  - dev/liquibase.yaml
+tags:
+  - java
+  - scm
+  - sql
