@@ -10,6 +10,7 @@ description: |
 rationale: |
   With Jib we dont need to rebuild the whole Java application only the layers that changed.
   Also we don't need a specific Dockerfiles meaning one less syntax to learn and handle.
+  On top of that the image produced is a distroless image which means that we get a minimal image.
 license:
   open-source:
     name: Apache-2.0
