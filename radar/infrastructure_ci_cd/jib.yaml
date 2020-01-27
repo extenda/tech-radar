@@ -2,6 +2,8 @@ name: Jib
 logo: https://raw.githubusercontent.com/GoogleContainerTools/jib/master/logo/jib-docker-java-64x64.png
 blip:
   - date: 2019-10-31
+    ring: ASSESS
+  - date: 2020-01-27
     ring: TRIAL
 description: |
   Jib builds optimized Docker and OCI images for your Java applications without a Docker daemon.
