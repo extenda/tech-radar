@@ -3,6 +3,8 @@ logo: https://raw.githubusercontent.com/GoogleContainerTools/jib/master/logo/jib
 blip:
   - date: 2019-10-31
     ring: ASSESS
+  - date: 2020-01-27
+    ring: TRIAL
 description: |
   Jib builds optimized Docker and OCI images for your Java applications without a Docker daemon.
   It is available as plugins for Maven and Gradle and as a Java library.
@@ -10,6 +12,7 @@ description: |
 rationale: |
   With Jib we dont need to rebuild the whole Java application only the layers that changed.
   Also we don't need a specific Dockerfiles meaning one less syntax to learn and handle.
+  On top of that the image produced is a distroless image which means that we get a minimal image.
 license:
   open-source:
     name: Apache-2.0
