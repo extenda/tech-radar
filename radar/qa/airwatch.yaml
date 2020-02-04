@@ -14,6 +14,7 @@ rationale: |
   AirWatch allows us to keep costs down while not having to maintain our own infrastructure.
 license:
   commercial:
+    company: VMWare
     description: |
       Commerical license. Standard plan $3.78 per device $6.52 per user.
 tags:
