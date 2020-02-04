@@ -9,7 +9,7 @@ description: |
 rationale: |
   We need infrastructure to test and verify MDM deployment methodologies and configuration of
   devices for our customers that employ that kind of solution.
-  
+
   AirWatch supports AppConfig, a standard for configuring applications.
   AirWatch allows us to keep costs down while not having to maintain our own infrastructure.
 license:
