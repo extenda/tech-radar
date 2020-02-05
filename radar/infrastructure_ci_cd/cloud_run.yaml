@@ -1,0 +1,42 @@
+name: Cloud Run
+logo: https://cloud.google.com/images/serverless/cloud-run.svg
+blip:
+  - date: 2020-02-05
+    ring: TRIAL
+description: |
+  Cloud Run is a servless compute platform on Google Cloud Platform that automatically scales your stateless containers.
+  Cloud Run is built on top of Knative and Kubernetes and abstract away most of the complexity to allow development
+  teams to deliver stateless containers.
+rationale: |
+  Cloud Run reduces the cognitive load that is introduced by Kubernetes and Knative. It allows the development teams
+  to focus on the application. To use Cloud Run, you must containerize your application, keep it stateless and write
+  it as an request/event-driven application.
+
+  Cloud Run comes in two flavors:
+
+    1. Fully-managed by Google
+    2. On top of GKE with Knative
+
+  With fully-managed Cloud Run there's no need for a GKE cluster and you pay for the compute time. The fully-managed
+  solution comes with a few restrictions as that what GCP resources can be used and how deployment works. These
+  restrictions will reduce over time and with the ease to migrate to Cloud Run on GKE, our approach is to start with
+  fully-managed Cloud Run that we anticipate we eventually will migrate.
+
+  Regardless whether fully-managed Cloud Run or GKE Cloud Run is used, developers will be able to use the same tools
+  to deploy their containers.
+
+license:
+  commercial:
+    company: Google
+    description: |
+      Use of this software requires a license for Google Cloud Platform.
+related:
+  - infrastructure_ci_cd/gcf.yaml
+  - infrastructure_ci_cd/gcp.yaml
+  - infrastructure_ci_cd/knative.yaml
+  - infrastructure_ci_cd/kubernetes.yaml
+tags:
+  - cloud
+  - gcp
+  - google
+  - serverless
