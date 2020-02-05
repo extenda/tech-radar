@@ -3,6 +3,8 @@ logo: https://cloud.google.com/images/serverless/cloud-functions.svg
 blip:
   - date: 2019-10-14
     ring: TRIAL
+  - date: 2020-02-05
+    ring: HOLD
 description: |
   Google Cloud Functions is a serverless execution environment for building and connecting cloud services.
   With Cloud Functions you write functions that are attached to events emitted from your infrastructure and services.
@@ -27,5 +29,5 @@ related:
 tags:
   - cloud
   - gcp
-  - faas
   - google
+  - serverless
