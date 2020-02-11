@@ -83,7 +83,8 @@ mapping:
               Qlik,
               Scandit,
               "Tanuki Software",
-              UXDivers
+              UXDivers,
+              VMWare
             ]
           "description":
             type: str
