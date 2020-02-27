@@ -74,6 +74,7 @@ mapping:
               AppVeyor,
               Atlassian,
               CircleCI,
+              Confluent,
               GitHub,
               Google,
               Infragistics,
