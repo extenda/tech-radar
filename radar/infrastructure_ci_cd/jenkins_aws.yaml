@@ -2,6 +2,8 @@ name: Jenkins Build Farm
 blip:
   - date: 2018-03-20
     ring: ADOPT
+  - date: 2019-11-15
+    ring: HOLD
 description: |
   The [Jenkins Build Farm](https://jenkins.extenda.se) is a container-based, elastic build farm maintained by
   Extenda Retail, running on AWS.
@@ -12,6 +14,10 @@ rationale: |
   As long as your build depends on internal resources such as [Nexus](https://nexus.extenda.io)
   or [SonarQube](https://sonar.extenda.io) the Jenkins Build Farm is the
   best CI/CD platform that can be used.
+license:
+  open-source:
+    name: MIT
+    link: https://jenkins.io/license/
 related:
   - infrastructure_ci_cd/circleci.yaml
 tags:

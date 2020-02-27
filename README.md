@@ -98,10 +98,9 @@ The format of a blip is as follows:
 name: Entry name # Required
 logo: https://domain.com/logo.png # Optional logo URL
 shortname: Short # Optional. Use only if name is too long for the radar blip
-active: true # Optional. If set to `false`, the blip is hidden on the visual radar
 blip: # A list of blip positions. Add a new entry every time the blip moves
   - date: 2019-05-21 # Required. The date the blip is created or changed
-    ring: ASSESS # Required. The position at date, One of ADOPT, TRIAL, ASSESS, HOLD
+    ring: ASSESS # Required. The position at date, One of ADOPT, TRIAL, ASSESS, HOLD, ARCHIVE
   - date: 2019-05-25
     ring: ADOPT
 description: |
@@ -179,22 +178,12 @@ For projects with multiple licenses, select the most permissible one and make su
 
 ### Supported Commercial Licenses
 
-The following companies are valid for use with commercial licenses.
-
-  * Amazon
-  * Google
-  * Jaspersoft
-  * Microsoft
-  * Oracle
-  * Qlik
-  * Tanuki Software
-
-If you add a radar entry that requires a license from some other company, this means the company must be added to the tech-radar model and schemas.
+The list of companies allowed for commercial use are maintained in the [src/radar_entry.schema.yaml](src/radar_entry.schema.yaml) file.
+If you add a radar entry that requires a license from some other company, this means the company must be added to the schema.
 
 ### Docker
 
-The Tech Radar is packaged into a Docker image. The image is automatically built
-on `package`, but can also be built manually.
+The Tech Radar is packaged into a Docker image. To build the radar, use this command:
 
 ```bash
 $ docker build -t tech-radar .

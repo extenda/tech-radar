@@ -9,8 +9,6 @@ mapping:
     type: str
   "shortname":
     type: str
-  "active":
-    type: bool
   "blip":
     type: seq
     required: true
@@ -23,7 +21,7 @@ mapping:
           "ring":
             type: str
             required: true
-            enum: [ADOPT, TRIAL, ASSESS, HOLD]
+            enum: [ADOPT, TRIAL, ASSESS, HOLD, ARCHIVE]
   "description":
     type: str
     required: true
@@ -73,12 +71,21 @@ mapping:
             required: true
             enum: [
               Amazon,
+              AppVeyor,
+              Atlassian,
+              CircleCI,
+              GitHub,
               Google,
+              Infragistics,
               Jaspersoft,
               Microsoft,
               Oracle,
               Qlik,
+              Scandit,
+              SonarSource,
               "Tanuki Software",
+              UXDivers,
+              VMWare
             ]
           "description":
             type: str

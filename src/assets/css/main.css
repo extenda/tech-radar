@@ -158,11 +158,6 @@ ul.history {
   color: white;
 }
 
-.badge.inactive {
-  background: #ff8f00;
-  color: white;
-}
-
 .badge.license {
   background: #fefefe;
   border: 1px solid #cfd8dc;
@@ -228,4 +223,16 @@ ul.tags {
 .entry-tag a {
   color: #333;
   text-decoration: none;
+}
+
+.inactive-note {
+  background: #ffb300;
+  color: black;
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+a.inactive {
+  color: gray;
+  text-decoration: line-through;
 }

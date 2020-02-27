@@ -17,6 +17,10 @@ rationale: |
 
   With the exception of Extenda Retail POS all POS solution products are built
   with Maven.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://maven.apache.org/ref/3.0/license.html
 related:
   - infrastructure_ci_cd/ant.yaml
   - infrastructure_ci_cd/gradle.yaml

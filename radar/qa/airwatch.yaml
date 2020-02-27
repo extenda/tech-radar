@@ -1,0 +1,23 @@
+name: VMWare Workspace ONE Powered by AirWatch
+shortname: AirWatch
+blip:
+  - date: 2020-02-04
+    ring: TRIAL
+description: |
+  AirWatch unified endpoint management (UEM) technology now powers VMware Workspace ONE,
+  an integrated platform for the digital workspace.
+rationale: |
+  We need infrastructure to test and verify MDM deployment methodologies and configuration of
+  devices for our customers that employ that kind of solution.
+
+  AirWatch supports AppConfig, a standard for configuring applications.
+  AirWatch allows us to keep costs down while not having to maintain our own infrastructure.
+license:
+  commercial:
+    company: VMWare
+    description: |
+      Commerical license. Standard plan $3.78 per device $6.52 per user.
+tags:
+  - mobile
+  - cloud
+  - test

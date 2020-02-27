@@ -16,6 +16,10 @@ rationale: |
   But, if you are about to build a new microservice, consider something else
   than Spring Framework. There are lots of alternatives that are faster, smaller
   and quicker to develop.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://raw.githubusercontent.com/spring-projects/spring-framework/master/LICENSE.txt
 tags:
   - java
   - spring

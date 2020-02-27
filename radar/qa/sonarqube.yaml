@@ -1,0 +1,43 @@
+name: SonarQube
+logo: https://www.sonarqube.org/assets/logo-31ad3115b1b4b120f3d1efd63e6b13ac9f1f89437f0cf6881cc4d8b5603a52b4.svg
+blip:
+  - date: 2018-11-07
+    ring: ADOPT
+description: |
+  SonarQube is a code quality analysis platform that given static code analysis and test code coverage rates the
+  project against a quality gate. It supports a lot of languages, for example C, C++, C#, HTML, Java, JavaScript,
+  TypeScript, XML.
+
+  Code is analysed as part of the build pipeline. A local agent is used to analyze the project, the test results
+  and coverage reports which are then published to SonarQube for further analysis.
+rationale: |
+  SonarQube is geared at "stopping the water leak". This means that the quality gates is focused on new code.
+  This makes it achievable to pass the quality gate no matter how much technical debt exists in the code base.
+
+  SonarQube gives us a single pane of glass for our code quality metrics. It allows us to inspect the overall quality
+  and the quality within the leak period (new code). The leak period metrics makes SonarQube useful to gather lead
+  measures for overall quality goals.
+
+  SonarQube integrates in the IDE with the [SonarLint Plugin](https://www.sonarlint.org).
+
+  **SonarQube comes in two flavors:**
+
+    * In-house service based on SonarQube Community Edition. The service is free to use, but limited to a single branch
+      and static analysis of pull requests.
+    * SonarCloud SaaS solution with paid subscription plan. This service allows for full quality gate analysis of
+      all branches and all pull requests. This service is free for open-source projects.
+license:
+  open-source:
+    name: LGPL-3.0
+    link: https://github.com/SonarSource/sonarqube/blob/master/LICENSE.txt
+  commercial:
+    company: SonarSource
+    description: |
+      SonarCloud is priced per lines of code it analyses. We can only analyze as many private projects as our quota
+      allows, meaning we need to prioritize which projects to run on SonarCloud vs. in-house SonarQube.
+tags:
+  - build
+  - dotnet
+  - java
+  - quality
+  - saas

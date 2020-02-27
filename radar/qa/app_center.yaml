@@ -1,0 +1,28 @@
+name: Microsoft Visual Studio App Center
+shortname: App Center
+blip:
+  - date: 2019-10-10
+    ring: ASSESS
+description: |
+  [App Center](https://docs.microsoft.com/en-us/appcenter/) cloud solution covers cross platform building, testing,
+  distributing, anaylitcs, crash reporting and application push notification.
+rationale: |
+  We believe that for Xamarin.Forms based mobile applications the MS Visual Studio
+  App Center testcloud would be the way to go for UI test automation using Xamarin.UITest framework.
+  It would allow us extend our CI/CD pipeline with our current competencies and staffing to running
+  automated tests in the cloud using physical devices on all Android / iOS versions we officially
+  support. Nightly testing and reporting on code checked in during the day, and running automated
+  regression testing weekly. Possibility of digging deeper into the deployment, analytics and
+  crash reporting at a later stage.
+license:
+  commercial:
+    company: Microsoft
+    description: |
+      Parts of the solution is free (like distribution, analytics and crash reporting), but there is a cost of
+      99 USD/month per device concurrency (= 30 device hours) for cloud testing.
+      [Read more here](https://visualstudio.microsoft.com/app-center/pricing/)
+tags:
+  - xamarin
+  - mobile
+  - cloud
+  - testautomation

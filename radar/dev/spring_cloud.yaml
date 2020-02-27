@@ -1,0 +1,27 @@
+name: Spring Cloud
+logo: https://spring.io/img/homepage/icon-spring-framework.svg
+blip:
+  - date: 2019-10-31
+    ring: HOLD
+description: |
+  Spring Cloud provides tools for developers to quickly build some of the common patterns in distributed systems:
+  e.g. configuration management, service discovery, circuit breakers, intelligent routing,
+  micro-proxy, control bus, one-time tokens, global locks, leadership election, distributed sessions, cluster state).
+  Coordination of distributed systems leads to boiler plate patterns,
+  and using Spring Cloud developers can quickly stand up services and applications that implement those patterns.
+rationale: |
+  Spring Cloud doesn't really work well with Kubernetes.
+  Lots, if not all, of the services offered by Spring Cloud is natively handled by Kubernetes and friends.
+  Using the native services of Kubernetes has proven much more stable and easy to use so we recommend them instead.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://raw.githubusercontent.com/spring-projects/spring-framework/master/LICENSE.txt
+tags:
+  - java
+  - spring
+related:
+  - dev/java.yaml
+  - dev/spring_framework.yaml
+  - dev/spring_boot2.yaml
+  - infrastructure_ci_cd/kubernetes.yaml

@@ -5,7 +5,11 @@ blip:
 description: |
   Lightweight and self-contained database
 rationale:
-  We want some service or WebAPIs to have a self-contained database
+  We want some service or WebAPIs to have a self-contained database.
+license:
+  open-source:
+    name: Public
+    link: https://www.sqlite.org/copyright.html
 related:
   - data_management/mssql.yaml
   - data_management/mysql.yaml

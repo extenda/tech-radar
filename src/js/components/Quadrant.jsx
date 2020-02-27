@@ -18,7 +18,12 @@ export default class Quadrant extends Component {
     <ul className={ring}>
       { quadrant[ring].map(entry => (
         <li key={entry.filename}>
-          <Link to={`/entries/${entry.filename}`}>{entry.name}</Link>
+          <Link
+            to={`/entries/${entry.filename}`}
+            className={entry.active ? '' : 'inactive'}
+          >
+            {entry.name}
+          </Link>
         </li>
       ))}
     </ul>

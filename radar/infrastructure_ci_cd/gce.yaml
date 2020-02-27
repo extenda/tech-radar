@@ -1,0 +1,29 @@
+name: Google Compute Engine
+logo: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Google-Compute-Engine-Logo.svg/2560px-Google-Compute-Engine-Logo.svg.png
+blip:
+  - date: 2019-10-14
+    ring: HOLD
+description: |
+  Google Compute Engine (GCE) is the Infrastructure as a Service component of Google Cloud Platform.
+  Google Compute Engine enables users to launch virtual machines (VMs) on demand.
+rationale: |
+  We should avoid building software that depends on virtual machines.
+  It is OK to launch VMs to perform one off tasks, but it shouldn't be part of the final product.
+  Preferably look for better options such as:
+
+    * Docker images on GKE
+    * Serverless functions
+    * SaaS solutions.
+license:
+  commercial:
+    company: Google
+    description: |
+      Use of this software requires a license for Google Cloud Platform.
+related:
+  - infrastructure_ci_cd/gcp.yaml
+  - infrastructure_ci_cd/kubernetes.yaml
+tags:
+  - cloud
+  - gcp
+  - iaas
+  - google

@@ -7,7 +7,11 @@ description: |
   Selenium provides a playback tool for authoring functional tests without the need to learn a test
   scripting language.
 rationale:
-  Enables QA Engineers to test Web front-end
+  Enables QA Engineers to test Web front-end.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/SeleniumHQ/selenium/blob/master/LICENSE
 related:
   - qa/specflow.yaml
 tags:
