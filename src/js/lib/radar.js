@@ -53,7 +53,7 @@ export default class SvgRadar {
   ];
 
   #footer_offset =
-    { x: -675, y: 420 };
+    { x: -70, y: 420 };
 
   #legend_offset = [
     { x: 450, y: 90 },
@@ -219,7 +219,7 @@ export default class SvgRadar {
                 .attr('id', d => `legendItem${d.id}`)
                 .text(d => `${d.id}. ${d.label}`)
                 .style('font-family', fontFamily)
-                .style('font-size', '11')
+                .style('font-size', '10')
                 .on('mouseover', d => { this.showBubble(d); this.highlightLegendItem(d); })
                 .on('mouseout', d => { this.hideBubble(d); this.unhighlightLegendItem(d); })
                 .on('click', this.followLink);
@@ -391,9 +391,9 @@ export default class SvgRadar {
 
   legend_transform = (quadrant, ring, index = null) => {
     let dx = ring < 2 ? 0 : 120;
-    let dy = (index == null ? -16 : index * 12);
+    let dy = (index == null ? -16 : index * 11);
     if (ring % 2 === 1) {
-      dy = dy + 36 + this.segmented[quadrant][ring-1].length * 12;
+      dy = dy + 36 + this.segmented[quadrant][ring-1].length * 11;
     }
     return this.translate(
       this.#legend_offset[quadrant].x + dx,
