@@ -2,6 +2,10 @@ name: Commit
 
 on: push
 
+env:
+  GCLOUD_VERSION: '282.0.0'
+  GCP_PROJECT: tech-radar-b545
+
 jobs:
   yamllint:
     runs-on: ubuntu-latest
@@ -32,7 +36,7 @@ jobs:
         with:
           service-account-key: ${{ secrets.SECRET_AUTH }}
           secrets: |
-            SONAR_TOKEN: sonarsource-token
+            SONAR_TOKEN: sonarcloud-token
 
       - name: NPM install
         run: npm ci
@@ -44,16 +48,18 @@ jobs:
             --output-file test-results/eslint/TEST-eslint.xml
 
       - name: Unit tests
-        run: npm test -- --ci --runInBand --coverage
+        run: npm test -- --ci --coverage
 
       - name: Build radar
         run: npm run build
 
       - name: SonarCloud Scan
         uses: extenda/actions/sonar-scanner@v0
+        with:
+          sonar-host: https://sonarcloud.io
 
   release:
-    #if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     needs:
       - yamllint
@@ -61,21 +67,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - uses: extenda/actions/gcp-secret-manager@v0
-        with:
-          service-account-key: ${{ secrets.SECRET_AUTH }}
-          secrets: |
-            DOCKER_USERNAME: dockerhub-user
-            DOCKER_PASSWORD: dockerhub-password
-
-#      - name: Create release
-#        uses: extenda/actions/conventional-release@v0
-#        id: release
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # TMP
-      - uses: extenda/actions/conventional-version@v0
+      - name: Create release
+        uses: extenda/actions/conventional-release@v0
         id: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -88,41 +81,43 @@ jobs:
           npm version ${{ steps.release.outputs.version }} --no-git-tag-version
           npm run build
 
-      - name: Publish Docker image
-        uses: extenda/actions/docker@v0
+      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
-          image: extenda/tech-radar
-          tag: latest,${{ steps.release.outputs.version }}
-          registry: docker.io
-          username: ${{ env.DOCKER_USERNAME }}
-          password: ${{ env.DOCKER_PASSWORD }}
+          version: ${{ env.GCLOUD_VERSION }}
+          service_account_key: ${{ secrets.GCLOUD_AUTH }}
 
-    deploy:
-      #if: github.ref == 'refs/heads/master'
-      runs-on: ubuntu-latest
-      needs:
-        - release
-      env:
-        GCP_PROJECT: tech-radar-b545
-      steps:
-        - uses: actions/checkout@v1
+      - name: Publish Docker image
+        run: |
+          gcloud auth configure-docker
+          IMAGE=gcr.io/$GCP_PROJECT/tech-radar:v${{ steps.release.outputs.version }}
+          docker build -t $IMAGE .
+          docker push $IMAGE
 
-        - uses: extenda/actions/conventional-version@v0
-          id: semver
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    needs:
+      - release
+    steps:
+      - uses: actions/checkout@v1
 
-        - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
-          with:
-            version: '282.0.0'
-            service_account_key: ${{ secrets.GCLOUD_AUTH }}
+      - uses: extenda/actions/conventional-version@v0
+        id: semver
 
-        - name: Deploy to Cloud Run
-          run: |
-            # ${{ steps.semver.outputs.release-tag }}
-            gcloud run deploy \
-              --image:docker.io/extenda/tech-radar:latest \
-              --service-account=cloudrun-runtime@$GCP_PROJECT.iam.gserviceaccount.com \
-              --platform=managed \
-              --memory=256Mi \
-              --allow-unauthenticated
+      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          version: ${{ env.GCLOUD_VERSION }}
+          service_account_key: ${{ secrets.GCLOUD_AUTH }}
 
-        # TODO Notify on Slack.
+      - name: Deploy to Cloud Run
+        run: |
+          gcloud run deploy tech-radar \
+            --image=gcr.io/$GCP_PROJECT/tech-radar:${{ steps.semver.outputs.release-tag }} \
+            --service-account=cloudrun-runtime@$GCP_PROJECT.iam.gserviceaccount.com \
+            --platform=managed \
+            --region=europe-west1 \
+            --project=$GCP_PROJECT \
+            --memory=256Mi \
+            --allow-unauthenticated
+
+      # TODO Notify on Slack.
