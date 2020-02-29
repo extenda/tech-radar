@@ -120,4 +120,11 @@ jobs:
             --memory=256Mi \
             --allow-unauthenticated
 
-      # TODO Notify on Slack.
+      - name: Notify Slack
+        run: |
+          curl -XPOST -H "Authorization: token ${{ github.token }}" \
+            https://slack.github.com/repos/${{ github.repository }} -d '[{
+            "title": "Extenda Retail Tech Radar ${{ steps.semver.outputs.release-tag }} :rocket:",
+            "text": "A new version of tech-radar has been deployed. See the latest changes at https://tech-radar.extendaretail.com",
+            "fallback": "A new version of tech-radar has been deployed."
+          }]'
