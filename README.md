@@ -1,5 +1,7 @@
 ![Commit](https://github.com/extenda/tech-radar/workflows/Commit/badge.svg)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=extenda_tech-radar&metric=alert_status)](https://sonarcloud.io/dashboard?id=extenda_tech-radar)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/extenda/tech-radar?label=version)
+![GitHub](https://img.shields.io/github/license/extenda/tech-radar)
 
 # Extenda Retail Tech Radar
 
@@ -194,7 +196,7 @@ $ docker build -t tech-radar .
 And to run a container, you'd run it in a way similar to this:
 
 ```bash
-$ docker run --rm -it -p 8080:80 tech-radar
+$ docker run --rm -it -p 8080:8080 tech-radar
 ```
 The Tech Radar would now be available at http://localhost:8080
 
@@ -207,7 +209,7 @@ $ docker run --rm -it -v $(pwd):/home -w /home -p 8080:8080 node:alpine sh -c "n
 ## Release Process
 
 The Tech Radar is released with a CI/CD pipeline, where every commit to `master` is deployed to production.
-Every build is automatically versioned according to commit messages adhering to the [angular convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines).
+Every build is automatically versioned according to commit messages adhering to [conventional commits](https://conventionalcommits.org).
 
 ## Maintainers
 
