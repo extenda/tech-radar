@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/extenda/tech-radar.svg?style=svg)](https://circleci.com/gh/extenda/tech-radar)
+![Commit](https://github.com/extenda/tech-radar/workflows/Commit/badge.svg)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=extenda_tech-radar&metric=alert_status)](https://sonarcloud.io/dashboard?id=extenda_tech-radar)
 
 # Extenda Retail Tech Radar
@@ -36,7 +36,7 @@ The Tech Radar is versioned with semantic versioning. Increment version as follo
   - `MINOR` version increments for every radar blip content change
   - `MAJOR` version increments for major (incompatible) changes such as radar quadrant changes
 
-Versioning is controlled with commit messages adhering to the [angular convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines).
+Versioning is controlled with commit messages adhering to [conventional commits](https://conventionalcommits.org).
 The commit message consists of a **header**, **body** and **footer**. The **header** has a **type**, **scope** and **subject**:
 ```
 <type>(<scope>): <subject>
@@ -53,10 +53,9 @@ For this project, use one of the follow values for **type**:
   - **fix**: A fix to existing radar content
   - **docs**: Documentation change, not related to radar content
   - **style**: Changes that do not affect the meaning of code (white-space, formatting)
-  - **perf**: A code change that improves performance
   - **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
 
-All commit messages in `master` should define type **type** of change. For changes to the radar contents, use:
+All commit messages MUST define type **type** of change. For changes to the radar contents, use:
 
   - **feat**: for new radar content
   - **fix**: for minor improvements to text on existing radar content
@@ -65,10 +64,12 @@ The other type of changes are normally not used when modifying the radar blip co
 
 For bumping `MAJOR` version you need to add **BREAKING CHANGE** in the footer, as an example:
 ```
-chore: Bumping major version
+chore: Bump major version
 
 BREAKING CHANGE: This will trigger `major` bump.
 ```
+
+Finally, all commits must be written in imperative mood (i.e, _Add_ not _Added_).
 
 ## Development
 
@@ -77,9 +78,10 @@ Start by installing dependencies:
 $ npm install
 ```
 
-Next, make sure to install [pre-commit](https://pre-commit.com) hooks.
+Next, make sure to install [pre-commit](https://pre-commit.com) hooks. In addition to ensure file formats it also
+checks commit messages.
 ```bash
-$ pre-commit install
+$ pre-commit install -t pre-commit -t commit-msg
 ```
 
 To start a development server that automatically refresh as you make changes to the radar contents, run the following:
