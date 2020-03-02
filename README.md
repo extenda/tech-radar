@@ -93,6 +93,14 @@ $ npm start
 This will open the Tech Radar in your default browser.
 The radar is running on http://localhost:8080.
 
+To run the development server with authentication enabled:
+```bash
+$ sudo echo "127.0.0.1 local.extendaretail.com" >> /etc/hosts
+$ npm run auth
+```
+This will open the Tech Radar in your default browser.
+The radar is running on http://local.extendaretail.com:8080 and requires Google login.
+
 ### Radar Blip Format
 
 Each blip (entry) on the radar is stored in a YAML file under the `radar` directory. Blips are assigned to quadrant categories and ranked according to the assessment rings in the radar.

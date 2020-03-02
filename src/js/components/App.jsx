@@ -4,6 +4,8 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+import Login from './Login';
+import Logout from './Logout';
 import Radar from './Radar';
 import Entry from './Entry';
 import Quadrant from './Quadrant';
@@ -16,6 +18,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isSignedIn: false,
       loading: true,
     };
   }
@@ -26,10 +29,42 @@ export default class App extends Component {
     });
   };
 
-  componentDidMount = () => radarService.init().then(this.radarDidLoad);
+  loginDidSucceed = (response) => {
+    this.setState({
+      isSignedIn: true,
+    });
+
+    const { accessToken } = response;
+
+    radarService.init(accessToken)
+      .then(this.radarDidLoad)
+      .catch((err) => {
+        console.error('Failed to load radar entries', err);
+        this.setState({
+          isSignedIn: false,
+          loading: true,
+        });
+      });
+  };
+
+  loginDidFail = () => {};
 
   render = () => {
-    const { loading } = this.state;
+    const { loading, isSignedIn } = this.state;
+
+    if (!isSignedIn) {
+      // For local development, we disable authentication.
+      if (process.env.NODE_ENV === 'development') {
+        this.loginDidSucceed({ accessToken: 'test' });
+        return null;
+      }
+      return (
+        <Login
+          onSuccess={this.loginDidSucceed}
+          onFailure={this.loginDidFail}
+        />
+      );
+    }
 
     if (loading) {
       return null;
@@ -37,6 +72,7 @@ export default class App extends Component {
 
     return (
       <React.Fragment>
+        <Logout />
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Radar} />

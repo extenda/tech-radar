@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login /> It renders login view 1`] = `
+<Fragment>
+  <nav
+    className="navbar"
+    role="navigation"
+  >
+    <ul
+      className="breadcrumb"
+    >
+      <li
+        key="home"
+      >
+         
+      </li>
+    </ul>
+  </nav>
+  <div
+    className="container"
+  >
+    <h1
+      className="center"
+    >
+      Extenda Retail Tech Radar
+    </h1>
+    <div
+      className="row"
+    >
+      <div
+        className="two columns"
+      >
+         
+      </div>
+      <div
+        className="five columns"
+      >
+        <p>
+          <span
+            aria-label="Wave"
+            role="img"
+          >
+            👋
+          </span>
+            Welcome to the Extenda Retail Tech Radar. Login with your Extenda Retail Google account.
+        </p>
+      </div>
+      <div
+        className="three columns"
+      >
+        <u
+          accessType="online"
+          buttonText="Sign in with Google"
+          className="google-button"
+          clientId="947570385950-m9cgarv8pduseu61eudf3k84glo47jv0.apps.googleusercontent.com"
+          cookiePolicy="single_host_origin"
+          disabledStyle={
+            Object {
+              "opacity": 0.6,
+            }
+          }
+          fetchBasicProfile={true}
+          hostedDomain="extendaretail.com"
+          icon={true}
+          isSignedIn={true}
+          jsSrc="https://apis.google.com/js/api.js"
+          onFailure={[Function]}
+          onRequest={[Function]}
+          onSuccess={[Function]}
+          prompt=""
+          scope="profile email"
+          tag="button"
+          theme="dark"
+          type="button"
+          uxMode="popup"
+        />
+      </div>
+      <div
+        className="two columns"
+      >
+         
+      </div>
+    </div>
+  </div>
+</Fragment>
+`;
