@@ -1,5 +1,5 @@
 const { OAuth2Client } = require('google-auth-library');
-const { clientId, hostedDomain } = require('../modules/auth-config');
+const { clientId, hostedDomain } = require('../../../src/js/modules/auth-config');
 
 const client = new OAuth2Client(clientId);
 
