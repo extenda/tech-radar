@@ -64,6 +64,14 @@ jest.mock('../src/js/components/Logout', () => () => (
 jest.mock('../src/js/modules/radarService');
 
 describe('<App />', () => {
+  let spyConsole;
+  beforeAll(() => {
+    spyConsole = jest.spyOn(console, 'error').mockImplementation();
+  });
+  afterAll(() => {
+    spyConsole.mockRestore();
+  });
+
   test('It renders <Login /> if not authenticated', async () => {
     const component = mount(<App />);
     expect(component.state().isSignedIn).toEqual(false);
