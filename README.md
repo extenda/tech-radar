@@ -96,6 +96,7 @@ The radar is running on http://localhost:8080.
 To run the development server with authentication enabled:
 ```bash
 $ sudo echo "127.0.0.1 local.extendaretail.com" >> /etc/hosts
+$ npm run backend &
 $ npm run auth
 ```
 This will open the Tech Radar in your default browser.

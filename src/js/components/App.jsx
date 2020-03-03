@@ -34,11 +34,11 @@ export default class App extends Component {
       isSignedIn: true,
     });
 
-    const { accessToken } = response;
-
-    radarService.init(accessToken)
+    const { tokenId } = response;
+    radarService.init(tokenId)
       .then(this.radarDidLoad)
       .catch((err) => {
+        // eslint-disable-next-line no-console
         console.error('Failed to load radar entries', err);
         this.setState({
           isSignedIn: false,
