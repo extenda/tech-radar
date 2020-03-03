@@ -7,7 +7,7 @@
   "scripts": {
     "build": "ncc build src/js/index.js -o dist",
     "lint:js": "eslint src test",
-    "start": "PORT=3000 node src/js/index.js",
+    "start": "npm run env PORT=3000 -- node src/js/index.js",
     "test": "jest"
   },
   "repository": "github:extenda/tech-radar",

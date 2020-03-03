@@ -10,7 +10,7 @@
     "build:backend": "npm run build --prefix server",
     "lint:js": "eslint src test",
     "start": "webpack-dev-server --open --watch --mode development --output-path build",
-    "backend": "PORT=3000 npm start --prefix server",
+    "backend": "npm start --prefix server",
     "auth": "BACKEND=1 webpack-dev-server --open --watch --mode production --host local.extendaretail.com --output-path build",
     "pip:install": "pip install --user -r .scripts/python_requirements.txt",
     "test": "jest",
