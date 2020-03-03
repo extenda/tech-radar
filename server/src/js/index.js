@@ -2,7 +2,6 @@ const index = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const { verifyRequest } = require('./verify');
-const process = require('process');
 
 process.on('SIGINT', () => {
   process.exit(0);

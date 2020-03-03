@@ -12,7 +12,7 @@ class AuthenticationError {
   }
 }
 
-const verifyToken = async token => client.verifyIdToken({
+const verifyToken = async (token) => client.verifyIdToken({
   idToken: token,
   audience: clientId,
 }).then((ticket) => {
