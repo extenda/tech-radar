@@ -24,27 +24,32 @@ export default class App extends Component {
   }
 
   radarDidLoad = () => {
-    this.setState({
+    this.setState(prevState => ({
+      ...prevState,
       loading: false,
-    });
+    }));
+  };
+
+  radarDidFail = (err) => {
+    // eslint-disable-next-line no-console
+    console.error('Failed to load radar entries', err);
+    this.setState(prevState => ({
+      ...prevState,
+      isSignedIn: false,
+      loading: true,
+    }));
   };
 
   loginDidSucceed = (response) => {
-    this.setState({
+    this.setState(prevState => ({
+      ...prevState,
       isSignedIn: true,
-    });
+    }));
 
     const { tokenId } = response;
     radarService.init(tokenId)
       .then(this.radarDidLoad)
-      .catch((err) => {
-        // eslint-disable-next-line no-console
-        console.error('Failed to load radar entries', err);
-        this.setState({
-          isSignedIn: false,
-          loading: true,
-        });
-      });
+      .catch(this.radarDidFail);
   };
 
   loginDidFail = () => {};

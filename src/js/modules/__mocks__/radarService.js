@@ -100,7 +100,12 @@ const mockBlips = [
 ];
 
 export default {
-  init: () => Promise.resolve(true),
+  init: (jwt) => {
+    if (jwt === 'fail') {
+      return Promise.reject(new Error('Not authenticated'));
+    }
+    return Promise.resolve(true);
+  },
   listBlips: (tags = []) => {
     if (tags.length === 1 && tags[0] === 'java') {
       return [mockBlips[0]];
