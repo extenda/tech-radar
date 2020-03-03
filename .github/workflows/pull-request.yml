@@ -1,0 +1,22 @@
+name: Pull Request
+on:
+  pull_request:
+    types:
+      - edit
+      - open
+      - reopen
+      - synchronize
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Lint commit messages
+        uses: extenda/actions/commitlint@v0
+
+      - name: Lint pull request title
+        uses: extenda/actions/commitlint@v0
+        with:
+          message: ${{ github.event.pull_request.title }}
