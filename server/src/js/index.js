@@ -1,8 +1,9 @@
-const index = require('express');
+const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const { verifyRequest } = require('./verify');
 
+// Handle SIGINT to gracefully exit on CTRL+C in local Docker.
 process.on('SIGINT', () => {
   process.exit(0);
 });
@@ -10,7 +11,7 @@ process.on('SIGINT', () => {
 const port = process.env.PORT || 8080;
 const publicHtml = process.env.PUBLIC_HTML || path.join(__dirname, '..', '..', '..', 'build');
 
-const app = index();
+const app = express();
 app.use(morgan('tiny'));
 app.disable('x-powered-by');
 
@@ -24,7 +25,9 @@ app.get('/js/radar.json', async (req, res, next) => {
   });
 });
 
-app.use(index.static(publicHtml));
-app.listen(port, () => {
+app.use(express.static(publicHtml));
+const server = app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+module.exports = server;

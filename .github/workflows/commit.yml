@@ -48,9 +48,14 @@ jobs:
           npm run lint:js -- \
             --format junit \
             --output-file test-results/eslint/TEST-eslint.xml
+          npm run lint:js --prefix=server -- \
+            --format junit \
+            --output-file test-results/eslint/TEST-eslint.xml
 
       - name: Unit tests
-        run: npm test -- --ci --coverage
+        run: |
+          npm test -- --ci --coverage
+          npm test --prefix server -- --ci --coverage
 
       - name: Build radar
         run: npm run build
