@@ -2,7 +2,12 @@ import { firstBy } from 'thenby';
 import { pick } from './utils';
 
 class RadarService {
-  init = () => fetch('/js/radar.json')
+  init = jwt => fetch('/js/radar.json', {
+    headers: {
+      Authorization: `Bearer ${jwt}`,
+    },
+    credentials: 'same-origin',
+  })
     .then(response => response.json())
     .then((data) => {
       this.model = data;

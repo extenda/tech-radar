@@ -236,3 +236,29 @@ a.inactive {
   color: gray;
   text-decoration: line-through;
 }
+
+.google-button {
+  line-height: 1em;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+button {
+  font: inherit;
+  margin: inherit;
+}
+
+.signout {
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  border: none;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.signout:hover {
+  color: white;
+  text-decoration: underline;
+}

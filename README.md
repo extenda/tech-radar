@@ -78,6 +78,7 @@ Finally, all commits must be written in imperative mood (i.e, _Add_ not _Added_)
 Start by installing dependencies:
 ```bash
 $ npm install
+$ npm install --prefix server
 ```
 
 Next, make sure to install [pre-commit](https://pre-commit.com) hooks. In addition to ensure file formats it also
@@ -92,6 +93,16 @@ $ npm start
 ```
 This will open the Tech Radar in your default browser.
 The radar is running on http://localhost:8080.
+
+To run the development server with authentication enabled:
+```bash
+$ sudo echo "127.0.0.1 local.extendaretail.com" >> /etc/hosts
+$ npm run backend &
+$ npm run auth
+```
+This will open the Tech Radar in your default browser.
+The radar is running on http://local.extendaretail.com:8080 and requires Google login.
+A development server that validates the Google ID token runs on http://localhost:3000.
 
 ### Radar Blip Format
 

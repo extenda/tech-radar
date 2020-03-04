@@ -39,16 +39,23 @@ jobs:
             SONAR_TOKEN: sonarcloud-token
 
       - name: NPM install
-        run: npm ci
+        run: |
+          npm ci
+          npm ci --prefix server
 
       - name: Lint javascript
         run: |
           npm run lint:js -- \
             --format junit \
             --output-file test-results/eslint/TEST-eslint.xml
+          npm run lint:js --prefix=server -- \
+            --format junit \
+            --output-file test-results/eslint/TEST-eslint.xml
 
       - name: Unit tests
-        run: npm test -- --ci --coverage
+        run: |
+          npm test -- --ci --coverage
+          npm test --prefix server -- --ci --coverage
 
       - name: Build radar
         run: npm run build
@@ -76,11 +83,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: NPM install
-        run: npm ci
+        run: |
+          npm ci
+          npm ci --prefix server
 
       - name: Build radar
         run: |
           npm version ${{ steps.release.outputs.version }} --no-git-tag-version
+          npm version ${{ steps.release.outputs.version }} --no-git-tag-version --prefix server
           npm run build
 
       - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
