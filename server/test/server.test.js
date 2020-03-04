@@ -60,6 +60,22 @@ describe('Express', () => {
     expect(response.headers.get('content-type')).toEqual('text/html; charset=UTF-8');
   });
 
+  test('It responds to /index.html', async () => {
+    const response = await fetch(`http://127.0.0.1:${port}/index.html`);
+    expect(response.status).toEqual(200);
+    expect(response.headers.get('content-type')).toEqual('text/html; charset=UTF-8');
+  });
+
+  test('It redirects **/*.html to /', async () => {
+    let response = await fetch(`http://127.0.0.1:${port}/dev.html`);
+    expect(response.status).toEqual(200);
+    expect(response.headers.get('content-type')).toEqual('text/html; charset=UTF-8');
+
+    response = await fetch(`http://127.0.0.1:${port}/entries/java.html`);
+    expect(response.status).toEqual(200);
+    expect(response.headers.get('content-type')).toEqual('text/html; charset=UTF-8');
+  });
+
   test('It removes X-Powered-By-Express response header', async () => {
     const response = await fetch(`http://127.0.0.1:${port}/`);
     expect(response.headers.get('x-powered-by-express')).toBeNull();
