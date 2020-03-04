@@ -12,13 +12,11 @@ rationale: |
   when stream processing capabilities not supported by the general purpose messaging platform.
   To use Kafka in a service, the following conditions must be met:
 
-    * Kafka is not our messaging platform, if no stream processors are needed,
-      use the general purpose message platform
+    * Kafka is not our messaging platform, If no stream processors are needed, always use the
+      general purpose message platform for both internal and external messaging
     * Use of Kafka is private to the clan's services. For all intents, consider
-      Kafka the equal of a database
-    * A business case can be built around the cost driven by using Kafka
-    * Kafka topics are internal API and cannot be used to share messages with
-      services with services maintained by other clans
+      Kafka the equal of a database and topics as private API only to be used internally
+    * A business case must be built around the cost driven by using Kafka
     * Kafka is only eligible for use in Google Cloud Platform with Confluent Cloud
 license:
   commercial:
