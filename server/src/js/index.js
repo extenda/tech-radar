@@ -15,6 +15,10 @@ const app = express();
 app.use(morgan('tiny'));
 app.disable('x-powered-by');
 
+app.get(/.*\.html/, async (req, res) => {
+  res.sendFile(path.join(publicHtml, 'index.html'));
+});
+
 app.get('/js/radar.json', async (req, res, next) => {
   verifyRequest(req).then(() => {
     next();
