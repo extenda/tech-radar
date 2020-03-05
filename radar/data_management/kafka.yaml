@@ -8,9 +8,9 @@ description: |
   The project aims to provide a unified, high-throughput,
   low-latency platform for handling real-time data feeds.
 rationale: |
-  We consider Kafka a streaming platform to be used internally within a microservice domain
-  when stream processing capabilities not supported by the general purpose messaging platform.
-  To use Kafka in a service, the following conditions must be met:
+  We consider Kafka a streaming platform to be used internally within a microservice domain.
+  It can be used when stream processing capabilities not supported by the general purpose
+  messaging platform are needed. To use Kafka in a service, the following conditions must be met:
 
     * Kafka is not our messaging platform, If no stream processors are needed, always use the
       general purpose message platform for both internal and external messaging
