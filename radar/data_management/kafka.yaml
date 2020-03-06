@@ -8,15 +8,17 @@ description: |
   The project aims to provide a unified, high-throughput,
   low-latency platform for handling real-time data feeds.
 rationale: |
-  We consider Kafka a streaming platform to be used internally within a microservice domain.
-  It can be used when stream processing capabilities not supported by the general purpose
-  messaging platform are needed. To use Kafka in a service, the following conditions must be met:
+  Kafka is a streaming platform available to be used when stream processing capabilities
+  are needed and the output of the stream is required input to other services.
+  To use Kafka for stream processing, the following conditions must be met:
 
-    * Kafka is not our messaging platform, If no stream processors are needed, always use the
-      general purpose message platform for both internal and external messaging
-    * Use of Kafka is private to the clan's services. For all intents, consider
-      Kafka the equal of a database and topics as private API only to be used internally
-    * A business case must be built around the cost driven by using Kafka
+    * Need for real-time event processing and streaming calculations
+    * Kafka is not our messaging platform, if no stream processors or message
+      ordering is needed, always use the general purpose message platform for
+      both internal and external messaging. In cases where both producing and
+      consuming services utilize Kafka Streams the consuming service can
+      subscribe directly to the Kafka topic. If needed the messages shall also
+      be published to pub-sub
     * Kafka is only eligible for use in Google Cloud Platform with Confluent Cloud
 license:
   commercial:
