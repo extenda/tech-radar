@@ -14,10 +14,15 @@ describe('RadarService', () => {
         .then(data => JSON.parse(data)),
     }));
 
-    await radarService.init();
+    await radarService.init('test');
 
     expect(global.fetch).toHaveBeenCalled();
-    expect(global.fetch).toHaveBeenCalledWith('/js/radar.json');
+    expect(global.fetch).toHaveBeenCalledWith('/js/radar.json', {
+      headers: {
+        Authorization: 'Bearer test',
+      },
+      credentials: 'same-origin',
+    });
   });
 
   test('It can list active blips', () => {

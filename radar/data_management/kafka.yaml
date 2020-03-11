@@ -1,4 +1,4 @@
-name: Kafka
+name: Kafka Streams
 blip:
   - date: 2019-05-22
     ring: TRIAL
@@ -7,15 +7,28 @@ description: |
   developed by LinkedIn and donated to the Apache Software Foundation, written in Scala and Java.
   The project aims to provide a unified, high-throughput,
   low-latency platform for handling real-time data feeds.
-rationale:
-  Kafka will cover several improvement needs in Retail Suite,
-  and external systems communicating with Retail Suite.
-  Its inherient scalability will allow us to target the Tier-1 and Tier-2 customers
-  and support their traffic and computational needs in the daily operation of Retail Suite.
-  The built in commit log can be regarded as the source-of-truth for several entities.
-  The power of real-time streaming can enable Retail Suite to process vast amounts of data faster
-  and more precise than today.
+rationale: |
+  Kafka is a streaming platform available to be used when stream processing capabilities
+  are needed and the output of the stream is required input to other services.
+  To use Kafka for stream processing, the following conditions must be met:
+
+    * Need for real-time event processing and streaming calculations
+    * Kafka is not our messaging platform, if no stream processors or message
+      ordering is needed, always use the general purpose message platform for
+      both internal and external messaging. In cases where both producing and
+      consuming services utilize Kafka Streams the consuming service can
+      subscribe directly to the Kafka topic. If needed the messages shall also
+      be published to pub-sub
+    * Kafka is only eligible for use in Google Cloud Platform with Confluent Cloud
+license:
+  commercial:
+    company: Confluent
+    description: |
+      Using Kafka requires a commercial agreement with Confluent Inc.
+      The services and stream processors must also run in the Google Cloud Platform.
+# related:
+# Add pubsub once adopted.
 tags:
   - java
   - dotnet
-  - messaging
+  - streaming

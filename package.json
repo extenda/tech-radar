@@ -5,9 +5,13 @@
   "description": "Extenda Retail Technology Radar",
   "main": "src/js/index.jsx",
   "scripts": {
-    "build": "webpack-cli --mode production",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "webpack-cli --mode production",
+    "build:backend": "npm run build --prefix server",
     "lint:js": "eslint src test",
     "start": "webpack-dev-server --open --watch --mode development --output-path build",
+    "backend": "npm start --prefix server",
+    "auth": "npm run env BACKEND=1 -- webpack-dev-server --open --watch --mode production --host local.extendaretail.com --output-path build",
     "pip:install": "pip install --user -r .scripts/python_requirements.txt",
     "test": "jest",
     "yaml:lint": "python .scripts/yaml_lint.py",
@@ -29,6 +33,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-google-login": "^5.1.1",
     "react-markdown": "^4.0.8",
     "react-router-dom": "^5.0.0",
     "react-tag-autocomplete": "^5.11.1",
@@ -45,8 +50,6 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
-    "conventional-changelog-angular": "^5.0.2",
-    "conventional-recommended-bump": "^4.0.4",
     "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^2.1.1",
     "enzyme": "^3.10.0",
@@ -66,7 +69,6 @@
     "jest-sonar-reporter": "^2.0.0",
     "mini-css-extract-plugin": "^0.7.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "sonarqube-scanner": "^2.4.1",
     "style-loader": "^0.23.1",
     "watch": "^1.0.2",
     "webpack": "^4.32.2",
@@ -106,7 +108,7 @@
     ],
     "parser": "babel-eslint",
     "rules": {
-      "import/no-extraneous-dependencies": false
+      "import/no-extraneous-dependencies": 0
     }
   },
   "eslintIgnore": [
@@ -115,7 +117,8 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
-      "!src/js/lib/*.js"
+      "!src/js/lib/*.js",
+      "!server/**"
     ],
     "moduleNameMapper": {
       "\\.(css|less)$": "identity-obj-proxy"
@@ -129,6 +132,10 @@
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/server/"
     ],
     "testResultsProcessor": "jest-sonar-reporter"
   },

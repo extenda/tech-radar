@@ -18,7 +18,7 @@ const buildRadar = () => {
   return radarBuilder.build(radarDir);
 };
 
-module.exports = {
+const webpack = {
   devServer: {
     contentBase: [
       outputPath,
@@ -114,3 +114,15 @@ module.exports = {
     modules: ['node_modules'],
   },
 };
+
+if (process.env.BACKEND === '1') {
+  // Add a proxy for the development server with JWT validation.
+  webpack.devServer.proxy = {
+    '/js/radar.json': {
+      target: 'http://localhost:3000',
+      secure: false,
+    },
+  };
+}
+
+module.exports = webpack;
