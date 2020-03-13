@@ -136,6 +136,6 @@ jobs:
         uses: extenda/actions/slack-message@v0
         with:
           title: 'Extenda Retail Tech Radar ${{ steps.semver.outputs.release-tag }} :rocket:'
-          message: 'A new version of tech-radar has been deployed. See the latest changes at https://tech-radar.extendaretail.com'
+          text: 'A new version of tech-radar has been deployed. See the latest changes at https://tech-radar.extendaretail.com'
           fallback: A new version of tech-radar has been deployed.
           service-account-key: ${{ secrets.SECRET_AUTH }}
