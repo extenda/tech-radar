@@ -3,6 +3,8 @@ shortname: BitBucket
 blip:
   - date: 2019-05-21
     ring: ADOPT
+  - date: 2020-03-24
+    ring: HOLD
 description: |
   Bitbucket is a web-based version control repository hosting service owned by
   Atlassian, for source code and development projects that use either Mercurial
