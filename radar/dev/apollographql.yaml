@@ -4,7 +4,7 @@ blip:
   - date: 2020-03-25
     ring: ASSESS
 description: |
-  Apollo is _Node.js_ based platform to allow combining APIs, databases, 
+  Apollo is _Node.js_ based platform to allow combining APIs, databases,
   and microservices into a single data graph that can be queried with GraphQL.
 rationale: |
   This is an existing platform to allow combining data from multiple (micro)services.
