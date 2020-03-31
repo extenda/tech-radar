@@ -1,6 +1,10 @@
 name: Commit
 
-on: push
+on:
+  push:
+  pull_request:
+    branches:
+      - master
 
 env:
   GCLOUD_VERSION: '282.0.0'
