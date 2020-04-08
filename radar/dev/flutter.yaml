@@ -8,7 +8,7 @@ description: |
   compiled applications for mobile from a single codebase.
 rationale: |
   Flutter is engineered for high development velocity.
-  This makes it perferct for building minimum viable products.
+  This makes it perfect for building minimum viable products.
 
   Flutter provides its own set of widgets, which gives consistent look on
   different platforms. This also means, that developers don't have to
@@ -24,6 +24,9 @@ license:
   open-source:
     name: BSD-3
     link: https://github.com/flutter/flutter/blob/master/LICENSE
+related:
+  - dev/nativescript.yaml
+  - dev/reactnative.yaml
 tags:
   - dart
   - mobile
