@@ -4,7 +4,9 @@ blip:
   - date: 2020-04-08
     ring: TRIAL
 description: |
-[Cloud SQL](https://cloud.google.com/sql) is a fully-managed database service that makes it easy to set up, maintain, manage, and administer your relational databases on Google Cloud Platform.
+[Cloud SQL](https://cloud.google.com/sql) is a fully-managed database service.
+It makes it easy to set up, maintain, manage, and administer
+your relational databases on Google Cloud Platform.
 
 You can use Cloud SQL with MySQL, PostgreSQL, or SQL Server.
 
