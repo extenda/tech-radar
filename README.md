@@ -18,8 +18,9 @@ The Tech Radar is available at:
 
 The radar content is maintained in the `radar` directory. To suggest changes or submit a new proposed entry to the radar do the following:
 
-  1. Fork this repository
-  2. Make changes in your fork
+  1. Pull this repository
+  2. Checkout a new branch
+  3. Make changes in your branch
       - See [Development](#development) for more info
       - See [Semantic Versioning](#semantic-versioning) on how to format commit messages
   3. Open a pull request motivating the change
