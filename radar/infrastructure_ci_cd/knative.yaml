@@ -2,6 +2,8 @@ name: Knative
 blip:
   - date: 2019-05-21
     ring: ASSESS
+  - date: 2020-04-13
+    ring: TRIAL
 description: |
   Knative, delivers an essential set of components to build and run serverless applications on Kubernetes.
   Knative offers features like scale-to-zero, autoscaling, in-cluster builds,
