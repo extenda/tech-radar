@@ -2,6 +2,8 @@ name: Chef
 blip:
   - date: 2019-05-22
     ring: ASSESS
+  - date: 2020-04-13
+    ring: HOLD
 description: |
   [Chef](https://www.chef.io/) is a configuration management tool written in Ruby and Erlang.
 rationale:
