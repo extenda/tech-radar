@@ -15,7 +15,7 @@ rationale: |
   community actions to move quickly with intergrating with 3rd party sevices. The pricing model is highly competitive,
   and would allow us to significantly reduce our spend compared to CircleCI or Appveyor. It is CI as a Service, which is
   the direction we want to move.
-  
+
   GitHub Actions gives and easy way to handle pipelines with its seamless way of handling CI pipelines.
   Using GitHub Actions is recommended because reduce the time developers need to think about pipelines
   and therefore increase our effort on our core products.
