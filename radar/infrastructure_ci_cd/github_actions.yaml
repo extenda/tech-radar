@@ -1,18 +1,24 @@
-name: "Github Actions"
+name: "GitHub Actions"
 blip:
   - date: 2019-11-01
     ring: ASSESS
   - date: 2019-11-15
     ring: TRIAL
+  - date: 2020-04-15
+    ring: ADOPT
 description: |
   GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and
   deploy your code right from GitHub.
 rationale: |
-  Github Actions support CI on a variety of build platforms including Windows, MacOS and Linux. You have the option to
+  GitHub Actions support CI on a variety of build platforms including Windows, MacOS and Linux. You have the option to
   build in pre-built containers, bring your own, or build on VMs. There already exists an enormous collection of
   community actions to move quickly with intergrating with 3rd party sevices. The pricing model is highly competitive,
   and would allow us to significantly reduce our spend compared to CircleCI or Appveyor. It is CI as a Service, which is
   the direction we want to move.
+  
+  GitHub Actions gives and easy way to handle pipelines with its seamless way of handling CI pipelines.
+  Using GitHub Actions is recommended because reduce the time developers need to think about pipelines
+  and therefore increase our effort on our core products.
 license:
   commercial:
     company: GitHub
@@ -22,6 +28,10 @@ related:
   - infrastructure_ci_cd/jenkins_aws.yaml
   - infrastructure_ci_cd/circleci.yaml
   - infrastructure_ci_cd/appveyor.yaml
+  - infrastructure_ci_cd/github.yaml
+  - dev/git.yaml
 tags:
   - build
   - saas
+  - ci
+  - git
