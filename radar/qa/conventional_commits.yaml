@@ -1,0 +1,49 @@
+name: Conventional Commits
+shortname: Conv. Commits
+blip:
+  - date: 2020-04-14
+    ring: TRIAL
+description: |
+  [Conventional Commits](https://conventionalcommits.org) are used to add human and machine
+  readable meaning to commit messages, allowing them to be used for automated semantical
+  versioning and release notes.
+rationale: |
+  We promote conventional commits as our commit message standard because it enables us to
+  automate semantic versioning and release notes in CI/CD. With conventional commits, the
+  commits contains all the information needed to properly bump the version according to
+  semantic version.
+
+  A conventional commit at follows this syntax:
+  ```
+  <type>[optional scope]: <description>
+
+  [optional body]
+
+  [optional footer]
+  ```
+
+    * `type` is one of `feat`, `fix`. It is also possible to use others, for example
+      `docs`, `chore` or `build`
+    * The optional `scope` should in our context be a JIRA issue key
+    * The `description` should be a imperative mood, summary of the change
+    * The optional `body` can further explain the change and can for example be included in release notes
+    * The optional `footer` is typically a `BREAKING CHANGE` notice
+
+  Here is a concrete example:
+  ```
+  feat(ELY-170): Add create quote form
+
+  Admins can now add new quotes through a web form
+  ```
+
+  We have multiple tools for automation around conventional commits
+
+    * [Release based on conventional commits]
+      (https://github.com/extenda/actions/tree/master/conventional-release#readme)
+    * [Automated JIRA release notes](https://github.com/extenda/actions/tree/master/jira-releasenotes#readme)
+    * [Pre-commit hook for validating commits](https://github.com/extenda/pre-commit-hooks)
+    * [GitHub Action workflow to validate commits](https://github.com/extenda/actions/tree/master/commitlint#readme)
+related:
+  - qa/semver.yaml
+tags:
+  - devops
