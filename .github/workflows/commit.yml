@@ -89,7 +89,7 @@ jobs:
       - uses: extenda/actions/setup-gcloud@v0
         id: gcloud
         with:
-          service_account_key: ${{ secrets.GCLOUD_AUTH }}
+          service-account-key: ${{ secrets.GCLOUD_AUTH }}
 
       - name: Publish Docker image
         run: |
@@ -117,7 +117,7 @@ jobs:
       - name: Deploy to Cloud Run
         uses: extenda/actions/cloud-run@v0
         with:
-          service_account_key: ${{ secrets.GCLOUD_AUTH }}
+          service-account-key: ${{ secrets.GCLOUD_AUTH }}
           image: gcr.io/${{ steps.gcloud.outputs.project-id }}/tech-radar:${{ steps.semver.outputs.release-tag }}
 
       - name: Notify Slack
