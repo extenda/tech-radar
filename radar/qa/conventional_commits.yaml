@@ -13,7 +13,7 @@ rationale: |
   commits contains all the information needed to properly bump the version according to
   semantic version.
 
-  A conventional commit at follows this syntax:
+  A conventional commit follows this syntax:
   ```
   <type>[optional scope]: <description>
 
