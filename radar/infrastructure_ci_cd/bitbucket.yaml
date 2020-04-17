@@ -20,10 +20,10 @@ description: |
   million teams on its platform.
   In April 2019 Atlassian announced that Bitbucket reached 10 million registered users and over 28 million repositories.
 rationale: |
-  
+
   We currently employ two hosted git-providers github and bitbucket, this adds administration overhead.
-  Migrating existing git repos to github, makes it possible to standardize on one development workflow 
-  for the company. 
+  Migrating existing git repos to github, makes it possible to standardize on one development workflow
+  for the company.
 license:
   commercial:
     company: Atlassian
