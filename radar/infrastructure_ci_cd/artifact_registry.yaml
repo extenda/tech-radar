@@ -3,16 +3,16 @@ blip:
   - date: 2020-04-17
     ring: ASSESS
 description: |
-  [Artifact Registry](https://cloud.google.com/artifact-registry/docs/overview) 
+  [Artifact Registry](https://cloud.google.com/artifact-registry/docs/overview)
   enables us to centrally store artifacts and
   build dependencies as part of an integrated Google Cloud experience.
-  A universal package manager for all our build artifacts and dependencies. 
+  A universal package manager for all our build artifacts and dependencies.
   Fast, scalable, reliable and secure.
   Supports Docker, Maven, Gradle & npm
 rationale: |
   We should Assess whetever this is a suitable candidate to centralize all our dependencies.
   Since the product is still in BETA we should be careful to utilize this in any production env.
-  
+
   What we need to assess:
     * Easy of use
     * Available documentation
