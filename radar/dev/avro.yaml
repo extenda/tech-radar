@@ -1,0 +1,21 @@
+name: Apache Avro
+blip:
+  - date: 2020-04-17
+    ring: TRIAL
+description: |
+  [Apache Avro](https://avro.apache.org/) is a data serialization system that has a binary format and
+  with serialization speed compared to Protobuf and Thrift. The Avro schema can be declared using
+  JSON or IDL, where the IDL is a more compact and easier to read definition, similar to Java and C.
+  The schema is included in the message or if messages is stored in a file, contained in the file.
+  With Avro's RPC functionality, the schema is exchanged once instead of in each message.
+rationale: |
+  Avro is a good fit for our big data storage since the schema is included and that it is supported in
+  Google BigQuery and Cloud Storage.
+related:
+tags:
+  - messaging
+  - serialization
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://www.apache.org/licenses/LICENSE-2.0
