@@ -1,0 +1,6 @@
+name: tech-radar
+memory: 256Mi
+platform:
+  managed:
+    allow-unauthenticated: true
+    region: europe-west1
