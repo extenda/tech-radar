@@ -10,7 +10,7 @@ rationale: |
   Analyze petabytes of data using ANSI SQL at blazing-fast speeds,
   with zero operational overhead.
   Run analytics at scale with 26%–34% lower three-year TCO than cloud data warehouse alternatives.
-  Democratize insights with a trusted, and more secure platform that scales with your needs.
+  Democratize insights with a trusted, and more secure platform that scales with your needs
 license:
   commercial:
     company: Google
