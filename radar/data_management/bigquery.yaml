@@ -4,11 +4,10 @@ blip:
   - date: 2020-04-16
     ring: TRIAL
 description: |
-  [Bigquery](https://cloud.google.com/bigquery) Serverless, highly scalable, 
+  [Bigquery](https://cloud.google.com/bigquery) Serverless, highly scalable,
   and cost-effective cloud data warehouse designed for business agility.
-
 rationale: |
-  Analyze petabytes of data using ANSI SQL at blazing-fast speeds, 
+  Analyze petabytes of data using ANSI SQL at blazing-fast speeds,
   with zero operational overhead.
   Run analytics at scale with 26%–34% lower three-year TCO than cloud data warehouse alternatives.
   Democratize insights with a trusted, and more secure platform that scales with your needs.
@@ -24,4 +23,3 @@ tags:
   - google
   - Datawarehouse
   - Bigdata
-  
