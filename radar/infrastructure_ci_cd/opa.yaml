@@ -2,6 +2,8 @@ name: OPA
 blip:
   - date: 2020-03-11
     ring: ASSESS
+  - date: 2020-04-13
+    ring: TRIAL
 description: |
   Open Policy Agent
 rationale: |
