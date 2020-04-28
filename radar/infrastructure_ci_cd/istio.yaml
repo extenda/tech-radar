@@ -3,6 +3,8 @@ logo: https://istio.io/img/istio-bluelogo-whitebackground-framed.svg
 blip:
   - date: 2019-05-21
     ring: ASSESS
+  - date: 2020-04-13
+    ring: TRIAL
 description: |
   Cloud platforms provide a wealth of benefits for the organizations that use them.
   However, there’s no denying that adopting the cloud can put strains on DevOps teams.
