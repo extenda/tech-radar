@@ -1,0 +1,25 @@
+name: Skaffold
+blip:
+  - date: 2020-04-16
+    ring: TRIAL
+description: |
+  [Skaffold](https://skaffold.dev/) is a command line tool that facilitates continuous development for K8s applications.
+  You can iterate on your application source code locally
+  then deploy to local or remote Kubernetes clusters.
+  Skaffold handles the workflow for building, pushing and deploying your application.
+  It also provides building blocks and describe customizations for a CI/CD pipeline.
+rationale: |
+  With Skaffold we can continuously build and test how our application will work on a cloud native platform.
+  Together with the [Cloud Code](https://cloud.google.com/code) plugin for Visual Studio and IntelliJ
+  and combined with Jib this gives us a fast and powerful development experience.
+related:
+  - infrastructure_ci_cd/kubernetes.yaml
+  - infrastructure_ci_cd/jib.yaml
+tags:
+  - k8s
+  - kubernetes
+  - template
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/kubernetes/kubernetes/blob/master/LICENSE

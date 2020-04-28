@@ -2,6 +2,8 @@ name: Docker Swarm
 blip:
   - date: 2019-05-22
     ring: ASSESS
+  - date: 2020-04-13
+    ring: HOLD
 description: |
   [Docker Swarm](https://docs.docker.com/engine/swarm/) is a clustering and scheduling tool for Docker containers.
   With Swarm, IT administrators and developers can establish and manage a cluster of Docker nodes
