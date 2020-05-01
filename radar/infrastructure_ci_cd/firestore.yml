@@ -3,19 +3,19 @@ blip:
   - date: 2020-04-30
     ring: TRIAL
 description: |
-  [Cloud FireStore](https://firebase.google.com/docs/firestore) Cloud Firestore is a flexible, 
-  scalable database for mobile, web, and server development from Firebase and Google Cloud Platform. 
-  Like Firebase Realtime Database, it keeps your data in sync across client apps through realtime listeners and offers 
-  offline support for mobile and web so you can build responsive apps that work regardless of network latency or 
+  [Cloud FireStore](https://firebase.google.com/docs/firestore) Cloud Firestore is a flexible,
+  scalable database for mobile, web, and server development from Firebase and Google Cloud Platform.
+  Like Firebase Realtime Database, it keeps your data in sync across client apps through realtime listeners and offers
+  offline support for mobile and web so you can build responsive apps that work regardless of network latency or
   Internet connectivity. Cloud Firestore also offers seamless integration with other Firebase and Google Cloud Platform
   products, including Cloud Functions.
 rationale: |
-  The Cloud Firestore data model supports flexible, hierarchical data structures and you can use queries to retrieve 
-  individual, specific documents or to retrieve all the documents in a collection that match your query parameters. 
-  Cloud Firestore uses data synchronization to update data on any connected device and caches data that your app is 
+  The Cloud Firestore data model supports flexible, hierarchical data structures and you can use queries to retrieve
+  individual, specific documents or to retrieve all the documents in a collection that match your query parameters.
+  Cloud Firestore uses data synchronization to update data on any connected device and caches data that your app is
   actively using, so the app can write, read, listen to, and query data even if the device is offline.
-  Cloud Firestore brings you the best of Google Cloud Platform's powerful infrastructure: automatic multi-region 
-  data replication, strong consistency guarantees,
+  Cloud Firestore brings you the best of Google Cloud Platform's powerful infrastructure: automatic multi-region
+  data replication and strong consistency guarantees.
 license:
   commercial:
     company: Google
