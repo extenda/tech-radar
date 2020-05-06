@@ -11,7 +11,7 @@ rationale: |
   The main rationale is that its an easy and common way to follow decisions
   and see the rationale behind that specific decision.
 
-  An Architectural Decision Records follows this syntax:
+  Architectural Decision Records follows this syntax:
   ````
   In the context of <use case/user story u>,
   facing <concern c> we decided for <option o>
