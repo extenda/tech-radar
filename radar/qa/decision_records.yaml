@@ -5,7 +5,7 @@ blip:
     ring: ASSESS
 description: |
   [Architectural Decision Records (ADR)](https://adr.github.io/) captures
-  a single Architecutral Decision and togheter forms a decision log.
+  a single Architecutral Decision and together forms a decision log.
 rationale: |
   We should assess if ADR is a good way for us to document decisions taken.
   The main rationale is that its an easy and common way to follow decisions
