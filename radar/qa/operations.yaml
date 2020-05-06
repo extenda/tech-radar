@@ -4,14 +4,13 @@ blip:
   - date: 2020-05-06
     ring: TRIAL
 description: |
-  [Google Cloud’s operations suite](https://cloud.google.com/products/operations) (formerly Stackdriver) is designed to monitor,
-  troubleshoot, and improve cloud infrastructure, software, and application performance.
-  Efficiently build and run workloads,
- keeping applications performant and available.
+  [Google Cloud’s operations suite](https://cloud.google.com/products/operations) (formerly Stackdriver) is designed to 
+  monitor, troubleshoot, and improve cloud infrastructure, software, and application performance.
+  Efficiently build and run workloads, keeping applications performant and available.
 rationale: |
   Operations suite gives us an easy way to monitor our workloads in GCP.
   We should consider using this as our first hand choice for observability tools.
-  
+
   What we need to evaluate:
     * Ease of use
     * Feasability in terms of costs
