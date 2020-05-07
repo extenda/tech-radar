@@ -16,7 +16,7 @@ rationale: |
   authentication and load balancing so it is suited for microservice communication.
 license:
   open-source:
-    name: Apache License 2.0
+    name: Apache-2.0
     link: https://github.com/grpc/grpc-java/blob/master/LICENSE
 tags:
   - grpc
