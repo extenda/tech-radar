@@ -1,0 +1,23 @@
+name: Detox
+blip:
+  - date: 2020-05-07
+    ring: TRIAL
+description: |
+  [Detox](https://github.com/wix/Detox) Gray box end-to-end testing and automation library for mobile apps.
+  Detox tests your mobile app while it's running in a real device/simulator, interacting with it just like a real user.
+rationale:
+  Enables QA Engineers to write cross-platform tests for mobile apps.
+license:
+  open-source:
+    name: MIT
+    link: https://github.com/wix/Detox/blob/master/LICENSE
+related:
+  - qa/cucumber.yaml
+  - dev/reactnative.yaml
+tags:
+  - e2e
+  - mobile
+  - test
+  - ci
+  - ios
+  - android
