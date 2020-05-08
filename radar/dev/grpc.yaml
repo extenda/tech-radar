@@ -9,9 +9,9 @@ description: |
   and has a simple c or java-like
   [service description language](https://grpc.io/docs/guides/concepts/#service-definition).
 rationale: |
-  We see benefins in having a schema based message system for service to
+  We see benefits in having a schema based message system for service to
   service communication both internally as well as to or from external systems.
-  The communication is done over HTTP/2 so it opens up for bi-directional data transfer
+  The communication is done over HTTP/2 so it opens up for bi-directional streaming data transfer
   over a connection that is open for a longer time. It has support for pluggable
   authentication and load balancing so it is suited for microservice communication.
 license:
