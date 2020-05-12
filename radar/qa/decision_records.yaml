@@ -1,0 +1,24 @@
+name: Architectural Decision Records
+shortname: Arch. Decision Records
+blip:
+  - date: 2020-05-06
+    ring: ASSESS
+description: |
+  [Architectural Decision Records (ADR)](https://adr.github.io/) captures
+  a single Architecutral Decision and together forms a decision log.
+rationale: |
+  We should assess if ADR is a good way for us to document decisions taken.
+  The main rationale is that its an easy and common way to follow decisions
+  and see the rationale behind that specific decision.
+
+  Architectural Decision Records follows this syntax:
+  ````
+  In the context of <use case/user story u>,
+  facing <concern c> we decided for <option o>
+  and neglected <other options>,
+  to achieve <system qualities/desired consequences>,
+  accepting <downside d/undesired consequences>,
+  because <additional rationale>.
+  ````
+tags:
+  - documentation
