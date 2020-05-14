@@ -1,0 +1,22 @@
+name: GetRightData
+blip:
+  - date: 2020-05-14
+    ring: TRIAL
+description: |
+  RightData is a self-service suite of applications that helps
+  you achieve Data Quality Assurance, Data Integrity Audit and
+  Continuous Data Quality Control with automated validation and
+  reconciliation capabilities.
+rationale: |
+  Empower organizations with products that improve accuracy,
+  consistency, comprehensiveness, completeness, relevancy and
+  timeliness of data that is used to make business decisions.
+  A key component of Data Testing is an ability to compare two
+  data sets from homogeneous or heterogeneous systems of like
+  or discrete data models. RightData offers two different kinds
+  data reconciliation/comparison scenarios.
+  They are Technical Data Reconciliation (TDR)
+  and Functional Data Reconciliation (FDR).
+  
+tags:
+  - testautomation
