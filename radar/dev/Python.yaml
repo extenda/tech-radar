@@ -1,4 +1,5 @@
-name: Python
+name: Python3.0
+logo: https://commons.wikimedia.org/wiki/Python_(programming_language)#/media/File:Python.svg
 blip:
   - date: 2020-05-13
     ring: TRIAL
@@ -21,6 +22,10 @@ rationale: |
   like machine learning and data science. Python is popular because of
   it's Simplicity, Libraries, Multi-paradigm approach,
   Enterprise Application Integration (EAI), Community – there’s always someone to rely on!
+license:
+  open-source:
+    name: Python Software Foundation(PSF)
+    link: https://docs.python.org/3/license.html#terms-and-conditions-for-accessing-or-otherwise-using-python
 tags:
   - datascience
   - machinelearning
