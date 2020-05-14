@@ -24,7 +24,7 @@ rationale: |
   Enterprise Application Integration (EAI), Community – there’s always someone to rely on!
 license:
   open-source:
-    name: Python Software Foundation(PSF)
+    name: PSF
     link: https://docs.python.org/3/license.html#terms-and-conditions-for-accessing-or-otherwise-using-python
 tags:
   - datascience
