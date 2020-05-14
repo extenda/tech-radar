@@ -4,15 +4,33 @@ blip:
   - date: 2018-03-20
     ring: TRIAL
 description: |
-  _Node.js_ is javascript on the server. It is asynchronous and event driven
-  Javascript runtime built to be scalable and highly concurrent.
+  [_Node.js_](https://nodejs.org/en/) is javascript on the server.
+  It is asynchronous and event driven Javascript runtime
+  built to be scalable and highly concurrent.
+  Node.js is single-threaded and uses an event-loop for processing.
 rationale: |
   Node.js is supported by all cloud provides and is essential in serverless and
   cloud native solutions. It is also a vital part of the front-end stack and a
   candidate for backend-for-frontend services.
+
+  Node.js is particular good of solving these specific types of problems:
+    * Non-blocking operations
+    * Event-driven requests
+    * Data-intensive process
+    * I/O intensive systems
+  The single threaded nature has it limitations
+  and another language might be better to use if you want to solve the following:
+    * Blocking operations
+    * Processor intensive operations
+    * Data calculations
 license:
   open-source:
     name: MIT
     link: https://github.com/spring-projects/spring-framework/blob/master/LICENSE.txt
 tags:
   - javascript
+  - js
+related:
+  - dev/typescript.yaml
+  - dev/react.yaml
+  - dev/javascript
