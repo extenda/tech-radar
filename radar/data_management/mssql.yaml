@@ -2,6 +2,8 @@ name: MSSQL
 blip:
   - date: 2019-05-22
     ring: ADOPT
+  - date: 2020-04-23
+    ring: HOLD
 description: |
   Microsoft SQL Server is a relational database management system developed by Microsoft.
   As a database server, it is a software product with the primary function of storing
@@ -9,11 +11,20 @@ description: |
   may run either on the same computer or on another computer across a network.
 rationale: |
   Persistent storage on the Microsoft Platform. Consider alternatives for new microservices.
+
+  We're not recommending MSSQL for use in new products and cloud-native microservices.
+  While it can be supported with Google's Cloud SQL, it comes with a premium price tag
+  due to licensing costs and hardware requirements. It also has inferior tooling for
+  infrastructure as code, making it harder to manage and maintain according to devops
+  best practices.
 license:
   commercial:
     company: Microsoft
     description: |
       Using SQL Server requires a license from Microsoft.
+related:
+  - data_management/postgresql.yaml
+  - data_management/cloud_sql.yaml
 tags:
   - dotnet
   - java
