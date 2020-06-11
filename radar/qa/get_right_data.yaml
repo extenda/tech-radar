@@ -8,15 +8,24 @@ description: |
   Continuous Data Quality Control with automated validation and
   reconciliation capabilities.
 rationale: |
-  Empower organizations with products that improve accuracy,
-  consistency, comprehensiveness, completeness, relevancy and
-  timeliness of data that is used to make business decisions.
-  A key component of Data Testing is an ability to compare two
-  data sets from homogeneous or heterogeneous systems of like
-  or discrete data models. RightData offers two different kinds
-  data reconciliation/comparison scenarios.
-  They are Technical Data Reconciliation (TDR)
-  and Functional Data Reconciliation (FDR).
+  Reason for this tool is a demand for something that can 
+  support Analytics and BI in a different way than traditional 
+  test tools for software development, which usually focus on 
+  end-point, front-end and code quality. This tool is focusing 
+  on data quality and relevant for testing implementation or 
+  modifications of data pipelines, transformations, reports, 
+  analytics or formulas/calculations.
+  Examples of what the tool can automate:
+  comparison of source and destination to ensure correctness of data.
+  Check correctness of expected output from data pipelines given 
+  specific scenarios (ie. sales, stock adjustments etc).
+  Comparison of data from previous version vs last version to ensure 
+  same result (ie. comparison of data for analytics or reports 
+  whenever any changes made).
+  Verify same data result from different sources whenever they 
+  are expected to be the same.
+  Sources or destinations can be cloud based databases, on 
+  premises databases, API's etc.
 
 tags:
   - testautomation
