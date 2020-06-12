@@ -2,8 +2,6 @@ name: Kotlin
 blip:
   - date: 2019-05-22
     ring: ADOPT
-  - date: 2020-06-12
-    ring: TRIAL
 description: |
   Kotlin has experienced an accelerated rate of adoption and rapid growth of tooling support.
   Some of the reasons behind its popularity are its concise syntax, null safety,
@@ -15,10 +13,6 @@ description: |
   developers.
 rationale:
   Modern alternative to Java, very productive and powerful language.
-
-  Kotlin can be used as an experimental alternative to other JVM languages such as Java. However, we don't
-  want to see it used mixed and/or inlined with Java in the same codebase. This would just add to the
-  cognitive load.
 license:
   open-source:
     name: Apache-2.0
