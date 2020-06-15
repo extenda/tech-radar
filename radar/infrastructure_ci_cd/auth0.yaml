@@ -1,0 +1,32 @@
+name: Auth0
+blip:
+  - date: 2020-06-15
+    ring: HOLD
+description: |
+  [Auth0](https://auth0.com) is a SaaS for user and machine-machine authentication. It supports local users and
+  federated login over social, Open ID, ADFS and SAML.
+rationale: |
+  Auth0 has been assessed as a potential SaaS supplier for our authentication needs. The following reasons
+  where the main drivers for looking into Auth0
+
+    * Leading authentication SaaS
+    * Both user and machine-machine authentication
+    * Strong documentation
+
+  After our decision to prefer Google services, we've opted to not use Auth0. Main reasons for this are:
+
+    * Not a Google service
+    * Problematic pricing model for large amounts of users and/or machines
+    * No official Terraform provider to manage tenants and applications/clients
+license:
+  commercial:
+    company: Auth0
+    description: |
+      Auth0 requires a license. We currently have a legacy developer license, in use by a few clients to
+      perform machine-to-machine authentication using the client credentials grant oauth2 flow.
+related:
+  - infrastructure_ci_cd/identity_platform.yaml
+tags:
+  - cloud
+  - saas
+  - security

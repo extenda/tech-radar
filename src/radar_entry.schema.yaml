@@ -74,6 +74,7 @@ mapping:
               Amazon,
               AppVeyor,
               Atlassian,
+              Auth0,
               CircleCI,
               Confluent,
               GitHub,
