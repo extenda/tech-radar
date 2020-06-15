@@ -1,0 +1,30 @@
+name: Identity Platform
+blip:
+  - date: 2020-06-15
+    ring: TRIAL
+description: |
+  Google Cloud's Identity Platform is a fully managed user authentication solution that supports
+  multi-tenancy, local e-mail users and federated login over OpenID Connect, SAML as well as
+  multiple social providers.
+rationale: |
+  Identity Platform is the SaaS we're using for user identity and authentication. It will help us support
+  authentication in a multi-tenancy setup with different login providers for each tenant.
+
+  We can manage Identity Platform with Terraform, which allows us to automate tenant creation and configuration.
+
+  Clients use [Firebase UI](https://firebase.google.com/docs/auth/web/firebaseui) to add sign-in support in the
+  application. Once authenticated, the platform returns an ID token which contains user information and can be
+  used for communicating with the Hii Retail services. Our Identity and Access Management will use the
+  [Firebase Admin SDK](https://firebase.google.com/docs/admin/setup) to add custom claims to JWTs.
+
+  The JWT from Identity Platform can be used with Open Policy Agent (OPA) to authorize the user.
+license:
+  commercial:
+    company: Google
+related:
+  - infrastructure_ci_cd/auth0.yaml
+  - infrastructure_ci_cd/opa.yaml
+tags:
+  - cloud
+  - saas
+  - security
