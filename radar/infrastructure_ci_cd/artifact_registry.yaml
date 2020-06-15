@@ -26,10 +26,10 @@ license:
 related:
   - infrastructure_ci_cd/gcp.yaml
   - infrastructure_ci_cd/maven.yaml
+  - infrastructure_ci_cd/nexus.yaml
   - infrastructure_ci_cd/docker.yaml
 tags:
   - cloud
   - gcp
-  - google
   - repo
   - docker
