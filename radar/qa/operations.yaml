@@ -14,6 +14,9 @@ rationale: |
   What we need to evaluate:
     * Ease of use
     * Feasability in terms of costs
+
+  Operations also includes log collection and browsing. Any logging framework used by a cloud service must
+  be interoperable with GCP Operations to ensure the logs can be collected, processed and analyzed.
 license:
   commercial:
     company: Google
