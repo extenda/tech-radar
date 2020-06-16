@@ -1,0 +1,520 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<QuadrantList/> It renders a list for Quandrant page 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "key": "test",
+        "pathname": "/",
+      },
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "test",
+            "pathname": "/",
+            "search": "",
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "test",
+          "pathname": "/",
+          "search": "",
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <QuadrantList
+      blips={
+        Array [
+          Object {
+            "id": -1,
+          },
+        ]
+      }
+      headerLevel={2}
+      quadrant={
+        Object {
+          "adopt": Array [
+            Object {
+              "active": true,
+              "filename": "1.html",
+              "id": 1,
+              "name": "A - 1",
+            },
+            Object {
+              "active": true,
+              "filename": "2.html",
+              "id": 2,
+              "name": "B - 2",
+            },
+          ],
+          "assess": Array [
+            Object {
+              "active": true,
+              "filename": "3.html",
+              "id": 3,
+              "name": "C - 3",
+            },
+          ],
+          "dirname": "test1",
+          "hold": Array [
+            Object {
+              "active": true,
+              "filename": "4.html",
+              "id": 4,
+              "name": "D - 4",
+            },
+            Object {
+              "active": true,
+              "filename": "5.html",
+              "id": 5,
+              "name": "E - 5",
+            },
+            Object {
+              "active": false,
+              "filename": "6.html",
+              "id": 6,
+              "name": "F - 6",
+            },
+          ],
+          "name": "Test",
+          "trial": Array [],
+        }
+      }
+      useShortname={false}
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="one-half column"
+        >
+          <h2>
+            Adopt
+          </h2>
+          <ol
+            className="adopt"
+          >
+            <li
+              className=""
+              id="legendItem1"
+              key="1.html"
+              value={1}
+            >
+              <Link
+                className=""
+                data-radar-id={1}
+                to="/entries/1.html"
+              >
+                <a
+                  className=""
+                  data-radar-id={1}
+                  href="/entries/1.html"
+                  onClick={[Function]}
+                >
+                  A - 1
+                </a>
+              </Link>
+            </li>
+            <li
+              className=""
+              id="legendItem2"
+              key="2.html"
+              value={2}
+            >
+              <Link
+                className=""
+                data-radar-id={2}
+                to="/entries/2.html"
+              >
+                <a
+                  className=""
+                  data-radar-id={2}
+                  href="/entries/2.html"
+                  onClick={[Function]}
+                >
+                  B - 2
+                </a>
+              </Link>
+            </li>
+          </ol>
+          <h2>
+            Trial
+          </h2>
+          <ol
+            className="trial"
+          />
+        </div>
+        <div
+          className="one-half column"
+        >
+          <h2>
+            Assess
+          </h2>
+          <ol
+            className="assess"
+          >
+            <li
+              className=""
+              id="legendItem3"
+              key="3.html"
+              value={3}
+            >
+              <Link
+                className=""
+                data-radar-id={3}
+                to="/entries/3.html"
+              >
+                <a
+                  className=""
+                  data-radar-id={3}
+                  href="/entries/3.html"
+                  onClick={[Function]}
+                >
+                  C - 3
+                </a>
+              </Link>
+            </li>
+          </ol>
+          <h2>
+            Hold
+          </h2>
+          <ol
+            className="hold"
+          >
+            <li
+              className=""
+              id="legendItem4"
+              key="4.html"
+              value={4}
+            >
+              <Link
+                className=""
+                data-radar-id={4}
+                to="/entries/4.html"
+              >
+                <a
+                  className=""
+                  data-radar-id={4}
+                  href="/entries/4.html"
+                  onClick={[Function]}
+                >
+                  D - 4
+                </a>
+              </Link>
+            </li>
+            <li
+              className=""
+              id="legendItem5"
+              key="5.html"
+              value={5}
+            >
+              <Link
+                className=""
+                data-radar-id={5}
+                to="/entries/5.html"
+              >
+                <a
+                  className=""
+                  data-radar-id={5}
+                  href="/entries/5.html"
+                  onClick={[Function]}
+                >
+                  E - 5
+                </a>
+              </Link>
+            </li>
+            <li
+              className=""
+              id="legendItem6"
+              key="6.html"
+              value={6}
+            >
+              <Link
+                className="inactive"
+                data-radar-id={6}
+                to="/entries/6.html"
+              >
+                <a
+                  className="inactive"
+                  data-radar-id={6}
+                  href="/entries/6.html"
+                  onClick={[Function]}
+                >
+                  F - 6
+                </a>
+              </Link>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </QuadrantList>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`<QuadrantList/> It renders a list for visual Radar 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "key": "test",
+        "pathname": "/",
+      },
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "test",
+            "pathname": "/",
+            "search": "",
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "test",
+          "pathname": "/",
+          "search": "",
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <QuadrantList
+      blips={
+        Array [
+          Object {
+            "active": true,
+            "id": 1,
+            "label": "Java",
+            "link": "/entries/java.html",
+            "moved": false,
+            "quadrant": 2,
+            "ring": 0,
+          },
+          Object {
+            "active": true,
+            "id": 3,
+            "label": "PHP",
+            "link": "/entries/php.html",
+            "moved": false,
+            "quadrant": 2,
+            "ring": 3,
+          },
+        ]
+      }
+      headerLevel={2}
+      onMouseEnter={[MockFunction]}
+      onMouseLeave={[MockFunction]}
+      quadrant={
+        Object {
+          "adopt": Array [
+            Object {
+              "active": true,
+              "filename": "1.html",
+              "id": 1,
+              "name": "A - 1",
+            },
+            Object {
+              "active": true,
+              "filename": "2.html",
+              "id": 2,
+              "name": "B - 2",
+            },
+          ],
+          "assess": Array [
+            Object {
+              "active": true,
+              "filename": "3.html",
+              "id": 3,
+              "name": "C - 3",
+            },
+          ],
+          "dirname": "test1",
+          "hold": Array [
+            Object {
+              "active": true,
+              "filename": "4.html",
+              "id": 4,
+              "name": "D - 4",
+            },
+            Object {
+              "active": true,
+              "filename": "5.html",
+              "id": 5,
+              "name": "E - 5",
+            },
+            Object {
+              "active": false,
+              "filename": "6.html",
+              "id": 6,
+              "name": "F - 6",
+            },
+          ],
+          "name": "Test",
+          "trial": Array [],
+        }
+      }
+      useShortname={true}
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="one-half column"
+        >
+          <h2>
+            Adopt
+          </h2>
+          <ol
+            className="adopt"
+          >
+            <li
+              className=""
+              id="legendItem1"
+              key="1.html"
+              value={1}
+            >
+              <Link
+                className=""
+                data-radar-id={1}
+                onMouseEnter={[MockFunction]}
+                onMouseLeave={[MockFunction]}
+                to="/entries/1.html"
+              >
+                <a
+                  className=""
+                  data-radar-id={1}
+                  href="/entries/1.html"
+                  onClick={[Function]}
+                  onMouseEnter={[MockFunction]}
+                  onMouseLeave={[MockFunction]}
+                >
+                  A - 1
+                </a>
+              </Link>
+            </li>
+            <li
+              className="filter-hidden"
+              id="legendItem2"
+              key="2.html"
+              value={2}
+            >
+              B - 2
+            </li>
+          </ol>
+          <h2>
+            Trial
+          </h2>
+          <ol
+            className="trial"
+          />
+        </div>
+        <div
+          className="one-half column"
+        >
+          <h2>
+            Assess
+          </h2>
+          <ol
+            className="assess"
+          >
+            <li
+              className=""
+              id="legendItem3"
+              key="3.html"
+              value={3}
+            >
+              <Link
+                className=""
+                data-radar-id={3}
+                onMouseEnter={[MockFunction]}
+                onMouseLeave={[MockFunction]}
+                to="/entries/3.html"
+              >
+                <a
+                  className=""
+                  data-radar-id={3}
+                  href="/entries/3.html"
+                  onClick={[Function]}
+                  onMouseEnter={[MockFunction]}
+                  onMouseLeave={[MockFunction]}
+                >
+                  C - 3
+                </a>
+              </Link>
+            </li>
+          </ol>
+          <h2>
+            Hold
+          </h2>
+          <ol
+            className="hold"
+          >
+            <li
+              className="filter-hidden"
+              id="legendItem4"
+              key="4.html"
+              value={4}
+            >
+              D - 4
+            </li>
+            <li
+              className="filter-hidden"
+              id="legendItem5"
+              key="5.html"
+              value={5}
+            >
+              E - 5
+            </li>
+            <li
+              className="filter-hidden"
+              id="legendItem6"
+              key="6.html"
+              value={6}
+            >
+              F - 6
+            </li>
+          </ol>
+        </div>
+      </div>
+    </QuadrantList>
+  </Router>
+</MemoryRouter>
+`;

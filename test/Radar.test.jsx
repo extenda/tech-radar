@@ -46,6 +46,34 @@ describe('<Radar />', () => {
     component.unmount();
   });
 
+  test('It reacts to mouse events on quadrants listings', () => {
+    const component = mount(
+      <MemoryRouter>
+        <Radar history={{ push: jest.fn() }} />
+      </MemoryRouter>,
+      { attachTo: window.domNode },
+    );
+
+    const showBubble = jest.spyOn(component.find(Radar).instance().svgRadar, 'showBubble')
+      .mockImplementationOnce(() => {});
+
+    const legendItem = component.find('#legendItem1').at(0);
+
+    // Simulate a mouse enter from the DOM element
+    legendItem.find('a').at(0).simulate('mouseEnter');
+
+    expect(showBubble).toHaveBeenCalled();
+    expect(legendItem.getDOMNode().className).toContain('radar-highlight');
+
+    // Simulate a mouse leave from the DOM element
+    legendItem.find('a').at(0).simulate('mouseLeave');
+
+    expect(legendItem.getDOMNode().className).not.toContain('radar-highlight');
+
+    component.unmount();
+    showBubble.mockRestore();
+  });
+
   test('It is possible to filter the radar blips', () => {
     const component = mount(
       <MemoryRouter>
@@ -60,7 +88,6 @@ describe('<Radar />', () => {
     const radar = component.find(Radar);
     radar.instance().onFilter([{ id: 1, name: 'java' }]);
 
-    expect(radar.state().tags).toEqual(['java']);
     expect(document.querySelectorAll('g.blip')).toHaveLength(1);
 
     component.unmount();

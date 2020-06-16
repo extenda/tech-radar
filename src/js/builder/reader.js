@@ -38,7 +38,7 @@ const findQuadrant = (yamlFile) => {
     return {
       index,
       dirname,
-      title: radar.quadrants[index].title,
+      name: radar.quadrants[index].name,
     };
   }
   throw new Error(`Invalid quadrant source file ${yamlFile}.`);

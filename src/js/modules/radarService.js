@@ -30,7 +30,7 @@ class RadarService {
     };
 
     return this.model.entries.filter(entryFilter)
-      .map(entry => pick(entry.blip, 'label', 'quadrant', 'ring', 'link', 'moved', 'active'));
+      .map(entry => pick(entry.blip, 'id', 'label', 'quadrant', 'ring', 'link', 'moved', 'active'));
   };
 
   listTags = () => {
@@ -64,16 +64,20 @@ class RadarService {
     .filter(entry => entry.tags.includes(tag))
     .sort(firstBy('name'));
 
-  getQuadrant = (dirname) => {
+  getQuadrant = (dirname, onlyActive = false) => {
     const qi = this.model.quadrants.findIndex(q => q.dirname === dirname);
     if (qi >= 0) {
       const quadrant = { ...this.model.quadrants[qi] };
       this.model.rings.forEach((ring, index) => {
-        quadrant[ring.toLowerCase()] = this.listEntries(quadrant.dirname, index, false)
+        quadrant[ring.toLowerCase()] = this.listEntries(quadrant.dirname, index, onlyActive)
           .map((entry) => {
-            const out = pick(entry, 'name', 'filename');
-            out.active = entry.blip.active;
-            return out;
+            const out = pick(entry, 'name', 'shortname', 'filename');
+            const { id, active } = entry.blip;
+            return {
+              ...out,
+              id,
+              active,
+            };
           });
       });
       return quadrant;

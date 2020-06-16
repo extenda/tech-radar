@@ -102,4 +102,24 @@ describe('RadarService', () => {
     const entries = radarService.listEntriesByTag('invalid');
     expect(entries).toHaveLength(0);
   });
+
+  test('It can enumerate all entries', () => {
+    const entries = radarService.listEntries('dev', '*', false);
+    expect(entries).toHaveLength(3);
+    expect(entries[0]).toMatchObject({ blip: { label: 'Lisp', id: 2 } });
+    expect(entries[1]).toMatchObject({ blip: { label: 'Java', id: 1 } });
+    expect(entries[2]).toMatchObject({ blip: { label: 'PHP', id: 3 } });
+  });
+
+  test('It can enumerate blips with IDs', () => {
+    const blips = radarService.listBlips();
+    expect(blips[0]).toMatchObject({
+      label: 'Java',
+      id: 1,
+    });
+    expect(blips[1]).toMatchObject({
+      label: 'PHP',
+      id: 3,
+    });
+  });
 });

@@ -59,6 +59,7 @@ export default class TagsInput extends Component {
         handleDelete={this.handleDelete}
         handleAddition={this.handleAddition}
         placeholder="Filter radar by tags"
+        inputAttributes={{ spellCheck: 'false', autoCorrect: 'off' }}
       />
     );
   };
