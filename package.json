@@ -11,7 +11,7 @@
     "lint:js": "eslint src test",
     "start": "webpack-dev-server --open --watch --mode development --output-path build",
     "backend": "npm start --prefix server",
-    "auth": "npm run env BACKEND=1 -- webpack-dev-server --open --watch --mode production --host local.extendaretail.com --output-path build",
+    "auth": "npm run env BACKEND=1 -- webpack-dev-server --open --watch --mode production --output-path build",
     "pip:install": "pip install --user -r .scripts/python_requirements.txt",
     "test": "jest",
     "yaml:lint": "python .scripts/yaml_lint.py",
