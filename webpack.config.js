@@ -89,21 +89,21 @@ const webpack = {
     filename: 'js/[name].bundle.js',
   },
   performance: {
-    maxEntrypointSize: 307200,
-    maxAssetSize: 307200,
+    maxEntrypointSize: 400 * 1024,
+    maxAssetSize: 400 * 1024,
   },
   plugins: [
     // Build the radar YAMLs on first run, then watch for changes in dev-server.
-    compiler => compiler.hooks.beforeRun.tapAsync('RadarBuilderPlugin', (params, callback) => {
+    (compiler) => compiler.hooks.beforeRun.tapAsync('RadarBuilderPlugin', (params, callback) => {
       buildRadar().then(callback);
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
     }),
-    new CopyPlugin([
-      { from: './src/assets/index.html', to: outputPath },
-    ], {
-      flatten: true,
+    new CopyPlugin({
+      patterns: [
+        { from: './src/assets/index.html', to: outputPath, flatten: true },
+      ],
     }),
   ],
   resolve: {

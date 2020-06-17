@@ -66,7 +66,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "jest-junit": "^6.4.0",
-    "jest-sonar-reporter": "^2.0.0",
+    "jest-sonar": "^0.2.8",
     "mini-css-extract-plugin": "^0.7.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "style-loader": "^0.23.1",
@@ -125,7 +125,20 @@
     },
     "reporters": [
       "default",
-      "jest-junit"
+      [
+        "jest-junit",
+        {
+          "outputDirectory": "test-results",
+          "outputName": "TEST-jest.xml"
+        }
+      ],
+      [
+        "jest-sonar",
+        {
+          "outputDirectory": "test-results",
+          "outputName": "sonar-report.xml"
+        }
+      ]
     ],
     "setupFilesAfterEnv": [
       "<rootDir>/test/setup.js"
@@ -136,14 +149,6 @@
     "testPathIgnorePatterns": [
       "/node_modules/",
       "<rootDir>/server/"
-    ],
-    "testResultsProcessor": "jest-sonar-reporter"
-  },
-  "jest-junit": {
-    "outputDirectory": "<rootDir>/test-results/jest",
-    "outputName": "TEST-jest.xml"
-  },
-  "jestSonar": {
-    "reportPath": "test-results"
+    ]
   }
 }
