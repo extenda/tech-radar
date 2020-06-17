@@ -1,0 +1,23 @@
+name: Nexus Repository OSS
+shortname: Nexus Repository
+blip:
+  - date: 2020-06-15
+    ring: TRIAL
+description: |
+  Nexus Repository Manager (OSS) is the leading repository manager with universal support
+  for Maven, npm, NuGet, Docker, YUM etc.
+rationale: |
+  Extenda Retail is operating a public Nexus repository. It is used by our development teams for private packages
+  for Maven/Gradle, NuGet, NPM and RPMs.
+
+  All developers have read access and writes are restricted to our CI service accounts. Details on how to configure
+  and use Nexus are found on our
+  [internal Confluence page](https://confluence.extendaretail.com/display/BT/Nexus+Repository+Manager).
+license:
+  open-source:
+    name: EPL-1.0
+    link: https://github.com/sonatype/nexus-public/blob/master/LICENSE.txt
+related:
+  - infrastructure_ci_cd/artifact_registry.yaml
+tags:
+  - repo
