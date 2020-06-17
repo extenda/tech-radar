@@ -2,6 +2,8 @@ name: Traefik
 blip:
   - date: 2019-05-22
     ring: ASSESS
+  - date: 2020-06-12
+    ring: ARCHIVE
 description: |
   [traefik](https://traefik.io/) is a reverse proxy / load balancer.
 rationale:

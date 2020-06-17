@@ -4,6 +4,8 @@ blip:
     ring: ASSESS
   - date: 2020-04-13
     ring: TRIAL
+  - date: 2020-06-12
+    ring: ARCHIVE
 description: |
   Knative, delivers an essential set of components to build and run serverless applications on Kubernetes.
   Knative offers features like scale-to-zero, autoscaling, in-cluster builds,
@@ -14,6 +16,7 @@ rationale: |
 related:
   - infrastructure_ci_cd/kubernetes.yaml
   - infrastructure_ci_cd/istio.yaml
+  - infrastructure_ci_cd/cloud_run.yaml
 tags:
   - devops
   - k8s

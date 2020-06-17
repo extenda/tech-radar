@@ -2,6 +2,8 @@ name: Dapper
 blip:
   - date: 2019-05-22
     ring: ADOPT
+  - date: 2020-06-12
+    ring: ARCHIVE
 description: |
   Sql object mapper extension library
 rationale:
