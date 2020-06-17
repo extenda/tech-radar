@@ -177,7 +177,7 @@ export default {
     }
     return [];
   },
-  getEntry: entry => mockEntries[entry],
+  getEntry: (entry) => mockEntries[entry],
   model: {
     title: 'Test',
     formattedDate: '5 June, 2019',

@@ -11,7 +11,7 @@ describe('RadarService', () => {
 
     global.fetch = jest.fn().mockImplementationOnce(() => Promise.resolve({
       json: () => fs.readFile(path.resolve(__dirname, '../build/js/radar.json'), 'utf-8')
-        .then(data => JSON.parse(data)),
+        .then((data) => JSON.parse(data)),
     }));
 
     await radarService.init('test');
