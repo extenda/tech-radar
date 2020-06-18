@@ -1,0 +1,23 @@
+name: OpenTelemetry
+blip:
+  - date: 2020-06-15
+    ring: TRIAL
+description: |
+  [OpenTelemetry](https://opentelemetry.io) is a set of APIs, libraries, agents and collectors to capture
+  distributed traces and metrics from applications. They can be analyzed using Google Operations
+  (Stackdriver), Prometheus, Jaeger and others.
+rationale: |
+  OpenTelemetry is a merge of OpenTracing and OpenCensus. In HiiRetail we use OpenTelemetry to record tracing
+  metrics in our applications. The records are then captured by GCP Operations (formerly Stackdriver) where
+  they can be analyzed. OpenTelemetry APIs exists for all our languages: C# (Dotnet), Java, Javascript, Python.
+
+  Using OpenTelemetry means the APIs must be added to the service and traces must be defined for the
+  metrics to capture. When deployed, these metrics will show up in Operations (Stackdriver) and can be analyzed
+  there.
+related:
+  - qa/operations.yaml
+  - qa/opentracing.yaml
+tags:
+  - cloud
+  - devops
+  - trace

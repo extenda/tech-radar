@@ -2,6 +2,8 @@ name: Moq
 blip:
   - date: 2019-05-22
     ring: ADOPT
+  - date: 2020-06-12
+    ring: ARCHIVE
 description: |
   Moq is a mocking framework for C#/.NET.
   It is used in unit testing to isolate your class under test from its dependencies and ensure
