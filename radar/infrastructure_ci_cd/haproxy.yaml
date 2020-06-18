@@ -2,6 +2,8 @@ name: HAProxy
 blip:
   - date: 2019-05-22
     ring: ASSESS
+  - date: 2020-06-12
+    ring: ARCHIVE
 description: |
   [HAProxy](http://www.haproxy.org/) is a high availability load balancer and proxy server
   for TCP and HTTP-based applications that spreads requests across multiple servers.

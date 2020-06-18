@@ -2,6 +2,8 @@ name: Nlog
 blip:
   - date: 2019-05-22
     ring: ASSESS
+  - date: 2020-06-12
+    ring: ARCHIVE
 description: |
   Logging framework for .Net
 rationale:

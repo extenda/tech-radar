@@ -2,13 +2,20 @@ name: Jaeger
 blip:
   - date: 2019-05-22
     ring: ADOPT
+  - date: 2020-06-15
+    ring: HOLD
 description: |
   [Jaeger](https://www.jaegertracing.io/), inspired by Dapper and OpenZipkin,
   is a distributed tracing system released as open source by Uber Technologies.
-rationale:
+rationale: |
   We want a way to trace web and database traffic that is also compliant with OpenTracing.
+
+  We prefer Google Cloud Operations (Stackdriver) over Jaeger and do not recommend it for services
+  running on GCP.
 related:
+  - qa/opentelemetry.yaml
   - qa/opentracing.yaml
+  - qa/operations.yaml
 tags:
   - cloud
   - devops

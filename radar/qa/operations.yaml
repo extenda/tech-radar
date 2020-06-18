@@ -4,8 +4,8 @@ blip:
   - date: 2020-05-06
     ring: TRIAL
 description: |
-  [Google Cloud’s operations suite](https://cloud.google.com/products/operations) (formerly Stackdriver) is designed to
-  monitor, troubleshoot, and improve cloud infrastructure, software, and application performance.
+  [Google Cloud’s operations suite](https://cloud.google.com/products/operations) (formerly Stackdriver) is designed
+  to monitor, troubleshoot, and improve cloud infrastructure, software, and application performance.
   Efficiently build and run workloads, keeping applications performant and available.
 rationale: |
   Operations suite gives us an easy way to monitor our workloads in GCP.
@@ -20,15 +20,13 @@ rationale: |
 license:
   commercial:
     company: Google
-    description: |
-      Use of this software requires a license for Google Cloud Platform.
 related:
   - data_management/kibana.yaml
   - data_management/beats.yaml
   - data_management/logstash.yaml
   - data_management/elasticsearch.yaml
   - infrastructure_ci_cd/gcp.yaml
-  - qa/opentracing.yaml
+  - qa/opentelemetry.yaml
 tags:
   - observability
   - monitoring
