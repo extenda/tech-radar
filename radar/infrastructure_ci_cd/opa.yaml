@@ -20,6 +20,8 @@ related:
   - infrastructure_ci_cd/istio.yaml
   - infrastructure_ci_cd/knative.yaml
   - infrastructure_ci_cd/kubernetes.yaml
+  - infrastructure_ci_cd/styra_das.yaml
 tags:
   - authorization
   - policy-enforcement
+  - security
