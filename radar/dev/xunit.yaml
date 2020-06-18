@@ -2,6 +2,8 @@ name: xUnit
 blip:
   - date: 2019-05-22
     ring: ADOPT
+  - date: 2020-06-12
+    ring: ARCHIVE
 description: |
   [xunit](https://xunit.net/) is a free, open source, community-focused unit testing tool for the .NET Framework
 rationale:
