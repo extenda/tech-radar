@@ -10,13 +10,14 @@ rationale: |
   service policies from GitHub, supports stack and libraries for policy reuse and differentiates between
   ingress (Envoy integration) and application (service integration) policy declarations.
 
-  We're looking at Styra DAS because it acts both as a control plane and as a data bundle server for our
-  OPA services. If we where to use Styra DAS, we don't need to build a highly-available bundle server
-  by ourselves, and can instead build a smaller service to ingest IAM data as data bundles in Styra DAS.
+  The main things we're assessing are:
 
-  Another potential we see with Styra DAS is it's ability to interactively work on policies and see how a
-  change affects already executed decisions. It also includes unit testing capabilities which we hope
-  to be able to utilize both interactively and from CI/CD workflows.
+    * Styra DAS as a control plane for our OPA services
+    * Styra DAS as our data bundle server to avoid building a highly-available bundle server ourselves.
+      With Styra, we only need to build a smaller integration layer between our IAM and Styra DAS
+    * How Styra DAS can be used to author policies interactively to see how the changes affect previous
+      decision logs
+    * How Styra DAS can help us in unit testing our service policies, both interactively and from CI/CD
 license:
   commercial:
     company: Styra
