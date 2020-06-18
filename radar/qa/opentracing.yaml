@@ -2,17 +2,23 @@ name: OpenTracing
 blip:
   - date: 2019-05-22
     ring: ADOPT
+  - date: 2020-06-15
+    ring: HOLD
 description: |
   [OpenTracing](https://opentracing.io/docs/overview/what-is-tracing/) is not a download or a program.
   Distributed tracing requires that software developers add instrumentation to the code of an application,
   or to the frameworks used in the application. OpenTracing is not a standard.
-rationale:
+rationale: |
   IT and DevOps teams can use distributed tracing to monitor applications.
   Distributed tracing is particularly well-suited to debugging and monitoring modern distributed
   software architectures, such as microservices.
   Developers can use distributed tracing to help debug and optimize their code.
+
+  OpenTracing has been merged with OpenCensus and is now known as OpenTelemetry. Use the new OpenTelemetry APIs
+  for new services instead of OpenTracing.
 related:
   - qa/jaeger.yaml
+  - qa/opentelemetry.yaml
 tags:
   - cloud
   - devops

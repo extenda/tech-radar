@@ -13,6 +13,7 @@ rationale: |
   We prefer Google Cloud Operations (Stackdriver) over Jaeger and do not recommend it for services
   running on GCP.
 related:
+  - qa/opentelemetry.yaml
   - qa/opentracing.yaml
   - qa/operations.yaml
 tags:
