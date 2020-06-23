@@ -56,12 +56,435 @@ exports[`<Radar /> It renders the SVG radar and description 1`] = `
     />
   </div>
   <div
-    className="svg-radar"
+    className="radar-container u-full-width"
   >
-    <svg
-      id="radar"
-    />
+    <div
+      className="radar-entries"
+    >
+      <h2>
+        Development
+      </h2>
+      <QuadrantList
+        blips={
+          Array [
+            Object {
+              "active": true,
+              "color": "#43a047",
+              "id": 1,
+              "index": 0,
+              "label": "Java",
+              "link": "/entries/java.html",
+              "moved": false,
+              "quadrant": 2,
+              "ring": 0,
+              "segment": Object {
+                "clipx": [Function],
+                "clipy": [Function],
+                "random": [Function],
+              },
+              "vx": 0,
+              "vy": 0,
+              "x": -14.474380723221014,
+              "y": -41.11798108601353,
+            },
+            Object {
+              "active": true,
+              "color": "#bf360c",
+              "id": 3,
+              "index": 1,
+              "label": "PHP",
+              "link": "/entries/php.html",
+              "moved": false,
+              "quadrant": 2,
+              "ring": 3,
+              "segment": Object {
+                "clipx": [Function],
+                "clipy": [Function],
+                "random": [Function],
+              },
+              "vx": 0,
+              "vy": 0,
+              "x": -382.075380904692,
+              "y": -21.17457418758074,
+            },
+          ]
+        }
+        headerLevel={3}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        quadrant={
+          Object {
+            "adopt": Array [
+              Object {
+                "active": true,
+                "filename": "1.html",
+                "id": 1,
+                "name": "A - 1",
+              },
+              Object {
+                "active": true,
+                "filename": "2.html",
+                "id": 2,
+                "name": "B - 2",
+              },
+            ],
+            "assess": Array [
+              Object {
+                "active": true,
+                "filename": "3.html",
+                "id": 3,
+                "name": "C - 3",
+              },
+            ],
+            "dirname": "test1",
+            "hold": Array [
+              Object {
+                "active": true,
+                "filename": "4.html",
+                "id": 4,
+                "name": "D - 4",
+              },
+              Object {
+                "active": true,
+                "filename": "5.html",
+                "id": 5,
+                "name": "E - 5",
+              },
+              Object {
+                "active": false,
+                "filename": "6.html",
+                "id": 6,
+                "name": "F - 6",
+              },
+            ],
+            "name": "Test",
+            "trial": Array [],
+          }
+        }
+        useShortname={true}
+      />
+      <h2>
+        Test 2
+      </h2>
+      <QuadrantList
+        blips={
+          Array [
+            Object {
+              "active": true,
+              "color": "#43a047",
+              "id": 1,
+              "index": 0,
+              "label": "Java",
+              "link": "/entries/java.html",
+              "moved": false,
+              "quadrant": 2,
+              "ring": 0,
+              "segment": Object {
+                "clipx": [Function],
+                "clipy": [Function],
+                "random": [Function],
+              },
+              "vx": 0,
+              "vy": 0,
+              "x": -14.474380723221014,
+              "y": -41.11798108601353,
+            },
+            Object {
+              "active": true,
+              "color": "#bf360c",
+              "id": 3,
+              "index": 1,
+              "label": "PHP",
+              "link": "/entries/php.html",
+              "moved": false,
+              "quadrant": 2,
+              "ring": 3,
+              "segment": Object {
+                "clipx": [Function],
+                "clipy": [Function],
+                "random": [Function],
+              },
+              "vx": 0,
+              "vy": 0,
+              "x": -382.075380904692,
+              "y": -21.17457418758074,
+            },
+          ]
+        }
+        headerLevel={3}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        quadrant={
+          Object {
+            "adopt": Array [
+              Object {
+                "active": true,
+                "filename": "1.html",
+                "id": 1,
+                "name": "A - 1",
+              },
+              Object {
+                "active": true,
+                "filename": "2.html",
+                "id": 2,
+                "name": "B - 2",
+              },
+            ],
+            "assess": Array [
+              Object {
+                "active": true,
+                "filename": "3.html",
+                "id": 3,
+                "name": "C - 3",
+              },
+            ],
+            "dirname": "test1",
+            "hold": Array [
+              Object {
+                "active": true,
+                "filename": "4.html",
+                "id": 4,
+                "name": "D - 4",
+              },
+              Object {
+                "active": true,
+                "filename": "5.html",
+                "id": 5,
+                "name": "E - 5",
+              },
+              Object {
+                "active": false,
+                "filename": "6.html",
+                "id": 6,
+                "name": "F - 6",
+              },
+            ],
+            "name": "Test",
+            "trial": Array [],
+          }
+        }
+        useShortname={true}
+      />
+    </div>
+    <div
+      className="svg-radar"
+    >
+      <svg
+        id="radar"
+      />
+    </div>
+    <div
+      className="radar-entries"
+    >
+      <h2>
+        Test 4
+      </h2>
+      <QuadrantList
+        blips={
+          Array [
+            Object {
+              "active": true,
+              "color": "#43a047",
+              "id": 1,
+              "index": 0,
+              "label": "Java",
+              "link": "/entries/java.html",
+              "moved": false,
+              "quadrant": 2,
+              "ring": 0,
+              "segment": Object {
+                "clipx": [Function],
+                "clipy": [Function],
+                "random": [Function],
+              },
+              "vx": 0,
+              "vy": 0,
+              "x": -14.474380723221014,
+              "y": -41.11798108601353,
+            },
+            Object {
+              "active": true,
+              "color": "#bf360c",
+              "id": 3,
+              "index": 1,
+              "label": "PHP",
+              "link": "/entries/php.html",
+              "moved": false,
+              "quadrant": 2,
+              "ring": 3,
+              "segment": Object {
+                "clipx": [Function],
+                "clipy": [Function],
+                "random": [Function],
+              },
+              "vx": 0,
+              "vy": 0,
+              "x": -382.075380904692,
+              "y": -21.17457418758074,
+            },
+          ]
+        }
+        headerLevel={3}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        quadrant={
+          Object {
+            "adopt": Array [
+              Object {
+                "active": true,
+                "filename": "1.html",
+                "id": 1,
+                "name": "A - 1",
+              },
+              Object {
+                "active": true,
+                "filename": "2.html",
+                "id": 2,
+                "name": "B - 2",
+              },
+            ],
+            "assess": Array [
+              Object {
+                "active": true,
+                "filename": "3.html",
+                "id": 3,
+                "name": "C - 3",
+              },
+            ],
+            "dirname": "test1",
+            "hold": Array [
+              Object {
+                "active": true,
+                "filename": "4.html",
+                "id": 4,
+                "name": "D - 4",
+              },
+              Object {
+                "active": true,
+                "filename": "5.html",
+                "id": 5,
+                "name": "E - 5",
+              },
+              Object {
+                "active": false,
+                "filename": "6.html",
+                "id": 6,
+                "name": "F - 6",
+              },
+            ],
+            "name": "Test",
+            "trial": Array [],
+          }
+        }
+        useShortname={true}
+      />
+      <h2>
+        Test 1
+      </h2>
+      <QuadrantList
+        blips={
+          Array [
+            Object {
+              "active": true,
+              "color": "#43a047",
+              "id": 1,
+              "index": 0,
+              "label": "Java",
+              "link": "/entries/java.html",
+              "moved": false,
+              "quadrant": 2,
+              "ring": 0,
+              "segment": Object {
+                "clipx": [Function],
+                "clipy": [Function],
+                "random": [Function],
+              },
+              "vx": 0,
+              "vy": 0,
+              "x": -14.474380723221014,
+              "y": -41.11798108601353,
+            },
+            Object {
+              "active": true,
+              "color": "#bf360c",
+              "id": 3,
+              "index": 1,
+              "label": "PHP",
+              "link": "/entries/php.html",
+              "moved": false,
+              "quadrant": 2,
+              "ring": 3,
+              "segment": Object {
+                "clipx": [Function],
+                "clipy": [Function],
+                "random": [Function],
+              },
+              "vx": 0,
+              "vy": 0,
+              "x": -382.075380904692,
+              "y": -21.17457418758074,
+            },
+          ]
+        }
+        headerLevel={3}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        quadrant={
+          Object {
+            "adopt": Array [
+              Object {
+                "active": true,
+                "filename": "1.html",
+                "id": 1,
+                "name": "A - 1",
+              },
+              Object {
+                "active": true,
+                "filename": "2.html",
+                "id": 2,
+                "name": "B - 2",
+              },
+            ],
+            "assess": Array [
+              Object {
+                "active": true,
+                "filename": "3.html",
+                "id": 3,
+                "name": "C - 3",
+              },
+            ],
+            "dirname": "test1",
+            "hold": Array [
+              Object {
+                "active": true,
+                "filename": "4.html",
+                "id": 4,
+                "name": "D - 4",
+              },
+              Object {
+                "active": true,
+                "filename": "5.html",
+                "id": 5,
+                "name": "E - 5",
+              },
+              Object {
+                "active": false,
+                "filename": "6.html",
+                "id": 6,
+                "name": "F - 6",
+              },
+            ],
+            "name": "Test",
+            "trial": Array [],
+          }
+        }
+        useShortname={true}
+      />
+    </div>
   </div>
+  <div
+    className="u-cf"
+  />
   <div
     className="container"
   >

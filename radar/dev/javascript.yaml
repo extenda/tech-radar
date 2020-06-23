@@ -16,3 +16,8 @@ rationale: |
 tags:
   - javascript
   - web
+  - language
+related:
+  - dev/typescript.yaml
+  - dev/react.yaml
+  - dev/nodejs.yaml

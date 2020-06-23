@@ -4,6 +4,8 @@ blip:
     ring: ASSESS
   - date: 2020-04-13
     ring: HOLD
+  - date: 2020-06-16
+    ring: ARCHIVE
 description: |
   [Chef](https://www.chef.io/) is a configuration management tool written in Ruby and Erlang.
 rationale:

@@ -16,7 +16,7 @@ const Navigation = (props) => {
       <nav className="navbar" role="navigation">
         <ul className="breadcrumb">
           <li key="home">
-            <Link to="/">Tech Radar</Link>
+            <Link to="/">Radar</Link>
             <Icon name="angle-right" />
           </li>
           {!entry && !tag && (
@@ -49,7 +49,7 @@ const Navigation = (props) => {
     <nav className="navbar" role="navigation">
       <ul className="quadrants">
         <li className="radar-root">
-          <Link to="/">Tech Radar</Link>
+          <Link to="/">Radar</Link>
           <Icon name="rss" />
         </li>
         {home.map(q => (

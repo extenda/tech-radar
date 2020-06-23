@@ -1,4 +1,5 @@
 name: Google Compute Engine
+shortname: Compute Engine
 logo: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Google-Compute-Engine-Logo.svg/2560px-Google-Compute-Engine-Logo.svg.png
 blip:
   - date: 2019-10-14

@@ -2,11 +2,13 @@ name: SaltStack
 blip:
   - date: 2018-03-20
     ring: ADOPT
+  - date: 2020-06-15
+    ring: HOLD
 description: |
   SaltStack is a deployment and monitoring platform.
 rationale: |
-  SaltStack is the underlying technology used by Extenda Up! to manage the state
-  of thousands of workstations.
+  While useful for managing desired state configuration, the SaltStack maintainers consistently released breaking
+  changes. There were also many dependency headaches due to being built on Python.
 related:
   - infrastructure_ci_cd/ansible.yaml
   - infrastructure_ci_cd/chef.yaml

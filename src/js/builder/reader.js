@@ -5,9 +5,9 @@ const yaml = require('yaml');
 const radar = require('./model');
 const { dateFormat } = require('../modules/utils');
 
-const htmlFile = yamlFile => `${path.basename(yamlFile, '.yaml')}.html`;
+const htmlFile = (yamlFile) => `${path.basename(yamlFile, '.yaml')}.html`;
 
-const last = arr => arr[arr.length - 1];
+const last = (arr) => arr[arr.length - 1];
 
 // Build a list of related builder blips.
 const buildRelatedLinks = (entry) => {
@@ -33,18 +33,18 @@ const buildRelatedLinks = (entry) => {
 // Find the quadrant and its index for a YAML source file.
 const findQuadrant = (yamlFile) => {
   const dirname = path.relative(radar.radarDir, path.dirname(yamlFile));
-  const index = radar.quadrants.findIndex(q => q.dirname === dirname);
+  const index = radar.quadrants.findIndex((q) => q.dirname === dirname);
   if (index >= 0) {
     return {
       index,
       dirname,
-      title: radar.quadrants[index].title,
+      name: radar.quadrants[index].name,
     };
   }
   throw new Error(`Invalid quadrant source file ${yamlFile}.`);
 };
 
-const ringName = ring => ring.charAt(0) + ring.substr(1).toLowerCase();
+const ringName = (ring) => ring.charAt(0) + ring.substr(1).toLowerCase();
 
 // Create a builder blip entry.
 const createBlip = (entry) => {
@@ -69,7 +69,7 @@ const createBlip = (entry) => {
 
   if (entry.blip.length > 1) {
     blip.history = [];
-    entry.blip.forEach(p => blip.history.push({
+    entry.blip.forEach((p) => blip.history.push({
       date: dateFormat(new Date(p.date)),
       ringName: ringName(p.ring),
     }));
@@ -102,7 +102,7 @@ const createLicenseTags = (entry) => {
 };
 
 const createTags = (entry) => {
-  const tags = entry.tags ? entry.tags.map(t => t.toLowerCase()) : [];
+  const tags = entry.tags ? entry.tags.map((t) => t.toLowerCase()) : [];
   tags.push(...createLicenseTags(entry));
   tags.sort((a, b) => a.localeCompare(b));
   return tags;
@@ -112,7 +112,7 @@ const collectEntries = (radarDir, callback) => {
   const klawOpts = {
     nodir: true,
     traverseAll: true,
-    filter: p => path.extname(p.path) === '.yaml',
+    filter: (p) => path.extname(p.path) === '.yaml',
   };
 
   radar.radarDir = radarDir;

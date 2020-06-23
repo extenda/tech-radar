@@ -28,7 +28,7 @@ const d3 = {
   ...force,
 };
 
-const fontFamily = '"Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif';
+const fontFamily = '"Roboto", sans-serif';
 
 // ES6 class variant of Zalando's original visualizer. This class supports updating entries after initial rendering
 export default class SvgRadar {
@@ -80,7 +80,6 @@ export default class SvgRadar {
   normal_between = (min, max) => {
     return min + (this.random() + this.random()) * 0.5 * (max - min);
   };
-
 
   polar = (cartesian) => {
     let x = cartesian.x;
@@ -153,6 +152,9 @@ export default class SvgRadar {
 
     const { print_layout } = this.config;
 
+    // Store all entries so we can search them by ID later.
+    this.radarEntries = entries;
+
     this.rink.selectAll('*').remove();
     this.radar.select('#legend').remove();
 
@@ -180,19 +182,7 @@ export default class SvgRadar {
       this.segmented[entry.quadrant][entry.ring].push(entry);
     }
 
-    // assign unique sequential id to each entry
-    let id = 1;
-    for (let quadrant of [2,3,1,0]) {
-      for (let ring = 0; ring < 4; ring++) {
-        let entries = this.segmented[quadrant][ring];
-        entries.sort((a, b) => a.label.localeCompare(b.label));
-        for (let i = 0; i < entries.length; i++) {
-          entries[i].id = '' + id++;
-        }
-      }
-    }
-
-    if (print_layout) {
+    if (print_layout && this.config.print_entries) {
       const legend = this.radar.append('g').attr('id', 'legend');
       for (let quadrant = 0; quadrant < 4; quadrant++) {
         legend.append('text')
@@ -240,6 +230,7 @@ export default class SvgRadar {
     // configure each blip
     blips.each(function (d) {
       const blip = d3.select(this);
+      blip.attr('id', `blip${d.id}`);
 
       // blip shape
       if (d.moved) {
@@ -261,7 +252,8 @@ export default class SvgRadar {
           .attr('text-anchor', 'middle')
           .style('fill', '#fff')
           .style('font-family', fontFamily)
-          .style('font-size', () => blip_text.length > 2 ? '8' : '9')
+          .style('font-size', () => '9') //blip_text.length > 2 ? '8' : '9')
+          .style('font-weight', '300')
           .style('pointer-events', 'none')
           .style('user-select', 'none');
       }
@@ -293,14 +285,15 @@ export default class SvgRadar {
   renderBackground = () => {
     const svg = d3.select('svg#' + this.config.svg_id)
       .style('background-color', this.config.colors.background)
-      .attr('width', this.config.width)
-      .attr('height', this.config.height);
+      // .attr('width', this.config.width/2)
+      // .attr('height', this.config.height/2);
 
     this.radar = svg.append('g');
     if ('zoomed_quadrant' in this.config) {
       svg.attr('viewBox', this.viewbox(this.config.zoomed_quadrant));
     } else {
       this.radar.attr('transform', this.translate(this.config.width / 2, this.config.height / 2));
+      svg.attr('viewBox', `0 0 ${this.config.width} ${this.config.height}`);
     }
 
     const grid = this.radar.append('g');
@@ -348,19 +341,20 @@ export default class SvgRadar {
           .style('fill', '#e5e5e5')
           .style('font-family', fontFamily)
           .style('font-size', 42)
-          .style('font-weight', 'bold')
+          .style('font-weight', '400')
           .style('pointer-events', 'none')
           .style('user-select', 'none');
       }
     }
 
-    if (this.config.print_layout) {
+    if (this.config.print_footer || this.config.print_layout) {
       // Footer
       this.radar.append('text')
         .attr('transform', this.translate(this.#footer_offset.x, this.#footer_offset.y))
         .text('\u2B24 No change     \u25B6 New or moved')
         .attr('xml:space', 'preserve')
         .style('font-family', fontFamily)
+        .style('font-weight', '300')
         .style('font-size', '10');
     }
 
@@ -382,7 +376,8 @@ export default class SvgRadar {
       .style('fill', '#333');
     bubble.append('text')
       .style('font-family', fontFamily)
-      .style('font-size', '10px')
+      .style('font-size', '12px')
+      .style('font-weight', '300')
       .style('fill', '#fff');
     bubble.append('path')
       .attr('d', 'M 0,0 10,0 5,8 z')
@@ -400,6 +395,13 @@ export default class SvgRadar {
       this.#legend_offset[quadrant].y + dy
     );
   };
+
+  showBubbleForId = (id) => {
+    const d = this.radarEntries.find((d) => d.id === Number(id));
+    if (d) {
+      this.showBubble(d);
+    }
+  }
 
   showBubble = (d) => {
     if (d.active || config.print_layout) {
@@ -431,17 +433,21 @@ export default class SvgRadar {
       .style('opacity', 0);
   };
 
-  highlightLegendItem = (d) => {
-    const legendItem = document.getElementById(`legendItem${d.id}`);
-    legendItem.setAttribute('filter', 'url(#solid)');
-    legendItem.setAttribute('fill', 'white');
+  highlightLegendItem = ({ id }) => {
+    const legendItem = document.getElementById(`legendItem${id}`);
+    if (legendItem) {
+      legendItem.classList.toggle('radar-highlight');
+      // legendItem.setAttribute('filter', 'url(#solid)');
+      // legendItem.setAttribute('fill', 'white');
+    }
   };
 
-  unhighlightLegendItem = (d) => {
-    const legendItem = document.getElementById(`legendItem${d.id}`);
+  unhighlightLegendItem = ({ id }) => {
+    const legendItem = document.getElementById(`legendItem${id}`);
     if (legendItem) {
-      legendItem.removeAttribute('filter');
-      legendItem.removeAttribute('fill');
+      legendItem.classList.toggle('radar-highlight');
+      //legendItem.removeAttribute('filter');
+      //legendItem.removeAttribute('fill');
     }
   };
 };

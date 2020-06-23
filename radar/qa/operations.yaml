@@ -14,18 +14,19 @@ rationale: |
   What we need to evaluate:
     * Ease of use
     * Feasability in terms of costs
+
+  Operations also includes log collection and browsing. Any logging framework used by a cloud service must
+  be interoperable with GCP Operations to ensure the logs can be collected, processed and analyzed.
 license:
   commercial:
     company: Google
-    description: |
-      Use of this software requires a license for Google Cloud Platform.
 related:
   - data_management/kibana.yaml
   - data_management/beats.yaml
   - data_management/logstash.yaml
   - data_management/elasticsearch.yaml
   - infrastructure_ci_cd/gcp.yaml
-  - qa/opentracing.yaml
+  - qa/opentelemetry.yaml
 tags:
   - observability
   - monitoring

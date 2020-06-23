@@ -17,6 +17,7 @@ const mockEntries = {
       moved: false,
       link: '/entries/java.html',
       active: true,
+      id: 1,
     },
     description: 'Description',
     rationale: 'Rationale',
@@ -46,6 +47,7 @@ const mockEntries = {
         { date: 'Mar 20, 2018', ringName: 'Hold' },
         { date: 'Aug 23, 2019', ringName: 'Archive' },
       ],
+      id: 2,
     },
     description: 'Description',
     rationale: 'Rationale',
@@ -69,6 +71,7 @@ const mockEntries = {
         { date: 'Jan 1, 2004', ringName: 'Adopt' },
         { date: 'Mar 20, 2018', ringName: 'Hold' },
       ],
+      id: 3,
     },
     description: 'Description',
     rationale: 'Rationale',
@@ -88,6 +91,7 @@ const mockBlips = [
     moved: false,
     link: '/entries/java.html',
     active: true,
+    id: 1,
   },
   {
     label: 'PHP',
@@ -96,6 +100,7 @@ const mockBlips = [
     moved: false,
     link: '/entries/php.html',
     active: true,
+    id: 3,
   },
 ];
 
@@ -122,17 +127,47 @@ export default {
       name: 'Test',
       dirname: 'test1',
       adopt: [
-        { name: 'A - 1', filename: '1.html', active: true },
-        { name: 'B - 2', filename: '2.html', active: true },
+        {
+          name: 'A - 1',
+          filename: '1.html',
+          active: true,
+          id: 1,
+        },
+        {
+          name: 'B - 2',
+          filename: '2.html',
+          active: true,
+          id: 2,
+        },
       ],
       trial: [],
       assess: [
-        { name: 'C - 3', filename: '3.html', active: true },
+        {
+          name: 'C - 3',
+          filename: '3.html',
+          active: true,
+          id: 3,
+        },
       ],
       hold: [
-        { name: 'D - 4', filename: '4.html', active: true },
-        { name: 'E - 5', filename: '5.html', active: true },
-        { name: 'F - 6', filename: '6.html', active: false },
+        {
+          name: 'D - 4',
+          filename: '4.html',
+          active: true,
+          id: 4,
+        },
+        {
+          name: 'E - 5',
+          filename: '5.html',
+          active: true,
+          id: 5,
+        },
+        {
+          name: 'F - 6',
+          filename: '6.html',
+          active: false,
+          id: 6,
+        },
       ],
     };
   },
@@ -142,7 +177,7 @@ export default {
     }
     return [];
   },
-  getEntry: entry => mockEntries[entry],
+  getEntry: (entry) => mockEntries[entry],
   model: {
     title: 'Test',
     formattedDate: '5 June, 2019',
