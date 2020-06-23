@@ -1,0 +1,35 @@
+name: Cloud Dataflow
+logo: https://commons.wikimedia.org/wiki/File:Cloud-Dataflow-Logo.svg
+blip:
+  - date: 2020-06-23
+    ring: ADOPT
+description: |
+  [Dataflow](https://cloud.google.com/dataflow) is a serverless GCP service
+  based on open-source project Apache Beam that provides a unified API for both stream and batch data processing.
+rationale: |
+  With Dataflow we get a processing engine as a fully-managed service
+  that enables us to focus more on developing new functionality and delivering business value
+  instead of spending time and resources on managing distributed software running on a cluster,
+  which would be the case if we use Cloud Dataproc.
+
+  Dataflow provides the following benefits:
+
+  * Automated provisioning and management of processing resources.
+  * Horizontal autoscaling of worker resources.
+  * Reliable and consistent exactly-once processing.
+  * Ability to create data pipelines for both batch and stream processing
+  using the same unified model provided by one of the Apache Beam SDKs (Java, Python, Go).
+license:
+  commercial:
+    company: Google
+    description: |
+      Use of this software requires a license for Google Cloud Platform.
+tags:
+  - bigdata
+  - cloud
+  - google
+  - gcp
+  - batch
+  - streaming
+  - apache-beam
+  - commercial
