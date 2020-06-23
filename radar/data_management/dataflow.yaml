@@ -29,6 +29,7 @@ tags:
   - cloud
   - google
   - gcp
+  - serverless
   - batch
   - streaming
   - apache-beam
