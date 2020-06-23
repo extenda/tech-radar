@@ -19,13 +19,8 @@ rationale: |
 license:
   commercial:
     company: Google
-    description: |
-      Use of this software requires a license for Google Cloud Platform.
 tags:
   - bigdata
   - cloud
-  - google
   - gcp
   - visual-interface
-  - code-free
-  - commercial
