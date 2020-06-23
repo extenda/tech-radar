@@ -1,65 +1,34 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Navigation from './Navigation';
 import NotFound from './NotFound';
 import radarService from '../modules/radarService';
+import QuadrantList from './QuadrantList';
 
-export default class Quadrant extends Component {
-  static propTypes = {
-    match: PropTypes.shape({
-      params: PropTypes.shape({
-        quadrant: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
-  };
+const Quadrant = ({ match }) => {
+  const quadrant = radarService.getQuadrant(match.params.quadrant);
 
-  renderEntriesList = (quadrant, ring) => (
-    <ul className={ring}>
-      { quadrant[ring].map(entry => (
-        <li key={entry.filename}>
-          <Link
-            to={`/entries/${entry.filename}`}
-            className={entry.active ? '' : 'inactive'}
-          >
-            {entry.name}
-          </Link>
-        </li>
-      ))}
-    </ul>
+  if (!quadrant) {
+    return (<NotFound />);
+  }
+
+  return (
+    <>
+      <Navigation quadrant={{ name: quadrant.name, dirname: quadrant.dirname }} />
+      <div className="container">
+        <h1>{quadrant.name}</h1>
+        <QuadrantList quadrant={quadrant} />
+      </div>
+    </>
   );
+};
 
-  render = () => {
-    const { match } = this.props;
-    const quadrant = radarService.getQuadrant(match.params.quadrant);
+Quadrant.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      quadrant: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
 
-    if (!quadrant) {
-      return (<NotFound />);
-    }
-
-    return (
-      <React.Fragment>
-        <Navigation quadrant={{ name: quadrant.name, dirname: quadrant.dirname }} />
-        <div className="container">
-          <h1>{quadrant.name}</h1>
-          <div className="row">
-            <div className="one-half column">
-              <h2>Adopt</h2>
-              {this.renderEntriesList(quadrant, 'adopt')}
-
-              <h2>Trial</h2>
-              {this.renderEntriesList(quadrant, 'trial')}
-            </div>
-            <div className="one-half column">
-              <h2>Assess</h2>
-              {this.renderEntriesList(quadrant, 'assess')}
-
-              <h2>Hold</h2>
-              {this.renderEntriesList(quadrant, 'hold')}
-            </div>
-          </div>
-        </div>
-      </React.Fragment>
-    );
-  };
-}
+export default Quadrant;

@@ -17,7 +17,12 @@ exports[`<TagsInput /> It can render input 1`] = `
   }
   handleAddition={[Function]}
   handleDelete={[Function]}
-  inputAttributes={Object {}}
+  inputAttributes={
+    Object {
+      "autoCorrect": "off",
+      "spellCheck": "false",
+    }
+  }
   maxSuggestionsLength={6}
   minQueryLength={2}
   placeholder="Filter radar by tags"

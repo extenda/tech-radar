@@ -1,4 +1,4 @@
-const dateFormat = time => time.toLocaleString('en', {
+const dateFormat = (time) => time.toLocaleString('en', {
   year: 'numeric',
   month: 'short',
   day: 'numeric',

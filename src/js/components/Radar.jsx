@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import SvgRadar from '../lib/radar';
 import radarService from '../modules/radarService';
 import Icon from './Icon';
 import Navigation from './Navigation';
 import TagsInput from './TagsInput';
 import { pick } from '../modules/utils';
+import QuadrantList from './QuadrantList';
 
 export default class Radar extends Component {
   static propTypes = {
@@ -20,7 +22,7 @@ export default class Radar extends Component {
     this.svgRadar = this.createSvgRadar();
 
     this.state = {
-      tags: [],
+      blips: radarService.listBlips([]),
     };
   }
 
@@ -31,8 +33,8 @@ export default class Radar extends Component {
 
     return new SvgRadar({
       svg_id: 'radar',
-      width: 1450,
-      height: 1000,
+      width: 900, // 1450 Set to 900 if not printing labels.
+      height: 900,
       colors: {
         background: '#fff',
         grid: '#bbb',
@@ -47,6 +49,8 @@ export default class Radar extends Component {
         { name: 'Hold', color: '#bf360c' },
       ],
       print_layout: true,
+      print_entities: false,
+      print_footer: true,
       linkOnClick: (link) => {
         history.push(link);
       },
@@ -59,22 +63,50 @@ export default class Radar extends Component {
   };
 
   renderBlips = () => {
-    const { tags } = this.state;
-
-    this.svgRadar.renderEntries(
-      radarService.listBlips(tags),
-    );
+    const { blips } = this.state;
+    this.svgRadar.renderEntries(blips);
   };
 
   onFilter = (tags) => {
     this.setState({
-      tags: tags.map(t => t.name),
+      blips: radarService.listBlips(tags.map(t => t.name)),
     }, this.renderBlips);
   };
 
   componentDidMount = () => {
     this.renderRadar();
   };
+
+  onMouseEnter = (e) => {
+    const id = e.currentTarget.getAttribute('data-radar-id');
+    this.svgRadar.showBubbleForId(id);
+    this.svgRadar.highlightLegendItem({ id });
+  };
+
+  onMouseLeave = (e) => {
+    const id = e.currentTarget.getAttribute('data-radar-id');
+    this.svgRadar.hideBubble();
+    this.svgRadar.unhighlightLegendItem({ id });
+  };
+
+  renderQuadrant = (quadrant) => {
+    const { blips } = this.state;
+    const entries = radarService.getQuadrant(quadrant.dirname, true);
+
+    return (
+      <>
+        <h2>{quadrant.name}</h2>
+        <QuadrantList
+          quadrant={entries}
+          blips={blips}
+          headerLevel={3}
+          useShortname
+          onMouseEnter={this.onMouseEnter}
+          onMouseLeave={this.onMouseLeave}
+        />
+      </>
+    );
+  }
 
   render = () => {
     const radar = radarService.model;
@@ -93,9 +125,20 @@ export default class Radar extends Component {
         <div className="tags-filter">
           <TagsInput onFilter={this.onFilter} tags={radarService.listTags()} />
         </div>
-        <div className="svg-radar">
-          <svg id="radar" />
+        <div className="radar-container u-full-width">
+          <div className="radar-entries">
+            {this.renderQuadrant(radar.quadrants[2])}
+            {this.renderQuadrant(radar.quadrants[1])}
+          </div>
+          <div className="svg-radar">
+            <svg id="radar" />
+          </div>
+          <div className="radar-entries">
+            {this.renderQuadrant(radar.quadrants[3])}
+            {this.renderQuadrant(radar.quadrants[0])}
+          </div>
         </div>
+        <div className="u-cf" />
         <div className="container">
           <div className="row">
             <div className="one-half column">

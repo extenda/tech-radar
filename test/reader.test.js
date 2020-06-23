@@ -10,8 +10,8 @@ describe('YAML Reader', () => {
 
   test('It maps licenses to tags', () => {
     const entries = [];
-    reader.collectEntries(path.resolve(__dirname, 'radar/valid'), entry => entries.push(entry));
-    expect(entries.find(entry => entry.name === 'Java').tags).toEqual([
+    reader.collectEntries(path.resolve(__dirname, 'radar/valid'), (entry) => entries.push(entry));
+    expect(entries.find((entry) => entry.name === 'Java').tags).toEqual([
       '90\'s',
       'commercial',
       'gpl-ce',
@@ -21,7 +21,7 @@ describe('YAML Reader', () => {
       'web',
     ]);
 
-    expect(entries.find(entry => entry.name === 'PHP').tags).toContain('bsd');
+    expect(entries.find((entry) => entry.name === 'PHP').tags).toContain('bsd');
   });
 
   test('It throws error on invalid relations', () => {
