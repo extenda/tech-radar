@@ -14,7 +14,7 @@ exports[`<Navigation /> It renders entry breadcrumbs 1`] = `
       <Link
         to="/"
       >
-        Tech Radar
+        Radar
       </Link>
       <Icon
         name="angle-right"
@@ -57,7 +57,7 @@ exports[`<Navigation /> It renders home menu 1`] = `
       <Link
         to="/"
       >
-        Tech Radar
+        Radar
       </Link>
       <Icon
         name="rss"
@@ -118,7 +118,7 @@ exports[`<Navigation /> It renders quadrant breadcrumbs 1`] = `
       <Link
         to="/"
       >
-        Tech Radar
+        Radar
       </Link>
       <Icon
         name="angle-right"
@@ -148,7 +148,7 @@ exports[`<Navigation /> It renders tag breadcrumbs 1`] = `
       <Link
         to="/"
       >
-        Tech Radar
+        Radar
       </Link>
       <Icon
         name="angle-right"

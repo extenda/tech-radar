@@ -97,12 +97,11 @@ The radar is running on http://localhost:8080.
 
 To run the development server with authentication enabled:
 ```bash
-$ sudo echo "127.0.0.1 local.extendaretail.com" >> /etc/hosts
 $ npm run backend &
 $ npm run auth
 ```
 This will open the Tech Radar in your default browser.
-The radar is running on http://local.extendaretail.com:8080 and requires Google login.
+The radar is running on http://localhost:8080 and requires Google login.
 A development server that validates the Google ID token runs on http://localhost:3000.
 
 ### Radar Blip Format

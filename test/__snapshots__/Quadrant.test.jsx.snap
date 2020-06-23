@@ -19,105 +19,66 @@ exports[`<Quadrant /> It renders as expected 1`] = `
     <h1>
       Test
     </h1>
-    <div
-      className="row"
-    >
-      <div
-        className="one-half column"
-      >
-        <h2>
-          Adopt
-        </h2>
-        <ul
-          className="adopt"
-        >
-          <li
-            key="1.html"
-          >
-            <Link
-              className=""
-              to="/entries/1.html"
-            >
-              A - 1
-            </Link>
-          </li>
-          <li
-            key="2.html"
-          >
-            <Link
-              className=""
-              to="/entries/2.html"
-            >
-              B - 2
-            </Link>
-          </li>
-        </ul>
-        <h2>
-          Trial
-        </h2>
-        <ul
-          className="trial"
-        />
-      </div>
-      <div
-        className="one-half column"
-      >
-        <h2>
-          Assess
-        </h2>
-        <ul
-          className="assess"
-        >
-          <li
-            key="3.html"
-          >
-            <Link
-              className=""
-              to="/entries/3.html"
-            >
-              C - 3
-            </Link>
-          </li>
-        </ul>
-        <h2>
-          Hold
-        </h2>
-        <ul
-          className="hold"
-        >
-          <li
-            key="4.html"
-          >
-            <Link
-              className=""
-              to="/entries/4.html"
-            >
-              D - 4
-            </Link>
-          </li>
-          <li
-            key="5.html"
-          >
-            <Link
-              className=""
-              to="/entries/5.html"
-            >
-              E - 5
-            </Link>
-          </li>
-          <li
-            key="6.html"
-          >
-            <Link
-              className="inactive"
-              to="/entries/6.html"
-            >
-              F - 6
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <QuadrantList
+      blips={
+        Array [
+          Object {
+            "id": -1,
+          },
+        ]
+      }
+      headerLevel={2}
+      quadrant={
+        Object {
+          "adopt": Array [
+            Object {
+              "active": true,
+              "filename": "1.html",
+              "id": 1,
+              "name": "A - 1",
+            },
+            Object {
+              "active": true,
+              "filename": "2.html",
+              "id": 2,
+              "name": "B - 2",
+            },
+          ],
+          "assess": Array [
+            Object {
+              "active": true,
+              "filename": "3.html",
+              "id": 3,
+              "name": "C - 3",
+            },
+          ],
+          "dirname": "test1",
+          "hold": Array [
+            Object {
+              "active": true,
+              "filename": "4.html",
+              "id": 4,
+              "name": "D - 4",
+            },
+            Object {
+              "active": true,
+              "filename": "5.html",
+              "id": 5,
+              "name": "E - 5",
+            },
+            Object {
+              "active": false,
+              "filename": "6.html",
+              "id": 6,
+              "name": "F - 6",
+            },
+          ],
+          "name": "Test",
+          "trial": Array [],
+        }
+      }
+      useShortname={false}
+    />
   </div>
 </Fragment>
 `;

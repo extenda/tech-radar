@@ -1,5 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { MemoryRouter } from 'react-router-dom';
 import Quadrant from '../src/js/components/Quadrant';
 import NotFound from '../src/js/components/NotFound';
 
@@ -8,12 +9,17 @@ jest.mock('../src/js/modules/radarService');
 describe('<Quadrant />', () => {
   test('It groups entries by ring', () => {
     const match = { params: { quadrant: 'test' } };
-    const component = shallow(<Quadrant match={match} />);
+    const component = mount(
+      <MemoryRouter>
+        <Quadrant match={match} />
+      </MemoryRouter>,
+    );
 
-    expect(component.find('ul.adopt > li')).toHaveLength(2);
-    expect(component.find('ul.trial > li')).toHaveLength(0);
-    expect(component.find('ul.assess > li')).toHaveLength(1);
-    expect(component.find('ul.hold > li')).toHaveLength(3);
+    expect(component.find('ol.adopt > li')).toHaveLength(2);
+    expect(component.find('ol.trial > li')).toHaveLength(0);
+    expect(component.find('ol.assess > li')).toHaveLength(1);
+    expect(component.find('ol.hold > li')).toHaveLength(3);
+    component.unmount();
   });
 
   test('It renders as expected', () => {
@@ -31,7 +37,12 @@ describe('<Quadrant />', () => {
 
   test('It renders inactive style for archived entries', () => {
     const match = { params: { quadrant: 'test' } };
-    const component = shallow(<Quadrant match={match} />);
-    expect(component.find('.inactive')).toHaveLength(1);
+    const component = mount(
+      <MemoryRouter>
+        <Quadrant match={match} />
+      </MemoryRouter>,
+    );
+    expect(component.find('a.inactive')).toHaveLength(1);
+    component.unmount();
   });
 });
