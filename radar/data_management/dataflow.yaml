@@ -22,15 +22,13 @@ rationale: |
 license:
   commercial:
     company: Google
-    description: |
-      Use of this software requires a license for Google Cloud Platform.
+related:
+  - infrastructure_ci_cd/pubsub.yaml
 tags:
   - bigdata
   - cloud
-  - google
   - gcp
   - serverless
   - batch
   - streaming
   - apache-beam
-  - commercial
