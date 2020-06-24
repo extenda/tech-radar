@@ -3,6 +3,8 @@ logo: https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg
 blip:
   - date: 2018-03-20
     ring: TRIAL
+  - date: 2020-06-19
+    ring: ADOPT
 description: |
   [_Node.js_](https://nodejs.org/en/) is javascript on the server.
   It is asynchronous and event driven Javascript runtime
