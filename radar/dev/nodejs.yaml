@@ -20,6 +20,7 @@ rationale: |
     * Event-driven requests
     * Data-intensive process
     * I/O intensive systems
+
   The single threaded nature has it limitations
   and another language might be better to use if you want to solve the following:
     * Blocking operations
