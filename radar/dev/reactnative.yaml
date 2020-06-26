@@ -3,7 +3,7 @@ logo: https://facebook.github.io/react-native/img/header_logo.png
 blip:
   - date: 2019-02-20
     ring: ASSESS
-  - date: 2020-06-36
+  - date: 2020-06-26
     ring: ADOPT
 description: |
   React Native lets you build mobile apps using only JavaScript. It uses the same design as React,
