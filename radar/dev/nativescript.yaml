@@ -15,8 +15,8 @@ rationale: |
       supports direct native integrations
     * It was primarily used together with Vue and we have moved Vue to hold
 related:
-  dev/reactnative.yaml
-  dev/vue.yaml
+  - dev/reactnative.yaml
+  - dev/vue.yaml
 tags:
   - android
   - ios
