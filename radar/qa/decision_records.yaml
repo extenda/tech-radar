@@ -20,5 +20,7 @@ rationale: |
   accepting <downside d/undesired consequences>,
   because <additional rationale>.
   ````
+related:
+  - qa/structurizr.yaml
 tags:
   - documentation
