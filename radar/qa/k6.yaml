@@ -1,0 +1,21 @@
+name: k6 load testing tool
+shortname: k6
+blip:
+  - date: 2020-06-29
+    ring: TRIAL
+description: |
+  [k6](https://k6.io/) is a modern open-source load testing tool written in Go and executes scripts written in Javascript.
+rationale: |
+  By using k6 we can easily identify performance issues early in development by "shifting left" and integrating it with
+  our CI pipeline, making it an ideal tool for our new services and products.
+
+  Checks and thresholds can be added to the scripts as pass/fail criterias along with outputing the result to a number
+  of products such as Kafka, Datadog and InfluxDB to mention a few. They also have a SaaS product running in the Cloud.
+license:
+  open-source:
+    name: AGPL-3.0
+    linK: https://github.com/loadimpact/k6/blob/master/LICENSE.md
+tags:
+  - api
+  - test
+  - ci
