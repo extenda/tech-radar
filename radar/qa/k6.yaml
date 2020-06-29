@@ -12,10 +12,6 @@ rationale: |
 
   Checks and thresholds can be added to the scripts as pass/fail criterias along with outputing the result to a number
   of products such as Kafka, Datadog and InfluxDB to mention a few. They also have a SaaS product running in the Cloud.
-license:
-  open-source:
-    name: AGPL-3.0
-    linK: https://github.com/loadimpact/k6/blob/master/LICENSE.md
 tags:
   - api
   - test
