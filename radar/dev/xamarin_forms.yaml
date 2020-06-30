@@ -1,0 +1,22 @@
+name: Xamarin Forms
+blip:
+  - date: 2020-06-30
+    ring: HOLD
+description: |
+  Xamarin.Forms (XF) is an open-source UI framework. XF allows developers to build Xamarin.Android, Xamarin.iOS,
+  and Windows applications from a single shared codebase.
+rationale: |
+  While XF is used for several apps within the company we now believe that it should be set on hold
+  for any new development in favor for modern UI frameworks such as React Native or Flutter.
+license:
+  open-source:
+    name: MIT
+    link: https://github.com/xamarin/Xamarin.Forms/blob/main/LICENSE
+related:
+  - dev/react.yaml
+  - dev/typescript.yaml
+tags:
+  - xamarin
+  - mobile
+  - android
+  - ios
