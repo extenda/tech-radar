@@ -90,7 +90,8 @@ mapping:
               Styra,
               "Tanuki Software",
               UXDivers,
-              VMWare
+              VMWare,
+              Stream.io
             ]
           "description":
             type: str
