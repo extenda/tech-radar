@@ -1,0 +1,36 @@
+name: Structurizr (C4)
+blip:
+  - date: 2020-06-26
+    ring: ASSESS
+description: |
+  [Structurizr](https://structurizr.com) is both a set of APIs and a SaaS that allows generating
+  [C4 diagrams](https://c4model.com) from code models.
+rationale: |
+  We should assess if C4 models are easier to maintain and create from code, rather than using
+  diagramming tools such as LucidChart.
+
+  To create diagrams, use the API implementation for your language
+    * [structurizr-java](https://github.com/structurizr/java)
+    * [structurizr-dotnet](https://github.com/structurizr/dotnet)
+
+  Things we wish to assess:
+    * Are the APIs for Java and Dotnet easier or more productive to use than LucidChart?
+    * Is PlantUML output good enough for our needs?
+    * Do we want to use the APIs with a Structurizr SaaS license to render diagrams in cloud?
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/structurizr/java/blob/master/LICENSE
+    description: |
+      The API clients are open-source and can be used without Structurizr SaaS to create models and export them to
+      Graphviz or PlantUML.
+  commercial:
+    company: Structurizr Ltd
+    description: |
+      Use of the Structurizr SaaS requires a paid subscription for workspaces on https://structurizr.com.
+related:
+  - qa/decision_records.yaml
+tags:
+  - documentation
+  - dotnet
+  - java
