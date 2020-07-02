@@ -1,0 +1,40 @@
+name: Stream Chat Messaging
+shortname: Stream.io
+blip:
+  - date: 2020-07-02
+    ring: ASSESS
+description: |
+  [Stream](https://getstream.io/) enables us to build chat/feeds/push message functionality
+  without implementing backend and transport. It has stylable components for
+  React, React Native, Flutter, IOS and Android. This can be used for ex. instore chat,
+  order feeds, alerts, assigning tasks to staff using bots and other integrations, possibility
+  for chat between store staff and end users.
+
+  Features:
+  * Multi-tenancy
+  * Giphy, emoticons and File Attachments
+  * Threads
+  * Direct and Group Chats
+  * Link previews help users share information
+  * Search your messages & conversations
+  * Bot automation and forms
+  * Custom message types
+rationale: |
+  We should assess if this can be a suitable candidate for a chat/feeds backend.
+
+  What we need to assess:
+  * Pricing beyond standard tier
+  * Authentication
+  * Ease of use
+  * Language support
+  * Chat bot implementations
+  * Flutter components
+license:
+  commercial:
+    company: Stream.io
+    description: |
+      Use of this software requires a license for Stream.io.
+tags:
+  - cloud
+  - chat
+  - feeds
