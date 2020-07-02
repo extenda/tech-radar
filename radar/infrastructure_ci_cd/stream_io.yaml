@@ -5,8 +5,8 @@ blip:
     ring: ASSESS
 description: |
   [Stream](https://getstream.io/) enables us to build chat/feeds/push message functionality
-  without implementing backend and transport. It has stylable components for 
-  React, React Native, Flutter, IOS and Android. This can be used for ex. in-store chat, 
+  without implementing backend and transport. It has stylable components for
+  React, React Native, Flutter, IOS and Android. This can be used for ex. instore chat,
   order feeds, alerts, assigning tasks to staff using bots and other integrations, possibility
   for chat between store staff and end users.
 
@@ -21,7 +21,7 @@ description: |
   * Custom message types
 rationale: |
   We should assess if this can be a suitable candidate for a chat/feeds backend.
-  
+
   What we need to assess:
   * Pricing beyond standard tier
   * Authentication
