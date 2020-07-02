@@ -1,0 +1,26 @@
+name: Cloud Data Fusion
+logo: https://img.stackshare.io/service/10775/Image_2019-04-16_at_7.45.29_AM.png
+blip:
+  - date: 2020-06-23
+    ring: ASSESS
+description: |
+  [Data Fusion](https://cloud.google.com/data-fusion) is a fully-managed cloud-native code-free
+  data integration service for quickly building and managing data pipelines on GCP.
+  Data Fusion is built using open source project CDAP (https://cdap.io/),
+    and this open core ensures data pipeline portability for users.
+  Data Fusion offers pre-built transformations as well as the ability to create an internal library
+  of custom connections and transformations that can be validated, shared, and reused across teams.
+  It runs on top of ephemeral Cloud Dataproc clusters that are created, scaled, and deleted automatically.
+rationale: |
+  Data Fusion provides the following benefits:
+
+  * Visual point-and-click interface enabling code-free development and deployment of EL/ELT/ETL data pipelines.
+  * A library of 150+ preconfigured connectors and transformations.
+license:
+  commercial:
+    company: Google
+tags:
+  - bigdata
+  - cloud
+  - gcp
+  - visual-interface
