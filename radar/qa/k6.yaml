@@ -1,0 +1,17 @@
+name: k6 load testing tool
+shortname: k6
+blip:
+  - date: 2020-06-29
+    ring: TRIAL
+description: |
+  [k6](https://k6.io/) is a modern open-source load testing tool written in Go and executes scripts written in
+  Javascript. Outputing the result can be done to a number of products such as Kafka, Datadog and InfluxDB.
+rationale: |
+  By using k6 we can easily identify performance issues early in development by "shifting left" and integrating it with
+  our CI pipeline, making it an ideal tool for our new services and products.
+
+  Adding Checks and Thresholds as pass/fail criterias to our scripts will get us quick feedback when we do changes.
+tags:
+  - api
+  - test
+  - ci
