@@ -13,7 +13,8 @@ for file in glob.glob("radar/**/*.yaml"):
     try:
         c.validate(raise_exception=True)
     except Exception as e:
-        print("ERROR - " + file + "\n" + e.message)
+        msg = e.msg if hasattr(e, 'msg') else e.message
+        print("ERROR - " + file + "\n" + msg)
         exitCode += 1
 
 for file in glob.glob("radar/**/*.yml"):
