@@ -1,24 +1,14 @@
+const fs = require('fs');
+const path = require('path');
+const yaml = require('yaml');
 const packageVersion = require('../../../package.json').version;
 const { dateFormat } = require('../modules/utils');
 
-const quadrants = [
-  {
-    dirname: 'data_management',
-    name: 'Data Management',
-  },
-  {
-    dirname: 'infrastructure_ci_cd',
-    name: 'CI/CD & Infrastructure',
-  },
-  {
-    dirname: 'dev',
-    name: 'Development',
-  },
-  {
-    dirname: 'qa',
-    name: 'Quality Assurance',
-  },
-];
+const quadrants = yaml.parse(
+  fs.readFileSync(path.join(process.env.BASEDIR || process.cwd(), 'radar', 'quadrants.yaml'), 'utf8'),
+);
+
+const title = process.env.TITLE || 'Extenda Retail Tech Radar';
 
 // Number of milliseconds in 30 days.
 const THIRTY_DAYS = 2592000000;
@@ -27,7 +17,7 @@ const THIRTY_DAYS = 2592000000;
 const RADAR_DATE = new Date();
 
 module.exports = {
-  title: 'Extenda Retail Tech Radar',
+  title,
   version: packageVersion,
   date: RADAR_DATE,
   formattedDate: dateFormat(RADAR_DATE),

@@ -112,7 +112,7 @@ const collectEntries = (radarDir, callback) => {
   const klawOpts = {
     nodir: true,
     traverseAll: true,
-    filter: (p) => path.extname(p.path) === '.yaml',
+    filter: (p) => path.extname(p.path) === '.yaml' && path.basename(path.dirname(p.path)) !== 'radar',
   };
 
   radar.radarDir = radarDir;

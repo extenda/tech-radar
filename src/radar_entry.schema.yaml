@@ -70,30 +70,7 @@ mapping:
           "company":
             type: str
             required: true
-            enum: [
-              Amazon,
-              AppVeyor,
-              Atlassian,
-              Auth0,
-              CircleCI,
-              Confluent,
-              Flatfile,
-              GitHub,
-              Google,
-              Infragistics,
-              Jaspersoft,
-              Microsoft,
-              Oracle,
-              Qlik,
-              Scandit,
-              SonarSource,
-              "Structurizr Ltd",
-              Styra,
-              "Tanuki Software",
-              UXDivers,
-              VMWare,
-              Stream.io
-            ]
+            func: company_enum
           "description":
             type: str
   "related":

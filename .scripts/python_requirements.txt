@@ -1,2 +1,3 @@
 yamllint==1.15.0
 pykwalify==1.7.0
+pyyaml==5.3.1

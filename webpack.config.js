@@ -1,7 +1,7 @@
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const log = require('webpack-log');
 const path = require('path');
 const watch = require('watch');
@@ -9,9 +9,12 @@ const radarBuilder = require('./src/js/builder/builder');
 
 const logger = log({ name: 'radar' });
 
-const outputPath = path.resolve(__dirname, 'build');
+const baseDir = process.env.BASEDIR || __dirname;
+const title = process.env.TITLE || 'Extenda Retail Tech Radar';
 
-const radarDir = path.join(__dirname, 'radar');
+const outputPath = path.resolve(baseDir, 'build');
+
+const radarDir = path.join(baseDir, 'radar');
 
 const buildRadar = () => {
   logger.info('Build JSON radar');
@@ -30,7 +33,7 @@ const webpack = {
       disableDotRule: true,
     },
     after: (app, server) => {
-      watch.watchTree('radar', () => {
+      watch.watchTree(radarDir, () => {
         buildRadar().then(() => {
           server.sockWrite(server.sockets, 'content-changed');
         });
@@ -100,10 +103,12 @@ const webpack = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
     }),
-    new CopyPlugin({
-      patterns: [
-        { from: './src/assets/index.html', to: outputPath, flatten: true },
-      ],
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: 'src/assets/index.html',
+      templateParameters: {
+        title,
+      },
     }),
   ],
   resolve: {

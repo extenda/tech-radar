@@ -134,7 +134,7 @@ license: # Optional, but recommended to always include
       for example with dual licenses. Supports markdown.
   # Only if commercial
   commercial:
-    company: Google # Required company name. Must match enum in schema.
+    company: Google # Required company name. Must match name in companies.yaml.
     description: |
       Optional description of the commercial license that supports Markdown.
 related: # Optional list of related entries
@@ -193,8 +193,9 @@ For projects with multiple licenses, select the most permissible one and make su
 
 ### Supported Commercial Licenses
 
-The list of companies allowed for commercial use are maintained in the [src/radar_entry.schema.yaml](src/radar_entry.schema.yaml) file.
-If you add a radar entry that requires a license from some other company, this means the company must be added to the schema.
+The [`radar/companies.yaml`](radar/companies.yaml) file contains the list of companies allowed for commercial licenses.
+If you add a radar entry that requires a license from some other company, this means the company
+must be added to the `companies.yaml` file.
 
 ### Docker
 

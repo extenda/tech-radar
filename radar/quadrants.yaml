@@ -1,0 +1,8 @@
+- name: Data Management
+  dirname: data_management
+- name: CI/CD & Infrastructure
+  dirname: infrastructure_ci_cd
+- name: Development
+  dirname: dev
+- name: Quality Assurance
+  dirname: qa
