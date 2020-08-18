@@ -13,10 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Lint commit messages
-        uses: extenda/actions/commitlint@v0
-
       - name: Lint pull request title
         uses: extenda/actions/commitlint@v0
         with:
           message: ${{ github.event.pull_request.title }}
+
+      - name: Lint commit messages
+        if: always()
+        uses: extenda/actions/commitlint@v0
+        with:
+          relaxed: ${{ contains(job.status, 'success') }}
