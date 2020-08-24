@@ -90,6 +90,7 @@ const webpack = {
   output: {
     path: outputPath,
     filename: 'js/[name].bundle.js',
+    publicPath: '/',
   },
   performance: {
     maxEntrypointSize: 400 * 1024,
