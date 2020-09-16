@@ -1,0 +1,28 @@
+name: Buildpacks
+logo: https://buildpacks.io/images/buildpacks-logo.svg
+blip:
+  - date: 2020-09-16
+    ring: ASSESS
+description: |
+  Buildpacks is a Cloud Native Sandbox project. It embraces modern container standards, such as OCI image format,
+  to build the most optimized Docker image to be deployed to any Cloud.
+  It provides a simple CLI tool, Pack, to try it out.
+rationale: |
+  By using Buildpacks, we ensure that our apps meet security and compliance requirements and that
+  the built image is optimized for running in our Cloud environment.
+  There is also no need to define a Dockerfile and having to learn the syntax and process how to create a
+  optimized, production ready Docker image.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/buildpacks/spec/blob/main/LICENSE
+related:
+  - infrastructure_ci_cd/docker.yaml
+  - infrastructure_ci_cd/jib.yaml
+  - dev/nodejs.yaml
+  - dev/java.yaml
+tags:
+  - cloud
+  - docker
+  - nodejs
+  - java
