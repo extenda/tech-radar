@@ -12,9 +12,7 @@ rationale: |
   the built image is optimized for running in our Cloud environment.
   There is also no need to define a Dockerfile and having to learn the syntax and process how to create a
   optimized, production ready Docker image.
-  
   While assessing this we should look at:
-
     * Build time compare to regular Docker build-command
     * If it can be used for all our core languages (dotnet, java, node)
     * Developer experience compared to Dockerfiles
