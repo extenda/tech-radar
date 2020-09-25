@@ -1,0 +1,34 @@
+name: Genymotion SaaS
+shortname: Genymotion
+logo: https://www.genymotion.com/wp-content/themes/genymobile/img/genymobile-with-motion.svg
+blip:
+  - date: 2020-09-25
+    ring: ASSESS
+description: |
+  [Genymotion](https://genymotion.com) is Android as a Service. It offers virtual
+  android devices for testing in continuous integration.
+rationale: |
+  Genymotion is evaluated as a solution to support end-to-end UI tests on emulated
+  devices in GitHub Actions.
+
+  We are assessing the following:
+
+    * If we can successfully use the virtual ADB connection on GitHub Actions
+    * If tests are reliable and fast enough for CI/CD
+    * If pricing is viable
+    * If it's good enough to test on emulated devices
+    * If we can ignore testing on iOS
+license:
+  commercial:
+    company: Genymotion
+    description: |
+      The SaaS uses a pay-as-you-go license with $0.05 per minute per device.
+related:
+  - qa/detox.yaml
+  - dev/reactnative.yaml
+tags:
+  - e2e
+  - mobile
+  - test
+  - ci
+  - android

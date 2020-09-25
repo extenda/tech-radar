@@ -13,6 +13,7 @@ license:
     link: https://github.com/wix/Detox/blob/master/LICENSE
 related:
   - qa/cucumber.yaml
+  - qa/genymotion.yaml
   - dev/reactnative.yaml
 tags:
   - e2e
