@@ -9,6 +9,17 @@ rationale: |
   Purpose with Looker is to simplify HiiRetail adoption of Actionable Insights,
   Analytics and Business Intelligence through data driven workflow, API's, SDK's,
   modern visualization, and integrated insights.
+  Looker functionality to assess:
+  - data driven and action based workflow and push notifications
+  - embedding and API's
+  - semantic layer and translation/localization of dialog, labels and free text / tool tips
+  - development of reports, dashboards and widgets
+  - scheduling
+  - interaction with embedded content
+  - advanced and extensible visualization
+  - security that can be integrated with google
+  - ad-hoc capabilities
+  - development and deployment process using GitHub
 license:
   commercial:
     company: Google
