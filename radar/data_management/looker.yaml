@@ -1,0 +1,33 @@
+name: Looker
+blip:
+  - date: 2020-09-29
+    ring: ASSESS
+description: |
+  [Looker](https://looker.com/) is a business intelligence software and big data analytics platform
+  that helps you explore, analyze and share real-time business analytics easily.
+rationale: |
+  Purpose with Looker is to simplify HiiRetail adoption of Actionable Insights,
+  Analytics and Business Intelligence through data driven workflow, API's, SDK's,
+  modern visualization, and integrated insights.
+  Looker functionality to assess:
+  - data driven and action based workflow and push notifications
+  - embedding and API's
+  - semantic layer and translation/localization of dialog, labels and free text / tool tips
+  - development of reports, dashboards and widgets
+  - scheduling
+  - interaction with embedded content
+  - advanced and extensible visualization
+  - security that can be integrated with google
+  - ad-hoc capabilities
+  - development and deployment process using GitHub
+license:
+  commercial:
+    company: Google
+related:
+  - data_management/jaspersoft.yaml
+  - data_management/qliksense.yaml
+tags:
+  - bigdata
+  - cloud
+  - gcp
+  - bi
