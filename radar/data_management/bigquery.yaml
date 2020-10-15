@@ -1,10 +1,9 @@
-name: Bigquery
-logo: https://commons.wikimedia.org/wiki/File:Google-BigQuery-Logo.svg
+name: BigQuery
 blip:
   - date: 2020-04-16
     ring: TRIAL
 description: |
-  [Bigquery](https://cloud.google.com/bigquery) Serverless, highly scalable,
+  [Bigquery](https://cloud.google.com/bigquery) is a serverless, highly scalable,
   and cost-effective cloud data warehouse designed for business agility.
 rationale: |
   Analyze petabytes of data using ANSI SQL at blazing-fast speeds,
