@@ -3,6 +3,8 @@ logo: https://angular.io/assets/images/logos/angular/angular.png
 blip:
   - date: 2019-03-29
     ring: ADOPT
+  - date: 2020-10-18
+    ring: HOLD
 description: |
   Angular is a platform for building mobile and desktop web applications.
 rationale: |
@@ -10,6 +12,11 @@ rationale: |
   a convention over configuration approach and TypeScript as a requirement it allows
   for an easier transition from backend to frontend and with a complete set
   of tooling it enables us to build large scale web applications.
+
+  We currently have both React and Angular in ADOPT, but we do not intend to support both
+  moving forward. Rallying around a singular frontend technology, we are better able
+  to share knowledge, leverage reusable components, and support a consistent look and flow across
+  the multitude of HII Retail Service web frontends that we will be developing.
 license:
   open-source:
     name: MIT
