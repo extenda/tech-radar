@@ -13,10 +13,10 @@ rationale: |
   for an easier transition from backend to frontend and with a complete set
   of tooling it enables us to build large scale web applications.
 
-  We currently have both React and Angular in ADOPT, but we do not intend to support both
-  moving forward. Rallying around a singular frontend technology, we are better able
+  Formerly, we had both React and Angular in ADOPT, but we could not support both
+  moving forward. Rallying around a singular frontend technology, we were better able
   to share knowledge, leverage reusable components, and support a consistent look and flow across
-  the multitude of HII Retail Service web frontends that we will be developing.
+  the multitude of Hii Retail Service web frontends that we are developing.
 license:
   open-source:
     name: MIT
