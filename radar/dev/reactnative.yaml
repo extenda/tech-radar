@@ -3,12 +3,19 @@ logo: https://facebook.github.io/react-native/img/header_logo.png
 blip:
   - date: 2019-02-20
     ring: ASSESS
+  - date: 2020-06-26
+    ring: ADOPT
 description: |
   React Native lets you build mobile apps using only JavaScript. It uses the same design as React,
   letting you compose a rich mobile UI from declarative components.
 rationale: |
-  As an alternative to NativeSceript, React Native takes a more explicit approach to
-  building apps on iOS and Android.
+  React Native enables cross platform development for iOS and Android, and with the Microsoft led
+  initiative for Windows and macOS the code base can also be used for desktop binaries.
+
+  React Native is in a mature state and is getting regular updates, the project is well
+  maintained and roadmap and infrastructure plans are being well communicated by Facebook.
+
+  TypeScript is fully supported.
 license:
   open-source:
     name: MIT
