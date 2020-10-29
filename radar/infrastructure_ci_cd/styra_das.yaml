@@ -1,7 +1,7 @@
 name: Styra DAS
 blip:
   - date: 2020-06-18
-    ring: ASSESS
+    ring: ADOPT
 description: |
   [Styra DAS](https://www.styra.com/manage-open-policy-agent-with-styra-das) is a SaaS management and
   control plane for Open Policy Agent (OPA).
