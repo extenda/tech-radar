@@ -1,6 +1,8 @@
 name: Styra DAS
 blip:
   - date: 2020-06-18
+    ring: ASSESS
+  - date: 2020-10-29
     ring: ADOPT
 description: |
   [Styra DAS](https://www.styra.com/manage-open-policy-agent-with-styra-das) is a SaaS management and
