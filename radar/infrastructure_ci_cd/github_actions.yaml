@@ -1,4 +1,4 @@
-name: "GitHub Actions"
+name: GitHub Actions
 blip:
   - date: 2019-11-01
     ring: ASSESS
@@ -19,11 +19,20 @@ rationale: |
   GitHub Actions gives an easy way to handle pipelines with its seamless way of handling CI pipelines.
   Using GitHub Actions is recommended because it reduces the time developers need to think about pipelines
   and therefore increase our effort on our core products.
+
+  Use GitHub Actions for all new development. Builds on GitHub Actions should generally complete within
+  15 minutes. GitHub Actions is also heavily geared towards continuous delivery to the cloud.
+
+  These are the advices for other CI/CD platforms:
+    * Do not migrate from Jenkins AWS. The exception would be fast builds with a continuous delivery requirement
+    * CircleCI pipelines should be migrated to GitHub Actions
+    * AppVeyor pipelines should be migrated to GitHub Actions
+    * TeamCity pipelines should be migrated to GitHub Actions
 license:
   commercial:
     company: GitHub
     description: |
-      10,000 free build mintutes per month with additional charges thereafter.
+      3,000 free build minutes per month with additional charges thereafter.
 related:
   - infrastructure_ci_cd/jenkins_aws.yaml
   - infrastructure_ci_cd/circleci.yaml
