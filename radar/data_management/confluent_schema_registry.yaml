@@ -5,10 +5,10 @@ blip:
   - date: 2020-11-11
     ring: ASSESS
 description: |
-  [Confluent Cloud Schema Registry](https://www.confluent.io/product/confluent-platform/data-compatibility/) is a central repository with a
-  RESTful interface for developers to define standard schemas and register
+  [Confluent Cloud Schema Registry](https://www.confluent.io/product/confluent-platform/data-compatibility/) 
+  is a central repository with a RESTful interface for developers to define standard schemas and register
   applications to enable compatibility. Schema Registry is available as a
-  software component of Confluent Platform or as a managed component of 
+  software component of Confluent Platform or as a managed component of
   Confluent Cloud.
 rationale: |
   Develop using standard schemas
@@ -19,8 +19,8 @@ rationale: |
   Reduce operational complexity
   Schema Registry reduces operational complexity in the application
   development cycle, because it eliminates the need for complex coordination
-  among developers. Need to add a new column to a downstream database? 
-  You don’t need an involved change process and at least 5 meetings to 
+  among developers. Need to add a new column to a downstream database?
+  You don’t need an involved change process and at least 5 meetings to
   coordinate 20 teams.
 license:
   commercial:
