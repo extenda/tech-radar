@@ -1,0 +1,44 @@
+name: Confluent Cloud Schema Registry
+shortname: Schema Registry
+logo: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.confluent.io%2Fblog%2Ftag%2Fconfluent-news%2F&psig=AOvVaw1Rk_G-pCzkg8CDtwrGRy-T&ust=1605176177106000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPDOoLqh-uwCFQAAAAAdAAAAABAJ
+blip:
+  - date: 2020-11-11
+    ring: ASSESS
+description: |
+  [Confluent Cloud Schema Registry](https://www.confluent.io/product/confluent-platform/data-compatibility/) is a central repository with a
+  RESTful interface for developers to define standard schemas and register
+  applications to enable compatibility. Schema Registry is available as a
+  software component of Confluent Platform or as a managed component of 
+  Confluent Cloud.
+rationale: |
+  Develop using standard schemas
+  Store and share a versioned history of all standard schemas, and validate
+  data compatibility at the client level.Schema Registry supports Avro,
+  JSON and Protobuf serialization formats.
+  
+  Reduce operational complexity
+  Schema Registry reduces operational complexity in the application
+  development cycle, because it eliminates the need for complex coordination
+  among developers. Need to add a new column to a downstream database? 
+  You don’t need an involved change process and at least 5 meetings to 
+  coordinate 20 teams.
+license:
+  commercial:
+    company: Confluent
+    description: |
+      Using Confluent Cloud Schema Registry requires a commercial agreement with Confluent Inc.
+related:
+  - data_management/bigquery.yaml
+  - data_management/kafka.yaml
+  - dev/avro.yaml
+  - infrastructure_ci_cd/pubsub.yaml
+tags:
+  - kafka
+  - streaming
+  - events
+  - schemas
+  - avro
+  - protobuf
+  - json
+  - bigquery
+  
