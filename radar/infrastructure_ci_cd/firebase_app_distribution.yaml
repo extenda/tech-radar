@@ -4,7 +4,8 @@ blip:
   - date: 2020-11-13
     ring: ASSESS
 description: |
-  [Firebase App Distribution](https://firebase.google.com/docs/app-distribution) enables distributing mobile apps to trusted testers
+  [Firebase App Distribution](https://firebase.google.com/docs/app-distribution) enables distributing mobile apps 
+  to trusted testers
 rationale: |
   It would allow us to extend our CI/CD pipeline with distributing our mobile apps variants(e.g. staging),
   as on Android Play or Apple Testflight one can only upload one build variant(i.e. production)
