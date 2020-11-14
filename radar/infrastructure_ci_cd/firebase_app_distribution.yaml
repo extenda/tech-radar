@@ -4,7 +4,7 @@ blip:
   - date: 2020-11-13
     ring: ASSESS
 description: |
-  [Firebase App Distribution](https://firebase.google.com/docs/app-distribution) enables distributing mobile apps 
+  [Firebase App Distribution](https://firebase.google.com/docs/app-distribution) enables distributing mobile apps
   to trusted testers
 rationale: |
   It would allow us to extend our CI/CD pipeline with distributing our mobile apps variants(e.g. staging),
@@ -13,7 +13,12 @@ license:
   commercial:
     company: Google
     description: |
-      The solution is free 
+      The solution is free
+related:
+  - qa/app_center.yaml
 tags:
   - mobile
   - cloud
+  - android
+  - ios
+  - ci
