@@ -9,6 +9,12 @@ description: |
 rationale: |
   It would allow us to extend our CI/CD pipeline with distributing our mobile apps variants(e.g. staging),
   as on Android Play or Apple Testflight one can only upload one build variant(i.e. production)
+
+  We should asses how easy and convenient is to distribute builds through Firebase 
+  contrary to AppCenter being that Firebase Distribution comes for free with the GCP.
+
+  This scope of this blip is Firebase App Distribution vs AppCenter Distribution hence it wont
+  put on hold AppCenter as per se.
 license:
   commercial:
     company: Google
