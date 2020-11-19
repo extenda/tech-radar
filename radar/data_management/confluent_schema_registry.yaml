@@ -10,18 +10,17 @@ description: |
   applications to enable compatibility. Schema Registry is available as a
   software component of Confluent Platform or as a managed component of
   Confluent Cloud.
-rationale: |
-  Develop using standard schemas
   Store and share a versioned history of all standard schemas, and validate
   data compatibility at the client level.Schema Registry supports Avro,
   JSON and Protobuf serialization formats.
-
-  Reduce operational complexity
-  Schema Registry reduces operational complexity in the application
-  development cycle, because it eliminates the need for complex coordination
-  among developers. Need to add a new column to a downstream database?
-  You don’t need an involved change process and at least 5 meetings to
-  coordinate 20 teams.
+rationale: |
+  Using a central repository for storing schemas will simplify development efforts and compliance across
+  Hii Retail services. A central management will provide all clans with the needed functionality to
+  maintain and version their schemas. Schema Registry functionality to assess:
+  - APIs for managing schemas
+  - Security and availability
+  - How it integrates with our services
+  - Do we need to include the entire schema in AVRO messages or just a reference
 license:
   commercial:
     company: Confluent
@@ -41,3 +40,4 @@ tags:
   - protobuf
   - json
   - bigquery
+  - pubsub
