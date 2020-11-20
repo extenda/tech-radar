@@ -11,7 +11,7 @@ description: |
   software component of Confluent Platform or as a managed component of
   Confluent Cloud.
   Store and share a versioned history of all standard schemas, and validate
-  data compatibility at the client level.Schema Registry supports Avro,
+  data compatibility at the client level. Schema Registry supports Avro,
   JSON and Protobuf serialization formats.
 rationale: |
   Using a central repository for storing schemas will simplify development efforts and compliance across
