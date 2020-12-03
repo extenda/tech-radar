@@ -1,7 +1,7 @@
 name: Flutter
 logo: https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png
 blip:
-  - date: 2020-04-06
+  - date: 2020-12-03
     ring: ASSESS
 description: |
   Flutter is Google’s UI toolkit for building beautiful, natively
@@ -20,6 +20,16 @@ rationale: |
   help developers easily achieve a constant 60fps.
   Flutter apps run via natively compiled code — no interpreters are involved.
   This means Flutter apps start quickly.
+
+  We are assessing the following
+
+  * If Github actions can build Flutter applications in a satisfactory way
+  * If Github actions can distribute to iOS Appstore and Google Playstore
+  * If UI testing can be automated on build
+  * If Flutter integrates with Extendaretail code quality tools
+  * Analytics and Crashlytics diagnostic capabilities
+  * Feedback from go live with first customer
+
 license:
   open-source:
     name: BSD-3
