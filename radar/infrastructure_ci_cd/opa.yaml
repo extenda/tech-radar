@@ -4,9 +4,17 @@ blip:
     ring: ASSESS
   - date: 2020-04-13
     ring: TRIAL
+  - date: 2020-08-29
+    ring: ADOPT
 description: |
   Open Policy Agent
 rationale: |
+  As the technology landscape is becoming more complex, concerns such as security need more automation and engineering
+  practices. When building systems, we need to take into consideration security policies, which are rules and procedures
+  to protect our systems from threats and disruption. For example, access control policies define and enforce who can
+  access which services and resources under what circumstances; by contrast, network security policies can dynamically
+  limit the traffic rate to a particular service.
+
   The Open Policy Agent (OPA, pronounced “oh-pa”) is an open source, general-purpose policy engine that unifies
   policy enforcement across the stack. OPA provides a high-level declarative language that let’s you specify
   policy as code and simple APIs to offload policy decision-making from your software. You can use OPA to
