@@ -1,8 +1,11 @@
-name: Cloud Run
+name: Cloud Run for Anthos
+shortname: Cloud Run
 logo: https://cloud.google.com/images/serverless/cloud-run.svg
 blip:
   - date: 2020-02-05
     ring: TRIAL
+  - date: 2020-10-05
+    ring: ADOPT
 description: |
   Cloud Run is a servless compute platform on Google Cloud Platform that automatically scales your stateless containers.
   Cloud Run is built on top of Knative and Kubernetes and abstract away most of the complexity to allow development
@@ -15,16 +18,13 @@ rationale: |
   Cloud Run comes in two flavors:
 
     1. Fully-managed by Google
-    2. On top of GKE with Knative
+    2. Cloud Run for Anthos, running on GKE with Knative
 
-  With fully-managed Cloud Run there's no need for a GKE cluster and you pay for the compute time. The fully-managed
-  solution comes with a few restrictions as that what GCP resources can be used and how deployment works. These
-  restrictions will reduce over time and with the ease to migrate to Cloud Run on GKE, our approach is to start with
-  fully-managed Cloud Run that we anticipate we eventually will migrate.
+  We have adopted Cloud Run for Anthos as this gives us a serverless compute platform from the developer perspective,
+  but also supports the nobs we need to turn in the cloud native platform.
 
-  Regardless whether fully-managed Cloud Run or GKE Cloud Run is used, developers will be able to use the same tools
-  to deploy their containers.
-
+  With Cloud Run for Anthos, we support a continuous deployment pipeline with GitHub Actions, policy-based
+  authorization with Open Policy Agent and integrated metrics and monitoring with Cloud Operations.
 license:
   commercial:
     company: Google
@@ -35,6 +35,7 @@ related:
   - infrastructure_ci_cd/gcp.yaml
   - infrastructure_ci_cd/knative.yaml
   - infrastructure_ci_cd/kubernetes.yaml
+  - infrastructure_ci_cd/opa.yaml
 tags:
   - cloud
   - gcp
