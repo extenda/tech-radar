@@ -1,0 +1,22 @@
+name: Trivy
+logo: https://github.com/aquasecurity/trivy/blob/main/imgs/logo.png
+blip:
+  - date: 2021-01-19
+    ring: ADOPT
+description: |
+  [Trivy](https://github.com/aquasecurity/trivy) is a simple and comprehensive vulnerability scanner
+  for containers and other artifacts, suitable for CI.
+rationale: |
+  Trivy allows to detect vulnerabilities in **OS packages**
+  (Alpine, Red Hat Universal Base Image, Red Hat Enterprise Linux, CentOS, Oracle Linux, Debian, Ubuntu, Amazon Linux,
+  openSUSE Leap, SUSE Enterprise Linux, Photon OS and Distroless)
+  and **Application dependencies** (Bundler, Composer, Pipenv, Poetry, npm, yarn, Cargo and NuGet).
+
+  It is very fast and has almost the same sthength as GCP Container Registry Scanning service,
+  but it's totaly free of charge.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/aquasecurity/trivy/blob/main/LICENSE
+tags:
+  - security
