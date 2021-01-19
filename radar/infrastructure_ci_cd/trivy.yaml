@@ -2,7 +2,7 @@ name: Trivy
 logo: https://github.com/aquasecurity/trivy/blob/main/imgs/logo.png
 blip:
   - date: 2021-01-19
-    ring: ADOPT
+    ring: ACCESS
 description: |
   [Trivy](https://github.com/aquasecurity/trivy) is a simple and comprehensive vulnerability scanner
   for containers and other artifacts, suitable for CI.
@@ -14,6 +14,11 @@ rationale: |
 
   It is very fast and has almost the same sthength as GCP Container Registry Scanning service,
   but it's totaly free of charge.
+  Tested with *vulnerables/web-dvwa* vulnerable image, trivy found 391 CVEs, (CRG found 399 CVEs).
+
+  To enforse in workflow https://github.com/aquasecurity/trivy-action can be used, althought it currently doesn't
+  provide fine-grained options such as list of ignored CVEs.
+
 license:
   open-source:
     name: Apache-2.0
