@@ -2,6 +2,8 @@ name: Styra DAS
 blip:
   - date: 2020-06-18
     ring: ASSESS
+  - date: 2020-11-02
+    ring: ADOPT
 description: |
   [Styra DAS](https://www.styra.com/manage-open-policy-agent-with-styra-das) is a SaaS management and
   control plane for Open Policy Agent (OPA).
@@ -10,14 +12,13 @@ rationale: |
   service policies from GitHub, supports stack and libraries for policy reuse and differentiates between
   ingress (Envoy integration) and application (service integration) policy declarations.
 
-  The main things we're assessing are:
+  We've adopted Styra DAS to help us succeed in these areas:
 
-    * Styra DAS as a control plane for our OPA services
-    * Styra DAS as our data bundle server to avoid building a highly-available bundle server ourselves.
-      With Styra, we only need to build a smaller integration layer between our IAM and Styra DAS
-    * How Styra DAS can be used to author policies interactively to see how the changes affect previous
-      decision logs
-    * How Styra DAS can help us in unit testing our service policies, both interactively and from CI/CD
+    * Managing policy-as-code as part of an established GitOps process
+    * Validating the impact of policy changes before committing or deploying
+    * Distributing policy across a large number of OPAs running on multiple K8S clusters
+    * Monitoring authorization decisions in real time, and historically, to ensure policy works as expected
+
 license:
   commercial:
     company: Styra
