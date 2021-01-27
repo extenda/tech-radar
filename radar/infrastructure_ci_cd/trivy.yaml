@@ -16,8 +16,9 @@ rationale: |
   but it's totaly free of charge.
   Tested with *vulnerables/web-dvwa* vulnerable image, trivy found 391 CVEs, (CRG found 399 CVEs).
 
-  To integrate in workflow the [trivy-action](https://github.com/aquasecurity/trivy-action) can be used. The good startpoint
-  is to alert only CRITICAL and HIGH severity vulnerabilities, and ignore vulnerabilities which don't have fixes.
+  To integrate in workflow the [trivy-action](https://github.com/aquasecurity/trivy-action) can be used.
+  The good startpoint is to alert only CRITICAL and HIGH severity vulnerabilities, and ignore vulnerabilities
+  which don't have fixes.
 
   False-positives can be eliminated by adding CVE to `.trityigrnore` file in the root of the repository.
   However before adding CVE to ignored list ensure that:
