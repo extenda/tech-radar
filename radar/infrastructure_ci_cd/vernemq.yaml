@@ -1,0 +1,27 @@
+name: VerneMQ
+shortname: VerneMQ
+logo: https://vernemq.com/images/og-vernemq-logo.png
+blip:
+  - date: 2021-01-28
+    ring: ASSESS
+description: |
+  [VerneMQ](https://vernemq.com) is first and foremost a MQTT publish/subscribe message broker which
+  implements the OASIS industry standard MQTT protocol. But VerneMQ is also built to take messaging and IoT
+  applications to the next level by providing a unique set of features related to scalability, reliability
+  and high-performance as well as operational simplicity.
+rationale: |
+  We communicate with peripherals with the lightweight MQTT protocol and need a message broker that handles that.
+  VerneMQ is low cost alternative to Google Cloud IoT that is the GCP option.
+
+  Some interesting feature of VerneMQ to assess:
+    * Cluster support
+    * Bridge support
+    * Multi-tenancy through different mount points in the topic tree
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/vernemq/vernemq/blob/master/LICENSE.txt
+tags:
+  - mqtt
+  - messaging
+  - pubsub
