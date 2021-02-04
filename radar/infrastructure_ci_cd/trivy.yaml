@@ -13,7 +13,7 @@ rationale: |
   and **Application dependencies** (Bundler, Composer, Pipenv, Poetry, npm, yarn, Cargo and NuGet).
 
   It is very fast and has almost the same detecting power as GCP Container Registry Scanning service,
-  but it's totaly free of charge.
+  but it's totally free of charge.
   Tested with *vulnerables/web-dvwa* vulnerable image, trivy found 391 CVEs, (CRG found 399 CVEs).
 
   To integrate in workflow the [trivy-action](https://github.com/aquasecurity/trivy-action) can be used.
