@@ -11,5 +11,9 @@ rationale: |
   The great performance offered by Hazelcast is something we need to consider when building
   HiiRetail microservices. Also, being a default choice in Vert.x, a highly scalable, polyglot
   and performant toolkit, it is a great partner for the future HiiRetail services.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://docs.hazelcast.com/imdg/latest-dev/index.html#licensing
 tags:
   - java
