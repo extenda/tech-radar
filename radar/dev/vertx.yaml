@@ -11,9 +11,16 @@ description: |
 
   Vert.x contains several different components designed to make it easier for
   you to write reactive applications in a range of different languages.
-  It is a compelling approach to writing microservices!
+  It is a compelling approach to writing microservices, as it guides you towards
+  a more functional thinking when writing code. There is also very little "magic"
+  in the code - it is easy to read the source when familiar with the syntax.
+  In some sense it also encourage you to write code by "composition over inheritance".
+  Small components tends to be much easier to test, and the loosely coupled nature
+  of Vert.x (Actor model) makes everything highly testable.
 
-  As of version 4.0.2, Vert.x exposes its API in Java, JavaScript, Groovy, Ruby,
+  Also it very well supports IDEALS, which is aimed for in HiiRetail services.
+
+  As of version 4.0.3, Vert.x exposes its API in Java, JavaScript, Groovy, Ruby,
   Scala and Kotlin.
 rationale: |
   Vert.x is a very effective, highly performant framework where focus is on writing
