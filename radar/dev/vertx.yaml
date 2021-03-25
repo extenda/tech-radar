@@ -24,7 +24,7 @@ description: |
   Scala and Kotlin.
 rationale: |
   Vert.x is a very effective, highly performant framework where focus is on writing
-  small isolated classes that communicates via a shared bus; EventBus.
+  small isolated classes that communicate via a shared bus; EventBus.
   Being an unopinionated toolkit, the developer is free to do whatever fits the
   current requirement, with the set of tools Vert.x provide. A large set of modules
   brings even more functionality where needed.
