@@ -1,0 +1,28 @@
+name: Admin Labs
+blip:
+  - date: 2021-04-12
+    ring: ASSESS
+description: |
+  [AdminLabs](https://www.adminlabs.com/status-page/) is a tool to check status of services,
+  share incident, and maintenance details over internet available to our employees, customers and their stake holders.
+rationale: |
+  Use AdminLabs to check status of services ( Hii retail, Relevate and Platoform).
+  The AdminLabs pings the health check url of the services and reports back status as
+  Operation, Outage or Under Maintenance.
+  We are assessing the following:
+  * Status Page
+  * Incident notification
+  * Maintenance details
+  * Status subscription
+  * How easy is setup
+  * How to configure status page for Hii retail services, Relevate per customer and Platform services
+  * more details for the assessment available at
+    https://docs.google.com/presentation/d/16iPTFRKRX1n_xX_RB1S2soXo8-qeliRkWQAfes2nHCg/edit?usp=sharing
+license:
+  commercial:
+    company: Admin Labs
+    description: https://www.adminlabs.com/status-pages-pricing/
+tags:
+  - Services status check
+  - Hii Retail
+  - Relevate
