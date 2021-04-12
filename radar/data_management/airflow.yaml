@@ -1,0 +1,38 @@
+name: Airflow
+blip:
+  - date: 2021-04-08
+    ring: ASSESS
+description: |
+  [Airflow](https://airflow.apache.org/docs/apache-airflow/stable/index.html) is a tool to programmatically create,
+  schedule, and monitor workflows.
+rationale: |
+  Use Airflow to create workflows as Directed Acyclic Graphs (DAGs) of tasks as a Python code.
+  The Airflow scheduler executes your tasks on an array of workers while following the specified dependencies.
+  Airflow wrap and simplify the writing of Bash, SQL, Python scripts and also support GCP specific operations,
+  like communication with Cloud Storage or BigQuery.
+  The rich user interface makes it easy to visualize pipelines running in production,
+  monitor progress, and troubleshoot issues when needed.
+
+  We are assessing the following:
+
+  * Deployment and management of Airflow cluster components
+  * Airflow cluster observability
+  * Pricing for Cloud Composer (Google managed Airflow solution)
+  * Integration with Google tools
+  * How easy is write DAGs
+  * How to test, deploy and control versions of DAGs
+  * How DAGs are flexible(Dynamic DAG creation based on input)
+  * DAG auto-healing, auto retries, fail notifications
+  * UI functionality. DAG execution visualization
+  * Authentification/Authorization granularity
+  * Community adoption (number of contributors, releases frequency,
+  popularity among commercial providers - GCP, AWS, Azur, etc)
+
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://airflow.apache.org/docs/apache-airflow/stable/license.html
+tags:
+  - workflows orchestration
+  - python
+  - kubernetes
