@@ -13,7 +13,7 @@ rationale: |
   using TypeScript.
 license:
   open-source:
-    name: Apache 2.0
+    name: Apache-2.0
     link: https://github.com/microsoft/TypeScript/blob/master/LICENSE.txt
 related:
   - dev/react.yaml
