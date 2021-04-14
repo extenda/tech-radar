@@ -7,7 +7,7 @@ description: |
   TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 rationale: |
   Typescript has proven it's value in development, by enabling developers to write
-  more strict and reliable code. With TS, it is safe to refactor code, because 
+  more strict and reliable code. With TS, it is safe to refactor code, because
   types will ensure, that your functions return what the suppose to.
   For Angular projects TypeScript is a requirement, this blip is for React projects
   using TypeScript.
