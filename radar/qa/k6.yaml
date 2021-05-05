@@ -11,6 +11,8 @@ rationale: |
   our CI pipeline, making it an ideal tool for our new services and products.
 
   Adding Checks and Thresholds as pass/fail criterias to our scripts will get us quick feedback when we do changes.
+
+  [Brainery course](https://brainery.bridgeapp.com/learner/courses/6b86d55f/enroll)
 tags:
   - api
   - test
