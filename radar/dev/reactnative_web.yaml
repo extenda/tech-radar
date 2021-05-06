@@ -1,7 +1,7 @@
 name: React Native Web
 blip:
   - date: 2021-04-30
-    ring: TRIAL
+    ring: ASSESS
 description: |
   "React Native for Web" makes it possible to run React Native components and APIs on the web using React DOM.
 rationale:
@@ -11,7 +11,7 @@ rationale:
 
   Of course this is not for all types of apps but where we need to support more plaforms.
 
-  We'd like to trial this for Cloud POS and Attendant App where we need web support besides Android/iOS and
+  We'd like to assess this for Cloud POS and Attendant App where we need web support besides Android/iOS and
   where maintaing a separate web interface adds more complexity for the team and time to market.
 license:
   open-source:
