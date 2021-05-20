@@ -5,14 +5,14 @@ blip:
 description: |
   "React Native for Web" makes it possible to run React Native components and APIs on the web using React DOM.
 rationale:
-  Allows to have a React Native app that runs in the browser. Going forward, the trend of having a code base
-  that runs in the browser besides of JS is just about to increase with the help of WebAssembly(Flutter Web, Blazor)
-  even though RN Web isnt based on it.
+  Allows having a React Native app that runs in the browser. Going forward, the trend of having a codebase
+  that runs in the browser besides JS is just about to increase with the help of WebAssembly(Flutter Web, Blazor)
+  even though RN Web isn't based on it.
 
-  Of course this is not for all types of apps but where we need to support more plaforms.
+  Of course, this is not for all types of apps but where we need to support more platforms.
 
   We'd like to assess this for Cloud POS and Attendant App where we need web support besides Android/iOS and
-  where maintaing a separate web interface adds more complexity for the team and time to market.
+  where maintaining a separate web interface adds more complexity for the team and time to market.
 license:
   open-source:
     name: Apache-2.0
