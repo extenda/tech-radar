@@ -1,33 +1,38 @@
-name: Structurizr (C4)
+name: Structurizr DSL (C4)
 blip:
   - date: 2020-06-26
     ring: ASSESS
+  - date: 2021-05-20
+    ring: ADOPT
 description: |
-  [Structurizr](https://structurizr.com) is both a set of APIs and a SaaS that allows generating
-  [C4 diagrams](https://c4model.com) from code models.
+  [Structurizr DSL](https://github.com/structurizr/dsl#readme) is a C4 model DSL that allows us to express our
+  architecture diagrams as code.
 rationale: |
-  We should assess if C4 models are easier to maintain and create from code, rather than using
-  diagramming tools such as LucidChart.
+  We need a consistent and uniform way to document architecture for our Hii Retail services. Without a
+  common way to create diagrams, teams choose very different abstraction levels and visual style for
+  their architecture diagrams, or choose to not create any diagrams at all.
 
-  To create diagrams, use the API implementation for your language
-    * [structurizr-java](https://github.com/structurizr/java)
-    * [structurizr-dotnet](https://github.com/structurizr/dotnet)
+  We have decided to use the [C4 model](https://c4model.com) to describe our microservice systems.
+  We have also decided to create diagrams as code using the
+  [Structurizr DSL](https://github.com/structurizr/dsl#readme). Diagrams will be treated as code and live
+  in GitHub. We want to avoid "yet another tool" (e.g. Lucidchart) where documents would exist.
+  Assets (PNGs) generated from the model should also be commited to GitHub.
 
-  Things we wish to assess:
-    * Are the APIs for Java and Dotnet easier or more productive to use than LucidChart?
-    * Is PlantUML output good enough for our needs?
-    * Do we want to use the APIs with a Structurizr SaaS license to render diagrams in cloud?
+  With the adoption of Structurizr DSL we see the following consequences
+
+    * We have introduced a [structurizr-to-png](https://github.com/extenda/structurizr-to-png#readme)
+      tool to generate images from DSL files.
+    * The diagrams as code approach will from now on ensure that all our architecture diagrams have
+      the same look and feel.
+    * We can still use other tools for diagrams that are not C4. This decision has no immediate
+      impact on tools like Lucidchart, but they should not be used for C4 anymore.
 license:
   open-source:
     name: Apache-2.0
     link: https://github.com/structurizr/java/blob/master/LICENSE
     description: |
-      The API clients are open-source and can be used without Structurizr SaaS to create models and export them to
-      Graphviz or PlantUML.
-  commercial:
-    company: Structurizr Ltd
-    description: |
-      Use of the Structurizr SaaS requires a paid subscription for workspaces on https://structurizr.com.
+      The DSL and API clients are open-source and used together with our own open source tool
+      [structurizr-to-png](https://github.com/extenda/structurizr-to-png#readme) to generate PNGs.
 related:
   - qa/decision_records.yaml
 tags:
