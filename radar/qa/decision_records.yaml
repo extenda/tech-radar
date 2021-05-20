@@ -5,6 +5,8 @@ blip:
     ring: ASSESS
   - date: 2020-06-26
     ring: TRIAL
+  - date: 2021-05-20
+    ring: ADOPT
 description: |
   [Architectural Decision Records (ADR)](https://adr.github.io/) captures
   a single Architecutral Decision and together forms a decision log.
@@ -13,18 +15,9 @@ rationale: |
   The main rationale for doing this is that its an easy and common way to follow decisions
   and see the rationale behind that specific decision.
 
-  Architectural Decision Records follows this syntax:
-  ````
-  In the context of <use case/user story u>,
-  facing <concern c> we decided for <option o>
-  and neglected <other options>,
-  to achieve <system qualities/desired consequences>,
-  accepting <downside d/undesired consequences>,
-  because <additional rationale>.
-  ````
-
-  We recommend using the [adr-tools](https://github.com/npryce/adr-tools) utility to create and maintain
-  ADRs in your GitHub repository.
+  We should use the [adr-tools](https://github.com/npryce/adr-tools) utility to create and maintain
+  ADRs in your GitHub repository. We have wrapped the tool in
+  [docker-adr-tools](https://github.com/extenda/docker-adr-tools) to make it easily accessible on all platforms.
 related:
   - qa/structurizr.yaml
 tags:
