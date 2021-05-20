@@ -3,6 +3,8 @@ shortname: Conv. Commits
 blip:
   - date: 2020-04-14
     ring: TRIAL
+  - date: 2021-05-20
+    ring: ADOPT
 description: |
   [Conventional Commits](https://conventionalcommits.org) are used to add human and machine
   readable meaning to commit messages, allowing them to be used for automated semantical
