@@ -21,3 +21,5 @@ tags:
   - java
   - javascript
   - web
+related:
+  - dev/asyncapi.yaml

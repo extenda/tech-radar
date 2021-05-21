@@ -1,0 +1,27 @@
+name: AsyncAPI
+logo: https://raw.githubusercontent.com/asyncapi/spec/master/assets/logo.png
+blip:
+  - date: 2021-05-20
+    ring: ASSESS
+description: |
+  The [AsyncAPI initiative](https://www.asyncapi.com) is a specification for event driven APIs.
+  It is inspired by OpenAPI and borrows concepts and schema modelling for some interoperability.
+rationale: |
+  [AsyncAPI](https://www.asyncapi.com) is worth investigating as we miss a unified way to define
+  and document our event driven APIs.
+
+  What we need to assess:
+
+    * Can we express our event driven APIs in a useful way?
+    * Is the generated documentation good enough and in pair with what we can build from OpenAPI?
+    * Can we publish the documentation in our developer portal?
+    * Can we use OpenAPI specs for runtime validation or code generation?
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/asyncapi/spec/blob/master/LICENSE
+tags:
+  - api
+related:
+  - dev/openapi.yaml
+  - infrastructure_ci_cd/pubsub.yaml
