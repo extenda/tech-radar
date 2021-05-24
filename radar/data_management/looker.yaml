@@ -22,9 +22,11 @@ rationale: |
   - security that can be integrated with google
   - ad-hoc capabilities
   - development and deployment process using GitHub
+
   Looker is backed by Google and recently has become a new GCP service available in Cloud Console.
   Being a native GCP solution for creating and managing reports with powerful modern visualization
   capabilities, Looker very good fits in with our cloud-native tech stack.
+
   After successfully evaluating all major Looker's functionality,
   we decided to adopt it and use it instead of Qlik Sense.
 license:
