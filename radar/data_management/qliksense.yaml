@@ -3,6 +3,8 @@ logo: https://qlik.imgix.net/us/-/media/images/qlik/global/qlik-logo-2x.png?h=94
 blip:
   - date: 2019-05-22
     ring: ADOPT
+  - date: 2021-05-24
+    ring: HOLD
 description: |
   Qlik Sense is a business intelligence (BI) and visual analytics platform that
   supports dashboards, custom and embedded analytics, and self-service
@@ -18,12 +20,16 @@ rationale: |
   In April 2019 Qlik announced the general availablitity of Qlik Sense Enterprise
   for Kubernetes clusters using containers. This version would offer a much more
   scalable solution, to provide BI as a services for our clients.
+
+  After successfully evaluating all major Looker's functionality,
+  we decided to adopt it and use it instead of Qlik Sense.
 license:
   commercial:
     company: Qlik
     description: |
       Using Qlick Sense requires a license from Qlik.
 related:
+  - data_management/looker.yaml
   - data_management/qlikview.yaml
 tags:
   - bi
