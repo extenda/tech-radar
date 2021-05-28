@@ -29,7 +29,7 @@ rationale: |
 license:
   open-source:
     name: MIT
-    link: https://github.com/spring-projects/spring-framework/blob/master/LICENSE.txt
+    link: https://github.com/nodejs/node/blob/master/LICENSE
 tags:
   - javascript
   - js

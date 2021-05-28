@@ -3,14 +3,26 @@ logo: https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png
 blip:
   - date: 2019-03-29
     ring: TRIAL
+  - date: 2021-04-14
+    ring: ADOPT
 description: |
   TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 rationale: |
+  Typescript has proven its value in development, by enabling developers to write
+  more strict and reliable code. With TS, it is safe to refactor code, because
+  types will ensure, that your functions return what they suppose to.
   For Angular projects TypeScript is a requirement, this blip is for React projects
   using TypeScript.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/microsoft/TypeScript/blob/master/LICENSE.txt
 related:
   - dev/react.yaml
   - dev/angular.yaml
+  - dev/nodejs.yaml
 tags:
   - javascript
   - web
+  - nodejs
+  - typescript
