@@ -1,0 +1,33 @@
+name: Vertex AI
+blip:
+  - date: 2021-06-25
+    ring: ASSESS
+description: |
+  [Vertex AI](https://cloud.google.com/vertex-ai) is a Google Cloud service and a unified
+  AI platform that provides tooling for building, deploying, and scaling pre-trained and custom ML models.
+rationale: |
+  Vertex AI brings AutoML and AI Platform together into a unified API and user interface.
+  AutoML is used to train models on image, tabular, text, and video datasets without writing code,
+  while training in AI Platform lets us create custom models.
+  With Vertex AI, both AutoML training and custom training are available options.
+  Whichever option is chosen for training, models can be saved, deployed, and used for predictions with Vertex AI.
+
+  Vertex AI provides functionality for managing all stages of Machine Learning workflows, including the following:
+  - creating and managing datasets
+  - training ML models on provided data
+  - uploading and storing custom models
+  - deploying models to an endpoint for serving predictions
+  - sending prediction requests to endpoints
+  - specifying a prediction traffic split in endpoints
+  - managing models and endpoints
+
+  The main benefit of using Vertex AI is that it significantly simplifies the process
+  of building, serving, and scaling ML models on GCP.
+license:
+  commercial:
+    company: Google
+tags:
+  - artificial-intelligence
+  - machine-learning
+  - ml
+  - predictions
