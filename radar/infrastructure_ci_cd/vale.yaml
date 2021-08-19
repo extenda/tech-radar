@@ -8,17 +8,20 @@ description: |
   Vale is also available as a GitHub Action.
 rationale: |
   Vale allows us to lint natural language.
-  
-  Through the possibility to create Extenda specific styles, we can customize what's considered errors, 
+
+  Through the possibility to create Extenda specific styles, we can customize what's considered errors,
   warnings, or suggestions. [Vale-Studio](https://vale-studio.errata.ai/) is a tool for developing such writing rules.
-  The community around Vale also makes officially maintained styles available for download to be used as-is or as part of a custom style.
+  The community around Vale also makes officially maintained styles available for download to be used as-is
+  or as part of a custom style.
   
-  Vale also has a concept about custom vocabularies. These allow you to maintain custom lists of terminology independent of your styles.
+  Vale also has a concept about custom vocabularies.
+  These allow you to maintain custom lists of terminology independent of your styles.
+
+  Since Vale is available as both a CLI and GitHub action, we can, with some configuration,
+  create commit hooks that will run Vale in development environments before we push changes.
   
-  Since Vale is available as both a CLI and GitHub action, we can, with some configuration, 
-  create commit hooks that will run Vale in development environments before we push changes. 
-  
-  [Vale-Server](https://errata.ai/vale-server/) (a cross-platform desktop application) looks like a good non-developer alternative to the CLI. 
+  [Vale-Server](https://errata.ai/vale-server/) (a cross-platform desktop application)
+  looks like a good non-developer alternative to the CLI.
   However, there is a monthly license cost attached to this alternative.
 
 license:
