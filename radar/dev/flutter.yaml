@@ -3,25 +3,26 @@ logo: https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.pn
 blip:
   - date: 2020-04-06
     ring: ASSESS
+  - date: 2021-09-23
+    ring: ADOPT
 description: |
   Flutter is Google’s UI toolkit for building beautiful, natively
   compiled applications for mobile from a single codebase.
 rationale: |
-  Flutter is engineered for high development velocity.
-  This makes it perfect for building minimum viable products.
+  Flutter is engineered for high development velocity. That makes the framework perfect for
+   building minimum viable products and considerably decreases time to market for full-blown applications.
 
-  Flutter provides its own set of widgets, which gives consistent look on
-  different platforms. This also means, that developers don't have to
-  touch native code - you can use the wide range of pre-existing
-  widgets or create your own - the technology allows you to control
-  every pixel on the screen.
+  Flutter provides its own set of widgets, which gives a consistent look on different platforms. That
+   also means that developers don't have to touch native code - you can use a wide range of pre-existing
+   widgets or create your own, freeing up development time for innovation and business logic.
 
-  You can expect excellent performance. Flutter is designed to
-  help developers easily achieve a constant 60fps.
-  Flutter apps run via natively compiled code — no interpreters are involved.
-  This means Flutter apps start quickly.
+  You can expect excellent performance. Flutter is designed to help developers easily achieve a constant
+   60fps. Flutter apps run via natively compiled code — no interpreters are involved. The UI will render
+   directly on a native canvas via the Skia engine, instead of linking to native components.
 
-  We are assessing the following
+  Flutter apps start quickly, perform well and produce a snappy and fast user experience.
+
+  We are assessing the following.
 
   * If Github actions can build Flutter applications in a satisfactory way
   * If Github actions can distribute to iOS Appstore and Google Playstore
@@ -30,6 +31,18 @@ rationale: |
   * Analytics and Crashlytics diagnostic capabilities
   * Feedback from go live with first customer
 
+  Assesment results.
+
+  We managed to build multiple pipelines for different tenants with Github actions. We deploy
+   to test flight,firebase app tester, Apple Spp Store, and Google Play Store via the Fastlane action.
+   Flutter is highly testable and we automated the testing process in our CI/CD pipeline.
+
+  There is a limitation with the integration with the Extendaretail's Sonarqube server because it's not
+   extendable with plugins. We use code diagostics and monitoring with Firebase Crashlytics
+   and Firebase Analytics.
+
+  We are going live shortly with our first tenant. We havn't recived any feedback on apps
+   in production.
 license:
   open-source:
     name: BSD-3
