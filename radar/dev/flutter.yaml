@@ -31,17 +31,17 @@ rationale: |
   * Analytics and Crashlytics diagnostic capabilities
   * Feedback from go live with first customer
 
-  Assesment results.
+  Assessment results.
 
   We managed to build multiple pipelines for different tenants with Github actions. We deploy
-   to test flight,firebase app tester, Apple Spp Store, and Google Play Store via the Fastlane action.
+   to test flight,firebase app tester, Apple App Store, and Google Play Store via the Fastlane action.
    Flutter is highly testable and we automated the testing process in our CI/CD pipeline.
 
-  There is a limitation with the integration with the Extendaretail's Sonarqube server because it's not
-   extendable with plugins. We use code diagostics and monitoring with Firebase Crashlytics
+  There is a limitation with the integration with Extendaretail's Sonarqube server because it's not
+   extendable with plugins. We use code diagnostics and monitoring with Firebase Crashlytics
    and Firebase Analytics.
 
-  We are going live shortly with our first tenant. We havn't recived any feedback on apps
+  We are going live shortly with our first tenant. We haven't received any feedback on apps
    in production.
 license:
   open-source:
