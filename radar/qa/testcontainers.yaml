@@ -16,7 +16,7 @@ rationale: |
     Application integration tests: for running your application in a short-lived test mode with dependencies,
     such as databases, message queues or web servers.
 
-    UI/Acceptance tests: use containerized web browsers, compatible with Selenium, for conducting automated UI tests. 
+    UI/Acceptance tests: use containerized web browsers, compatible with Selenium, for conducting automated UI tests.
     Each test can get a fresh instance of the browser, with no browser state,
     plugin variations or automated browser upgrades to worry about.
     And you get a video recording of each test session, or just each session where tests failed.
