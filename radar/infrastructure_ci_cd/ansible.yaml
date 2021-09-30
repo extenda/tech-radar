@@ -2,11 +2,12 @@ name: Ansible
 blip:
   - date: 2019-05-22
     ring: ASSESS
+  - date: 2021-09-30
+    ring: ARCHIVE
 description: |
   [Ansible](https://github.com/ansible/ansible) is an open-source software provisioning,
   configuration management, and application-deployment tool.
-rationale:
-  We need to look into configuration management tools.
+rationale: We need to look into configuration management tools.
 related:
   - infrastructure_ci_cd/chef.yaml
   - infrastructure_ci_cd/puppet.yaml
