@@ -3,6 +3,8 @@ logo: https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-
 blip:
   - date: 2019-10-03
     ring: TRIAL
+  - date: 2021-09-30
+    ring: ARCHIVE
 description: |
   Puppeteer is an automation library which provides a high-level API to control Chrome or Chromium.
   Puppeteer runs headless by default, but can be configured to run full (non-headless) Chrome or Chromium.
