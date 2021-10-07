@@ -1,0 +1,37 @@
+name: LaunchDarkly
+blip:
+  - date: 2021-10-06
+    ring: ASSESS
+description: |
+  [LaunchDarkly](https://launchdarkly.com) is a feature toggle SaaS that makes it possible to release and rollback
+  features immediately without a redeploy. The service supports user segmentation for targeted feature previews
+  and A/B testing etc.
+rationale: |
+  LaunchDarkly allows us to implement the _Release on demand_ capability in the
+  [SAF continuous delivery pipeline](https://www.scaledagileframework.com/continuous-delivery-pipeline/).
+
+  > To support a business that wants to release on demand, features must be waiting and verified in production before
+  > the business needs them. Therefore, it’s optimal to separate the deployment process from the release process so
+  > that deployed changes move into the production environment in a manner that does not affect the behavior of the
+  > current system. This gives the teams the ability to make smaller, incremental changes, which can be deployed to
+  > production continually but are not released to end users until the time is right.
+  >
+  > © Scaled Agile, Inc.
+
+  We want to assess LaunchDarkly in the following areas
+
+    * The ability to release and rollback a feature immediately
+    * Feature toggle segmentation based on tenants, groups and potentially individuals
+    * Release on demand by product marketing
+    * Developer friendliness, implementation effort and testability
+    * Management of feature flag dependencies between services and clans
+license:
+  commercial:
+    company: LaunchDarkly
+    description: |
+      Use of LaunchDarkly will require an enterprise license agreement. The pricing is based on developer seats and
+      number of montly active users (accessing our products and services).
+tags:
+  - test
+  - ci
+  - saas
