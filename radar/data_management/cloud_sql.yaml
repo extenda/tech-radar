@@ -3,12 +3,14 @@ logo: https://upload.wikimedia.org/wikipedia/commons/1/1d/Cloud-SQL-Logo.svg
 blip:
   - date: 2020-04-08
     ring: TRIAL
+  - date: 2021-10-07
+    ring: ADOPT
 description: |
   [Cloud SQL](https://cloud.google.com/sql) is a fully-managed database service.
   It makes it easy to set up, maintain, manage, and administer
   your relational databases on Google Cloud Platform.
 
-  You can use Cloud SQL with MySQL, PostgreSQL, or SQL Server.
+  You can use Cloud SQL with MySQL, PostgreSQL, or SQL Server. Although PostgreSQL should be defacto standard.
 
   Make sure that you choose a database technology that is approved in the Tech Radar when deploying Cloud SQL.
 rationale: |
