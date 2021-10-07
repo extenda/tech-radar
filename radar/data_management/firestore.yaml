@@ -2,6 +2,8 @@ name: Cloud Firestore
 blip:
   - date: 2020-04-30
     ring: TRIAL
+  - date: 2021-10-07
+    ring: ADOPT
 description: |
   [Cloud FireStore](https://firebase.google.com/docs/firestore) Cloud Firestore is a flexible,
   scalable database for mobile, web, and server development from Firebase and Google Cloud Platform.
