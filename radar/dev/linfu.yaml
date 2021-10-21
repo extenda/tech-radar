@@ -2,6 +2,8 @@ name: LinFu
 blip:
   - date: 2019-05-22
     ring: HOLD
+  - date: 2021-09-30
+    ring: ARCHIVE
 description: |
   Dependency injection framework.
 rationale: |

@@ -2,10 +2,11 @@ name: Portainer
 blip:
   - date: 2019-05-22
     ring: HOLD
+  - date: 2021-09-30
+    ring: ARCHIVE
 description: |
   [Portainer](https://www.portainer.io/) is a Docker and Docker Swarm manager.
-rationale:
-  Enables easy management of Docker and Docker Swarm in a easy to understand web interface.
+rationale: Enables easy management of Docker and Docker Swarm in a easy to understand web interface.
 related:
   - infrastructure_ci_cd/docker.yaml
   - infrastructure_ci_cd/docker_swarm.yaml

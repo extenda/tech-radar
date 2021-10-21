@@ -4,10 +4,11 @@ blip:
     ring: ASSESS
   - date: 2019-09-16
     ring: TRIAL
+  - date: 2021-09-30
+    ring: ARCHIVE
 description: |
   [Consul](https://www.consul.io/) is a service for service discovery, segmentation and configuration.
-rationale:
-  We need to take a closer look into how to store and manage configuration etc. Consul is one of the options.
+rationale: We need to take a closer look into how to store and manage configuration etc. Consul is one of the options.
 license:
   open-source:
     name: MPL-2.0

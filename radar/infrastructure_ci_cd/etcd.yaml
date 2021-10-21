@@ -2,10 +2,11 @@ name: etcd
 blip:
   - date: 2019-05-22
     ring: TRIAL
+  - date: 2021-09-30
+    ring: ARCHIVE
 description: |
   [etcd](https://coreos.com/etcd/) is a distributed key value store.
-rationale:
-  We need to take a closer look into how to store and manage configuration etc. Etcd is one of the options.
+rationale: We need to take a closer look into how to store and manage configuration etc. Etcd is one of the options.
 related:
   - infrastructure_ci_cd/consul.yaml
   - data_management/zookeeper.yaml

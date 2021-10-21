@@ -2,9 +2,10 @@ name: .NET Framework
 blip:
   - date: 2019-05-22
     ring: HOLD
+  - date: 2021-09-30
+    ring: ARCHIVE
 description: |
   Software framework that runs on Windows
-rationale:
-  Enabling us to make software for the Windows platform.
+rationale: Enabling us to make software for the Windows platform.
 tags:
   - dotnet
