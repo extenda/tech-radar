@@ -5,15 +5,15 @@ const Icon = (props) => {
   const { name, spaceBefore } = props;
 
   return (
-    <React.Fragment>
+    <>
       {spaceBefore && (
-        <React.Fragment>
+        <>
           {' '}
-        </React.Fragment>
+        </>
       )}
       <i className={`fa fa-${name}`} />
       {' '}
-    </React.Fragment>
+    </>
   );
 };
 

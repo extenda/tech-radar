@@ -6,7 +6,7 @@ const NotFound = () => {
   const radar = radarService.model;
 
   return (
-    <React.Fragment>
+    <>
       <Navigation home={radar.quadrants} />
       <div className="container">
         <div className="row">
@@ -19,7 +19,7 @@ const NotFound = () => {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

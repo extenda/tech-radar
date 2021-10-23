@@ -13,7 +13,7 @@ describe('YAML Reader', () => {
 
   test('It maps licenses to tags', () => {
     const entries = [];
-    reader.collectEntries(path.resolve(__dirname, 'radar/valid'), radar,(entry) => entries.push(entry));
+    reader.collectEntries(path.resolve(__dirname, 'radar/valid'), radar, (entry) => entries.push(entry));
     expect(entries.find((entry) => entry.name === 'Java').tags).toEqual([
       '90\'s',
       'commercial',

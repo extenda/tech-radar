@@ -39,11 +39,11 @@ const renderEntry = (entry, enabled, params) => {
 
 const renderEntriesList = (params, ring) => {
   const { filter, quadrant } = params;
-  const isEnabled = entry => filter.has(-1) || filter.has(entry.id);
+  const isEnabled = (entry) => filter.has(-1) || filter.has(entry.id);
 
   return (
     <ol className={ring}>
-      {quadrant[ring].map(entry => (
+      {quadrant[ring].map((entry) => (
         <li
           value={entry.id}
           key={entry.filename}
@@ -68,7 +68,7 @@ const QuadrantList = (props) => {
   } = props;
 
   const params = {
-    filter: new Set(blips.map(b => b.id)),
+    filter: new Set(blips.map((b) => b.id)),
     quadrant,
     useShortname,
     onMouseEnter,

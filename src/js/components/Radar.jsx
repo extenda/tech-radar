@@ -77,7 +77,6 @@ export class Radar extends Component {
         blips: radarService.listBlips(),
       }), this.renderBlips);
     }
-
   }
 
   componentDidMount = () => {

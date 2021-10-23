@@ -51,11 +51,12 @@ export class App extends Component {
 
     const { ldClient } = this.props;
     if (!ldClient) {
+      // eslint-disable-next-line no-console
       console.debug('Missing LDClient property');
       return null;
     }
 
-    const { tokenId, profileObj: { googleId, email }} = response;
+    const { tokenId, profileObj: { googleId, email } } = response;
     return ldClient.identify({
       key: shajs('sha256').update(`${googleId}`).digest('hex'),
       email,

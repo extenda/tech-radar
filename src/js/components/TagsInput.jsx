@@ -49,7 +49,7 @@ class TagsInput extends Component {
       />
     );
   };
-};
+}
 
 TagsInput.getDerivedStateFromProps = (props, state) => {
   const { tags } = props;
@@ -61,7 +61,7 @@ TagsInput.getDerivedStateFromProps = (props, state) => {
     };
     return {
       tags: [],
-      suggestions: tags.map((t) => ({id: id(), name: t})),
+      suggestions: tags.map((t) => ({ id: id(), name: t })),
     };
   }
   return null;

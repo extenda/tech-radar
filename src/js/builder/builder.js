@@ -12,7 +12,7 @@ const build = (radarDir, output = 'build/js/radar.json') => {
   json.entries = [];
 
   // Read entries from YAML files.
-  reader.collectEntries(radarDir, radar,(entry) => json.entries.push(entry));
+  reader.collectEntries(radarDir, radar, (entry) => json.entries.push(entry));
 
   // Sort entries by quadrant, ring and name.
   json.entries.sort(firstBy((a, b) => a.blip.quadrant - b.blip.quadrant)

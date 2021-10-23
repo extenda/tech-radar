@@ -11,14 +11,14 @@ const Tags = (props) => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <Icon name="tags" />
-      {[...new Set(tags)].map(tag => (
+      {[...new Set(tags)].map((tag) => (
         <button key={tag} type="button" className="entry-tag">
           <Link to={`/tags/${tag}.html`}>{tag}</Link>
         </button>
       ))}
-    </React.Fragment>
+    </>
   );
 };
 

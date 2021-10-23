@@ -2,7 +2,6 @@ import { firstBy } from 'thenby';
 import { pick } from './utils';
 
 class RadarService {
-
   loadRadar = (radarPath, jwt) => fetch(radarPath, {
     headers: {
       Authorization: `Bearer ${jwt}`,
@@ -29,6 +28,7 @@ class RadarService {
     if (this.models[id]) {
       this.model = this.models[id];
     } else {
+      // eslint-disable-next-line no-console
       console.error('Unknown model ID:', id);
     }
   }

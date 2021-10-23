@@ -29,7 +29,7 @@ const COMMERCIAL_DEFAULT_TEXT = {
   Google: 'Use of this software requires a license for Google Cloud Platform.',
 };
 
-const commercialDescription = commercial => commercial.description
+const commercialDescription = (commercial) => commercial.description
   || COMMERCIAL_DEFAULT_TEXT[commercial.company];
 
 const License = (props) => {
@@ -40,7 +40,7 @@ const License = (props) => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <h2>
         License
       </h2>
@@ -74,7 +74,7 @@ const License = (props) => {
           )}
         </div>
       )}
-    </React.Fragment>
+    </>
   );
 };
 

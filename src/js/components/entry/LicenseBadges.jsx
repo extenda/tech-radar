@@ -6,14 +6,14 @@ const LicenseBadges = (props) => {
   const { license: { openSource, commercial } } = props;
 
   return (
-    <React.Fragment>
+    <>
       {openSource && (
         <Badge icon="balance-scale" className="license" text={openSource.name} link={openSource.link} />
       )}
       {commercial && (
         <Badge icon="balance-scale" className="license" text="Commercial" />
       )}
-    </React.Fragment>
+    </>
   );
 };
 
