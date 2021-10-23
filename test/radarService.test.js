@@ -6,6 +6,9 @@ import radarService from '../src/js/modules/radarService';
 jest.dontMock('../src/js/modules/radarService');
 
 describe('RadarService', () => {
+
+  // TODO We must deal with two files here now! Or support that we only fetch one somehow.
+
   beforeAll(async () => {
     await build(path.resolve(__dirname, 'radar/valid'));
 

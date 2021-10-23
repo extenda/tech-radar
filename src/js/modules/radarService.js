@@ -2,16 +2,36 @@ import { firstBy } from 'thenby';
 import { pick } from './utils';
 
 class RadarService {
-  init = (jwt) => fetch('/js/radar.json', {
+
+  loadRadar = (radarPath, jwt) => fetch(radarPath, {
     headers: {
       Authorization: `Bearer ${jwt}`,
     },
     credentials: 'same-origin',
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      this.model = data;
+  }).then((response) => response.json());
+
+  init = (jwt, enableToolRadar = false) => {
+    const tasks = [this.loadRadar('/js/radar.json', jwt)];
+    if (enableToolRadar) {
+      tasks.push(this.loadRadar('/js/radar_tool.json', jwt));
+    }
+    return Promise.all(tasks).then((radars) => {
+      // Set the first model to active.
+      [this.model] = radars;
+      this.models = {};
+      radars.forEach((radar) => {
+        this.models[radar.id] = radar;
+      });
     });
+  }
+
+  useModel = (id) => {
+    if (this.models[id]) {
+      this.model = this.models[id];
+    } else {
+      console.error('Unknown model ID:', id);
+    }
+  }
 
   getEntry = (filename) => this.model.entries.find((entry) => entry.filename === filename);
 

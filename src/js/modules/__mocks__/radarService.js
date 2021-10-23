@@ -111,6 +111,9 @@ export default {
     }
     return Promise.resolve(true);
   },
+  useModel: () => {
+    // No op
+  },
   listBlips: (tags = []) => {
     if (tags.length === 1 && tags[0] === 'java') {
       return [mockBlips[0]];

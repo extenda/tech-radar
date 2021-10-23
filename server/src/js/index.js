@@ -29,6 +29,13 @@ app.get('/js/radar.json', async (req, res, next) => {
   });
 });
 
+// TODO Should we just bundle both files into one? Could we return a JSON object with both radars?
+// I think we can do that... But would be better to do that at compile-time.
+// Or just make the bigger refactor to load them in a new way. But it will be a bit slower.
+
+// TODO Support /js/radar_tool.json and hide behind feature toggle!
+// Here we must also inject the LD_CLIENT_ID somehow...
+
 app.use(express.static(publicHtml));
 const server = app.listen(port, () => {
   console.log(`Listening on port ${port}`);

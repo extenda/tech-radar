@@ -2,18 +2,17 @@ const fs = require('fs-extra');
 const path = require('path');
 const { firstBy } = require('thenby');
 const reader = require('./reader');
-const radar = require('./model');
+const loadModel = require('./model');
 const { pick } = require('../modules/utils');
 
-const BUILD_DIR = 'build/js';
-
-const build = (radarDir) => {
-  fs.mkdirsSync(BUILD_DIR);
-  const json = pick(radar, 'title', 'version', 'formattedDate', 'quadrants', 'quadrantsNavBar', 'rings');
+const build = (radarDir, output = 'build/js/radar.json') => {
+  fs.mkdirsSync(path.dirname(output));
+  const radar = loadModel(radarDir);
+  const json = pick(radar, 'id', 'title', 'version', 'formattedDate', 'quadrants', 'quadrantsNavBar', 'rings');
   json.entries = [];
 
   // Read entries from YAML files.
-  reader.collectEntries(radarDir, (entry) => json.entries.push(entry));
+  reader.collectEntries(radarDir, radar,(entry) => json.entries.push(entry));
 
   // Sort entries by quadrant, ring and name.
   json.entries.sort(firstBy((a, b) => a.blip.quadrant - b.blip.quadrant)
@@ -33,7 +32,7 @@ const build = (radarDir) => {
     });
   });
 
-  return fs.writeJson(path.join(BUILD_DIR, 'radar.json'), json);
+  return fs.writeJson(output, json);
 };
 
 module.exports = {

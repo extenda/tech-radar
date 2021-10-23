@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { withLDConsumer } from 'launchdarkly-react-client-sdk';
 import SvgRadar from '../lib/radar';
 import radarService from '../modules/radarService';
 import Icon from './Icon';
@@ -9,20 +9,13 @@ import TagsInput from './TagsInput';
 import { pick } from '../modules/utils';
 import QuadrantList from './QuadrantList';
 
-export default class Radar extends Component {
-  static propTypes = {
-    history: PropTypes.shape({
-      push: PropTypes.func.isRequired,
-    }).isRequired,
-  };
-
+export class Radar extends Component {
   constructor(props) {
     super(props);
-
     this.svgRadar = this.createSvgRadar();
-
     this.state = {
       blips: radarService.listBlips([]),
+      tags: radarService.listTags(),
     };
   }
 
@@ -40,8 +33,7 @@ export default class Radar extends Component {
         grid: '#bbb',
         inactive: '#ddd',
       },
-      title: `${radar.title} - ${radar.version}`,
-      quadrants: radar.quadrants.map(q => pick(q, 'name')),
+      quadrants: radar.quadrants.map((q) => pick(q, 'name')),
       rings: [
         { name: 'Adopt', color: '#43a047' },
         { name: 'Trial', color: '#c0ca33' },
@@ -68,10 +60,25 @@ export default class Radar extends Component {
   };
 
   onFilter = (tags) => {
-    this.setState({
-      blips: radarService.listBlips(tags.map(t => t.name)),
-    }, this.renderBlips);
+    this.setState((prevState) => ({
+      ...prevState,
+      blips: radarService.listBlips(tags.map((t) => t.name)),
+    }), this.renderBlips);
   };
+
+  onChangeRadar = (e) => {
+    // We must trigger a change on the TagFilter component to update the blips!
+    const id = e.currentTarget.getAttribute('data-radar-id');
+    if (radarService.model.id !== id) {
+      radarService.useModel(id);
+      this.setState((prevState) => ({
+        ...prevState,
+        tags: radarService.listTags(),
+        blips: radarService.listBlips(),
+      }), this.renderBlips);
+    }
+
+  }
 
   componentDidMount = () => {
     this.renderRadar();
@@ -111,9 +118,37 @@ export default class Radar extends Component {
   render = () => {
     const radar = radarService.model;
 
+    const { flags } = this.props;
+    const { tags } = this.state;
+
     return (
-      <React.Fragment>
+      <>
         <Navigation home={radar.quadrantsNavBar} />
+        {flags.enableToolRadar && (
+          <>
+            <div className="u-full-width" style={{ marginBottom: '20px' }}>
+              <center>
+                <button type="button" data-radar-id="radar" onClick={this.onChangeRadar}>
+                  <Icon name="rss" />
+                  Engineering
+                </button>
+                <button type="button" data-radar-id="radar_tool" onClick={this.onChangeRadar}>
+                  <Icon name="signal" />
+                  IT & BIS
+                </button>
+              </center>
+            </div>
+            <h1 className="center">
+              {radar.title}
+              &nbsp;
+              <span className="version">
+                <Icon name="calendar" />
+                {radar.formattedDate}
+              </span>
+            </h1>
+          </>
+        )}
+        {!flags.enableToolRadar && (
         <h1 className="center">
           {radar.title}
           &nbsp;
@@ -122,8 +157,9 @@ export default class Radar extends Component {
             {radar.version}
           </span>
         </h1>
+        )}
         <div className="tags-filter">
-          <TagsInput onFilter={this.onFilter} tags={radarService.listTags()} />
+          <TagsInput onFilter={this.onFilter} tags={tags} />
         </div>
         <div className="radar-container u-full-width">
           <div className="radar-entries">
@@ -200,7 +236,21 @@ export default class Radar extends Component {
             </div>
           </div>
         </div>
-      </React.Fragment>
+      </>
     );
   };
 }
+
+Radar.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  flags: PropTypes.object,
+};
+
+Radar.defaultProps = {
+  flags: {},
+};
+
+export default withLDConsumer()(Radar);

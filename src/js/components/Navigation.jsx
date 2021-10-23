@@ -25,7 +25,7 @@ const Navigation = (props) => {
             </li>
           )}
           {entry && (
-            <React.Fragment>
+            <>
               <li key={quadrant.dirname}>
                 <Link to={`/${quadrant.dirname}.html`}>{quadrant.name}</Link>
                 <Icon name="angle-right" />
@@ -33,7 +33,7 @@ const Navigation = (props) => {
               <li key={entry.name}>
                 {entry.name}
               </li>
-            </React.Fragment>
+            </>
           )}
           {tag && (
             <li key={tag}>
@@ -52,7 +52,7 @@ const Navigation = (props) => {
           <Link to="/">Radar</Link>
           <Icon name="rss" />
         </li>
-        {home.map(q => (
+        {home.map((q) => (
           <li key={q.dirname}>
             <Link to={`/${q.dirname}.html`}>{q.name}</Link>
           </li>
