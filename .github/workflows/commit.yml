@@ -10,7 +10,7 @@ jobs:
   yamllint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - uses: actions/setup-python@v1
 
@@ -30,7 +30,9 @@ jobs:
     needs:
       - yamllint
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: NPM install
         run: |
@@ -67,7 +69,15 @@ jobs:
       - yamllint
       - test
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: extenda/actions/gcp-secret-manager@v0
+        with:
+          service-account-key: ${{ secrets.SECRET_AUTH }}
+          secrets: |
+            LD_CLIENT_ID: launchdarkly-client-id
 
       - name: Create release
         uses: extenda/actions/conventional-release@v0
@@ -120,10 +130,10 @@ jobs:
           service-account-key: ${{ secrets.GCLOUD_AUTH }}
           image: gcr.io/${{ steps.gcloud.outputs.project-id }}/tech-radar:${{ steps.semver.outputs.release-tag }}
 
-      - name: Notify Slack
-        uses: extenda/actions/slack-message@v0
-        with:
-          title: 'Extenda Retail Tech Radar ${{ steps.semver.outputs.release-tag }} :rocket:'
-          text: 'A new version of tech-radar has been deployed. See the latest changes at https://tech-radar.extendaretail.com'
-          fallback: A new version of tech-radar has been deployed.
-          service-account-key: ${{ secrets.SECRET_AUTH }}
+#      - name: Notify Slack
+#        uses: extenda/actions/slack-message@v0
+#        with:
+#          title: 'Extenda Retail Tech Radar ${{ steps.semver.outputs.release-tag }} :rocket:'
+#          text: 'A new version of tech-radar has been deployed. See the latest changes at https://tech-radar.extendaretail.com'
+#          fallback: A new version of tech-radar has been deployed.
+#          service-account-key: ${{ secrets.SECRET_AUTH }}

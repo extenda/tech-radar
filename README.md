@@ -98,7 +98,7 @@ The radar is running on http://localhost:8080.
 To run the development server with authentication enabled:
 ```bash
 $ npm run backend &
-$ npm run auth
+$ npm run frontend
 ```
 This will open the Tech Radar in your default browser.
 The radar is running on http://localhost:8080 and requires Google login.

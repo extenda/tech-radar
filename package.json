@@ -11,7 +11,7 @@
     "lint:js": "eslint --ext .js --ext .jsx src test",
     "start": "webpack-dev-server --open --watch --mode development",
     "backend": "npm start --prefix server",
-    "auth": "npm run env BACKEND=1 -- webpack-dev-server --open --watch --mode production",
+    "frontend": "npm run env BACKEND=1 -- webpack-dev-server --open --watch --mode development",
     "pip:install": "pip install --user -r .scripts/python_requirements.txt",
     "test": "jest",
     "yaml:lint": "python .scripts/yaml_lint.py",

@@ -33,14 +33,7 @@ const buildRadar = async (radarName) => {
   await Promise.all(jobs);
 };
 
-const launchDarklyClientId = (mode) => {
-  if (mode === 'development') {
-    // Staging client_id
-    return '616ee08b06d2ef0bc1c67e78';
-  }
-  // Production client_id
-  return '616ee08b06d2ef0bc1c67e76';
-};
+const launchDarklyClientId = () => process.env.LD_CLIENT_ID || '';
 
 module.exports = (env, argv) => {
   const webpack = {
