@@ -1,7 +1,14 @@
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
+const LaunchDarkly = require('launchdarkly-node-server-sdk');
+const shajs = require('sha.js');
 const { verifyRequest } = require('./verify');
+
+// Run in offline mode if LD_SDK_KEY is not set.
+const ldClient = LaunchDarkly.init(process.env.LD_SDK_KEY, {
+  offline: !process.env.LD_SDK_KEY,
+});
 
 // Handle SIGINT to gracefully exit on CTRL+C in local Docker.
 process.on('SIGINT', () => {
@@ -19,24 +26,40 @@ app.get(/.*\.html/, async (req, res) => {
   res.sendFile(path.join(publicHtml, 'index.html'));
 });
 
+function send401(res, err) {
+  res.status(401)
+    .append('WWW-Authenticate', `Bearer,error="${err.code}",error_description="${err.message}"`)
+    .end();
+}
+
 app.get('/js/radar.json', async (req, res, next) => {
-  verifyRequest(req).then(() => {
-    next();
-  }).catch((err) => {
-    res.status(401)
-      .append('WWW-Authenticate', `Bearer,error="${err.code}",error_description="${err.message}"`)
-      .end();
-  });
+  verifyRequest(req)
+    .then(() => next())
+    .catch((err) => send401(res, err));
 });
 
-// TODO Should we just bundle both files into one? Could we return a JSON object with both radars?
-// I think we can do that... But would be better to do that at compile-time.
-// Or just make the bigger refactor to load them in a new way. But it will be a bit slower.
-
-// TODO Support /js/radar_tool.json and hide behind feature toggle!
-// Here we must also inject the LD_CLIENT_ID somehow...
+app.get('/js/radar_tool.json', async (req, res, next) => {
+  verifyRequest(req).then(({ sub, email }) => ({
+    key: shajs('sha256').update(`${sub}`).digest('hex'),
+    email,
+    privateAttributeNames: ['email'],
+  })).then((user) => ldClient.variation('enable.tool-radar', user, false))
+    .then((flag) => {
+      if (flag === true) {
+        return next();
+      } else {
+        return res.status(404).end();
+      }
+    })
+    .catch((err) => send401(res, err));
+});
 
 app.use(express.static(publicHtml));
+
+(async () => {
+  await ldClient.waitForInitialization();
+})();
+
 const server = app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });

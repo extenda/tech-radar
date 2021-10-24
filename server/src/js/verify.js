@@ -16,9 +16,13 @@ const verifyToken = async (token) => client.verifyIdToken({
   idToken: token,
   audience: clientId,
 }).then((ticket) => {
-  const { hd } = ticket.getPayload();
-  return hd === hostedDomain;
-}).catch(() => false);
+  const { hd, sub, email } = ticket.getPayload();
+  return {
+    valid: hd === hostedDomain,
+    sub,
+    email,
+  };
+}).catch(() => ({ valid: false }));
 
 const verifyRequest = async (req) => {
   if (req.headers && req.headers.authorization) {
@@ -26,13 +30,13 @@ const verifyRequest = async (req) => {
     if (parts.length === 2) {
       const [scheme, credentials] = parts;
       if (/^Bearer$/i.test(scheme)) {
-        const result = await verifyToken(credentials);
-        if (!result) {
+        const auth = await verifyToken(credentials);
+        if (!auth.valid) {
           throw new AuthenticationError('invalid_token', {
             message: 'Bad credentials',
           });
         }
-        return true;
+        return auth;
       }
       throw new AuthenticationError('credentials_bad_scheme', {
         message: 'Format is Authorization: Bearer [token]',
