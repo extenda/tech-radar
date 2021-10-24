@@ -6,8 +6,6 @@ import radarService from '../src/js/modules/radarService';
 jest.dontMock('../src/js/modules/radarService');
 
 describe('RadarService', () => {
-  // TODO We must deal with two files here now! Or support that we only fetch one somehow.
-
   beforeAll(async () => {
     await build(path.resolve(__dirname, 'radar/valid'));
 
@@ -123,5 +121,16 @@ describe('RadarService', () => {
       label: 'PHP',
       id: 3,
     });
+  });
+
+  test('It can switch radar on-demand', async () => {
+    global.fetch.mockImplementationOnce(() => Promise.resolve({
+      json: () => ({ id: 'radar_tool' }),
+    }));
+    expect(Object.keys(radarService.models)).toHaveLength(1);
+    await radarService.switchRadar('radar_tool');
+    expect(global.fetch).toHaveBeenCalledTimes(2);
+    expect(Object.keys(radarService.models)).toHaveLength(2);
+    expect(radarService.model.id).toEqual('radar_tool');
   });
 });

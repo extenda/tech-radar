@@ -168,7 +168,7 @@ describe('Express', () => {
           authorization: 'Bearer VALID_DOMAIN',
         },
       });
-      expect(mockVariation).toHaveBeenCalledWith('enable.tool-radar', {
+      expect(mockVariation).toHaveBeenCalledWith('release.tool-radar', {
         key: '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08',
         email: 'test@extendaretail.com',
         privateAttributeNames: ['email'],

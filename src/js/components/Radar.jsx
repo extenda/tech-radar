@@ -70,12 +70,13 @@ export class Radar extends Component {
     // We must trigger a change on the TagFilter component to update the blips!
     const id = e.currentTarget.getAttribute('data-radar-id');
     if (radarService.model.id !== id) {
-      radarService.useModel(id);
-      this.setState((prevState) => ({
-        ...prevState,
-        tags: radarService.listTags(),
-        blips: radarService.listBlips(),
-      }), this.renderBlips);
+      radarService.switchRadar(id).then(() => {
+        this.setState((prevState) => ({
+          ...prevState,
+          tags: radarService.listTags(),
+          blips: radarService.listBlips(),
+        }), this.renderBlips);
+      });
     }
   }
 
@@ -123,7 +124,7 @@ export class Radar extends Component {
     return (
       <>
         <Navigation home={radar.quadrantsNavBar} />
-        {flags.enableToolRadar && (
+        {flags.releaseToolRadar && (
           <>
             <div className="u-full-width" style={{ marginBottom: '20px' }}>
               <center>
@@ -147,7 +148,7 @@ export class Radar extends Component {
             </h1>
           </>
         )}
-        {!flags.enableToolRadar && (
+        {!flags.releaseToolRadar && (
         <h1 className="center">
           {radar.title}
           &nbsp;

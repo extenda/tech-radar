@@ -62,7 +62,7 @@ export class App extends Component {
       email,
       privateAttributeNames: ['email'],
     }).then(camelCaseKeys)
-      .then((flags) => radarService.init(tokenId, flags.enableToolRadar)
+      .then((flags) => radarService.init(tokenId, flags.releaseToolRadar)
         .then(this.radarDidLoad)
         .catch(this.radarDidFail));
   };

@@ -2,35 +2,32 @@ import { firstBy } from 'thenby';
 import { pick } from './utils';
 
 class RadarService {
+  models = {};
+
   loadRadar = (radarPath, jwt) => fetch(radarPath, {
     headers: {
       Authorization: `Bearer ${jwt}`,
     },
     credentials: 'same-origin',
-  }).then((response) => response.json());
-
-  init = (jwt, enableToolRadar = false) => {
-    const tasks = [this.loadRadar('/js/radar.json', jwt)];
-    if (enableToolRadar) {
-      tasks.push(this.loadRadar('/js/radar_tool.json', jwt));
-    }
-    return Promise.all(tasks).then((radars) => {
-      // Set the first model to active.
-      [this.model] = radars;
-      this.models = {};
-      radars.forEach((radar) => {
-        this.models[radar.id] = radar;
-      });
+  }).then((response) => response.json())
+    .then((radar) => {
+      this.model = radar;
+      this.models[radar.id] = radar;
     });
+
+  init = (jwt = false) => {
+    this.jwt = jwt;
+    return this.loadRadar('/js/radar.json', jwt);
   }
 
-  useModel = (id) => {
+  switchRadar = async (id) => {
     if (this.models[id]) {
       this.model = this.models[id];
-    } else {
-      // eslint-disable-next-line no-console
-      console.error('Unknown model ID:', id);
+      return Promise.resolve();
     }
+    return this.loadRadar(`/js/${id}.json`, this.jwt).catch(() => {
+      console.error('Unknown model ID:', id);
+    });
   }
 
   getEntry = (filename) => this.model.entries.find((entry) => entry.filename === filename);

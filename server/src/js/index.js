@@ -43,7 +43,7 @@ app.get('/js/radar_tool.json', async (req, res, next) => {
     key: shajs('sha256').update(`${sub}`).digest('hex'),
     email,
     privateAttributeNames: ['email'],
-  })).then((user) => ldClient.variation('enable.tool-radar', user, false))
+  })).then((user) => ldClient.variation('release.tool-radar', user, false))
     .then((flag) => {
       if (flag === true) {
         return next();
