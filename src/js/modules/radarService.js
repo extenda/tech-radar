@@ -26,6 +26,7 @@ class RadarService {
       return Promise.resolve();
     }
     return this.loadRadar(`/js/${id}.json`, this.jwt).catch(() => {
+      // eslint-disable-next-line no-console
       console.error('Unknown model ID:', id);
     });
   }

@@ -47,9 +47,8 @@ app.get('/js/radar_it.json', async (req, res, next) => {
     .then((flag) => {
       if (flag === true) {
         return next();
-      } else {
-        return res.status(404).end();
       }
+      return res.status(404).end();
     })
     .catch((err) => send401(res, err));
 });
