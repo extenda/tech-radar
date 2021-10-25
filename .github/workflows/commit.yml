@@ -5,6 +5,9 @@ on:
   push:
     branches:
       - master
+  repository_dispatch:
+    types:
+      - radar-release
 
 jobs:
   yamllint:
@@ -68,6 +71,8 @@ jobs:
     needs:
       - yamllint
       - test
+    outputs:
+      docker-image-name: ${{ steps.docker-publish.outputs.docker-image-name }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -78,6 +83,17 @@ jobs:
           service-account-key: ${{ secrets.SECRET_AUTH }}
           secrets: |
             LD_CLIENT_ID: launchdarkly-client-id
+            ORG_TOKEN: github-token
+
+      - name: Checkout tool radar repository
+        uses: actions/checkout@v2
+        with:
+          token: ${{ env.ORG_TOKEN }}
+          repository: extenda/tool-radar
+          path: .tool_radar
+
+      - name: Copy tool radar
+        run: mv .tool_radar/radar radar_tool
 
       - name: Create release
         uses: extenda/actions/conventional-release@v0
@@ -102,9 +118,11 @@ jobs:
           service-account-key: ${{ secrets.GCLOUD_AUTH }}
 
       - name: Publish Docker image
+        id: docker-publish
         run: |
           gcloud auth configure-docker --quiet
           IMAGE=gcr.io/${{ steps.gcloud.outputs.project-id }}/tech-radar:${{ steps.release.outputs.release-tag }}
+          echo "::set-output name=docker-image-name::$IMAGE"
           docker build -t $IMAGE .
           docker push $IMAGE
 
@@ -114,11 +132,6 @@ jobs:
     needs:
       - release
     steps:
-      - uses: actions/checkout@v1
-
-      - uses: extenda/actions/conventional-version@v0
-        id: semver
-
       - uses: extenda/actions/setup-gcloud@v0
         id: gcloud
         with:
@@ -128,12 +141,4 @@ jobs:
         uses: extenda/actions/cloud-run@v0
         with:
           service-account-key: ${{ secrets.GCLOUD_AUTH }}
-          image: gcr.io/${{ steps.gcloud.outputs.project-id }}/tech-radar:${{ steps.semver.outputs.release-tag }}
-
-#      - name: Notify Slack
-#        uses: extenda/actions/slack-message@v0
-#        with:
-#          title: 'Extenda Retail Tech Radar ${{ steps.semver.outputs.release-tag }} :rocket:'
-#          text: 'A new version of tech-radar has been deployed. See the latest changes at https://tech-radar.extendaretail.com'
-#          fallback: A new version of tech-radar has been deployed.
-#          service-account-key: ${{ secrets.SECRET_AUTH }}
+          image: ${{ needs.release.outputs.docker-image-name }}

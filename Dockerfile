@@ -8,5 +8,6 @@ COPY --from=gcr.io/berglas/berglas:0.5.2 /bin/berglas /bin/berglas
 
 COPY build /var/www
 COPY server/dist /opt/tech-radar
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
-CMD ["/bin/berglas", "exec", "--", "/usr/local/bin/node", "/opt/tech-radar/index.js"]
+CMD ["/usr/local/bin/entrypoint.sh"]
