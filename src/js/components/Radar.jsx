@@ -132,7 +132,7 @@ export class Radar extends Component {
                   <Icon name="rss" />
                   Engineering
                 </button>
-                <button type="button" data-radar-id="radar_tool" onClick={this.onChangeRadar}>
+                <button type="button" data-radar-id="radar_it" onClick={this.onChangeRadar}>
                   <Icon name="signal" />
                   IT & BIS
                 </button>

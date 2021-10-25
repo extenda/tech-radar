@@ -38,7 +38,7 @@ app.get('/js/radar.json', async (req, res, next) => {
     .catch((err) => send401(res, err));
 });
 
-app.get('/js/radar_tool.json', async (req, res, next) => {
+app.get('/js/radar_it.json', async (req, res, next) => {
   verifyRequest(req).then(({ sub, email }) => ({
     key: shajs('sha256').update(`${sub}`).digest('hex'),
     email,

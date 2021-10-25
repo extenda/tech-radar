@@ -85,15 +85,15 @@ jobs:
             LD_CLIENT_ID: launchdarkly-client-id
             ORG_TOKEN: github-token
 
-      - name: Checkout tool radar repository
+      - name: Checkout IT & BIS radar repository
         uses: actions/checkout@v2
         with:
           token: ${{ env.ORG_TOKEN }}
-          repository: extenda/tool-radar
-          path: .tool_radar
+          repository: extenda/it-bis-radar
+          path: .it-bis_radar
 
-      - name: Copy tool radar
-        run: mv .tool_radar/radar radar_tool
+      - name: Copy IT & BIS radar
+        run: mv .it-bis_radar/radar radar_it
 
       - name: Create release
         uses: extenda/actions/conventional-release@v0

@@ -33,6 +33,13 @@ describe('<Radar />', () => {
     component.unmount();
   });
 
+  test('It renders IT & BIS radar switch', () => {
+    const component = shallow(
+      <Radar history={{ push: jest.fn() }} flags={{ releaseToolRadar: true }} />,
+    );
+    expect(component).toMatchSnapshot();
+  });
+
   test('It is possible to click radar blips', () => {
     const clickFn = jest.fn();
     const component = mount(

@@ -24,11 +24,11 @@ const buildRadar = async (radarName) => {
     jobs.push(radarBuilder.build(radarDir, path.join(outputPath, 'js', 'radar.json')));
   }
 
-  const toolRadarPath = path.join(baseDir, 'radar_tool');
+  const toolRadarPath = path.join(baseDir, 'radar_it');
 
-  if ((!radarName || radarName === 'radar_tool') && fs.existsSync(toolRadarPath)) {
-    logger.info('Build JSON radar [radar_tool]');
-    jobs.push(radarBuilder.build(toolRadarPath, path.join(outputPath, 'js', 'radar_tool.json')));
+  if ((!radarName || radarName === 'radar_it') && fs.existsSync(toolRadarPath)) {
+    logger.info('Build JSON radar [radar_it]');
+    jobs.push(radarBuilder.build(toolRadarPath, path.join(outputPath, 'js', 'radar_it.json')));
   }
   await Promise.all(jobs);
 };
@@ -146,7 +146,7 @@ module.exports = (env, argv) => {
         target: 'http://localhost:3000',
         secure: false,
       },
-      '/js/radar_tool.json': {
+      '/js/radar_it.json': {
         target: 'http://localhost:3000',
         secure: false,
       },
