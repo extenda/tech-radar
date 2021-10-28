@@ -15,7 +15,7 @@ license:
     company: EverSQL
     description: |
       Use of this software requires an enterprise license. The pricing is based on number of
-      montly optimizations.
+      monthly optimizations.
 related:
   - data_management/cloud_sql.yaml
 tags:
