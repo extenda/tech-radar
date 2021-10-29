@@ -1,0 +1,22 @@
+name: EverSQL
+blip:
+  - date: 2021-10-27
+    ring: ASSESS
+description: |
+  [EverSQL](https://www.eversql.com/) provides AI based performance insights, SQL query rewrites,
+  indexing recommendations, cost reduction recommendations, ad-hoc SQL enhancements, slow query log
+  visualization and many more.
+rationale: |
+  We need a tool/extension that can be used for database tuning. Cloud SQL Query Insights doesn’t
+  provide needed functionality. CPU/RAM and PLAN for query is not enough. The tool needs to clearly
+  suggest how to optimize the query plan, what indexes are missed etc. EverSQL meets the needs.
+license:
+  commercial:
+    company: EverSQL
+    description: |
+      Use of this software requires an enterprise license. The pricing is based on number of
+      monthly optimizations.
+related:
+  - data_management/cloud_sql.yaml
+tags:
+  - sql
