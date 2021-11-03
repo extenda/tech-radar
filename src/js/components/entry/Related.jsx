@@ -10,16 +10,16 @@ const Related = (props) => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <h2>Related</h2>
       <ul>
-        {related.map(value => (
+        {related.map((value) => (
           <li key={value.file}>
             <Link to={value.file}>{value.name}</Link>
           </li>
         ))}
       </ul>
-    </React.Fragment>
+    </>
   );
 };
 

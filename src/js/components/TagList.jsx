@@ -11,7 +11,7 @@ const TagList = (props) => {
   const entries = radarService.listEntriesByTag(tag);
 
   return (
-    <React.Fragment>
+    <>
       <Navigation tag={tag} />
       <div className="container">
         <h1>
@@ -19,14 +19,14 @@ const TagList = (props) => {
           {tag}
         </h1>
         <ul>
-          {entries.map(entry => (
+          {entries.map((entry) => (
             <li key={entry.name}>
               <Link to={`/entries/${entry.filename}`}>{entry.name}</Link>
             </li>
           ))}
         </ul>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -122,4 +122,15 @@ describe('RadarService', () => {
       id: 3,
     });
   });
+
+  test('It can switch radar on-demand', async () => {
+    global.fetch.mockImplementationOnce(() => Promise.resolve({
+      json: () => ({ id: 'radar_it' }),
+    }));
+    expect(Object.keys(radarService.models)).toHaveLength(1);
+    await radarService.switchRadar('radar_it');
+    expect(global.fetch).toHaveBeenCalledTimes(2);
+    expect(Object.keys(radarService.models)).toHaveLength(2);
+    expect(radarService.model.id).toEqual('radar_it');
+  });
 });

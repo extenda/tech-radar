@@ -1,8 +1,7 @@
 import React from 'react';
 import * as reactRouter from 'react-router-dom';
 import { shallow, mount } from 'enzyme';
-import App from '../src/js/components/App';
-import Radar from '../src/js/components/Radar';
+import { App } from '../src/js/components/App';
 import Entry from '../src/js/components/Entry';
 import Quadrant from '../src/js/components/Quadrant';
 import NotFound from '../src/js/components/NotFound';
@@ -13,14 +12,14 @@ import Login from '../src/js/components/Login';
 const { MemoryRouter } = reactRouter;
 
 // eslint-disable-next-line react/prop-types
-const mockRouter = initialEntry => ({ children }) => (
+const mockRouter = (initialEntry) => ({ children }) => (
   <MemoryRouter initialEntries={[initialEntry]}>
     {children}
   </MemoryRouter>
 );
 
 jest.mock('../src/js/components/Radar', () => () => (
-  <div>
+  <div id="radar">
     Radar
   </div>
 ));
@@ -89,19 +88,21 @@ describe('<App />', () => {
 
   test('It renders Radar on successful login', async () => {
     reactRouter.BrowserRouter = mockRouter('/');
-    const component = mount(<App />);
-    await component.instance().loginDidSucceed({ tokenId: 'test' });
+    const identify = jest.fn().mockResolvedValueOnce({});
+    const component = mount(<App ldClient={{ identify }} />);
+    await component.instance().loginDidSucceed({ tokenId: 'test', profileObj: { googleId: 1, email: 'mail' } });
     await component.update();
     expect(component.state().isSignedIn).toEqual(true);
     expect(component.state().loading).toEqual(false);
     expect(component.find(Logout)).toHaveLength(1);
-    expect(component.find(Radar)).toHaveLength(1);
+    expect(component.find('#radar')).toHaveLength(1);
   });
 
   test('It does not render Radar on invalid JWT', async () => {
     reactRouter.BrowserRouter = mockRouter('/');
-    const component = mount(<App />);
-    await component.instance().loginDidSucceed({ tokenId: 'fail' });
+    const identify = jest.fn().mockResolvedValueOnce({});
+    const component = mount(<App ldClient={{ identify }} />);
+    await component.instance().loginDidSucceed({ tokenId: 'fail', profileObj: { googleId: 1, email: 'mail' } });
     await component.update();
     expect(component.state().isSignedIn).toEqual(false);
     expect(component.state().loading).toEqual(true);
@@ -117,7 +118,7 @@ describe('<App />', () => {
     component.setState({ isSignedIn: true, loading: false });
     await component.update();
     expect(component.state().isSignedIn).toEqual(true);
-    expect(component.find(Radar)).toHaveLength(1);
+    expect(component.find('#radar')).toHaveLength(1);
   });
 
   test('It renders <Logout /> on / route', async () => {

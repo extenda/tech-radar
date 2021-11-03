@@ -6,3 +6,4 @@ coverage/
 .scannerwork/
 server/dist
 .scripts/*.pyc
+radar_it/

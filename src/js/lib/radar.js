@@ -150,7 +150,7 @@ export default class SvgRadar {
 
   renderEntries = (entries = []) => {
 
-    const { print_layout } = this.config;
+    const { print_layout } = this.config;
 
     // Store all entries so we can search them by ID later.
     this.radarEntries = entries;

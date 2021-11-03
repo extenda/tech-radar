@@ -3,26 +3,12 @@ import PropTypes from 'prop-types';
 import ReactTags from 'react-tag-autocomplete';
 import '../../assets/css/react-tags.css';
 
-export default class TagsInput extends Component {
-  static propTypes = {
-    onFilter: PropTypes.func.isRequired,
-    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-  };
-
+class TagsInput extends Component {
   constructor(props) {
     super(props);
-
-    const { tags } = props;
-
-    let i = 0;
-    const id = () => {
-      i += 1;
-      return i;
-    };
-
     this.state = {
       tags: [],
-      suggestions: tags.map(t => ({ id: id(), name: t })),
+      suggestions: [],
     };
   }
 
@@ -64,3 +50,27 @@ export default class TagsInput extends Component {
     );
   };
 }
+
+TagsInput.getDerivedStateFromProps = (props, state) => {
+  const { tags } = props;
+  if (tags.length !== state.suggestions.length) {
+    let i = 0;
+    const id = () => {
+      i += 1;
+      return i;
+    };
+    return {
+      tags: [],
+      suggestions: tags.map((t) => ({ id: id(), name: t })),
+    };
+  }
+  return null;
+};
+
+TagsInput.propTypes = {
+  onFilter: PropTypes.func.isRequired,
+  // eslint-disable-next-line react/no-unused-prop-types
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
+export default TagsInput;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { shallow, mount } from 'enzyme';
-import Radar from '../src/js/components/Radar';
+import { Radar } from '../src/js/components/Radar';
 
 jest.mock('../src/js/modules/radarService');
 
@@ -31,6 +31,13 @@ describe('<Radar />', () => {
     );
     expect(document.querySelectorAll('g.blip')).toHaveLength(2);
     component.unmount();
+  });
+
+  test('It renders IT & BIS radar switch', () => {
+    const component = shallow(
+      <Radar history={{ push: jest.fn() }} flags={{ releaseToolRadar: true }} />,
+    );
+    expect(component).toMatchSnapshot();
   });
 
   test('It is possible to click radar blips', () => {

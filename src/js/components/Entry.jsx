@@ -20,10 +20,10 @@ const Entry = (props) => {
       <NotFound />
     );
   }
-  const quadrant = radarService.model.quadrants.find(q => q.dirname === entry.quadrant.dirname);
+  const quadrant = radarService.model.quadrants.find((q) => q.dirname === entry.quadrant.dirname);
 
   return (
-    <React.Fragment>
+    <>
       <Navigation quadrant={quadrant} entry={{ name: entry.name }} />
       <div className="container">
         {(entry.blip.active === false) && (
@@ -57,10 +57,10 @@ const Entry = (props) => {
           <div className="twelve columns">
             <Markdown source={entry.description} />
             {entry.rationale && (
-              <React.Fragment>
+              <>
                 <h2>Rationale</h2>
                 <Markdown source={entry.rationale} />
-              </React.Fragment>
+              </>
             )}
             <License license={entry.license} />
             <Related related={entry.related} />
@@ -71,7 +71,7 @@ const Entry = (props) => {
           <Tags tags={entry.tags} />
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

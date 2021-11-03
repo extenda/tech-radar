@@ -6,7 +6,7 @@ import { clientId, hostedDomain } from '../modules/auth-config';
 const Login = (props) => {
   const { onSuccess, onFailure } = props;
   return (
-    <React.Fragment>
+    <>
       <nav className="navbar" role="navigation">
         <ul className="breadcrumb">
           <li key="home">
@@ -46,7 +46,7 @@ const Login = (props) => {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -2,7 +2,6 @@ const fs = require('fs');
 const klawSync = require('klaw-sync');
 const path = require('path');
 const yaml = require('yaml');
-const radar = require('./model');
 const { dateFormat } = require('../modules/utils');
 
 const htmlFile = (yamlFile) => `${path.basename(yamlFile, '.yaml')}.html`;
@@ -10,7 +9,7 @@ const htmlFile = (yamlFile) => `${path.basename(yamlFile, '.yaml')}.html`;
 const last = (arr) => arr[arr.length - 1];
 
 // Build a list of related builder blips.
-const buildRelatedLinks = (entry) => {
+const buildRelatedLinks = (radar, entry) => {
   if (entry.related) {
     const related = [];
     entry.related.forEach((file) => {
@@ -31,7 +30,7 @@ const buildRelatedLinks = (entry) => {
 };
 
 // Find the quadrant and its index for a YAML source file.
-const findQuadrant = (yamlFile) => {
+const findQuadrant = (radar, yamlFile) => {
   const dirname = path.relative(radar.radarDir, path.dirname(yamlFile));
   const index = radar.quadrants.findIndex((q) => q.dirname === dirname);
   if (index >= 0) {
@@ -47,7 +46,7 @@ const findQuadrant = (yamlFile) => {
 const ringName = (ring) => ring.charAt(0) + ring.substr(1).toLowerCase();
 
 // Create a builder blip entry.
-const createBlip = (entry) => {
+const createBlip = (radar, entry) => {
   const blipAge = radar.date - new Date(last(entry.blip).date).getTime();
   const blip = {
     label: entry.shortname ? entry.shortname : entry.name,
@@ -108,21 +107,22 @@ const createTags = (entry) => {
   return tags;
 };
 
-const collectEntries = (radarDir, callback) => {
+const collectEntries = (radarDir, model, callback) => {
+  const radar = { ...model };
   const klawOpts = {
     nodir: true,
     traverseAll: true,
-    filter: (p) => path.extname(p.path) === '.yaml' && path.basename(path.dirname(p.path)) !== 'radar',
+    filter: (p) => path.extname(p.path) === '.yaml' && path.basename(path.dirname(p.path)) !== path.basename(radarDir),
   };
 
   radar.radarDir = radarDir;
 
   klawSync(radar.radarDir, klawOpts).forEach((f) => {
     const entry = yaml.parse(fs.readFileSync(f.path, 'utf8'));
-    entry.quadrant = findQuadrant(f.path);
+    entry.quadrant = findQuadrant(radar, f.path);
     entry.filename = htmlFile(f.path);
-    entry.blip = createBlip(entry);
-    entry.related = buildRelatedLinks(entry);
+    entry.blip = createBlip(radar, entry);
+    entry.related = buildRelatedLinks(radar, entry);
     entry.tags = createTags(entry);
     if (entry.license && entry.license['open-source']) {
       entry.license.openSource = entry.license['open-source'];

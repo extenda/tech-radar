@@ -111,6 +111,7 @@ export default {
     }
     return Promise.resolve(true);
   },
+  switchRadar: () => Promise.resolve(),
   listBlips: (tags = []) => {
     if (tags.length === 1 && tags[0] === 'java') {
       return [mockBlips[0]];

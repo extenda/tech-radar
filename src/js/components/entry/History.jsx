@@ -10,19 +10,19 @@ const History = (props) => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <h2>History</h2>
       <ul className="history">
-        {history.map(value => (
+        {history.map((value) => (
           <li key={value.date}>
-            <Icon name="calendar" spaceBefore={false}/>
+            <Icon name="calendar" spaceBefore={false} />
             {value.date}
             &nbsp;-&nbsp;
             {value.ringName}
           </li>
         ))}
       </ul>
-    </React.Fragment>
+    </>
   );
 };
 

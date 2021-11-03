@@ -1,8 +1,10 @@
 const path = require('path');
 const fetch = require('node-fetch');
 const { OAuth2Client } = require('google-auth-library');
+const { init: ldInit } = require('launchdarkly-node-server-sdk');
 
 jest.mock('google-auth-library');
+jest.mock('launchdarkly-node-server-sdk');
 
 // Mock the Oauth2Client verifyIdToken method from Google.
 const mockVerifyIdToken = jest.fn(({ idToken }) => {
@@ -11,6 +13,8 @@ const mockVerifyIdToken = jest.fn(({ idToken }) => {
     ticket = {
       getPayload: () => ({
         hd: 'extendaretail.com',
+        sub: 'test',
+        email: 'test@extendaretail.com',
       }),
     };
   } else if (idToken === 'INVALID_DOMAIN') {
@@ -27,6 +31,12 @@ const mockVerifyIdToken = jest.fn(({ idToken }) => {
 
 OAuth2Client.mockImplementation(() => ({
   verifyIdToken: mockVerifyIdToken,
+}));
+
+const mockVariation = jest.fn();
+ldInit.mockImplementation(() => ({
+  waitForInitialization: jest.fn().mockResolvedValueOnce(true),
+  variation: mockVariation,
 }));
 
 // Directory where static test content lives.
@@ -50,8 +60,7 @@ describe('Express', () => {
   });
 
   afterEach(() => {
-    OAuth2Client.mockClear();
-    mockVerifyIdToken.mockClear();
+    jest.clearAllMocks();
   });
 
   test('It responds to /', async () => {
@@ -130,6 +139,41 @@ describe('Express', () => {
       });
       expect(response.status).toEqual(200);
       expect(response.headers.get('content-type')).toEqual('application/json; charset=UTF-8');
+      expect(mockVerifyIdToken).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('js/radar_it.js', () => {
+    test('It returns 200 OK if feature is enabled', async () => {
+      mockVariation.mockResolvedValueOnce(true);
+      const response = await fetch(`http://127.0.0.1:${port}/js/radar_it.json`, {
+        headers: {
+          authorization: 'Bearer VALID_DOMAIN',
+        },
+      });
+      expect(mockVariation).toHaveBeenCalledWith('release.tool-radar', {
+        key: '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08',
+        email: 'test@extendaretail.com',
+        privateAttributeNames: ['email'],
+      }, false);
+      expect(response.status).toEqual(200);
+      expect(response.headers.get('content-type')).toEqual('application/json; charset=UTF-8');
+      expect(mockVerifyIdToken).toHaveBeenCalledTimes(1);
+    });
+
+    test('It returns 404 if feature is disabled', async () => {
+      mockVariation.mockResolvedValueOnce(false);
+      const response = await fetch(`http://127.0.0.1:${port}/js/radar_it.json`, {
+        headers: {
+          authorization: 'Bearer VALID_DOMAIN',
+        },
+      });
+      expect(mockVariation).toHaveBeenCalledWith('release.tool-radar', {
+        key: '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08',
+        email: 'test@extendaretail.com',
+        privateAttributeNames: ['email'],
+      }, false);
+      expect(response.status).toEqual(404);
       expect(mockVerifyIdToken).toHaveBeenCalledTimes(1);
     });
   });
