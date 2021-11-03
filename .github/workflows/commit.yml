@@ -82,8 +82,13 @@ jobs:
         with:
           service-account-key: ${{ secrets.SECRET_AUTH }}
           secrets: |
-            LD_CLIENT_ID: launchdarkly-client-id
             ORG_TOKEN: github-token
+
+      - uses: extenda/actions/gcp-secret-manager@v0
+        with:
+          service-account-key: ${{ secrets.GCLOUD_AUTH }}
+          secrets: |
+            LD_CLIENT_ID: launchdarkly-client-id
 
       - name: Checkout IT & BIS radar repository
         uses: actions/checkout@v2
