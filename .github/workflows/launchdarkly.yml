@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - '**/*.js'
+      - 'coderefs.yaml'
+      - '.github/workflows/launchdarkly.yml'
 
 jobs:
   coderefs:
@@ -11,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          fetch-depth: 11
 
       - uses: extenda/actions/gcp-secret-manager@v0
         with:
