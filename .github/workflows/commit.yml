@@ -137,6 +137,8 @@ jobs:
     needs:
       - release
     steps:
+      - uses: actions/checkout@v2
+
       - uses: extenda/actions/setup-gcloud@v0
         id: gcloud
         with:
