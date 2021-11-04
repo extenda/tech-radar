@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - '**/*.js'
-      - 'coderefs.yaml'
+      - '.launchdarkly/coderefs.yaml'
       - '.github/workflows/launchdarkly.yml'
 
 jobs:
