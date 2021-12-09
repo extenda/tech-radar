@@ -184,7 +184,7 @@ The following open source license names are valid for use in the radar blips.
 | MPL-1.0     | Mozilla Public License (MPL) Version 1.0                         |
 | MPL-1.1     | Mozilla Public License (MPL) Version 1.1                         |
 | MPL-2.0     | Mozilla Public License (MPL) Version 2.0                         |
-| PostgreSQL  | The PostgreSQL Licence                                           |
+| PostgreSQL  | The PostgreSQL License                                           |
 | Public      | Public Domain                                                    |
 
 If you find a library with a license that isn't in this list it must be analyzed in detail.
