@@ -2,6 +2,8 @@ name: Cloud Firestore
 blip:
   - date: 2020-04-30
     ring: TRIAL
+  - date: 2021-10-07
+    ring: ADOPT
 description: |
   [Cloud FireStore](https://firebase.google.com/docs/firestore) Cloud Firestore is a flexible,
   scalable database for mobile, web, and server development from Firebase and Google Cloud Platform.
@@ -16,6 +18,8 @@ rationale: |
   actively using, so the app can write, read, listen to, and query data even if the device is offline.
   Cloud Firestore brings you the best of Google Cloud Platform's powerful infrastructure: automatic multi-region
   data replication and strong consistency guarantees.
+  Developers should always use datastore mode unless designing for mobile client integration.
+  For more information see [Datastore mode vs. Native](https://cloud.google.com/datastore/docs/firestore-or-datastore).
 license:
   commercial:
     company: Google
