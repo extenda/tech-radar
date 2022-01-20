@@ -3,6 +3,8 @@ shortname: k6
 blip:
   - date: 2020-06-29
     ring: TRIAL
+  - date: 2021-12-02
+    ring: ADOPT
 description: |
   [k6](https://k6.io/) is a modern open-source load testing tool written in Go and executes scripts written in
   Javascript. Outputing the result can be done to a number of products such as Kafka, Datadog and InfluxDB.
