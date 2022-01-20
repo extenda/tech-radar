@@ -2,15 +2,26 @@ name: PostgreSQL
 blip:
   - date: 2019-06-24
     ring: TRIAL
+  - date: 2021-10-07
+    ring: ADOPT
 description: |
-    PostgreSQL is a powerful, open source object-relational database system
-    that uses and extends the SQL language combined with many features that
-    safely store and scale the most complicated data workloads. The origins
-    of PostgreSQL date back to 1986 as part of the POSTGRES project at the
-    University of California at Berkeley and has more than 30 years of
-    active development on the core platform.
+  PostgreSQL is a powerful, open source object-relational database system
+  that uses and extends the SQL language combined with many features that
+  safely store and scale the most complicated data workloads. The origins
+  of PostgreSQL date back to 1986 as part of the POSTGRES project at the
+  University of California at Berkeley and has more than 30 years of
+  active development on the core platform.
 rationale: |
-  Persistent storage on the Google Cloud Platform.
+  PostgreSQL is the preferred relational database for Hii Retail.
+  If you need a relational database, especially with Cloud SQL, use PostgreSQL and no other alternatives.
+  This is the only relational database that supports EKM and CMEK.
+license:
+  open-source:
+    name: PostgreSQL
+    link: https://www.opensource.org/licenses/postgresql
+    description: |
+      PostgreSQL is released under the PostgreSQL License, a liberal Open Source license,
+      similar to the BSD or MIT licenses.
 tags:
   - dotnet
   - java
