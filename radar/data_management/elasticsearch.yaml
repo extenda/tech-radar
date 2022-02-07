@@ -9,14 +9,15 @@ blip:
   - date: 2022-02-10
     ring: ADOPT
 description: |
-  Elasticsearch is a distributed, massively scalable document database. Coupled with 
-  Kibana, Beats and Logstash it is the most essential part of the 
-  [ELK Stack](https://www.elastic.co/what-is/elk-stack). 
+  Elasticsearch is a distributed, massively scalable document database. Coupled with
+  Kibana, Beats and Logstash it is the most essential part of the
+  [ELK Stack](https://www.elastic.co/what-is/elk-stack).
 
-  Elasticsearch can reliably and securely take data from any source, in any format, then search, analyze, and visualize it in real time.
+  Elasticsearch can reliably and securely take data from any source, in any format, then search,
+  analyze, and visualize it in real time.
 rationale: |
-  Consider Elasticsearch when there's a need to search massive amounts of 
-  data, or a free-text search capability is needed. Consider Elasticsearch 
+  Consider Elasticsearch when there's a need to search massive amounts of
+  data, or a free-text search capability is needed. Consider Elasticsearch
   also for metrics, logging and tracing needs. Paired with [Kibana](data_management/kibana.yaml)
   Elasticsearch provides a powerful analytics and observability tool.
 
