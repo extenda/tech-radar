@@ -11,7 +11,7 @@ description: |
   Confluent's elastic scalability and virtually infinite storage simplifies real-time data movement across public
   and private clouds. You get out-of-the-box [connectors](https://www.confluent.io/hub/) to the most popular data
   sources/sinks in the Kafka ecosystem, in addition to a vast amount of other services.
-  You get SQL-based stream processing, a governance suite for streaming data, 
+  You get SQL-based stream processing, a governance suite for streaming data,
   and more — all fully managed in the same cloud UI.
 rationale: |
   Confluent Cloud provides Kafka and Kafka Streams as a streaming engine and processing platform available to be used
