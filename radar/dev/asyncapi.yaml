@@ -3,6 +3,8 @@ logo: https://raw.githubusercontent.com/asyncapi/spec/master/assets/logo.png
 blip:
   - date: 2021-05-20
     ring: ASSESS
+  - date: 2022-02-10
+    ring: TRIAL
 description: |
   The [AsyncAPI initiative](https://www.asyncapi.com) is a specification for event driven APIs.
   It is inspired by OpenAPI and borrows concepts and schema modelling for some interoperability.
@@ -22,6 +24,12 @@ license:
     link: https://github.com/asyncapi/spec/blob/master/LICENSE
 tags:
   - api
+  - event
+  - real-time
+  - streaming
+  - schema
+  - integration
 related:
   - dev/openapi.yaml
   - infrastructure_ci_cd/pubsub.yaml
+  - data_management/kafka.yaml
