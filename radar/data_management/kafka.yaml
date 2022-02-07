@@ -5,13 +5,14 @@ blip:
   - date: 2022-02-10
     ring: ADOPT
 description: |
-  Kafka in [Confluent Cloud](https://www.confluent.io/confluent-cloud/) 
+  Kafka in [Confluent Cloud](https://www.confluent.io/confluent-cloud/)
   is a fully managed, cloud-native Kafka service for connecting and processing all of your data,
   everywhere it's needed.
   Confluent's elastic scalability and virtually infinite storage simplifies real-time data movement across public
-  and private clouds. You get out-of-the-box [connectors](https://www.confluent.io/hub/) to the most popular data sources/sinks in the Kafka ecosystem,
-  in addition to a vast amount of other services. You get SQL-based stream processing, a governance suite for
-  streaming data, and more — all fully managed in the same cloud UI.
+  and private clouds. You get out-of-the-box [connectors](https://www.confluent.io/hub/) to the most popular data
+  sources/sinks in the Kafka ecosystem, in addition to a vast amount of other services.
+  You get SQL-based stream processing, a governance suite for streaming data, 
+  and more — all fully managed in the same cloud UI.
 rationale: |
   Confluent Cloud provides Kafka and Kafka Streams as a streaming engine and processing platform available to be used
   when stream processing capabilities are needed and the output of the stream is required input to other services.
