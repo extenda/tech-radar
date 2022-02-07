@@ -16,7 +16,13 @@ license:
 related:
   - dev/graphql.yaml
   - dev/nodejs.yaml
+  - dev/asyncapi.yaml
+  - dev/openapi.yaml
 tags:
   - api
   - javascript
   - typescript
+  - search
+  - mutations
+  - query
+  - integration
