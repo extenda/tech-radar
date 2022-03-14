@@ -33,7 +33,7 @@
     "jest": "^26.0.1",
     "jest-junit": "^10.0.0",
     "jest-sonar": "^0.2.8",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.7"
   },
   "eslintConfig": {
     "env": {
