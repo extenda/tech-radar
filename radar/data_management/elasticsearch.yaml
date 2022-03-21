@@ -6,14 +6,23 @@ blip:
     ring: ADOPT
   - date: 2020-06-15
     ring: TRIAL
+  - date: 2022-02-10
+    ring: ADOPT
 description: |
-  Elasticsearch is a distributed, massivily scalable search engine.
+  Elasticsearch is a distributed, massively scalable document database. Coupled with
+  Kibana, Beats and Logstash it is the most essential part of the
+  [ELK Stack](https://www.elastic.co/what-is/elk-stack).
+
+  Elasticsearch can reliably and securely take data from any source, in any format, then search,
+  analyze, and visualize it in real time.
 rationale: |
   Consider Elasticsearch when there's a need to search massive amounts of
-  data, for example in Retail Suite, Centraloffice, ASI or logging and tracing needs.
+  data, or a free-text search capability is needed. Consider Elasticsearch
+  also for metrics, logging and tracing needs. Paired with [Kibana](data_management/kibana.yaml)
+  Elasticsearch provides a powerful analytics and observability tool.
 
-  Elasticsearch should be used as a managed service (SaaS) for cloud services. We must
-  evaulate the licensing, operations and business case before we can adopt Elasticsearch.
+  ElasticSearch should be used as a managed service (SaaS) for cloud services in Google Cloud.
+  Elastic provides this service as [Elastic Cloud](https://www.elastic.co/cloud/).
 related:
   - data_management/kibana.yaml
   - data_management/beats.yaml
@@ -22,3 +31,11 @@ tags:
   - bi
   - dotnet
   - java
+  - observability
+  - log
+  - metrics
+  - trace
+  - free-text
+  - search
+  - nosql
+  - real-time

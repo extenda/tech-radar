@@ -3,10 +3,23 @@ blip:
   - date: 2019-05-22
     ring: ADOPT
 description: |
-  Visualisation tool for Elastic stack
+  [Kibana](https://www.elastic.co/guide/en/kibana/current/introduction.html) is a visualization tool for Elasticsearch.
+  Kibana enables you to give shape to your data and navigate the Elastic Stack. With Kibana, you can:
+  <p>
+    <ul>
+      <li>Search, observe, and protect your data. From discovering documents to analyzing logs to
+      finding security vulnerabilities, Kibana is your portal for accessing these capabilities and more.</li>
+      <li>Analyze your data. Search for hidden insights, visualize what you've found in charts,
+      gauges, maps, graphs, and more, and combine them in a dashboard</li>
+      <li>Manage, monitor, and secure the Elastic Stack. Manage your data, monitor the health of your
+      Elastic Stack cluster, and control which users have access to which features</li>
+    </ul>
+  </p>
 rationale: |
-  Together with the other parts of the Elastic stack enables us to visualize our logs
-  and system health in a centralized location
+  Together with the other parts of the Elastic stack enables us to visualize any data
+  in dashboards or [Canvas](https://www.elastic.co/guide/en/kibana/current/canvas.html).
+  It provides observability, visualization and alerts for our logs and system health
+  in a centralized location.
 related:
   - data_management/elasticsearch.yaml
   - data_management/beats.yaml
@@ -14,3 +27,10 @@ related:
 tags:
   - log
   - trace
+  - observability
+  - metrics
+  - alerts
+  - dashboards
+  - slides
+  - live
+  - real-time
