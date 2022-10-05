@@ -6,7 +6,7 @@ description: |
   [Renovate](https://github.com/renovatebot/renovate). Automated dependency updates. Multi-platform and multi-language.
 rationale:
   We want a tool that can simplify dependency updates by grouping update PRs.
-  
+
   Renovate can group dependency update by monorepo (e.g. @nestjs/*),
   by type (e.g. all non-major versions).
 
