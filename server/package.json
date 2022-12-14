@@ -19,7 +19,7 @@
   "license": "MIT",
   "homepage": "https://github.com/extenda/tech-radar#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "google-auth-library": "^5.10.1",
     "launchdarkly-node-server-sdk": "^6.2.0",
     "morgan": "^1.9.1",
