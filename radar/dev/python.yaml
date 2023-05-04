@@ -3,6 +3,8 @@ logo: https://commons.wikimedia.org/wiki/Python_(programming_language)#/media/Fi
 blip:
   - date: 2020-05-13
     ring: TRIAL
+  - date: 2023-05-04
+    ring: HOLD
 description: |
   Python is an interpreted, high-level, general-purpose programming language.
   Created by Guido van Rossum and first released in 1991.
@@ -22,6 +24,11 @@ rationale: |
   like machine learning and data science. Python is popular because of
   it's Simplicity, Libraries, Multi-paradigm approach,
   Enterprise Application Integration (EAI), Community – there’s always someone to rely on!
+
+  While Python is a powerful language, there is a need to restrict the number of programming
+  languages for Hii Retail-services. Python can still be used for smaller scripts, but it has
+  been decided to NOT use Python as a programming language for Hii Retail-services going forward.
+  Hii Retail-services, mostly AI / ML-services, that already uses Python does not need to change their language.
 license:
   open-source:
     name: PSFL
