@@ -13,9 +13,9 @@ jobs:
   yamllint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v1
+      - uses: actions/setup-python@v5
 
       - name: Install dependencies
         run: |
@@ -33,7 +33,7 @@ jobs:
     needs:
       - yamllint
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -74,7 +74,7 @@ jobs:
     outputs:
       docker-image-name: ${{ steps.docker-publish.outputs.docker-image-name }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -91,7 +91,7 @@ jobs:
             LD_CLIENT_ID: launchdarkly-client-id
 
       - name: Checkout IT & BIS radar repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           token: ${{ env.ORG_TOKEN }}
           repository: extenda/it-bis-radar
@@ -137,7 +137,7 @@ jobs:
     needs:
       - release
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - uses: extenda/actions/setup-gcloud@v0
         id: gcloud
