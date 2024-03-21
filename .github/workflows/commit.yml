@@ -63,6 +63,10 @@ jobs:
       - name: Build radar
         run: npm run build
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: SonarCloud Scan
         uses: extenda/actions/sonar-scanner@v0
         with:
