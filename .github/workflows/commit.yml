@@ -20,9 +20,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r ./.scripts/python_requirements.txt
+        run: pip install -r ./.scripts/python_requirements.txt
 
       - name: Yaml lint
         run: python .scripts/yaml_lint.py
