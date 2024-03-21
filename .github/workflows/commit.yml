@@ -13,14 +13,14 @@ jobs:
   yamllint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r ./.scripts/python_requirements.txt
+        run: pip install -r ./.scripts/python_requirements.txt
 
       - name: Yaml lint
         run: python .scripts/yaml_lint.py
@@ -33,9 +33,13 @@ jobs:
     needs:
       - yamllint
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
 
       - name: NPM install
         run: |
@@ -59,6 +63,10 @@ jobs:
       - name: Build radar
         run: npm run build
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: SonarCloud Scan
         uses: extenda/actions/sonar-scanner@v0
         with:
@@ -74,9 +82,13 @@ jobs:
     outputs:
       docker-image-name: ${{ steps.docker-publish.outputs.docker-image-name }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
 
       - uses: extenda/actions/gcp-secret-manager@v0
         with:
@@ -91,7 +103,7 @@ jobs:
             LD_CLIENT_ID: launchdarkly-client-id
 
       - name: Checkout IT & BIS radar repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           token: ${{ env.ORG_TOKEN }}
           repository: extenda/it-bis-radar
@@ -137,7 +149,7 @@ jobs:
     needs:
       - release
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - uses: extenda/actions/setup-gcloud@v0
         id: gcloud
