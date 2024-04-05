@@ -1,7 +1,7 @@
 name: React Native Web
 blip:
-  - date: 2021-04-30
-    ring: ASSESS
+  - date: 2024-04-05
+    ring: HOLD
 description: |
   "React Native for Web" makes it possible to run React Native components and APIs on the web using React DOM.
 rationale:
