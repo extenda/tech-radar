@@ -1,6 +1,5 @@
-const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { DefinePlugin } = require('webpack');
 const log = require('webpack-log');
@@ -38,21 +37,28 @@ const launchDarklyClientId = () => process.env.LD_CLIENT_ID || '';
 module.exports = (env, argv) => {
   const webpack = {
     devServer: {
-      contentBase: [
-        outputPath,
-        path.resolve(__dirname, 'src/assets'),
+      static: [
+        { directory: outputPath },
+        { directory: path.resolve(__dirname, 'src/assets') },
       ],
-      publicPath: '/',
+      devMiddleware: {
+        publicPath: '/',
+      },
       historyApiFallback: {
         index: '/',
         disableDotRule: true,
       },
-      after: (app, server) => {
+      setupMiddlewares: (middlewares) => {
+        // Watch for changes to radar YAMLs and rebuild the JSON model.
         watch.watchTree(radarDir, () => {
           buildRadar().then(() => {
-            server.sockWrite(server.sockets, 'content-changed');
+            logger.debug('Rebuilt radar model');
           });
+          // buildRadar().then(() => {
+          //   server.sockWrite(server.sockets, 'content-changed');
+          // });
         });
+        return middlewares;
       },
     },
     entry: {
@@ -63,21 +69,11 @@ module.exports = (env, argv) => {
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader',
-          },
+          use: ['babel-loader'],
         },
         {
           test: /\.css$/,
-          use: [
-            {
-              loader: MiniCssExtractPlugin.loader,
-              options: {
-                hmr: process.env.NODE_ENV === 'development',
-              },
-            },
-            'css-loader',
-          ],
+          use: [MiniCssExtractPlugin.loader, 'css-loader'],
         },
         {
           test: /\.(png|svg|jpg|gif|ico)$/,
@@ -93,13 +89,10 @@ module.exports = (env, argv) => {
         },
       ],
     },
-    node: {
-      fs: 'empty',
-    },
     optimization: {
       minimizer: [
-        new TerserJSPlugin({}),
-        new OptimizeCSSAssetsPlugin({}),
+        // `...`,
+        new CssMinimizerPlugin(),
       ],
     },
     output: {
@@ -133,6 +126,11 @@ module.exports = (env, argv) => {
     resolve: {
       modules: ['node_modules', 'src/js/'],
       extensions: ['.js', '.jsx'],
+      fallback: {
+        fs: false,
+        path: false, // For polyfill use require.resolve('path-browserify')
+        buffer: false, // For polyfill use require.resolve('buffer')
+      },
     },
     resolveLoader: {
       modules: ['node_modules'],
@@ -141,16 +139,18 @@ module.exports = (env, argv) => {
 
   if (process.env.BACKEND === '1') {
     // Add a proxy for the development server with JWT validation.
-    webpack.devServer.proxy = {
-      '/js/radar.json': {
+    webpack.devServer.proxy = [
+      {
+        context: '/js/radar.json',
         target: 'http://localhost:3000',
         secure: false,
       },
-      '/js/radar_it.json': {
+      {
+        context: '/js/radar_it.json',
         target: 'http://localhost:3000',
         secure: false,
       },
-    };
+    ];
   }
 
   return webpack;

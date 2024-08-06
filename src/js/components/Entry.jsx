@@ -55,11 +55,11 @@ const Entry = (props) => {
             <LicenseBadges license={entry.license} />
           </div>
           <div className="twelve columns">
-            <Markdown source={entry.description} />
+            <Markdown>{entry.description}</Markdown>
             {entry.rationale && (
               <>
                 <h2>Rationale</h2>
-                <Markdown source={entry.rationale} />
+                <Markdown>{entry.rationale}</Markdown>
               </>
             )}
             <License license={entry.license} />

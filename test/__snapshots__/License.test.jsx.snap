@@ -36,17 +36,9 @@ exports[`<License /> It renders commercial license with description 1`] = `
       Oracle
       .
     </strong>
-    <ReactMarkdown
-      astPlugins={Array []}
-      escapeHtml={true}
-      plugins={Array []}
-      rawSourcePos={false}
-      renderers={Object {}}
-      skipHtml={false}
-      source="License text."
-      sourcePos={false}
-      transformLinkUri={[Function]}
-    />
+    <lr>
+      License text.
+    </lr>
   </div>
 </Fragment>
 `;
@@ -121,17 +113,9 @@ exports[`<License /> It renders open-source license with description 1`] = `
     <p>
       The MIT License
     </p>
-    <ReactMarkdown
-      astPlugins={Array []}
-      escapeHtml={true}
-      plugins={Array []}
-      rawSourcePos={false}
-      renderers={Object {}}
-      skipHtml={false}
-      source="OSS Desc"
-      sourcePos={false}
-      transformLinkUri={[Function]}
-    />
+    <lr>
+      OSS Desc
+    </lr>
   </div>
 </Fragment>
 `;

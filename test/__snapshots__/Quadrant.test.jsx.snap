@@ -6,7 +6,7 @@ exports[`<Quadrant /> It renders as expected 1`] = `
     entry={null}
     home={null}
     quadrant={
-      Object {
+      {
         "dirname": "test1",
         "name": "Test",
       }
@@ -21,31 +21,31 @@ exports[`<Quadrant /> It renders as expected 1`] = `
     </h1>
     <QuadrantList
       blips={
-        Array [
-          Object {
+        [
+          {
             "id": -1,
           },
         ]
       }
       headerLevel={2}
       quadrant={
-        Object {
-          "adopt": Array [
-            Object {
+        {
+          "adopt": [
+            {
               "active": true,
               "filename": "1.html",
               "id": 1,
               "name": "A - 1",
             },
-            Object {
+            {
               "active": true,
               "filename": "2.html",
               "id": 2,
               "name": "B - 2",
             },
           ],
-          "assess": Array [
-            Object {
+          "assess": [
+            {
               "active": true,
               "filename": "3.html",
               "id": 3,
@@ -53,20 +53,20 @@ exports[`<Quadrant /> It renders as expected 1`] = `
             },
           ],
           "dirname": "test1",
-          "hold": Array [
-            Object {
+          "hold": [
+            {
               "active": true,
               "filename": "4.html",
               "id": 4,
               "name": "D - 4",
             },
-            Object {
+            {
               "active": true,
               "filename": "5.html",
               "id": 5,
               "name": "E - 5",
             },
-            Object {
+            {
               "active": false,
               "filename": "6.html",
               "id": 6,
@@ -74,7 +74,7 @@ exports[`<Quadrant /> It renders as expected 1`] = `
             },
           ],
           "name": "Test",
-          "trial": Array [],
+          "trial": [],
         }
       }
       useShortname={false}

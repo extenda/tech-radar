@@ -56,7 +56,7 @@ const License = (props) => {
               : OS_LICENSES[openSource.name]}
           </p>
           {openSource.description && (
-            <Markdown source={openSource.description} />
+            <Markdown>{openSource.description}</Markdown>
           )}
         </div>
       )}
@@ -70,7 +70,7 @@ const License = (props) => {
             .
           </strong>
           {commercialDescription(commercial) && (
-            <Markdown source={commercialDescription(commercial)} />
+            <Markdown>{commercialDescription(commercial)}</Markdown>
           )}
         </div>
       )}

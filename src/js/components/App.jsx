@@ -5,8 +5,8 @@ import {
   Route,
 } from 'react-router-dom';
 import { withLDConsumer, camelCaseKeys } from 'launchdarkly-react-client-sdk';
-import shajs from 'sha.js';
 import PropTypes from 'prop-types';
+import { jwtDecode } from 'jwt-decode';
 import Login from './Login';
 import Logout from './Logout';
 import LDRadar from './Radar';
@@ -16,6 +16,7 @@ import Footer from './Footer';
 import NotFound from './NotFound';
 import TagList from './TagList';
 import radarService from '../modules/radarService';
+import sha256 from '../modules/sha256';
 
 export class App extends Component {
   constructor(props) {
@@ -56,15 +57,15 @@ export class App extends Component {
       return null;
     }
 
-    const { tokenId, profileObj: { googleId, email } } = response;
-    return ldClient.identify({
-      key: shajs('sha256').update(`${googleId}`).digest('hex'),
+    const { sub, email } = jwtDecode(response.credential);
+    return sha256(sub).then((key) => ldClient.identify({
+      key,
       email,
       privateAttributeNames: ['email'],
     }).then(camelCaseKeys)
-      .then((flags) => radarService.init(tokenId, flags.releaseToolRadar)
+      .then((flags) => radarService.init(response.credential, flags.releaseToolRadar)
         .then(this.radarDidLoad)
-        .catch(this.radarDidFail));
+        .catch(this.radarDidFail)));
   };
 
   loginDidFail = () => {};

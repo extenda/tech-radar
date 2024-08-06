@@ -2,39 +2,22 @@
 
 exports[`<Logout /> It renders logout button 1`] = `
 <Logout>
-  <f
-    buttonText="Logout of Google"
-    clientId="947570385950-m9cgarv8pduseu61eudf3k84glo47jv0.apps.googleusercontent.com"
-    disabledStyle={
-      Object {
-        "opacity": 0.6,
-      }
-    }
-    icon={true}
-    jsSrc="https://apis.google.com/js/api.js"
-    onLogoutSuccess={[Function]}
-    render={[Function]}
-    tag="button"
-    theme="light"
+  <button
+    className="google-button signout"
+    onClick={[Function]}
     type="button"
   >
-    <button
-      className="google-button signout"
-      onClick={[Function]}
-      type="button"
+    <Icon
+      name="sign-out"
+      spaceBefore={true}
     >
-      <Icon
-        name="sign-out"
-        spaceBefore={true}
-      >
-         
-        <i
-          className="fa fa-sign-out"
-        />
-         
-      </Icon>
-      Sign out
-    </button>
-  </f>
+       
+      <i
+        className="fa fa-sign-out"
+      />
+       
+    </Icon>
+    Sign out
+  </button>
 </Logout>
 `;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GoogleLogin } from 'react-google-login';
-import { clientId, hostedDomain } from '../modules/auth-config';
+import { GoogleLogin } from '@react-oauth/google';
+import { hostedDomain } from '../modules/auth-config';
 
 const Login = (props) => {
   const { onSuccess, onFailure } = props;
@@ -35,10 +35,8 @@ const Login = (props) => {
               className="google-button"
               onSuccess={onSuccess}
               onFailure={onFailure}
-              clientId={clientId}
-              hostedDomain={hostedDomain}
-              isSignedIn
-              theme="dark"
+              theme="outline"
+              hosted_domain={hostedDomain}
             />
           </div>
           <div className="two columns">

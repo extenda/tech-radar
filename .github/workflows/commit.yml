@@ -40,6 +40,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            server/package-lock.json
 
       - name: NPM install
         run: |
@@ -63,10 +67,6 @@ jobs:
       - name: Build radar
         run: npm run build
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
       - name: SonarCloud Scan
         uses: extenda/actions/sonar-scanner@v0
         with:
@@ -89,6 +89,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            server/package-lock.json
 
       - uses: extenda/actions/gcp-secret-manager@v0
         with:

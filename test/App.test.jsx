@@ -1,5 +1,4 @@
 import React from 'react';
-import * as reactRouter from 'react-router-dom';
 import { shallow, mount } from 'enzyme';
 import { App } from '../src/js/components/App';
 import Entry from '../src/js/components/Entry';
@@ -8,15 +7,11 @@ import NotFound from '../src/js/components/NotFound';
 import TagList from '../src/js/components/TagList';
 import Logout from '../src/js/components/Logout';
 import Login from '../src/js/components/Login';
+import sha256 from '../src/js/modules/sha256';
 
-const { MemoryRouter } = reactRouter;
+const TEST_TOKEN = 'eyJhbGciOiJIUzI1NiIsImtpZCI6IjQ1MjljNDA5Zjc3YTEwNmZiNjdlZTFhODVkMTY4ZmQyY2ZiN2MwYjciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJzdWIiOiJ0ZXN0IiwiaGQiOiJleHRlbmRhcmV0YWlsLmNvbSIsImVtYWlsIjoidGVzdEBleHRlbmRhcmV0YWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlfQ.pevBIXNzVdqfUfmmREIKFYu6GDdD4pdsKao83zs6A9Y';
 
-// eslint-disable-next-line react/prop-types
-const mockRouter = (initialEntry) => ({ children }) => (
-  <MemoryRouter initialEntries={[initialEntry]}>
-    {children}
-  </MemoryRouter>
-);
+jest.mock('../src/js/modules/sha256');
 
 jest.mock('../src/js/components/Radar', () => () => (
   <div id="radar">
@@ -65,10 +60,12 @@ jest.mock('../src/js/modules/radarService');
 describe('<App />', () => {
   let spyConsole;
   beforeAll(() => {
+    sha256.mockResolvedValue('mock-sha');
     spyConsole = jest.spyOn(console, 'error').mockImplementation();
   });
   afterAll(() => {
     spyConsole.mockRestore();
+    sha256.mockRestore();
   });
 
   test('It renders <Login /> if not authenticated', async () => {
@@ -87,10 +84,10 @@ describe('<App />', () => {
   });
 
   test('It renders Radar on successful login', async () => {
-    reactRouter.BrowserRouter = mockRouter('/');
+    window.history.pushState({}, '', '/');
     const identify = jest.fn().mockResolvedValueOnce({});
     const component = mount(<App ldClient={{ identify }} />);
-    await component.instance().loginDidSucceed({ tokenId: 'test', profileObj: { googleId: 1, email: 'mail' } });
+    await component.instance().loginDidSucceed({ credential: TEST_TOKEN });
     await component.update();
     expect(component.state().isSignedIn).toEqual(true);
     expect(component.state().loading).toEqual(false);
@@ -99,10 +96,10 @@ describe('<App />', () => {
   });
 
   test('It does not render Radar on invalid JWT', async () => {
-    reactRouter.BrowserRouter = mockRouter('/');
+    window.history.pushState({}, '', '/');
     const identify = jest.fn().mockResolvedValueOnce({});
     const component = mount(<App ldClient={{ identify }} />);
-    await component.instance().loginDidSucceed({ tokenId: 'fail', profileObj: { googleId: 1, email: 'mail' } });
+    await component.instance().loginDidFail({ });
     await component.update();
     expect(component.state().isSignedIn).toEqual(false);
     expect(component.state().loading).toEqual(true);
@@ -113,7 +110,7 @@ describe('<App />', () => {
   });
 
   test('It renders the radar on / route', async () => {
-    reactRouter.BrowserRouter = mockRouter('/');
+    window.history.pushState({}, '', '/');
     const component = mount(<App />);
     component.setState({ isSignedIn: true, loading: false });
     await component.update();
@@ -122,7 +119,7 @@ describe('<App />', () => {
   });
 
   test('It renders <Logout /> on / route', async () => {
-    reactRouter.BrowserRouter = mockRouter('/');
+    window.history.pushState({}, '', '/');
     const component = mount(<App />);
     component.setState({ isSignedIn: true, loading: false });
     await component.update();
@@ -131,14 +128,15 @@ describe('<App />', () => {
   });
 
   test('It renders quadrant on /*.html route', async () => {
-    reactRouter.BrowserRouter = mockRouter('/dev.html');
+    window.history.pushState({}, '', '/dev.html');
     const component = mount(<App />);
     component.setState({ isSignedIn: true, loading: false });
+    await component.update();
     expect(component.find(Quadrant)).toHaveLength(1);
   });
 
   test('It renders entry on /entries/*.html route', async () => {
-    reactRouter.BrowserRouter = mockRouter('/entries/java.html');
+    window.history.pushState({}, '', '/entries/java.html');
     const component = mount(<App />);
     component.setState({ isSignedIn: true, loading: false });
     await component.update();
@@ -146,7 +144,7 @@ describe('<App />', () => {
   });
 
   test('It renders not found for invalid URL', async () => {
-    reactRouter.BrowserRouter = mockRouter('/notfound');
+    window.history.pushState({}, '', '/notfound');
     const component = mount(<App />);
     component.setState({ isSignedIn: true, loading: false });
     await component.update();
@@ -154,10 +152,11 @@ describe('<App />', () => {
   });
 
   test('It renders tag list no /tags/*.html route', async () => {
-    reactRouter.BrowserRouter = mockRouter('/tags/java.html');
+    window.history.pushState({}, '', '/tags/java.html');
     const component = mount(<App />);
     component.setState({ isSignedIn: true, loading: false });
     await component.update();
+
     expect(component.find(TagList)).toHaveLength(1);
   });
 });
