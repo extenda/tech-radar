@@ -139,16 +139,18 @@ module.exports = (env, argv) => {
 
   if (process.env.BACKEND === '1') {
     // Add a proxy for the development server with JWT validation.
-    webpack.devServer.proxy = {
-      '/js/radar.json': {
+    webpack.devServer.proxy = [
+      {
+        context: '/js/radar.json',
         target: 'http://localhost:3000',
         secure: false,
       },
-      '/js/radar_it.json': {
+      {
+        context: '/js/radar_it.json',
         target: 'http://localhost:3000',
         secure: false,
       },
-    };
+    ];
   }
 
   return webpack;
