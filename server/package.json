@@ -5,7 +5,7 @@
   "description": "Extenda Retail Technology Radar Backend Server",
   "main": "src/js/index.js",
   "scripts": {
-    "build": "ncc build src/js/index.js -o dist",
+    "build": "esbuild src/js/index.js --bundle --platform=node --minify=true --outfile=dist/index.js",
     "lint:js": "eslint src test",
     "start": "npm run env PORT=3000 -- node src/js/index.js",
     "test": "jest"
@@ -19,21 +19,21 @@
   "license": "MIT",
   "homepage": "https://github.com/extenda/tech-radar#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "google-auth-library": "^5.10.1",
+    "express": "^4.19.2",
+    "google-auth-library": "^9.13.0",
     "launchdarkly-node-server-sdk": "^6.2.0",
-    "morgan": "^1.9.1",
+    "morgan": "^1.10.0",
     "sha.js": "^2.4.11"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.21.1",
+    "esbuild": "^0.23.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.21.2",
-    "jest": "^26.0.1",
-    "jest-junit": "^10.0.0",
-    "jest-sonar": "^0.2.8",
-    "node-fetch": "^2.6.7"
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0",
+    "jest-sonar": "^0.2.16",
+    "node-fetch": "^3.3.2"
   },
   "eslintConfig": {
     "env": {

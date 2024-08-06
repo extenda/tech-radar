@@ -5,7 +5,6 @@ import {
   Route,
 } from 'react-router-dom';
 import { withLDConsumer, camelCaseKeys } from 'launchdarkly-react-client-sdk';
-import shajs from 'sha.js';
 import PropTypes from 'prop-types';
 import Login from './Login';
 import Logout from './Logout';
@@ -16,6 +15,15 @@ import Footer from './Footer';
 import NotFound from './NotFound';
 import TagList from './TagList';
 import radarService from '../modules/radarService';
+
+const getSHA256Hash = async (input) => {
+  const textAsBuffer = new TextEncoder().encode(input);
+  const hashBuffer = await window.crypto.subtle.digest('SHA-256', textAsBuffer);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray
+    .map((item) => item.toString(16).padStart(2, '0'))
+    .join('');
+};
 
 export class App extends Component {
   constructor(props) {
@@ -57,14 +65,14 @@ export class App extends Component {
     }
 
     const { tokenId, profileObj: { googleId, email } } = response;
-    return ldClient.identify({
-      key: shajs('sha256').update(`${googleId}`).digest('hex'),
+    return getSHA256Hash(googleId).then((key) => ldClient.identify({
+      key,
       email,
       privateAttributeNames: ['email'],
     }).then(camelCaseKeys)
       .then((flags) => radarService.init(tokenId, flags.releaseToolRadar)
         .then(this.radarDidLoad)
-        .catch(this.radarDidFail));
+        .catch(this.radarDidFail)));
   };
 
   loginDidFail = () => {};
