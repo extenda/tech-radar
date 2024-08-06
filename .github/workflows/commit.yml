@@ -161,7 +161,17 @@ jobs:
           service-account-key: ${{ secrets.GCLOUD_AUTH }}
 
       - name: Deploy to Cloud Run
-        uses: extenda/actions/cloud-run@v0
-        with:
-          service-account-key: ${{ secrets.GCLOUD_AUTH }}
-          image: ${{ needs.release.outputs.docker-image-name }}
+        run: |
+          gcloud run deploy tech-radar \
+          --image=${{ needs.release.outputs.docker-image-name }} \
+          --service-account=cloudrun-runtime@${{ steps.gcloud.outputs.project-id }}.iam.gserviceaccount.com \
+          --platform=managed \
+          --region=europe-west1 \
+          --project=${{ steps.gcloud.outputs.project-id }} \
+          --cpu=1 \
+          --memory=256Mi \
+          --min-instances=0 \
+          --max-instances=20 \
+          --allow-unauthenticated \
+          --set-env-vars=SERVICE_PROJECT_ID=${{ steps.gcloud.outputs.project-id }},SERVICE_ENVIRONMENT=prod \
+          --set-secrets=LD_SDK_KEY=launchdarkly-sdk-key:latest
