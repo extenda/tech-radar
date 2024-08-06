@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import { withLDProvider } from 'launchdarkly-react-client-sdk';
 import LDApp from './components/App';
+import { clientId } from './modules/auth-config';
 import '../assets/favicon.ico';
 import '../assets/css/main.css';
 
@@ -11,6 +13,8 @@ const LDWrapper = withLDProvider({
 })(() => <LDApp />);
 
 ReactDOM.render(
-  <LDWrapper />,
+  <GoogleOAuthProvider clientId={clientId}>
+    <LDWrapper />
+  </GoogleOAuthProvider>,
   document.getElementById('app'),
 );

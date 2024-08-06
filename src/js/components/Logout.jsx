@@ -1,28 +1,19 @@
 import React from 'react';
-import { GoogleLogout } from 'react-google-login';
+import { googleLogout } from '@react-oauth/google';
 import Icon from './Icon';
-import { clientId } from '../modules/auth-config';
 
-const signOutButton = (renderProps) => {
-  const { onClick } = renderProps;
-  return (
-    <button type="button" className="google-button signout" onClick={onClick}>
-      <Icon name="sign-out" />
-      Sign out
-    </button>
-  );
-};
-
-const logoutDidSucceed = () => {
-  window.location.reload();
+const logout = () => {
+  googleLogout();
+  window.setTimeout(() => {
+    window.location.reload();
+  }, 100);
 };
 
 const Logout = () => (
-  <GoogleLogout
-    clientId={clientId}
-    onLogoutSuccess={logoutDidSucceed}
-    render={signOutButton}
-  />
+  <button type="button" className="google-button signout" onClick={logout}>
+    <Icon name="sign-out" />
+    Sign out
+  </button>
 );
 
 export default Logout;

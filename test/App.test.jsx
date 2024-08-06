@@ -9,6 +9,8 @@ import Logout from '../src/js/components/Logout';
 import Login from '../src/js/components/Login';
 import sha256 from '../src/js/modules/sha256';
 
+const TEST_TOKEN = 'eyJhbGciOiJIUzI1NiIsImtpZCI6IjQ1MjljNDA5Zjc3YTEwNmZiNjdlZTFhODVkMTY4ZmQyY2ZiN2MwYjciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJzdWIiOiJ0ZXN0IiwiaGQiOiJleHRlbmRhcmV0YWlsLmNvbSIsImVtYWlsIjoidGVzdEBleHRlbmRhcmV0YWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlfQ.pevBIXNzVdqfUfmmREIKFYu6GDdD4pdsKao83zs6A9Y';
+
 jest.mock('../src/js/modules/sha256');
 
 jest.mock('../src/js/components/Radar', () => () => (
@@ -85,7 +87,7 @@ describe('<App />', () => {
     window.history.pushState({}, '', '/');
     const identify = jest.fn().mockResolvedValueOnce({});
     const component = mount(<App ldClient={{ identify }} />);
-    await component.instance().loginDidSucceed({ tokenId: 'test', profileObj: { googleId: 1, email: 'mail' } });
+    await component.instance().loginDidSucceed({ credential: TEST_TOKEN });
     await component.update();
     expect(component.state().isSignedIn).toEqual(true);
     expect(component.state().loading).toEqual(false);
@@ -97,7 +99,7 @@ describe('<App />', () => {
     window.history.pushState({}, '', '/');
     const identify = jest.fn().mockResolvedValueOnce({});
     const component = mount(<App ldClient={{ identify }} />);
-    await component.instance().loginDidSucceed({ tokenId: 'fail', profileObj: { googleId: 1, email: 'mail' } });
+    await component.instance().loginDidFail({ });
     await component.update();
     expect(component.state().isSignedIn).toEqual(false);
     expect(component.state().loading).toEqual(true);

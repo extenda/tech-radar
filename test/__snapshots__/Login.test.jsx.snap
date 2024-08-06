@@ -48,31 +48,12 @@ exports[`<Login /> It renders login view 1`] = `
       <div
         className="three columns"
       >
-        <u
-          accessType="online"
-          buttonText="Sign in with Google"
+        <GoogleLogin
           className="google-button"
-          clientId="947570385950-m9cgarv8pduseu61eudf3k84glo47jv0.apps.googleusercontent.com"
-          cookiePolicy="single_host_origin"
-          disabledStyle={
-            {
-              "opacity": 0.6,
-            }
-          }
-          fetchBasicProfile={true}
-          hostedDomain="extendaretail.com"
-          icon={true}
-          isSignedIn={true}
-          jsSrc="https://apis.google.com/js/api.js"
+          hosted_domain="extendaretail.com"
           onFailure={[Function]}
-          onRequest={[Function]}
           onSuccess={[Function]}
-          prompt=""
-          scope="profile email"
-          tag="button"
-          theme="dark"
-          type="button"
-          uxMode="popup"
+          theme="outline"
         />
       </div>
       <div

@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import { withLDConsumer, camelCaseKeys } from 'launchdarkly-react-client-sdk';
 import PropTypes from 'prop-types';
+import { jwtDecode } from 'jwt-decode';
 import Login from './Login';
 import Logout from './Logout';
 import LDRadar from './Radar';
@@ -56,13 +57,13 @@ export class App extends Component {
       return null;
     }
 
-    const { tokenId, profileObj: { googleId, email } } = response;
-    return sha256(googleId).then((key) => ldClient.identify({
+    const { sub, email } = jwtDecode(response.credential);
+    return sha256(sub).then((key) => ldClient.identify({
       key,
       email,
       privateAttributeNames: ['email'],
     }).then(camelCaseKeys)
-      .then((flags) => radarService.init(tokenId, flags.releaseToolRadar)
+      .then((flags) => radarService.init(response.credential, flags.releaseToolRadar)
         .then(this.radarDidLoad)
         .catch(this.radarDidFail)));
   };
