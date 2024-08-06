@@ -6,13 +6,13 @@ exports[`<Entry /> It renders entry with history 1`] = `
 <Fragment>
   <Navigation
     entry={
-      Object {
+      {
         "name": "PHP",
       }
     }
     home={null}
     quadrant={
-      Object {
+      {
         "dirname": "dev",
         "name": "Development",
       }
@@ -58,7 +58,7 @@ exports[`<Entry /> It renders entry with history 1`] = `
         />
         <LicenseBadges
           license={
-            Object {
+            {
               "commercial": null,
               "openSource": null,
             }
@@ -68,50 +68,34 @@ exports[`<Entry /> It renders entry with history 1`] = `
       <div
         className="twelve columns"
       >
-        <ReactMarkdown
-          astPlugins={Array []}
-          escapeHtml={true}
-          plugins={Array []}
-          rawSourcePos={false}
-          renderers={Object {}}
-          skipHtml={false}
-          source="Description"
-          sourcePos={false}
-          transformLinkUri={[Function]}
-        />
+        <lr>
+          Description
+        </lr>
         <h2>
           Rationale
         </h2>
-        <ReactMarkdown
-          astPlugins={Array []}
-          escapeHtml={true}
-          plugins={Array []}
-          rawSourcePos={false}
-          renderers={Object {}}
-          skipHtml={false}
-          source="Rationale"
-          sourcePos={false}
-          transformLinkUri={[Function]}
-        />
+        <lr>
+          Rationale
+        </lr>
         <License
           license={
-            Object {
+            {
               "commercial": null,
               "openSource": null,
             }
           }
         />
         <Related
-          related={Array []}
+          related={[]}
         />
         <History
           history={
-            Array [
-              Object {
+            [
+              {
                 "date": "Jan 1, 2004",
                 "ringName": "Adopt",
               },
-              Object {
+              {
                 "date": "Mar 20, 2018",
                 "ringName": "Hold",
               },
@@ -125,7 +109,7 @@ exports[`<Entry /> It renders entry with history 1`] = `
     >
       <Tags
         tags={
-          Array [
+          [
             "90's",
           ]
         }
@@ -139,13 +123,13 @@ exports[`<Entry /> It renders entry with related links 1`] = `
 <Fragment>
   <Navigation
     entry={
-      Object {
+      {
         "name": "Java",
       }
     }
     home={null}
     quadrant={
-      Object {
+      {
         "dirname": "dev",
         "name": "Development",
       }
@@ -186,7 +170,7 @@ exports[`<Entry /> It renders entry with related links 1`] = `
         />
         <LicenseBadges
           license={
-            Object {
+            {
               "commercial": null,
               "openSource": null,
             }
@@ -196,34 +180,18 @@ exports[`<Entry /> It renders entry with related links 1`] = `
       <div
         className="twelve columns"
       >
-        <ReactMarkdown
-          astPlugins={Array []}
-          escapeHtml={true}
-          plugins={Array []}
-          rawSourcePos={false}
-          renderers={Object {}}
-          skipHtml={false}
-          source="Description"
-          sourcePos={false}
-          transformLinkUri={[Function]}
-        />
+        <lr>
+          Description
+        </lr>
         <h2>
           Rationale
         </h2>
-        <ReactMarkdown
-          astPlugins={Array []}
-          escapeHtml={true}
-          plugins={Array []}
-          rawSourcePos={false}
-          renderers={Object {}}
-          skipHtml={false}
-          source="Rationale"
-          sourcePos={false}
-          transformLinkUri={[Function]}
-        />
+        <lr>
+          Rationale
+        </lr>
         <License
           license={
-            Object {
+            {
               "commercial": null,
               "openSource": null,
             }
@@ -231,8 +199,8 @@ exports[`<Entry /> It renders entry with related links 1`] = `
         />
         <Related
           related={
-            Array [
-              Object {
+            [
+              {
                 "file": "php.html",
                 "name": "PHP",
               },
@@ -240,7 +208,7 @@ exports[`<Entry /> It renders entry with related links 1`] = `
           }
         />
         <History
-          history={Array []}
+          history={[]}
         />
       </div>
     </div>
@@ -249,7 +217,7 @@ exports[`<Entry /> It renders entry with related links 1`] = `
     >
       <Tags
         tags={
-          Array [
+          [
             "90's",
             "java",
           ]
@@ -264,13 +232,13 @@ exports[`<Entry /> It renders inactive statement 1`] = `
 <Fragment>
   <Navigation
     entry={
-      Object {
+      {
         "name": "Lisp",
       }
     }
     home={null}
     quadrant={
-      Object {
+      {
         "dirname": "dev",
         "name": "Development",
       }
@@ -328,7 +296,7 @@ exports[`<Entry /> It renders inactive statement 1`] = `
         />
         <LicenseBadges
           license={
-            Object {
+            {
               "commercial": null,
               "openSource": null,
             }
@@ -338,54 +306,38 @@ exports[`<Entry /> It renders inactive statement 1`] = `
       <div
         className="twelve columns"
       >
-        <ReactMarkdown
-          astPlugins={Array []}
-          escapeHtml={true}
-          plugins={Array []}
-          rawSourcePos={false}
-          renderers={Object {}}
-          skipHtml={false}
-          source="Description"
-          sourcePos={false}
-          transformLinkUri={[Function]}
-        />
+        <lr>
+          Description
+        </lr>
         <h2>
           Rationale
         </h2>
-        <ReactMarkdown
-          astPlugins={Array []}
-          escapeHtml={true}
-          plugins={Array []}
-          rawSourcePos={false}
-          renderers={Object {}}
-          skipHtml={false}
-          source="Rationale"
-          sourcePos={false}
-          transformLinkUri={[Function]}
-        />
+        <lr>
+          Rationale
+        </lr>
         <License
           license={
-            Object {
+            {
               "commercial": null,
               "openSource": null,
             }
           }
         />
         <Related
-          related={Array []}
+          related={[]}
         />
         <History
           history={
-            Array [
-              Object {
+            [
+              {
                 "date": "Jan 1, 1970",
                 "ringName": "Adopt",
               },
-              Object {
+              {
                 "date": "Mar 20, 2018",
                 "ringName": "Hold",
               },
-              Object {
+              {
                 "date": "Aug 23, 2019",
                 "ringName": "Archive",
               },
@@ -398,7 +350,7 @@ exports[`<Entry /> It renders inactive statement 1`] = `
       className="u-pull-right"
     >
       <Tags
-        tags={Array []}
+        tags={[]}
       />
     </div>
   </div>
@@ -409,13 +361,13 @@ exports[`<Entry /> It renders logotype if present 1`] = `
 <Fragment>
   <Navigation
     entry={
-      Object {
+      {
         "name": "PHP",
       }
     }
     home={null}
     quadrant={
-      Object {
+      {
         "dirname": "dev",
         "name": "Development",
       }
@@ -461,7 +413,7 @@ exports[`<Entry /> It renders logotype if present 1`] = `
         />
         <LicenseBadges
           license={
-            Object {
+            {
               "commercial": null,
               "openSource": null,
             }
@@ -471,50 +423,34 @@ exports[`<Entry /> It renders logotype if present 1`] = `
       <div
         className="twelve columns"
       >
-        <ReactMarkdown
-          astPlugins={Array []}
-          escapeHtml={true}
-          plugins={Array []}
-          rawSourcePos={false}
-          renderers={Object {}}
-          skipHtml={false}
-          source="Description"
-          sourcePos={false}
-          transformLinkUri={[Function]}
-        />
+        <lr>
+          Description
+        </lr>
         <h2>
           Rationale
         </h2>
-        <ReactMarkdown
-          astPlugins={Array []}
-          escapeHtml={true}
-          plugins={Array []}
-          rawSourcePos={false}
-          renderers={Object {}}
-          skipHtml={false}
-          source="Rationale"
-          sourcePos={false}
-          transformLinkUri={[Function]}
-        />
+        <lr>
+          Rationale
+        </lr>
         <License
           license={
-            Object {
+            {
               "commercial": null,
               "openSource": null,
             }
           }
         />
         <Related
-          related={Array []}
+          related={[]}
         />
         <History
           history={
-            Array [
-              Object {
+            [
+              {
                 "date": "Jan 1, 2004",
                 "ringName": "Adopt",
               },
-              Object {
+              {
                 "date": "Mar 20, 2018",
                 "ringName": "Hold",
               },
@@ -528,7 +464,7 @@ exports[`<Entry /> It renders logotype if present 1`] = `
     >
       <Tags
         tags={
-          Array [
+          [
             "90's",
           ]
         }

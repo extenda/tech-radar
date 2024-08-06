@@ -1,3 +1,6 @@
+/**
+ * @jest-environment node
+ */
 const path = require('path');
 const reader = require('../src/js/builder/reader');
 const createModel = require('../src/js/builder/model');

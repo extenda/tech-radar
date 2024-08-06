@@ -6,7 +6,7 @@ exports[`<Logout /> It renders logout button 1`] = `
     buttonText="Logout of Google"
     clientId="947570385950-m9cgarv8pduseu61eudf3k84glo47jv0.apps.googleusercontent.com"
     disabledStyle={
-      Object {
+      {
         "opacity": 0.6,
       }
     }

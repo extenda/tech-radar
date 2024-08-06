@@ -55,7 +55,7 @@ exports[`<Login /> It renders login view 1`] = `
           clientId="947570385950-m9cgarv8pduseu61eudf3k84glo47jv0.apps.googleusercontent.com"
           cookiePolicy="single_host_origin"
           disabledStyle={
-            Object {
+            {
               "opacity": 0.6,
             }
           }

@@ -15,15 +15,7 @@ import Footer from './Footer';
 import NotFound from './NotFound';
 import TagList from './TagList';
 import radarService from '../modules/radarService';
-
-const getSHA256Hash = async (input) => {
-  const textAsBuffer = new TextEncoder().encode(input);
-  const hashBuffer = await window.crypto.subtle.digest('SHA-256', textAsBuffer);
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  return hashArray
-    .map((item) => item.toString(16).padStart(2, '0'))
-    .join('');
-};
+import sha256 from '../modules/sha256';
 
 export class App extends Component {
   constructor(props) {
@@ -65,7 +57,7 @@ export class App extends Component {
     }
 
     const { tokenId, profileObj: { googleId, email } } = response;
-    return getSHA256Hash(googleId).then((key) => ldClient.identify({
+    return sha256(googleId).then((key) => ldClient.identify({
       key,
       email,
       privateAttributeNames: ['email'],
