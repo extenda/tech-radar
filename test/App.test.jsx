@@ -1,5 +1,4 @@
 import React from 'react';
-import * as reactRouter from 'react-router-dom';
 import { shallow, mount } from 'enzyme';
 import { App } from '../src/js/components/App';
 import Entry from '../src/js/components/Entry';
