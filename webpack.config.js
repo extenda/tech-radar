@@ -91,7 +91,7 @@ module.exports = (env, argv) => {
     },
     optimization: {
       minimizer: [
-        // `...`,
+        '...',
         new CssMinimizerPlugin(),
       ],
     },
