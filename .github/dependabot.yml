@@ -9,6 +9,7 @@ updates:
       - packages/shared
     schedule:
       interval: weekly
+    versioning-strategy: increase
     groups:
       deps:
         patterns:
