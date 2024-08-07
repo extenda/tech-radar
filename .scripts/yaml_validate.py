@@ -9,7 +9,7 @@ exitCode = 0
 pykwalify.init_logging(0)
 
 for file in glob.glob("radar/**/*.yaml"):
-    c = Core(source_file=file, schema_files=["src/radar_entry.schema.yaml"], extensions=[".scripts/companies.py"])
+    c = Core(source_file=file, schema_files=["radar_entry.schema.yaml"], extensions=[".scripts/companies.py"])
     try:
         c.validate(raise_exception=True)
     except Exception as e:
