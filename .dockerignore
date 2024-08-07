@@ -1,4 +1,4 @@
 *
-!build/
-!server/dist
+!packages/app/build/
+!packages/backend/dist
 !entrypoint.sh

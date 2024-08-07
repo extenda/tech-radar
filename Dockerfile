@@ -4,8 +4,8 @@ ENV PUBLIC_HTML /var/www
 
 EXPOSE 8080
 
-COPY build /var/www
-COPY server/dist /opt/tech-radar
+COPY packages/app/build /var/www
+COPY packages/backend/dist /opt/tech-radar
 
 ENTRYPOINT ["/usr/local/bin/node"]
 CMD ["/opt/tech-radar/index.js"]

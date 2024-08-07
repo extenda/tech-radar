@@ -1,9 +1,9 @@
 node_modules/
-build/
+packages/app/build/
 test-results/
 coverage/
 .idea
 .scannerwork/
-server/dist
+packages/backend/dist/
 .scripts/*.pyc
 radar_it

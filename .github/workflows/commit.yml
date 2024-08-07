@@ -41,28 +41,23 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
-          cache-dependency-path: |
-            package-lock.json
-            server/package-lock.json
 
       - name: NPM install
-        run: |
-          npm ci
-          npm ci --prefix server
+        run: npm ci
 
       - name: Lint javascript
         run: |
-          npm run lint:js -- \
-            --format junit \
-            --output-file test-results/eslint/TEST-eslint.xml
-          npm run lint:js --prefix=server -- \
-            --format junit \
-            --output-file test-results/eslint/TEST-eslint.xml
+          for module in app backend builder; do
+            npm run lint:js -w "@tech-radar/$module" -- \
+              --format junit \
+              --output-file test-results/eslint/TEST-eslint.xml
+          done
 
       - name: Unit tests
         run: |
-          npm test -- --ci --coverage
-          npm test --prefix server -- --ci --coverage
+          for module in app backend builder; do
+            npm test -w "@tech-radar/$module" -- --ci --runInBand
+          done
 
       - name: Build radar
         run: npm run build
@@ -90,9 +85,6 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
-          cache-dependency-path: |
-            package-lock.json
-            server/package-lock.json
 
       - uses: extenda/actions/gcp-secret-manager@v0
         with:
@@ -123,14 +115,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: NPM install
-        run: |
-          npm ci
-          npm ci --prefix server
+        run: npm ci
 
       - name: Build radar
         run: |
           npm version ${{ steps.release.outputs.version }} --no-git-tag-version
-          npm version ${{ steps.release.outputs.version }} --no-git-tag-version --prefix server
           npm run build
 
       - uses: extenda/actions/setup-gcloud@v0

@@ -78,27 +78,27 @@ Finally, all commits must be written in imperative mood (i.e, _Add_ not _Added_)
 
 Start by installing dependencies:
 ```bash
-$ npm install
-$ npm install --prefix server
+npm ci
 ```
 
 Next, make sure to install [pre-commit](https://pre-commit.com) hooks. In addition to ensure file formats it also
 checks commit messages.
 ```bash
-$ pre-commit install -t pre-commit -t commit-msg
+pre-commit install -t pre-commit -t commit-msg
 ```
 
 To start a development server that automatically refresh as you make changes to the radar contents, run the following:
 ```bash
-$ npm start
+npm start
 ```
+
 This will open the Tech Radar in your default browser.
 The radar is running on http://localhost:8080.
 
 To run the development server with authentication enabled:
 ```bash
-$ npm run backend &
-$ npm run frontend
+npm run backend &
+npm run frontend
 ```
 This will open the Tech Radar in your default browser.
 The radar is running on http://localhost:8080 and requires Google login.
@@ -147,45 +147,45 @@ tags: # Optional list of tags.
 There are two scripts to validate radar entries. To use them, first install the required Python dependencies:
 
 ```bash
-$ npm run pip:install
+npm run pip:install
 ```
 
 To run YAML lint, run the following:
 ```bash
-$ npm run yaml:lint
+npm run yaml:lint
 ```
 
 And to validate the YAML against its schema definition, use:
 ```bash
-$ npm run yaml:validate
+npm run yaml:validate
 ```
 
 ### Supported Open-Source Licenses
 
 The following open source license names are valid for use in the radar blips.
 
-| Name        | Description                                                      |
-| ----------- | ---------------------------------------------------------------- |
-| Apache-1.1  | Apache Software License Version 1.1                              |
-| Apache-2.0  | Apache Software License Version 2.0                              |
-| BSD-2       | Simplified BSD License (BSD 2-Clause License)                    |
-| BSD-3       | New BSD License (BSD 3-Clause License)                           |
-| BSD-4       | Original BSD License (BSD 4-Clause License)                      |
-| BSD-style   | BSD-style license, see project license for details               |
-| CC0         | Creative Commons Public Domain                                   |
-| CDDL-1.0    | Common Development and Distribution License (CDDL) Version 1.0   |
-| CDDL-1.1    | Common Development and Distribution License (CDDL) Version 1.1   |
-| EPL-1.0     | Eclipse Public License (EPL) Version 1.0                         |
-| EDL-1.0     | Eclipse Distribution License (EDL) Version 1.0                   |
-| LGPL-2.1    | GNU Lesser General Public License (LGPL) Version 2.1             |
-| LGPL-3.0    | GNU Lesser General Public License (LGPL) Version 3.0             |
-| GPL-CE      | GNU General Public License (GPL) with the Classpath Exception    |
-| MIT         | The MIT License                                                  |
-| MPL-1.0     | Mozilla Public License (MPL) Version 1.0                         |
-| MPL-1.1     | Mozilla Public License (MPL) Version 1.1                         |
-| MPL-2.0     | Mozilla Public License (MPL) Version 2.0                         |
-| PostgreSQL  | The PostgreSQL License                                           |
-| Public      | Public Domain                                                    |
+| Name       | Description                                                    |
+|------------|----------------------------------------------------------------|
+| Apache-1.1 | Apache Software License Version 1.1                            |
+| Apache-2.0 | Apache Software License Version 2.0                            |
+| BSD-2      | Simplified BSD License (BSD 2-Clause License)                  |
+| BSD-3      | New BSD License (BSD 3-Clause License)                         |
+| BSD-4      | Original BSD License (BSD 4-Clause License)                    |
+| BSD-style  | BSD-style license, see project license for details             |
+| CC0        | Creative Commons Public Domain                                 |
+| CDDL-1.0   | Common Development and Distribution License (CDDL) Version 1.0 |
+| CDDL-1.1   | Common Development and Distribution License (CDDL) Version 1.1 |
+| EPL-1.0    | Eclipse Public License (EPL) Version 1.0                       |
+| EDL-1.0    | Eclipse Distribution License (EDL) Version 1.0                 |
+| LGPL-2.1   | GNU Lesser General Public License (LGPL) Version 2.1           |
+| LGPL-3.0   | GNU Lesser General Public License (LGPL) Version 3.0           |
+| GPL-CE     | GNU General Public License (GPL) with the Classpath Exception  |
+| MIT        | The MIT License                                                |
+| MPL-1.0    | Mozilla Public License (MPL) Version 1.0                       |
+| MPL-1.1    | Mozilla Public License (MPL) Version 1.1                       |
+| MPL-2.0    | Mozilla Public License (MPL) Version 2.0                       |
+| PostgreSQL | The PostgreSQL License                                         |
+| Public     | Public Domain                                                  |
 
 If you find a library with a license that isn't in this list it must be analyzed in detail.
 The list only contains license types analyzed for compliance with Extenda Retail products.
@@ -203,20 +203,21 @@ must be added to the `companies.yaml` file.
 The Tech Radar is packaged into a Docker image. To build the radar, use this command:
 
 ```bash
-$ docker build -t tech-radar .
+npm run build
+docker build -t tech-radar .
 ```
 
 And to run a container, you'd run it in a way similar to this:
 
 ```bash
-$ docker run --rm -it -p 8080:8080 tech-radar
+docker run --rm -it -p 8080:8080 tech-radar
 ```
 The Tech Radar would now be available at http://localhost:8080
 
 It is also possible to run the development server in Docker:
 
 ```bash
-$ docker run --rm -it -v $(pwd):/home -w /home -p 8080:8080 node:alpine sh -c "npm i; npm start"
+docker run --rm -it -v $(pwd):/home -w /home -p 8080:8080 node:alpine sh -c "npm i; npm start"
 ```
 
 ## Release Process
