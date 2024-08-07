@@ -1,14 +1,10 @@
 version: 2
 updates:
   - package-ecosystem: npm
-    directories:
-      - /
-      - packages/app
-      - packages/backend
-      - packages/builder
-      - packages/shared
+    directory: /
     schedule:
       interval: weekly
+    versioning-strategy: increase
     groups:
       deps:
         patterns:
