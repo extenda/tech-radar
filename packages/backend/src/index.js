@@ -22,7 +22,7 @@ const app = express();
 app.use(morgan('tiny'));
 app.disable('x-powered-by');
 
-app.get(/.*\.html/, async (req, res) => {
+app.get(/\.html$/, async (req, res) => {
   res.sendFile(path.join(publicHtml, 'index.html'));
 });
 
