@@ -5,7 +5,6 @@ const { DefinePlugin } = require('webpack');
 const log = require('webpack-log');
 const path = require('path');
 const fs = require('fs');
-const watch = require('watch');
 const radarBuilder = require('./src/js/builder/builder');
 
 const logger = log({ name: 'radar' });
@@ -50,13 +49,10 @@ module.exports = (env, argv) => {
       },
       setupMiddlewares: (middlewares) => {
         // Watch for changes to radar YAMLs and rebuild the JSON model.
-        watch.watchTree(radarDir, () => {
+        fs.watch(radarDir, { recursive: true }, () => {
           buildRadar().then(() => {
             logger.debug('Rebuilt radar model');
           });
-          // buildRadar().then(() => {
-          //   server.sockWrite(server.sockets, 'content-changed');
-          // });
         });
         return middlewares;
       },
