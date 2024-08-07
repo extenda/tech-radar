@@ -1,5 +1,7 @@
 name: React Native Web
 blip:
+  - date: 2021-04-30
+    ring: ASSESS
   - date: 2024-04-05
     ring: HOLD
 description: |
@@ -11,8 +13,8 @@ rationale:
 
   Of course, this is not for all types of apps but where we need to support more platforms.
 
-  We'd like to assess this for Cloud POS and Attendant App where we need web support besides Android/iOS and
-  where maintaining a separate web interface adds more complexity for the team and time to market.
+  After evaluation we've decided to abandon React Native Web. We've moved in a different direction with our UIs.
+  The community is also moving in the other direction, with React Native being generated from React Web.
 license:
   open-source:
     name: Apache-2.0
