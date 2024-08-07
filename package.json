@@ -78,27 +78,6 @@
     "webpack-dev-server": "^5.0.4",
     "webpack-log": "^3.0.2"
   },
-  "babel": {
-    "env": {
-      "test": {
-        "plugins": [
-          "@babel/plugin-transform-runtime"
-        ]
-      }
-    },
-    "plugins": [
-      [
-        "@babel/plugin-transform-runtime",
-        {
-          "regenerator": true
-        }
-      ]
-    ],
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ]
-  },
   "eslintConfig": {
     "env": {
       "es6": true,
