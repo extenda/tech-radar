@@ -3,7 +3,10 @@ updates:
   - package-ecosystem: npm
     directories:
       - /
-      - /server
+      - packages/app
+      - packages/backend
+      - packages/builder
+      - packages/shared
     schedule:
       interval: weekly
     groups:
