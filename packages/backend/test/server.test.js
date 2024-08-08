@@ -152,9 +152,12 @@ describe('Express', () => {
         },
       });
       expect(mockVariation).toHaveBeenCalledWith('release.tool-radar', {
+        kind: 'user',
         key: '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08',
         email: 'test@extendaretail.com',
-        privateAttributeNames: ['email'],
+        _meta: {
+          privateAttributeNames: ['email'],
+        },
       }, false);
       expect(response.status).toEqual(200);
       expect(response.headers.get('content-type')).toEqual('application/json; charset=UTF-8');
@@ -169,9 +172,12 @@ describe('Express', () => {
         },
       });
       expect(mockVariation).toHaveBeenCalledWith('release.tool-radar', {
+        kind: 'user',
         key: '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08',
         email: 'test@extendaretail.com',
-        privateAttributeNames: ['email'],
+        _meta: {
+          privateAttributeNames: ['email'],
+        },
       }, false);
       expect(response.status).toEqual(404);
       expect(mockVerifyIdToken).toHaveBeenCalledTimes(1);
