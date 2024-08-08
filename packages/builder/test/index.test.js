@@ -8,9 +8,6 @@ afterEach(() => {
 
 test('It can build a radar', async () => {
   const outputFile = path.resolve(__dirname, '..', 'build', 'js', 'radar.json');
-  await builder.build(
-    path.resolve(__dirname, 'radar', 'valid'),
-    outputFile,
-  );
+  await builder.build(path.resolve(__dirname, 'radar', 'valid'), outputFile);
   expect(fs.existsSync(outputFile)).toEqual(true);
 });
