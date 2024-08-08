@@ -6,7 +6,7 @@
   "main": "src/js/index.jsx",
   "scripts": {
     "build": "webpack --mode production",
-    "lint:js": "eslint src test",
+    "lint:js": "eslint *.config.js src test",
     "start": "webpack serve --open --mode development",
     "frontend": "npm run env BACKEND=1 -- webpack serve --open --mode development",
     "test": "jest"

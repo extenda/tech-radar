@@ -8,7 +8,7 @@
     "test": "jest",
     "build": "esbuild src/index.js --bundle --platform=node --minify=true --outfile=dist/index.js",
     "start": "npm run env PORT=3000 -- node src/index.js",
-    "lint:js": "eslint src test"
+    "lint:js": "eslint *.config.js src test"
   },
   "license": "MIT",
   "homepage": "https://github.com/extenda/tech-radar#readme",
