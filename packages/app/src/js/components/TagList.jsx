@@ -6,7 +6,11 @@ import Icon from './Icon';
 import radarService from '../modules/radarService';
 
 const TagList = (props) => {
-  const { match: { params: { tag } } } = props;
+  const {
+    match: {
+      params: { tag },
+    },
+  } = props;
 
   const entries = radarService.listEntriesByTag(tag);
 

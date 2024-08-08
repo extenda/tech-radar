@@ -24,10 +24,12 @@ const Related = (props) => {
 };
 
 Related.propTypes = {
-  related: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    file: PropTypes.string.isRequired,
-  })),
+  related: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      file: PropTypes.string.isRequired,
+    }),
+  ),
 };
 
 Related.defaultProps = {

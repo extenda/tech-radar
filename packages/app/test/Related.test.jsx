@@ -3,9 +3,7 @@ import { mount, shallow } from 'enzyme/build';
 import { Link, MemoryRouter } from 'react-router-dom';
 import Related from '../src/js/components/entry/Related';
 
-const related = [
-  { file: 'php.html', name: 'PHP' },
-];
+const related = [{ file: 'php.html', name: 'PHP' }];
 
 describe('<Related />', () => {
   test('It renders related entries', () => {

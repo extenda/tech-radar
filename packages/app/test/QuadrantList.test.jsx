@@ -26,9 +26,7 @@ describe('<QuadrantList/>', () => {
   test('It renders a list for Quandrant page', () => {
     const component = mount(
       <MemoryRouter initialEntries={[{ pathname: '/', key: 'test' }]}>
-        <QuadrantList
-          quadrant={radarService.getQuadrant('test')}
-        />
+        <QuadrantList quadrant={radarService.getQuadrant('test')} />
       </MemoryRouter>,
     );
     expect(component).toMatchSnapshot();

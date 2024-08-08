@@ -9,12 +9,14 @@ module.exports = [
   {
     files: ['**/*.jsx'],
     ...react.configs.flat.recommended,
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
   },
   {
     name: 'app-config',
-    plugins: {
-      react,
-    },
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -28,4 +30,7 @@ module.exports = [
     rules: {},
   },
   eslintPluginPrettier,
+  {
+    ignores: ['src/js/lib/radar.js'],
+  },
 ];

@@ -9,12 +9,14 @@ const Quadrant = ({ match }) => {
   const quadrant = radarService.getQuadrant(match.params.quadrant);
 
   if (!quadrant) {
-    return (<NotFound />);
+    return <NotFound />;
   }
 
   return (
     <>
-      <Navigation quadrant={{ name: quadrant.name, dirname: quadrant.dirname }} />
+      <Navigation
+        quadrant={{ name: quadrant.name, dirname: quadrant.dirname }}
+      />
       <div className="container">
         <h1>{quadrant.name}</h1>
         <QuadrantList quadrant={quadrant} />

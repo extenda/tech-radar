@@ -27,10 +27,12 @@ const History = (props) => {
 };
 
 History.propTypes = {
-  history: PropTypes.arrayOf(PropTypes.shape({
-    date: PropTypes.string.isRequired,
-    ringName: PropTypes.string.isRequired,
-  })),
+  history: PropTypes.arrayOf(
+    PropTypes.shape({
+      date: PropTypes.string.isRequired,
+      ringName: PropTypes.string.isRequired,
+    }),
+  ),
 };
 
 History.defaultProps = {

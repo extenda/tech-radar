@@ -35,7 +35,10 @@ describe('<Radar />', () => {
 
   test('It renders IT & BIS radar switch', () => {
     const component = shallow(
-      <Radar history={{ push: jest.fn() }} flags={{ releaseToolRadar: true }} />,
+      <Radar
+        history={{ push: jest.fn() }}
+        flags={{ releaseToolRadar: true }}
+      />,
     );
     expect(component).toMatchSnapshot();
   });
@@ -61,7 +64,8 @@ describe('<Radar />', () => {
       { attachTo: window.domNode },
     );
 
-    const showBubble = jest.spyOn(component.find(Radar).instance().svgRadar, 'showBubble')
+    const showBubble = jest
+      .spyOn(component.find(Radar).instance().svgRadar, 'showBubble')
       .mockImplementationOnce(() => {});
 
     const legendItem = component.find('#legendItem1').at(0);

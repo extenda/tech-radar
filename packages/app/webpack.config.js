@@ -19,20 +19,31 @@ const buildRadar = async (radarName) => {
   const jobs = [];
   if (!radarName || radarName === 'radar') {
     logger.info('Build JSON radar [radar]');
-    jobs.push(radarBuilder.build(radarDir, path.join(outputPath, 'js', 'radar.json')));
+    jobs.push(
+      radarBuilder.build(radarDir, path.join(outputPath, 'js', 'radar.json')),
+    );
   }
 
   const toolRadarPath = path.join(baseDir, 'radar_it');
 
-  if ((!radarName || radarName === 'radar_it') && fs.existsSync(toolRadarPath)) {
+  if (
+    (!radarName || radarName === 'radar_it') &&
+    fs.existsSync(toolRadarPath)
+  ) {
     logger.info('Build JSON radar [radar_it]');
-    jobs.push(radarBuilder.build(toolRadarPath, path.join(outputPath, 'js', 'radar_it.json')));
+    jobs.push(
+      radarBuilder.build(
+        toolRadarPath,
+        path.join(outputPath, 'js', 'radar_it.json'),
+      ),
+    );
   }
   await Promise.all(jobs);
 };
 
 // Default to the staging client ID
-const launchDarklyClientId = () => process.env.LD_CLIENT_ID || '616ee08b06d2ef0bc1c67e78';
+const launchDarklyClientId = () =>
+  process.env.LD_CLIENT_ID || '616ee08b06d2ef0bc1c67e78';
 
 module.exports = (env, argv) => {
   const webpack = {
@@ -87,10 +98,7 @@ module.exports = (env, argv) => {
       ],
     },
     optimization: {
-      minimizer: [
-        '...',
-        new CssMinimizerPlugin(),
-      ],
+      minimizer: ['...', new CssMinimizerPlugin()],
     },
     output: {
       path: outputPath,
@@ -103,9 +111,13 @@ module.exports = (env, argv) => {
     },
     plugins: [
       // Build the radar YAMLs on first run, then watch for changes in dev-server.
-      (compiler) => compiler.hooks.beforeRun.tapAsync('RadarBuilderPlugin', (params, callback) => {
-        buildRadar().then(callback);
-      }),
+      (compiler) =>
+        compiler.hooks.beforeRun.tapAsync(
+          'RadarBuilderPlugin',
+          (params, callback) => {
+            buildRadar().then(callback);
+          },
+        ),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),

@@ -21,15 +21,10 @@ const mockEntries = {
     },
     description: 'Description',
     rationale: 'Rationale',
-    related: [
-      { file: 'php.html', name: 'PHP' },
-    ],
+    related: [{ file: 'php.html', name: 'PHP' }],
     quadrant: { index: 2, dirname: 'dev' },
     filename: 'java.html',
-    tags: [
-      '90\'s',
-      'java',
-    ],
+    tags: ["90's", 'java'],
   },
   lisp: {
     name: 'Lisp',
@@ -77,9 +72,7 @@ const mockEntries = {
     rationale: 'Rationale',
     quadrant: { index: 2, dirname: 'dev' },
     filename: 'php.html',
-    tags: [
-      '90\'s',
-    ],
+    tags: ["90's"],
   },
 };
 
@@ -118,7 +111,7 @@ export default {
     }
     return mockBlips;
   },
-  listTags: () => ['90\'s', 'java'],
+  listTags: () => ["90's", 'java'],
   getQuadrant: (dirname) => {
     if (dirname === 'missing') {
       return null;
@@ -185,11 +178,6 @@ export default {
     version: '0.0.1-local',
     quadrants: mockQuadrants,
     quadrantsNavBar: mockQuadrants,
-    rings: [
-      'ADOPT',
-      'TRIAL',
-      'ASSESS',
-      'HOLD',
-    ],
+    rings: ['ADOPT', 'TRIAL', 'ASSESS', 'HOLD'],
   },
 };

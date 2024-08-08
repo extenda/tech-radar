@@ -6,7 +6,9 @@ jest.mock('../src/js/modules/radarService');
 
 describe('<Login />', () => {
   test('It renders login view', () => {
-    const component = shallow(<Login onFailure={jest.fn} onSuccess={jest.fn} />);
+    const component = shallow(
+      <Login onFailure={jest.fn} onSuccess={jest.fn} />,
+    );
     expect(component).toMatchSnapshot();
   });
 });

@@ -22,17 +22,23 @@ class TagsInput extends Component {
     let { tags } = this.state;
     tags = tags.slice(0);
     tags.splice(i, 1);
-    this.setState({
-      tags,
-    }, this.updateFilter);
+    this.setState(
+      {
+        tags,
+      },
+      this.updateFilter,
+    );
   };
 
   handleAddition = (tag) => {
     const { tags } = this.state;
     tags.push(tag);
-    this.setState({
-      tags,
-    }, this.updateFilter);
+    this.setState(
+      {
+        tags,
+      },
+      this.updateFilter,
+    );
   };
 
   render = () => {

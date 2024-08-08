@@ -22,15 +22,19 @@ const Footer = () => {
           {dotSeparator}
           Discuss in
           <Icon name="slack" />
-          <a href="https://extendaretail.slack.com/channels/tech-radar">tech-radar</a>
+          <a href="https://extendaretail.slack.com/channels/tech-radar">
+            tech-radar
+          </a>
           <br />
-          The Tech Radar Generator is licensed under
-          {' '}
-          <a href="https://github.com/extenda/tech-radar/blob/master/LICENSE">MIT</a>
+          The Tech Radar Generator is licensed under{' '}
+          <a href="https://github.com/extenda/tech-radar/blob/master/LICENSE">
+            MIT
+          </a>
           {dotSeparator}
-          Thanks to Zalando for the
-          {' '}
-          <a href="https://github.com/zalando/tech-radar">radar visualization</a>
+          Thanks to Zalando for the{' '}
+          <a href="https://github.com/zalando/tech-radar">
+            radar visualization
+          </a>
         </p>
       </div>
     </footer>

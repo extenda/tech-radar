@@ -1,20 +1,13 @@
 module.exports = {
   collectCoverage: true,
   coverageDirectory: 'coverage',
-  coverageReporters: [
-    'lcov',
-    'text',
-  ],
-  collectCoverageFrom: [
-    'src/**/*.{js,jsx}',
-    '!src/js/lib/*.js',
-  ],
-  coveragePathIgnorePatterns: [
-    '/node_modules/',
-  ],
+  coverageReporters: ['lcov', 'text'],
+  collectCoverageFrom: ['src/**/*.{js,jsx}', '!src/js/lib/*.js'],
+  coveragePathIgnorePatterns: ['/node_modules/'],
   moduleNameMapper: {
     '\\.(css|less)$': 'identity-obj-proxy',
-    'react-markdown': '<rootDir>/../../node_modules/react-markdown/react-markdown.min.js',
+    'react-markdown':
+      '<rootDir>/../../node_modules/react-markdown/react-markdown.min.js',
   },
   reporters: [
     'default',

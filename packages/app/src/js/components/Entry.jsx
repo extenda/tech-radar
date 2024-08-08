@@ -16,17 +16,17 @@ const Entry = (props) => {
   const { match } = props;
   const entry = radarService.getEntry(match.params.id);
   if (!entry) {
-    return (
-      <NotFound />
-    );
+    return <NotFound />;
   }
-  const quadrant = radarService.model.quadrants.find((q) => q.dirname === entry.quadrant.dirname);
+  const quadrant = radarService.model.quadrants.find(
+    (q) => q.dirname === entry.quadrant.dirname,
+  );
 
   return (
     <>
       <Navigation quadrant={quadrant} entry={{ name: entry.name }} />
       <div className="container">
-        {(entry.blip.active === false) && (
+        {entry.blip.active === false && (
           <div className="row">
             <div className="twelve columns inactive-note">
               <strong>
@@ -34,9 +34,10 @@ const Entry = (props) => {
                 Not active on the current version!
               </strong>
               <br />
-              This blip is not on the current version of the radar. If it was recently archived it
-              is likely that it is still relevant. If the blip is older it might no longer be
-              relevant or our assessment of it might be different today.
+              This blip is not on the current version of the radar. If it was
+              recently archived it is likely that it is still relevant. If the
+              blip is older it might no longer be relevant or our assessment of
+              it might be different today.
             </div>
           </div>
         )}
@@ -50,7 +51,11 @@ const Entry = (props) => {
         </div>
         <div className="row">
           <div className="badges">
-            <Badge className={entry.blip.ringName} icon="map-marker" text={entry.blip.ringName} />
+            <Badge
+              className={entry.blip.ringName}
+              icon="map-marker"
+              text={entry.blip.ringName}
+            />
             <Badge icon="clock-o" text={entry.blip.since} />
             <LicenseBadges license={entry.license} />
           </div>

@@ -6,13 +6,8 @@ const Icon = (props) => {
 
   return (
     <>
-      {spaceBefore && (
-        <>
-          {' '}
-        </>
-      )}
-      <i className={`fa fa-${name}`} />
-      {' '}
+      {spaceBefore && <> </>}
+      <i className={`fa fa-${name}`} />{' '}
     </>
   );
 };

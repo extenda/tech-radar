@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-} from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { withLDConsumer } from 'launchdarkly-react-client-sdk';
 import PropTypes from 'prop-types';
 import { jwtDecode } from 'jwt-decode';
@@ -58,16 +54,23 @@ export class App extends Component {
     }
 
     const { sub, email } = jwtDecode(response.credential);
-    return sha256(sub).then((key) => ldClient.identify({
-      kind: 'user',
-      key,
-      email,
-      _meta: {
-        privateAttributeNames: ['email'],
-      },
-    }).then(() => radarService.init(response.credential)
-      .then(this.radarDidLoad)
-      .catch(this.radarDidFail)));
+    return sha256(sub).then((key) =>
+      ldClient
+        .identify({
+          kind: 'user',
+          key,
+          email,
+          _meta: {
+            privateAttributeNames: ['email'],
+          },
+        })
+        .then(() =>
+          radarService
+            .init(response.credential)
+            .then(this.radarDidLoad)
+            .catch(this.radarDidFail),
+        ),
+    );
   };
 
   loginDidFail = () => {};
@@ -77,10 +80,7 @@ export class App extends Component {
 
     if (!isSignedIn) {
       return (
-        <Login
-          onSuccess={this.loginDidSucceed}
-          onFailure={this.loginDidFail}
-        />
+        <Login onSuccess={this.loginDidSucceed} onFailure={this.loginDidFail} />
       );
     }
 
