@@ -4,7 +4,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import { withLDConsumer, camelCaseKeys } from 'launchdarkly-react-client-sdk';
+import { withLDConsumer } from 'launchdarkly-react-client-sdk';
 import PropTypes from 'prop-types';
 import { jwtDecode } from 'jwt-decode';
 import Login from './Login';
