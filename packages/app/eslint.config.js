@@ -8,6 +8,7 @@ const globals = require('globals');
 module.exports = [
   js.configs.recommended,
   {
+    name: 'react-config',
     files: ['**/*.jsx'],
     ...react.configs.flat.recommended,
     settings: {
@@ -17,7 +18,7 @@ module.exports = [
     },
   },
   {
-    name: 'app-config',
+    name: 'package-config',
     plugins: {
       'simple-import-sort': simpleImportSort,
     },

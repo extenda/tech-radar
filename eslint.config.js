@@ -6,7 +6,7 @@ const globals = require('globals');
 module.exports = [
   js.configs.recommended,
   {
-    name: 'project-config',
+    name: 'package-config',
     plugins: {
       'simple-import-sort': simpleImportSort,
     },
