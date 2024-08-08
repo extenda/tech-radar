@@ -66,23 +66,31 @@ describe('Express', () => {
   test('It responds to /', async () => {
     const response = await fetch(`http://127.0.0.1:${port}/`);
     expect(response.status).toEqual(200);
-    expect(response.headers.get('content-type')).toEqual('text/html; charset=UTF-8');
+    expect(response.headers.get('content-type')).toEqual(
+      'text/html; charset=UTF-8',
+    );
   });
 
   test('It responds to /index.html', async () => {
     const response = await fetch(`http://127.0.0.1:${port}/index.html`);
     expect(response.status).toEqual(200);
-    expect(response.headers.get('content-type')).toEqual('text/html; charset=UTF-8');
+    expect(response.headers.get('content-type')).toEqual(
+      'text/html; charset=UTF-8',
+    );
   });
 
   test('It redirects **/*.html to /', async () => {
     let response = await fetch(`http://127.0.0.1:${port}/dev.html`);
     expect(response.status).toEqual(200);
-    expect(response.headers.get('content-type')).toEqual('text/html; charset=UTF-8');
+    expect(response.headers.get('content-type')).toEqual(
+      'text/html; charset=UTF-8',
+    );
 
     response = await fetch(`http://127.0.0.1:${port}/entries/java.html`);
     expect(response.status).toEqual(200);
-    expect(response.headers.get('content-type')).toEqual('text/html; charset=UTF-8');
+    expect(response.headers.get('content-type')).toEqual(
+      'text/html; charset=UTF-8',
+    );
   });
 
   test('It removes X-Powered-By-Express response header', async () => {
@@ -94,7 +102,9 @@ describe('Express', () => {
     test('It returns 401 for missing token', async () => {
       const response = await fetch(`http://127.0.0.1:${port}/js/radar.json`);
       expect(response.status).toEqual(401);
-      expect(response.headers.get('www-authenticate')).toContain('credentials_required');
+      expect(response.headers.get('www-authenticate')).toContain(
+        'credentials_required',
+      );
       expect(mockVerifyIdToken).not.toHaveBeenCalled();
     });
 
@@ -105,7 +115,9 @@ describe('Express', () => {
         },
       });
       expect(response.status).toEqual(401);
-      expect(response.headers.get('www-authenticate')).toContain('credentials_bad_scheme');
+      expect(response.headers.get('www-authenticate')).toContain(
+        'credentials_bad_scheme',
+      );
       expect(mockVerifyIdToken).not.toHaveBeenCalled();
     });
 
@@ -116,7 +128,9 @@ describe('Express', () => {
         },
       });
       expect(response.status).toEqual(401);
-      expect(response.headers.get('www-authenticate')).toContain('invalid_token');
+      expect(response.headers.get('www-authenticate')).toContain(
+        'invalid_token',
+      );
       expect(mockVerifyIdToken).toHaveBeenCalledTimes(1);
     });
 
@@ -127,7 +141,9 @@ describe('Express', () => {
         },
       });
       expect(response.status).toEqual(401);
-      expect(response.headers.get('www-authenticate')).toContain('invalid_token');
+      expect(response.headers.get('www-authenticate')).toContain(
+        'invalid_token',
+      );
       expect(mockVerifyIdToken).toHaveBeenCalledTimes(1);
     });
 
@@ -138,7 +154,9 @@ describe('Express', () => {
         },
       });
       expect(response.status).toEqual(200);
-      expect(response.headers.get('content-type')).toEqual('application/json; charset=UTF-8');
+      expect(response.headers.get('content-type')).toEqual(
+        'application/json; charset=UTF-8',
+      );
       expect(mockVerifyIdToken).toHaveBeenCalledTimes(1);
     });
   });
@@ -146,39 +164,55 @@ describe('Express', () => {
   describe('js/radar_it.js', () => {
     test('It returns 200 OK if feature is enabled', async () => {
       mockVariation.mockResolvedValueOnce(true);
-      const response = await fetch(`http://127.0.0.1:${port}/js/radar_it.json`, {
-        headers: {
-          authorization: 'Bearer VALID_DOMAIN',
+      const response = await fetch(
+        `http://127.0.0.1:${port}/js/radar_it.json`,
+        {
+          headers: {
+            authorization: 'Bearer VALID_DOMAIN',
+          },
         },
-      });
-      expect(mockVariation).toHaveBeenCalledWith('release.tool-radar', {
-        kind: 'user',
-        key: '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08',
-        email: 'test@extendaretail.com',
-        _meta: {
-          privateAttributeNames: ['email'],
+      );
+      expect(mockVariation).toHaveBeenCalledWith(
+        'release.tool-radar',
+        {
+          kind: 'user',
+          key: '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08',
+          email: 'test@extendaretail.com',
+          _meta: {
+            privateAttributeNames: ['email'],
+          },
         },
-      }, false);
+        false,
+      );
       expect(response.status).toEqual(200);
-      expect(response.headers.get('content-type')).toEqual('application/json; charset=UTF-8');
+      expect(response.headers.get('content-type')).toEqual(
+        'application/json; charset=UTF-8',
+      );
       expect(mockVerifyIdToken).toHaveBeenCalledTimes(1);
     });
 
     test('It returns 404 if feature is disabled', async () => {
       mockVariation.mockResolvedValueOnce(false);
-      const response = await fetch(`http://127.0.0.1:${port}/js/radar_it.json`, {
-        headers: {
-          authorization: 'Bearer VALID_DOMAIN',
+      const response = await fetch(
+        `http://127.0.0.1:${port}/js/radar_it.json`,
+        {
+          headers: {
+            authorization: 'Bearer VALID_DOMAIN',
+          },
         },
-      });
-      expect(mockVariation).toHaveBeenCalledWith('release.tool-radar', {
-        kind: 'user',
-        key: '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08',
-        email: 'test@extendaretail.com',
-        _meta: {
-          privateAttributeNames: ['email'],
+      );
+      expect(mockVariation).toHaveBeenCalledWith(
+        'release.tool-radar',
+        {
+          kind: 'user',
+          key: '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08',
+          email: 'test@extendaretail.com',
+          _meta: {
+            privateAttributeNames: ['email'],
+          },
         },
-      }, false);
+        false,
+      );
       expect(response.status).toEqual(404);
       expect(mockVerifyIdToken).toHaveBeenCalledTimes(1);
     });
