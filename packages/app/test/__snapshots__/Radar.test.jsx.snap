@@ -531,8 +531,7 @@ exports[`<Radar /> It renders IT & BIS radar switch 1`] = `
           About the Tech Radar
         </h2>
         <p>
-          The Extenda Retail Tech Radar is based on the concept introduced by
-           
+          The Extenda Retail Tech Radar is based on the concept introduced by 
           <a
             href="https://www.thoughtworks.com/radar"
           >
@@ -1099,8 +1098,7 @@ exports[`<Radar /> It renders the SVG radar and description 1`] = `
           About the Tech Radar
         </h2>
         <p>
-          The Extenda Retail Tech Radar is based on the concept introduced by
-           
+          The Extenda Retail Tech Radar is based on the concept introduced by 
           <a
             href="https://www.thoughtworks.com/radar"
           >
