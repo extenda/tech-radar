@@ -14,8 +14,8 @@ const NotFound = () => {
           <div className="container">
             <h1>Not Found</h1>
             <p>
-              The requested resource was not found. You might have mistyped
-              something or found a broken link.
+              The requested resource was not found. You might have mistyped something or found a
+              broken link.
             </p>
           </div>
         </div>

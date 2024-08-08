@@ -54,14 +54,7 @@ const renderEntriesList = (params, ring) => {
 };
 
 const QuadrantList = (props) => {
-  const {
-    blips,
-    quadrant,
-    headerLevel,
-    useShortname,
-    onMouseEnter,
-    onMouseLeave,
-  } = props;
+  const { blips, quadrant, headerLevel, useShortname, onMouseEnter, onMouseLeave } = props;
 
   const params = {
     filter: new Set(blips.map((b) => b.id)),

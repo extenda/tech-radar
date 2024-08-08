@@ -18,19 +18,14 @@ describe('<Navigation />', () => {
   });
 
   test('It renders quadrant breadcrumbs', () => {
-    const component = shallow(
-      <Navigation quadrant={{ name: 'Test1', dirname: 'test1' }} />,
-    );
+    const component = shallow(<Navigation quadrant={{ name: 'Test1', dirname: 'test1' }} />);
     expect(component.find(Link)).toHaveLength(1);
     expect(component).toMatchSnapshot();
   });
 
   test('It renders entry breadcrumbs', () => {
     const component = shallow(
-      <Navigation
-        quadrant={{ name: 'Test1', dirname: 'test1' }}
-        entry={{ name: 'Entry' }}
-      />,
+      <Navigation quadrant={{ name: 'Test1', dirname: 'test1' }} entry={{ name: 'Entry' }} />,
     );
 
     expect(component.find(Link)).toHaveLength(2);

@@ -33,8 +33,7 @@ class RadarService {
     });
   };
 
-  getEntry = (filename) =>
-    this.model.entries.find((entry) => entry.filename === filename);
+  getEntry = (filename) => this.model.entries.find((entry) => entry.filename === filename);
 
   listBlips = (tags = []) => {
     const entryFilter = (entry) => {
@@ -53,16 +52,7 @@ class RadarService {
     return this.model.entries
       .filter(entryFilter)
       .map((entry) =>
-        pick(
-          entry.blip,
-          'id',
-          'label',
-          'quadrant',
-          'ring',
-          'link',
-          'moved',
-          'active',
-        ),
+        pick(entry.blip, 'id', 'label', 'quadrant', 'ring', 'link', 'moved', 'active'),
       );
   };
 
@@ -92,28 +82,24 @@ class RadarService {
   };
 
   listEntriesByTag = (tag) =>
-    this.model.entries
-      .filter((entry) => entry.tags.includes(tag))
-      .sort(firstBy('name'));
+    this.model.entries.filter((entry) => entry.tags.includes(tag)).sort(firstBy('name'));
 
   getQuadrant = (dirname, onlyActive = false) => {
     const qi = this.model.quadrants.findIndex((q) => q.dirname === dirname);
     if (qi >= 0) {
       const quadrant = { ...this.model.quadrants[qi] };
       this.model.rings.forEach((ring, index) => {
-        quadrant[ring.toLowerCase()] = this.listEntries(
-          quadrant.dirname,
-          index,
-          onlyActive,
-        ).map((entry) => {
-          const out = pick(entry, 'name', 'shortname', 'filename');
-          const { id, active } = entry.blip;
-          return {
-            ...out,
-            id,
-            active,
-          };
-        });
+        quadrant[ring.toLowerCase()] = this.listEntries(quadrant.dirname, index, onlyActive).map(
+          (entry) => {
+            const out = pick(entry, 'name', 'shortname', 'filename');
+            const { id, active } = entry.blip;
+            return {
+              ...out,
+              id,
+              active,
+            };
+          },
+        );
       });
       return quadrant;
     }

@@ -135,19 +135,11 @@ export class Radar extends Component {
           <>
             <div className="u-full-width" style={{ marginBottom: '20px' }}>
               <center>
-                <button
-                  type="button"
-                  data-radar-id="radar"
-                  onClick={this.onChangeRadar}
-                >
+                <button type="button" data-radar-id="radar" onClick={this.onChangeRadar}>
                   <Icon name="rss" />
                   Engineering
                 </button>
-                <button
-                  type="button"
-                  data-radar-id="radar_it"
-                  onClick={this.onChangeRadar}
-                >
+                <button type="button" data-radar-id="radar_it" onClick={this.onChangeRadar}>
                   <Icon name="signal" />
                   IT & BIS
                 </button>
@@ -195,58 +187,51 @@ export class Radar extends Component {
             <div className="one-half column">
               <h2>About the Tech Radar</h2>
               <p>
-                The Extenda Retail Tech Radar is based on the concept introduced
-                by <a href="https://www.thoughtworks.com/radar">ThoughtWorks</a>
-                . The Radar contains a list of technologies, complemented by an
-                assessment result, called ring assessment. The following rings
-                are used:
+                The Extenda Retail Tech Radar is based on the concept introduced by{' '}
+                <a href="https://www.thoughtworks.com/radar">ThoughtWorks</a>. The Radar contains a
+                list of technologies, complemented by an assessment result, called ring assessment.
+                The following rings are used:
               </p>
               <ul className="no-bullets">
                 <li>
                   <strong>Adopt</strong>
                   {' — '}
-                  Technologies we have high confidence in and recommend for wide
-                  use.
+                  Technologies we have high confidence in and recommend for wide use.
                 </li>
                 <li>
                   <strong>Trial</strong>
                   {' — '}
-                  Technologies we have seen used with success, but are yet to be
-                  proved successfully in wide use and at large scale. Carries
-                  higher risk.
+                  Technologies we have seen used with success, but are yet to be proved successfully
+                  in wide use and at large scale. Carries higher risk.
                 </li>
                 <li>
                   <strong>Assess</strong>
                   {' — '}
-                  Technologies that are promising with a clear potential value
-                  for us. Requires research and prototyping to analyze its
-                  impact.
+                  Technologies that are promising with a clear potential value for us. Requires
+                  research and prototyping to analyze its impact.
                 </li>
                 <li>
                   <strong>Hold</strong>
                   {' — '}
-                  Technologies not recommended for new products or technology we
-                  no longer want to invest in. Existing products may still
-                  consider these depending on their legacy.
+                  Technologies not recommended for new products or technology we no longer want to
+                  invest in. Existing products may still consider these depending on their legacy.
                 </li>
               </ul>
             </div>
             <div className="one-half column">
               <h2>The Purpose</h2>
               <p>
-                The Tech Radar aims to inspire and support teams at Extenda
-                Retail to pick the best technologies for their projects. It is
-                way to share experience and knowledge between the teams and to
-                create transparency about the technology direction of Extenda
-                Retail. The Tech Radar also becomes a list of dos and
-                don&apos;ts, what to try and to avoid in order to increase
-                success.
+                The Tech Radar aims to inspire and support teams at Extenda Retail to pick the best
+                technologies for their projects. It is way to share experience and knowledge between
+                the teams and to create transparency about the technology direction of Extenda
+                Retail. The Tech Radar also becomes a list of dos and don&apos;ts, what to try and
+                to avoid in order to increase success.
               </p>
               <h2>How to Contribute</h2>
               <p>
                 The Tech Radar is maintained on{' '}
-                <a href="https://github.com/extenda/tech-radar">GitHub</a>.
-                There you can read more about the process and how to contribute.
+                <a href="https://github.com/extenda/tech-radar">GitHub</a>. There you can read more
+                about the process and how to contribute.
               </p>
             </div>
           </div>

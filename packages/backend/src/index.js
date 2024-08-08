@@ -16,8 +16,7 @@ process.on('SIGINT', () => {
 });
 
 const port = process.env.PORT || 8080;
-const publicHtml =
-  process.env.PUBLIC_HTML || path.join(__dirname, '..', '..', 'app', 'build');
+const publicHtml = process.env.PUBLIC_HTML || path.join(__dirname, '..', '..', 'app', 'build');
 
 const app = express();
 app.use(morgan('tiny'));
@@ -30,10 +29,7 @@ app.get(/\.html$/, async (req, res) => {
 function send401(res, err) {
   res
     .status(401)
-    .append(
-      'WWW-Authenticate',
-      `Bearer,error="${err.code}",error_description="${err.message}"`,
-    )
+    .append('WWW-Authenticate', `Bearer,error="${err.code}",error_description="${err.message}"`)
     .end();
 }
 

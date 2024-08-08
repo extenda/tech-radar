@@ -10,16 +10,12 @@ describe('<Badge />', () => {
   });
 
   test('It renders badge with extra className', () => {
-    const component = shallow(
-      <Badge icon="test" text="test" className="my-test" />,
-    );
+    const component = shallow(<Badge icon="test" text="test" className="my-test" />);
     expect(component).toMatchSnapshot();
   });
 
   test('It renders badge with link', () => {
-    const icon = shallow(
-      <Badge icon="test" text="test" link="http://test.com" />,
-    );
+    const icon = shallow(<Badge icon="test" text="test" link="http://test.com" />);
     expect(icon.find('a')).toHaveLength(1);
   });
 });

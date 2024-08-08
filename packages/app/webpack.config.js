@@ -19,39 +19,25 @@ const buildRadar = async (radarName) => {
   const jobs = [];
   if (!radarName || radarName === 'radar') {
     logger.info('Build JSON radar [radar]');
-    jobs.push(
-      radarBuilder.build(radarDir, path.join(outputPath, 'js', 'radar.json')),
-    );
+    jobs.push(radarBuilder.build(radarDir, path.join(outputPath, 'js', 'radar.json')));
   }
 
   const toolRadarPath = path.join(baseDir, 'radar_it');
 
-  if (
-    (!radarName || radarName === 'radar_it') &&
-    fs.existsSync(toolRadarPath)
-  ) {
+  if ((!radarName || radarName === 'radar_it') && fs.existsSync(toolRadarPath)) {
     logger.info('Build JSON radar [radar_it]');
-    jobs.push(
-      radarBuilder.build(
-        toolRadarPath,
-        path.join(outputPath, 'js', 'radar_it.json'),
-      ),
-    );
+    jobs.push(radarBuilder.build(toolRadarPath, path.join(outputPath, 'js', 'radar_it.json')));
   }
   await Promise.all(jobs);
 };
 
 // Default to the staging client ID
-const launchDarklyClientId = () =>
-  process.env.LD_CLIENT_ID || '616ee08b06d2ef0bc1c67e78';
+const launchDarklyClientId = () => process.env.LD_CLIENT_ID || '616ee08b06d2ef0bc1c67e78';
 
 module.exports = (env, argv) => {
   const webpack = {
     devServer: {
-      static: [
-        { directory: outputPath },
-        { directory: path.resolve(__dirname, 'src/assets') },
-      ],
+      static: [{ directory: outputPath }, { directory: path.resolve(__dirname, 'src/assets') }],
       devMiddleware: {
         publicPath: '/',
       },
@@ -114,12 +100,9 @@ module.exports = (env, argv) => {
       (compiler) => {
         // Install hooks for run and watch (dev-server)
         ['run', 'watchRun'].forEach((hookName) => {
-          compiler.hooks[hookName].tapAsync(
-            'RadarBuilderPlugin',
-            (params, callback) => {
-              buildRadar().then(callback);
-            },
-          );
+          compiler.hooks[hookName].tapAsync('RadarBuilderPlugin', (params, callback) => {
+            buildRadar().then(callback);
+          });
         });
       },
       new MiniCssExtractPlugin({

@@ -16,9 +16,7 @@ const TEST_TOKEN =
 
 jest.mock('../src/js/modules/sha256');
 
-jest.mock('../src/js/components/Radar', () => () => (
-  <div id="radar">Radar</div>
-));
+jest.mock('../src/js/components/Radar', () => () => <div id="radar">Radar</div>);
 
 jest.mock('../src/js/components/Entry', () => () => <div>Entry</div>);
 

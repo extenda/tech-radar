@@ -11,9 +11,7 @@ const THIRTY_DAYS = 2592000000;
 const RADAR_DATE = new Date();
 
 const createModel = (radarDir) => {
-  const quadrants = yaml.parse(
-    fs.readFileSync(path.join(radarDir, 'quadrants.yaml'), 'utf8'),
-  );
+  const quadrants = yaml.parse(fs.readFileSync(path.join(radarDir, 'quadrants.yaml'), 'utf8'));
 
   const title = process.env.TITLE || 'Extenda Retail Tech Radar';
 

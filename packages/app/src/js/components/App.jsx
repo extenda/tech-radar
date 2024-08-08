@@ -66,10 +66,7 @@ export class App extends Component {
           },
         })
         .then(() =>
-          radarService
-            .init(response.credential)
-            .then(this.radarDidLoad)
-            .catch(this.radarDidFail),
+          radarService.init(response.credential).then(this.radarDidLoad).catch(this.radarDidFail),
         ),
     );
   };
@@ -80,9 +77,7 @@ export class App extends Component {
     const { loading, isSignedIn } = this.state;
 
     if (!isSignedIn) {
-      return (
-        <Login onSuccess={this.loginDidSucceed} onFailure={this.loginDidFail} />
-      );
+      return <Login onSuccess={this.loginDidSucceed} onFailure={this.loginDidFail} />;
     }
 
     if (loading) {

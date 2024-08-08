@@ -10,18 +10,14 @@ describe('<License />', () => {
   });
 
   test('It renders open-source license', () => {
-    const component = shallow(
-      <License license={{ openSource: { name: 'MIT' } }} />,
-    );
+    const component = shallow(<License license={{ openSource: { name: 'MIT' } }} />);
     expect(component).toMatchSnapshot();
     expect(component.html()).toMatch('The MIT License');
   });
 
   test('It renders open-source license with description', () => {
     const component = shallow(
-      <License
-        license={{ openSource: { name: 'MIT', description: 'OSS Desc' } }}
-      />,
+      <License license={{ openSource: { name: 'MIT', description: 'OSS Desc' } }} />,
     );
     expect(component).toMatchSnapshot();
     expect(component.html()).toMatch('The MIT License');
@@ -30,18 +26,14 @@ describe('<License />', () => {
 
   test('It renders open-source license with link', () => {
     const component = shallow(
-      <License
-        license={{ openSource: { name: 'MIT', link: 'https://license.com' } }}
-      />,
+      <License license={{ openSource: { name: 'MIT', link: 'https://license.com' } }} />,
     );
     expect(component).toMatchSnapshot();
     expect(component.find('a')).toHaveLength(1);
   });
 
   test('It renders commercial license', () => {
-    const component = shallow(
-      <License license={{ commercial: { company: 'Oracle' } }} />,
-    );
+    const component = shallow(<License license={{ commercial: { company: 'Oracle' } }} />);
     expect(component).toMatchSnapshot();
     expect(component.html()).toMatch('Oracle');
   });

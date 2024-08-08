@@ -58,17 +58,14 @@ const License = (props) => {
               OS_LICENSES[openSource.name]
             )}
           </p>
-          {openSource.description && (
-            <Markdown>{openSource.description}</Markdown>
-          )}
+          {openSource.description && <Markdown>{openSource.description}</Markdown>}
         </div>
       )}
       {commercial && (
         <div>
           <strong>
             <Icon name="exclamation-triangle" />
-            Available for use with a commercial agreement from{' '}
-            {commercial.company}.
+            Available for use with a commercial agreement from {commercial.company}.
           </strong>
           {commercialDescription(commercial) && (
             <Markdown>{commercialDescription(commercial)}</Markdown>

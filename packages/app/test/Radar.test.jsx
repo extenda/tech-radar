@@ -36,10 +36,7 @@ describe('<Radar />', () => {
 
   test('It renders IT & BIS radar switch', () => {
     const component = shallow(
-      <Radar
-        history={{ push: jest.fn() }}
-        flags={{ releaseToolRadar: true }}
-      />,
+      <Radar history={{ push: jest.fn() }} flags={{ releaseToolRadar: true }} />,
     );
     expect(component).toMatchSnapshot();
   });

@@ -18,9 +18,7 @@ const LicenseBadges = (props) => {
           link={openSource.link}
         />
       )}
-      {commercial && (
-        <Badge icon="balance-scale" className="license" text="Commercial" />
-      )}
+      {commercial && <Badge icon="balance-scale" className="license" text="Commercial" />}
     </>
   );
 };

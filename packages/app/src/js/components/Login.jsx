@@ -21,8 +21,8 @@ const Login = (props) => {
               <span role="img" aria-label="Wave">
                 &#x1F44B;
               </span>
-              &nbsp; Welcome to the Extenda Retail Tech Radar. Login with your
-              Extenda Retail Google account.
+              &nbsp; Welcome to the Extenda Retail Tech Radar. Login with your Extenda Retail Google
+              account.
             </p>
           </div>
           <div className="three columns">

@@ -6,8 +6,7 @@ module.exports = {
   coveragePathIgnorePatterns: ['/node_modules/'],
   moduleNameMapper: {
     '\\.(css|less)$': 'identity-obj-proxy',
-    'react-markdown':
-      '<rootDir>/../../node_modules/react-markdown/react-markdown.min.js',
+    'react-markdown': '<rootDir>/../../node_modules/react-markdown/react-markdown.min.js',
   },
   reporters: [
     'default',

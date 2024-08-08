@@ -11,8 +11,7 @@ exports[`<License /> It renders commercial license 1`] = `
         name="exclamation-triangle"
         spaceBefore={true}
       />
-      Available for use with a commercial agreement from
-       
+      Available for use with a commercial agreement from 
       Oracle
       .
     </strong>
@@ -31,8 +30,7 @@ exports[`<License /> It renders commercial license with description 1`] = `
         name="exclamation-triangle"
         spaceBefore={true}
       />
-      Available for use with a commercial agreement from
-       
+      Available for use with a commercial agreement from 
       Oracle
       .
     </strong>
@@ -66,8 +64,7 @@ exports[`<License /> It renders dual license 1`] = `
         name="exclamation-triangle"
         spaceBefore={true}
       />
-      Available for use with a commercial agreement from
-       
+      Available for use with a commercial agreement from 
       Oracle
       .
     </strong>

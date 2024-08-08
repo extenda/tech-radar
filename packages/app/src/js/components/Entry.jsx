@@ -19,9 +19,7 @@ const Entry = (props) => {
   if (!entry) {
     return <NotFound />;
   }
-  const quadrant = radarService.model.quadrants.find(
-    (q) => q.dirname === entry.quadrant.dirname,
-  );
+  const quadrant = radarService.model.quadrants.find((q) => q.dirname === entry.quadrant.dirname);
 
   return (
     <>
@@ -35,28 +33,21 @@ const Entry = (props) => {
                 Not active on the current version!
               </strong>
               <br />
-              This blip is not on the current version of the radar. If it was
-              recently archived it is likely that it is still relevant. If the
-              blip is older it might no longer be relevant or our assessment of
-              it might be different today.
+              This blip is not on the current version of the radar. If it was recently archived it
+              is likely that it is still relevant. If the blip is older it might no longer be
+              relevant or our assessment of it might be different today.
             </div>
           </div>
         )}
         <div className="row">
           <div className="entry-container">
             <h1>{entry.name}</h1>
-            {entry.logo && (
-              <img src={entry.logo} alt={entry.name} className="entry-logo" />
-            )}
+            {entry.logo && <img src={entry.logo} alt={entry.name} className="entry-logo" />}
           </div>
         </div>
         <div className="row">
           <div className="badges">
-            <Badge
-              className={entry.blip.ringName}
-              icon="map-marker"
-              text={entry.blip.ringName}
-            />
+            <Badge className={entry.blip.ringName} icon="map-marker" text={entry.blip.ringName} />
             <Badge icon="clock-o" text={entry.blip.since} />
             <LicenseBadges license={entry.license} />
           </div>

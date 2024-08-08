@@ -14,9 +14,7 @@ const buildRelatedLinks = (radar, entry) => {
     const related = [];
     entry.related.forEach((file) => {
       try {
-        const linked = yaml.parse(
-          fs.readFileSync(path.join(radar.radarDir, file), 'utf8'),
-        );
+        const linked = yaml.parse(fs.readFileSync(path.join(radar.radarDir, file), 'utf8'));
         related.push({
           file: htmlFile(file),
           name: linked.name,
