@@ -1,5 +1,6 @@
 const js = require('@eslint/js');
 const eslintPluginPrettier = require('eslint-plugin-prettier/recommended');
+const jsxA11y = require('eslint-plugin-jsx-a11y');
 const simpleImportSort = require('eslint-plugin-simple-import-sort');
 const react = require('eslint-plugin-react');
 const babelParser = require('@babel/eslint-parser');
@@ -17,6 +18,7 @@ module.exports = [
       },
     },
   },
+  jsxA11y.flatConfigs.recommended,
   {
     name: 'package-config',
     plugins: {
