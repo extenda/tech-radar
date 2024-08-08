@@ -4,7 +4,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import { withLDConsumer, camelCaseKeys } from 'launchdarkly-react-client-sdk';
+import { withLDConsumer } from 'launchdarkly-react-client-sdk';
 import PropTypes from 'prop-types';
 import { jwtDecode } from 'jwt-decode';
 import Login from './Login';
@@ -59,13 +59,15 @@ export class App extends Component {
 
     const { sub, email } = jwtDecode(response.credential);
     return sha256(sub).then((key) => ldClient.identify({
+      kind: 'user',
       key,
       email,
-      privateAttributeNames: ['email'],
-    }).then(camelCaseKeys)
-      .then((flags) => radarService.init(response.credential, flags.releaseToolRadar)
-        .then(this.radarDidLoad)
-        .catch(this.radarDidFail)));
+      _meta: {
+        privateAttributeNames: ['email'],
+      },
+    }).then(() => radarService.init(response.credential)
+      .then(this.radarDidLoad)
+      .catch(this.radarDidFail)));
   };
 
   loginDidFail = () => {};
