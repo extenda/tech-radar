@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest",
     "build": "esbuild src/index.js --bundle --platform=node --minify=true --outfile=dist/index.js",
-    "start": "npm run env PORT=3000 -- node src/js/index.js",
+    "start": "npm run env PORT=3000 -- node src/index.js",
     "lint:js": "eslint src test"
   },
   "license": "MIT",
@@ -16,7 +16,7 @@
     "@tech-radar/shared": "^0.0.0",
     "express": "^4.19.2",
     "google-auth-library": "^9.13.0",
-    "launchdarkly-node-server-sdk": "^6.2.0",
+    "launchdarkly-node-server-sdk": "^7.0.4",
     "morgan": "^1.10.0",
     "sha.js": "^2.4.11"
   },

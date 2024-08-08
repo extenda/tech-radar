@@ -16,7 +16,7 @@ process.on('SIGINT', () => {
 });
 
 const port = process.env.PORT || 8080;
-const publicHtml = process.env.PUBLIC_HTML || path.join(__dirname, '..', '..', '..', 'build');
+const publicHtml = process.env.PUBLIC_HTML || path.join(__dirname, '..', '..', 'app', 'build');
 
 const app = express();
 app.use(morgan('tiny'));
@@ -40,9 +40,12 @@ app.get('/js/radar.json', async (req, res, next) => {
 
 app.get('/js/radar_it.json', async (req, res, next) => {
   verifyRequest(req).then(({ sub, email }) => ({
+    kind: 'user',
     key: shajs('sha256').update(`${sub}`).digest('hex'),
     email,
-    privateAttributeNames: ['email'],
+    _meta: {
+      privateAttributeNames: ['email'],
+    },
   })).then((user) => ldClient.variation('release.tool-radar', user, false))
     .then((flag) => {
       if (flag === true) {

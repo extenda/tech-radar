@@ -31,7 +31,8 @@ const buildRadar = async (radarName) => {
   await Promise.all(jobs);
 };
 
-const launchDarklyClientId = () => process.env.LD_CLIENT_ID || '';
+// Default to the staging client ID
+const launchDarklyClientId = () => process.env.LD_CLIENT_ID || '616ee08b06d2ef0bc1c67e78';
 
 module.exports = (env, argv) => {
   const webpack = {

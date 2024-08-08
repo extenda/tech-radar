@@ -19,7 +19,7 @@
     "d3-force": "^2.0.1",
     "d3-selection": "^1.4.0",
     "jwt-decode": "^4.0.0",
-    "launchdarkly-react-client-sdk": "^2.23.2",
+    "launchdarkly-react-client-sdk": "^3.4.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
