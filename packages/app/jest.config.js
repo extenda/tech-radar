@@ -27,14 +27,6 @@ module.exports = {
     ],
   ],
   setupFilesAfterEnv: ['<rootDir>/test/setup.js'],
-
   snapshotSerializers: ['enzyme-to-json/serializer'],
-
-  // testPathIgnorePatterns: [
-  //   '/node_modules/',
-  //   '<rootDir>/server/',
-  // ],
-
-  // rootDir: process.cwd(),
   testEnvironment: 'jsdom',
 };
