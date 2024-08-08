@@ -1,5 +1,6 @@
 const js = require('@eslint/js');
 const eslintPluginPrettier = require('eslint-plugin-prettier/recommended');
+const simpleImportSort = require('eslint-plugin-simple-import-sort');
 const globals = require('globals');
 
 module.exports = [
@@ -7,7 +8,7 @@ module.exports = [
   {
     name: 'project-config',
     plugins: {
-      // 'simple-import-sort': simpleImportSort,
+      'simple-import-sort': simpleImportSort,
     },
     languageOptions: {
       ecmaVersion: 'latest',
@@ -17,7 +18,10 @@ module.exports = [
         ...globals.jest,
       },
     },
-    rules: {},
+    rules: {
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
+    },
   },
   eslintPluginPrettier,
 ];

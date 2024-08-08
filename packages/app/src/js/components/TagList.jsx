@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import Navigation from './Navigation';
-import Icon from './Icon';
+
 import radarService from '../modules/radarService';
+import Icon from './Icon';
+import Navigation from './Navigation';
 
 const TagList = (props) => {
   const {

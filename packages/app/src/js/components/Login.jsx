@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { GoogleLogin } from '@react-oauth/google';
 import { hostedDomain } from '@tech-radar/shared/src/auth-config';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const Login = (props) => {
   const { onSuccess, onFailure } = props;

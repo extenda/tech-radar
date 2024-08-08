@@ -1,8 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import radarService from '../modules/radarService';
 import Navigation from './Navigation';
 import NotFound from './NotFound';
-import radarService from '../modules/radarService';
 import QuadrantList from './QuadrantList';
 
 const Quadrant = ({ match }) => {

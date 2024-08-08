@@ -1,6 +1,7 @@
 import React from 'react';
-import Navigation from './Navigation';
+
 import radarService from '../modules/radarService';
+import Navigation from './Navigation';
 
 const NotFound = () => {
   const radar = radarService.model;

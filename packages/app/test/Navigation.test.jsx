@@ -1,6 +1,7 @@
-import React from 'react';
 import { shallow } from 'enzyme';
+import React from 'react';
 import { Link } from 'react-router-dom';
+
 import Navigation from '../src/js/components/Navigation';
 
 describe('<Navigation />', () => {

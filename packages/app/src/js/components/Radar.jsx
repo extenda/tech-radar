@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { withLDConsumer } from 'launchdarkly-react-client-sdk';
 import { pick } from '@tech-radar/shared/src/utils';
+import { withLDConsumer } from 'launchdarkly-react-client-sdk';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+
 import SvgRadar from '../lib/radar';
 import radarService from '../modules/radarService';
 import Icon from './Icon';
 import Navigation from './Navigation';
-import TagsInput from './TagsInput';
 import QuadrantList from './QuadrantList';
+import TagsInput from './TagsInput';
 
 export class Radar extends Component {
   constructor(props) {

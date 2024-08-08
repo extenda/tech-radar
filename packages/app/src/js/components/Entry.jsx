@@ -1,16 +1,17 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Markdown from 'react-markdown';
+
 import radarService from '../modules/radarService';
-import Related from './entry/Related';
-import History from './entry/History';
 import Badge from './entry/Badge';
-import Tags from './entry/Tags';
+import History from './entry/History';
 import License from './entry/License';
+import LicenseBadges from './entry/LicenseBadges';
+import Related from './entry/Related';
+import Tags from './entry/Tags';
+import Icon from './Icon';
 import Navigation from './Navigation';
 import NotFound from './NotFound';
-import LicenseBadges from './entry/LicenseBadges';
-import Icon from './Icon';
 
 const Entry = (props) => {
   const { match } = props;

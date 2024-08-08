@@ -1,5 +1,6 @@
-import { TextEncoder } from 'util';
 import crypto from 'crypto';
+import { TextEncoder } from 'util';
+
 import sha256 from '../src/js/modules/sha256';
 
 test('It can create a shasum', async () => {

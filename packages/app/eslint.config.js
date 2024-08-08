@@ -1,5 +1,6 @@
 const js = require('@eslint/js');
 const eslintPluginPrettier = require('eslint-plugin-prettier/recommended');
+const simpleImportSort = require('eslint-plugin-simple-import-sort');
 const react = require('eslint-plugin-react');
 const babelParser = require('@babel/eslint-parser');
 const globals = require('globals');
@@ -17,6 +18,9 @@ module.exports = [
   },
   {
     name: 'app-config',
+    plugins: {
+      'simple-import-sort': simpleImportSort,
+    },
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -27,7 +31,10 @@ module.exports = [
       },
       parser: babelParser,
     },
-    rules: {},
+    rules: {
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
+    },
   },
   eslintPluginPrettier,
   {

@@ -1,5 +1,5 @@
-import { firstBy } from 'thenby';
 import { pick } from '@tech-radar/shared/src/utils';
+import { firstBy } from 'thenby';
 
 class RadarService {
   models = {};

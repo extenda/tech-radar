@@ -1,13 +1,14 @@
 /* eslint-disable react/display-name */
+import { mount, shallow } from 'enzyme';
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+
 import { App } from '../src/js/components/App';
 import Entry from '../src/js/components/Entry';
-import Quadrant from '../src/js/components/Quadrant';
-import NotFound from '../src/js/components/NotFound';
-import TagList from '../src/js/components/TagList';
-import Logout from '../src/js/components/Logout';
 import Login from '../src/js/components/Login';
+import Logout from '../src/js/components/Logout';
+import NotFound from '../src/js/components/NotFound';
+import Quadrant from '../src/js/components/Quadrant';
+import TagList from '../src/js/components/TagList';
 import sha256 from '../src/js/modules/sha256';
 
 const TEST_TOKEN =

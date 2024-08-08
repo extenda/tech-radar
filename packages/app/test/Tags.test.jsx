@@ -1,6 +1,7 @@
+import { mount, shallow } from 'enzyme/build';
 import React from 'react';
 import { Link, MemoryRouter } from 'react-router-dom';
-import { mount, shallow } from 'enzyme/build';
+
 import Tags from '../src/js/components/entry/Tags';
 
 describe('<Tags />', () => {

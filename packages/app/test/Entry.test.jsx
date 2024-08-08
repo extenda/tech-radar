@@ -1,5 +1,6 @@
-import React from 'react';
 import { shallow } from 'enzyme';
+import React from 'react';
+
 import Entry from '../src/js/components/Entry';
 import NotFound from '../src/js/components/NotFound';
 

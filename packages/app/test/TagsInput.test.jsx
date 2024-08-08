@@ -1,5 +1,6 @@
-import React from 'react';
 import { shallow } from 'enzyme/build';
+import React from 'react';
+
 import TagsInput from '../src/js/components/TagsInput';
 
 const tags = ['java', 'php'];

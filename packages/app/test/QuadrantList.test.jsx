@@ -1,6 +1,7 @@
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
+
 import QuadrantList from '../src/js/components/QuadrantList';
 import radarService from '../src/js/modules/radarService';
 

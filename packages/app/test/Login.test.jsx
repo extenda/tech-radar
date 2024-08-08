@@ -1,5 +1,6 @@
-import React from 'react';
 import { shallow } from 'enzyme';
+import React from 'react';
+
 import Login from '../src/js/components/Login';
 
 jest.mock('../src/js/modules/radarService');

@@ -1,9 +1,10 @@
 /**
  * @jest-environment node
  */
+import { build } from '@tech-radar/builder';
 import * as fs from 'fs-extra';
 import * as path from 'path';
-import { build } from '@tech-radar/builder';
+
 import radarService from '../src/js/modules/radarService';
 
 jest.dontMock('../src/js/modules/radarService');

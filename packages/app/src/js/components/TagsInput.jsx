@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import ReactTags from 'react-tag-autocomplete';
 import '../../assets/css/react-tags.css';
+
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import ReactTags from 'react-tag-autocomplete';
 
 class TagsInput extends Component {
   constructor(props) {

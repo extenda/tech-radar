@@ -1,6 +1,7 @@
-import React from 'react';
 import { mount, shallow } from 'enzyme/build';
+import React from 'react';
 import { Link, MemoryRouter } from 'react-router-dom';
+
 import Related from '../src/js/components/entry/Related';
 
 const related = [{ file: 'php.html', name: 'PHP' }];

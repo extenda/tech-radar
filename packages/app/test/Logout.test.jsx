@@ -1,5 +1,6 @@
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
+
 import Logout from '../src/js/components/Logout';
 
 jest.mock('../src/js/modules/radarService');

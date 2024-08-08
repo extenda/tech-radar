@@ -1,6 +1,7 @@
 import React from 'react';
-import License from './License';
+
 import Badge from './Badge';
+import License from './License';
 
 const LicenseBadges = (props) => {
   const {
