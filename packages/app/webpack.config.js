@@ -111,13 +111,17 @@ module.exports = (env, argv) => {
     },
     plugins: [
       // Build the radar YAMLs on first run, then watch for changes in dev-server.
-      (compiler) =>
-        compiler.hooks.beforeRun.tapAsync(
-          'RadarBuilderPlugin',
-          (params, callback) => {
-            buildRadar().then(callback);
-          },
-        ),
+      (compiler) => {
+        // Install hooks for run and watch (dev-server)
+        ['run', 'watchRun'].forEach((hookName) => {
+          compiler.hooks[hookName].tapAsync(
+            'RadarBuilderPlugin',
+            (params, callback) => {
+              buildRadar().then(callback);
+            },
+          );
+        });
+      },
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
