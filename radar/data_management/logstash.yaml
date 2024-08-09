@@ -2,6 +2,8 @@ name: LogStash
 blip:
   - date: 2019-05-22
     ring: ASSESS
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Enrichment of ingested data.
 rationale: |

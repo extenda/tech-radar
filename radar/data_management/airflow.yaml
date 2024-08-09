@@ -2,6 +2,8 @@ name: Airflow
 blip:
   - date: 2021-04-08
     ring: ASSESS
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   [Airflow](https://airflow.apache.org/docs/apache-airflow/stable/index.html) is a tool to programmatically create,
   schedule, and monitor workflows.

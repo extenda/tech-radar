@@ -2,6 +2,8 @@ name: Hadoop
 blip:
   - date: 2019-05-22
     ring: ASSESS
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   [Hadoop](https://hadoop.apache.org/) is a collection of open-source software utilities that facilitate
   using a network of many computers to solve problems involving massive amounts of data and computation.

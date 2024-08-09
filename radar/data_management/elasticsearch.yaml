@@ -7,13 +7,13 @@ blip:
   - date: 2020-06-15
     ring: TRIAL
 description: |
-  Elasticsearch is a distributed, massivily scalable search engine.
+  Elasticsearch is a distributed, massively scalable search engine.
 rationale: |
   Consider Elasticsearch when there's a need to search massive amounts of
   data, for example in Retail Suite, Centraloffice, ASI or logging and tracing needs.
 
   Elasticsearch should be used as a managed service (SaaS) for cloud services. We must
-  evaulate the licensing, operations and business case before we can adopt Elasticsearch.
+  evaluate the licensing, operations and business case before we can adopt Elasticsearch.
 related:
   - data_management/kibana.yaml
   - data_management/beats.yaml

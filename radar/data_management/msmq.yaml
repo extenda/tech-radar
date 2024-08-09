@@ -2,6 +2,8 @@ name: MSMQ
 blip:
   - date: 2019-05-22
     ring: HOLD
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Microsoft Message Queuing or MSMQ is a message queue implementation developed by Microsoft
   and deployed in its Windows Server operating systems since Windows NT 4 and Windows 95.
