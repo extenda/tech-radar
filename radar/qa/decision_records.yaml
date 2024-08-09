@@ -1,5 +1,5 @@
 name: Architectural Decision Records
-shortname: Arch. Decision Records
+shortname: ADRs
 blip:
   - date: 2020-05-06
     ring: ASSESS
@@ -9,7 +9,7 @@ blip:
     ring: ADOPT
 description: |
   [Architectural Decision Records (ADR)](https://adr.github.io/) captures
-  a single Architecutral Decision and together forms a decision log.
+  a single Architectural Decision and together forms a decision log.
 rationale: |
   We use ADR as a way to document decisions taken related to architecture and technology.
   The main rationale for doing this is that its an easy and common way to follow decisions

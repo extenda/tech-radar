@@ -1,5 +1,5 @@
 name: Infrastructure as code
-shortname: Infra. as code
+shortname: IaC
 blip:
   - date: 2018-03-20
     ring: ADOPT
@@ -11,5 +11,9 @@ description: |
 rationale: |
   Treat your infrastructure as code and automate creating it and destroying it.
   This becomes especially important in a cloud-environment.
+related:
+  - infrastructure_ci_cd/terraform.yaml
+  - infrastructure_ci_cd/ansible.yaml
+  - infrastructure_ci_cd/saltstack.yaml
 tags:
   - devops

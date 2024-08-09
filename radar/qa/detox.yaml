@@ -2,6 +2,8 @@ name: Detox
 blip:
   - date: 2020-05-07
     ring: TRIAL
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   [Detox](https://github.com/wix/Detox) Gray box end-to-end testing and automation library for mobile apps.
   Detox tests your mobile app while it's running in a real device/simulator, interacting with it just like a real user.
