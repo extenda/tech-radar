@@ -2,6 +2,8 @@ name: EverSQL
 blip:
   - date: 2021-10-27
     ring: ASSESS
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   [EverSQL](https://www.eversql.com/) provides AI based performance insights, SQL query rewrites,
   indexing recommendations, cost reduction recommendations, ad-hoc SQL enhancements, slow query log

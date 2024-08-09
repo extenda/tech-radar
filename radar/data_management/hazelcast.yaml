@@ -3,6 +3,8 @@ logo: https://hazelcast.com/images/logos/hazelcast-logo-horz_sm.png
 blip:
   - date: 2021-03-04
     ring: TRIAL
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Hazelcast is the worlds leading in-memory data grid, and is used as a database, cache or
   message broker. It offers simple scalability, partitioning and re-balancing. Functions

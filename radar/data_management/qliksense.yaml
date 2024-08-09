@@ -5,6 +5,8 @@ blip:
     ring: ADOPT
   - date: 2021-05-24
     ring: HOLD
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Qlik Sense is a business intelligence (BI) and visual analytics platform that
   supports dashboards, custom and embedded analytics, and self-service
