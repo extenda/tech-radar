@@ -3,6 +3,8 @@ logo: https://upload.wikimedia.org/wikipedia/en/c/cc/JavaFX_Logo.png
 blip:
   - date: 2018-03-20
     ring: HOLD
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   JavaFX is a desktop application platform by Oracle. It is intended to replace
   Swing and AWT for Java desktop applications.

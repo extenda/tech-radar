@@ -2,6 +2,8 @@ name: Enunciate
 blip:
   - date: 2018-03-20
     ring: HOLD
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Enunciate is a framework to create HTML documentation and client APIs for your
   REST service implemented with Java. The documentation is generated from source

@@ -6,7 +6,7 @@ description: |
   An add-on for web-based applications to allow customers or internal users to upload spreadsheets of data.
   It pairs with SaaS dashboard and AI-assisted field match feature.
 rationale: |
-  HiiRetail needs rich UI capabilities, easy to embed and use, to allow users upload csv/xls data,
+  Hii Retail needs rich UI capabilities, easy to embed and use, to allow users upload csv/xls data,
   fix validation issues on the go, and import the data to our services.
   This includes standing data, article data, etc.
   The software needs to:

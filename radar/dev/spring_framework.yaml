@@ -3,6 +3,8 @@ logo: https://spring.io/img/homepage/icon-spring-framework.svg
 blip:
   - date: 2019-02-20
     ring: HOLD
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Spring Framework is an application framework and IoC container for Java.
   It integrates with most things Java and prominent features and frameworks include:

@@ -16,9 +16,7 @@ rationale: |
 
   When building new products, make sure to use the latest JDK available for
   your target deployment. For example, if you are building a microservice for
-  SaaS, don't build it for Java 8, go for the latest Java release. But, if you
-  are building a process that runs on a POS workstation, make sure to match
-  the available JRE.
+  SaaS, don't build it for Java 8, go for the latest LTS Java release.
 
   For existing systems, it is important to start to upgrade to the next LTS
   release after Java 8 (at this time Java 11). We must make sure our products

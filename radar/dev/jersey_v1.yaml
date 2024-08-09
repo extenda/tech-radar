@@ -2,6 +2,8 @@ name: Jersey 1.x
 blip:
   - date: 2018-03-20
     ring: HOLD
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Jersey 1.x is the reference implementation for JAX-RS 1. It is a framework
   to build RESTful services with Java.
