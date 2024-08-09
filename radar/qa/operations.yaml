@@ -1,5 +1,5 @@
-name: Google Operations Suite
-shortname: GCP Operations
+name: Google Cloud Operations Suite
+shortname: Cloud Operations
 blip:
   - date: 2020-05-06
     ring: TRIAL

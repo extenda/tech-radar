@@ -3,6 +3,8 @@ logo: https://spring.io/img/homepage/icon-spring-cloud.svg
 blip:
   - date: 2018-03-20
     ring: ASSESS
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Spring Cloud Contract is a framework to implement [consumer-driven contract testing](consumer_contract_testing.html)
   primarily in Spring Boot applications.

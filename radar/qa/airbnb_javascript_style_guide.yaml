@@ -3,6 +3,8 @@ shortname: AirBnB JS Guide
 blip:
   - date: 2019-02-20
     ring: TRIAL
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   [A mostly reasonable approach to JavaScript.](https://github.com/airbnb/javascript)
 rationale: |
