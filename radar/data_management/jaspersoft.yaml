@@ -2,18 +2,24 @@ name: JasperSoft
 blip:
   - date: 2019-05-23
     ring: ADOPT
+  - date: 2024-08-09
+    ring: HOLD
 description: |
   [JasperSoft](https://www.jaspersoft.com/embedded-bi/) is a stand-alone and embeddable business intelligence
   suite from TIBCO, used for reporting and analysis. It provides functionality for developing pixel perfect reports,
-  in addition to adhoc reporting and dashboard development for endusers.
-rationale:
+  in addition to adhoc reporting and dashboard development for end users.
+rationale: |
   JasperServer is embedded into Extenda Retail Suite (OEM license). It provides Retail Suite with seamless integrated
   functionality for reporting and analysis, including features such as ad-hoc, dashboards and scheduling.
+
+  JasperSoft is not licensed for other Extenda Retail products and on HOLD for new products.
 license:
   commercial:
     company: Jaspersoft
     description: |
       Each product using JasperSoft requires a license from TIBCO Jaspersoft.
+related:
+  - data_management/looker.yaml
 tags:
   - bi
   - dotnet
