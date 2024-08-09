@@ -117,6 +117,7 @@ module.exports = (env, argv) => {
       }),
       new DefinePlugin({
         LD_CLIENT_ID: JSON.stringify(launchDarklyClientId(argv.mode)),
+        DISABLE_GOOGLE_LOGIN: process.env.BACKEND !== '1' && argv.mode === 'development',
       }),
     ],
     resolve: {

@@ -39,6 +39,8 @@ module.exports = [
         ...globals.node,
         ...globals.jest,
         ...globals.browser,
+        LD_CLIENT_ID: 'readonly',
+        DISABLE_GOOGLE_LOGIN: 'readonly',
       },
       parser: babelParser,
     },
