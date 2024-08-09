@@ -47,10 +47,16 @@ module.exports = (env, argv) => {
       },
       setupMiddlewares: (middlewares) => {
         // Watch for changes to radar YAMLs and rebuild the JSON model.
-        fs.watch(radarDir, { recursive: true }, () => {
-          buildRadar().then(() => {
-            logger.debug('Rebuilt radar model');
-          });
+        fs.watch(radarDir, { recursive: true }, (event, filename) => {
+          if (filename.endsWith('.yaml')) {
+            buildRadar()
+              .then(() => {
+                logger.debug('Rebuilt radar model');
+              })
+              .catch(({ message = 'Invalid radar content. Check your YAML.' }) => {
+                logger.error('Error', message);
+              });
+          }
         });
         return middlewares;
       },
