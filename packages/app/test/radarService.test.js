@@ -1,9 +1,10 @@
 /**
  * @jest-environment node
  */
+import { build } from '@tech-radar/builder';
 import * as fs from 'fs-extra';
 import * as path from 'path';
-import { build } from '@tech-radar/builder';
+
 import radarService from '../src/js/modules/radarService';
 
 jest.dontMock('../src/js/modules/radarService');
@@ -12,10 +13,14 @@ describe('RadarService', () => {
   beforeAll(async () => {
     await build(path.resolve(__dirname, '../../builder/test/radar/valid'));
 
-    global.fetch = jest.fn().mockImplementationOnce(() => Promise.resolve({
-      json: () => fs.readFile(path.resolve(__dirname, '../build/js/radar.json'), 'utf-8')
-        .then((data) => JSON.parse(data)),
-    }));
+    global.fetch = jest.fn().mockImplementationOnce(() =>
+      Promise.resolve({
+        json: () =>
+          fs
+            .readFile(path.resolve(__dirname, '../build/js/radar.json'), 'utf-8')
+            .then((data) => JSON.parse(data)),
+      }),
+    );
 
     await radarService.init('test');
 
@@ -42,9 +47,7 @@ describe('RadarService', () => {
     const quadrant = radarService.getQuadrant('dev');
     expect(quadrant).toMatchObject({
       dirname: 'dev',
-      adopt: [
-        { name: 'Java', filename: 'java.html', active: true },
-      ],
+      adopt: [{ name: 'Java', filename: 'java.html', active: true }],
       assess: [],
       trial: [],
       hold: [
@@ -83,7 +86,7 @@ describe('RadarService', () => {
     const tags = radarService.listTags();
     expect(tags).toHaveLength(9);
     expect(tags).toEqual([
-      '90\'s',
+      "90's",
       'bsd',
       'bsd-2',
       'commercial',
@@ -127,9 +130,11 @@ describe('RadarService', () => {
   });
 
   test('It can switch radar on-demand', async () => {
-    global.fetch.mockImplementationOnce(() => Promise.resolve({
-      json: () => ({ id: 'radar_it' }),
-    }));
+    global.fetch.mockImplementationOnce(() =>
+      Promise.resolve({
+        json: () => ({ id: 'radar_it' }),
+      }),
+    );
     expect(Object.keys(radarService.models)).toHaveLength(1);
     await radarService.switchRadar('radar_it');
     expect(global.fetch).toHaveBeenCalledTimes(2);

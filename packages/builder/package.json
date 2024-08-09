@@ -6,7 +6,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
-    "lint:js": "eslint src test",
+    "lint:js": "eslint *.config.js src test",
     "build": ""
   },
   "license": "MIT",

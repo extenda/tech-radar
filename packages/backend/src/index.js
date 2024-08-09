@@ -27,7 +27,8 @@ app.get(/\.html$/, async (req, res) => {
 });
 
 function send401(res, err) {
-  res.status(401)
+  res
+    .status(401)
     .append('WWW-Authenticate', `Bearer,error="${err.code}",error_description="${err.message}"`)
     .end();
 }
@@ -39,14 +40,16 @@ app.get('/js/radar.json', async (req, res, next) => {
 });
 
 app.get('/js/radar_it.json', async (req, res, next) => {
-  verifyRequest(req).then(({ sub, email }) => ({
-    kind: 'user',
-    key: shajs('sha256').update(`${sub}`).digest('hex'),
-    email,
-    _meta: {
-      privateAttributeNames: ['email'],
-    },
-  })).then((user) => ldClient.variation('release.tool-radar', user, false))
+  verifyRequest(req)
+    .then(({ sub, email }) => ({
+      kind: 'user',
+      key: shajs('sha256').update(`${sub}`).digest('hex'),
+      email,
+      _meta: {
+        privateAttributeNames: ['email'],
+      },
+    }))
+    .then((user) => ldClient.variation('release.tool-radar', user, false))
     .then((flag) => {
       if (flag === true) {
         return next();

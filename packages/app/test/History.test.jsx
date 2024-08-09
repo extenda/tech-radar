@@ -1,5 +1,6 @@
-import React from 'react';
 import { shallow } from 'enzyme/build';
+import React from 'react';
+
 import History from '../src/js/components/entry/History';
 
 const history = [

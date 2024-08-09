@@ -1,7 +1,8 @@
-import React from 'react';
 import { shallow } from 'enzyme';
-import LicenseBadges from '../src/js/components/entry/LicenseBadges';
+import React from 'react';
+
 import Badge from '../src/js/components/entry/Badge';
+import LicenseBadges from '../src/js/components/entry/LicenseBadges';
 
 describe('<LicenseBadges />', () => {
   test('It renders no badges for missing license', () => {

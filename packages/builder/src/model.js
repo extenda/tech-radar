@@ -11,9 +11,7 @@ const THIRTY_DAYS = 2592000000;
 const RADAR_DATE = new Date();
 
 const createModel = (radarDir) => {
-  const quadrants = yaml.parse(
-    fs.readFileSync(path.join(radarDir, 'quadrants.yaml'), 'utf8'),
-  );
+  const quadrants = yaml.parse(fs.readFileSync(path.join(radarDir, 'quadrants.yaml'), 'utf8'));
 
   const title = process.env.TITLE || 'Extenda Retail Tech Radar';
 
@@ -29,18 +27,8 @@ const createModel = (radarDir) => {
     quadrants,
 
     // Quadrants in the order we want them in the navbar.
-    quadrantsNavBar: [
-      quadrants[2],
-      quadrants[3],
-      quadrants[1],
-      quadrants[0],
-    ],
-    rings: [
-      'ADOPT',
-      'TRIAL',
-      'ASSESS',
-      'HOLD',
-    ],
+    quadrantsNavBar: [quadrants[2], quadrants[3], quadrants[1], quadrants[0]],
+    rings: ['ADOPT', 'TRIAL', 'ASSESS', 'HOLD'],
   };
 };
 

@@ -19,7 +19,7 @@ const buildRelatedLinks = (radar, entry) => {
           file: htmlFile(file),
           name: linked.name,
         });
-      } catch (err) {
+      } catch {
         const source = entry.filename.replace('.html', '.yaml');
         throw new Error(`${source} - Related file not found: ${file}`);
       }
@@ -68,10 +68,12 @@ const createBlip = (radar, entry) => {
 
   if (entry.blip.length > 1) {
     blip.history = [];
-    entry.blip.forEach((p) => blip.history.push({
-      date: dateFormat(new Date(p.date)),
-      ringName: ringName(p.ring),
-    }));
+    entry.blip.forEach((p) =>
+      blip.history.push({
+        date: dateFormat(new Date(p.date)),
+        ringName: ringName(p.ring),
+      }),
+    );
   }
 
   return blip;
@@ -86,7 +88,9 @@ const createLicenseTags = (entry) => {
   }
 
   if (license && license['open-source']) {
-    const { 'open-source': { name } } = license;
+    const {
+      'open-source': { name },
+    } = license;
     tags.push('open-source');
     tags.push(name.toLowerCase());
 
@@ -112,7 +116,9 @@ const collectEntries = (radarDir, model, callback) => {
   const klawOpts = {
     nodir: true,
     traverseAll: true,
-    filter: (p) => path.extname(p.path) === '.yaml' && path.basename(path.dirname(p.path)) !== path.basename(radarDir),
+    filter: (p) =>
+      path.extname(p.path) === '.yaml' &&
+      path.basename(path.dirname(p.path)) !== path.basename(radarDir),
   };
 
   radar.radarDir = radarDir;

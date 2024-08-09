@@ -1,5 +1,6 @@
-import React from 'react';
 import { shallow } from 'enzyme/build';
+import React from 'react';
+
 import TagsInput from '../src/js/components/TagsInput';
 
 const tags = ['java', 'php'];
@@ -15,9 +16,7 @@ describe('<TagsInput />', () => {
     const component = shallow(<TagsInput onFilter={onFilter} tags={tags} />);
     component.instance().handleAddition({ id: 0, name: 'java' });
     expect(onFilter.mock.calls).toHaveLength(1);
-    expect(onFilter.mock.calls[0][0]).toMatchObject([
-      { id: 0, name: 'java' },
-    ]);
+    expect(onFilter.mock.calls[0][0]).toMatchObject([{ id: 0, name: 'java' }]);
 
     component.instance().handleAddition({ id: 1, name: 'php' });
     expect(onFilter.mock.calls).toHaveLength(2);
@@ -35,9 +34,7 @@ describe('<TagsInput />', () => {
     expect(onFilter.mock.calls).toHaveLength(2);
 
     component.instance().handleDelete(0);
-    expect(onFilter.mock.calls[2][0]).toMatchObject([
-      { id: 1, name: 'php' },
-    ]);
+    expect(onFilter.mock.calls[2][0]).toMatchObject([{ id: 1, name: 'php' }]);
 
     component.instance().handleDelete(0);
     expect(onFilter.mock.calls[3][0]).toMatchObject([]);

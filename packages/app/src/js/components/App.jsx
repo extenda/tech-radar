@@ -1,22 +1,19 @@
-import React, { Component } from 'react';
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-} from 'react-router-dom';
+import { jwtDecode } from 'jwt-decode';
 import { withLDConsumer } from 'launchdarkly-react-client-sdk';
 import PropTypes from 'prop-types';
-import { jwtDecode } from 'jwt-decode';
-import Login from './Login';
-import Logout from './Logout';
-import LDRadar from './Radar';
-import Entry from './Entry';
-import Quadrant from './Quadrant';
-import Footer from './Footer';
-import NotFound from './NotFound';
-import TagList from './TagList';
+import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import radarService from '../modules/radarService';
 import sha256 from '../modules/sha256';
+import Entry from './Entry';
+import Footer from './Footer';
+import Login from './Login';
+import Logout from './Logout';
+import NotFound from './NotFound';
+import Quadrant from './Quadrant';
+import LDRadar from './Radar';
+import TagList from './TagList';
 
 export class App extends Component {
   constructor(props) {
@@ -58,16 +55,20 @@ export class App extends Component {
     }
 
     const { sub, email } = jwtDecode(response.credential);
-    return sha256(sub).then((key) => ldClient.identify({
-      kind: 'user',
-      key,
-      email,
-      _meta: {
-        privateAttributeNames: ['email'],
-      },
-    }).then(() => radarService.init(response.credential)
-      .then(this.radarDidLoad)
-      .catch(this.radarDidFail)));
+    return sha256(sub).then((key) =>
+      ldClient
+        .identify({
+          kind: 'user',
+          key,
+          email,
+          _meta: {
+            privateAttributeNames: ['email'],
+          },
+        })
+        .then(() =>
+          radarService.init(response.credential).then(this.radarDidLoad).catch(this.radarDidFail),
+        ),
+    );
   };
 
   loginDidFail = () => {};
@@ -76,12 +77,7 @@ export class App extends Component {
     const { loading, isSignedIn } = this.state;
 
     if (!isSignedIn) {
-      return (
-        <Login
-          onSuccess={this.loginDidSucceed}
-          onFailure={this.loginDidFail}
-        />
-      );
+      return <Login onSuccess={this.loginDidSucceed} onFailure={this.loginDidFail} />;
     }
 
     if (loading) {

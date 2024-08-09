@@ -1,5 +1,6 @@
-import React from 'react';
 import { googleLogout } from '@react-oauth/google';
+import React from 'react';
+
 import Icon from './Icon';
 
 const logout = () => {

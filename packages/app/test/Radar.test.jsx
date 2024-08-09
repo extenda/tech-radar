@@ -1,6 +1,7 @@
+import { mount, shallow } from 'enzyme';
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { shallow, mount } from 'enzyme';
+
 import { Radar } from '../src/js/components/Radar';
 
 jest.mock('../src/js/modules/radarService');
@@ -61,7 +62,8 @@ describe('<Radar />', () => {
       { attachTo: window.domNode },
     );
 
-    const showBubble = jest.spyOn(component.find(Radar).instance().svgRadar, 'showBubble')
+    const showBubble = jest
+      .spyOn(component.find(Radar).instance().svgRadar, 'showBubble')
       .mockImplementationOnce(() => {});
 
     const legendItem = component.find('#legendItem1').at(0);

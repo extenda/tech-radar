@@ -1,6 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Markdown from 'react-markdown';
+
 import Icon from '../Icon';
 
 const OS_LICENSES = {
@@ -29,11 +30,13 @@ const COMMERCIAL_DEFAULT_TEXT = {
   Google: 'Use of this software requires a license for Google Cloud Platform.',
 };
 
-const commercialDescription = (commercial) => commercial.description
-  || COMMERCIAL_DEFAULT_TEXT[commercial.company];
+const commercialDescription = (commercial) =>
+  commercial.description || COMMERCIAL_DEFAULT_TEXT[commercial.company];
 
 const License = (props) => {
-  const { license: { openSource, commercial } } = props;
+  const {
+    license: { openSource, commercial },
+  } = props;
 
   if (openSource == null && commercial == null) {
     return null;
@@ -41,9 +44,7 @@ const License = (props) => {
 
   return (
     <>
-      <h2>
-        License
-      </h2>
+      <h2>License</h2>
       {openSource && (
         <div>
           <strong>
@@ -51,23 +52,20 @@ const License = (props) => {
             Available for use under an open-source license.
           </strong>
           <p>
-            {openSource.link
-              ? <a href={openSource.link}>{OS_LICENSES[openSource.name]}</a>
-              : OS_LICENSES[openSource.name]}
+            {openSource.link ? (
+              <a href={openSource.link}>{OS_LICENSES[openSource.name]}</a>
+            ) : (
+              OS_LICENSES[openSource.name]
+            )}
           </p>
-          {openSource.description && (
-            <Markdown>{openSource.description}</Markdown>
-          )}
+          {openSource.description && <Markdown>{openSource.description}</Markdown>}
         </div>
       )}
       {commercial && (
         <div>
           <strong>
             <Icon name="exclamation-triangle" />
-            Available for use with a commercial agreement from
-            {' '}
-            {commercial.company}
-            .
+            Available for use with a commercial agreement from {commercial.company}.
           </strong>
           {commercialDescription(commercial) && (
             <Markdown>{commercialDescription(commercial)}</Markdown>

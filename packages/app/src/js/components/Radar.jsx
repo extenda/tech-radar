@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { withLDConsumer } from 'launchdarkly-react-client-sdk';
 import { pick } from '@tech-radar/shared/src/utils';
+import { withLDConsumer } from 'launchdarkly-react-client-sdk';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+
 import SvgRadar from '../lib/radar';
 import radarService from '../modules/radarService';
 import Icon from './Icon';
 import Navigation from './Navigation';
-import TagsInput from './TagsInput';
 import QuadrantList from './QuadrantList';
+import TagsInput from './TagsInput';
 
 export class Radar extends Component {
   constructor(props) {
@@ -60,10 +61,13 @@ export class Radar extends Component {
   };
 
   onFilter = (tags) => {
-    this.setState((prevState) => ({
-      ...prevState,
-      blips: radarService.listBlips(tags.map((t) => t.name)),
-    }), this.renderBlips);
+    this.setState(
+      (prevState) => ({
+        ...prevState,
+        blips: radarService.listBlips(tags.map((t) => t.name)),
+      }),
+      this.renderBlips,
+    );
   };
 
   onChangeRadar = (e) => {
@@ -71,14 +75,17 @@ export class Radar extends Component {
     const id = e.currentTarget.getAttribute('data-radar-id');
     if (radarService.model.id !== id) {
       radarService.switchRadar(id).then(() => {
-        this.setState((prevState) => ({
-          ...prevState,
-          tags: radarService.listTags(),
-          blips: radarService.listBlips(),
-        }), this.renderBlips);
+        this.setState(
+          (prevState) => ({
+            ...prevState,
+            tags: radarService.listTags(),
+            blips: radarService.listBlips(),
+          }),
+          this.renderBlips,
+        );
       });
     }
-  }
+  };
 
   componentDidMount = () => {
     this.renderRadar();
@@ -113,7 +120,7 @@ export class Radar extends Component {
         />
       </>
     );
-  }
+  };
 
   render = () => {
     const radar = radarService.model;
@@ -149,14 +156,14 @@ export class Radar extends Component {
           </>
         )}
         {!flags.releaseToolRadar && (
-        <h1 className="center">
-          {radar.title}
-          &nbsp;
-          <span className="version">
-            <Icon name="tag" />
-            {radar.version}
-          </span>
-        </h1>
+          <h1 className="center">
+            {radar.title}
+            &nbsp;
+            <span className="version">
+              <Icon name="tag" />
+              {radar.version}
+            </span>
+          </h1>
         )}
         <div className="tags-filter">
           <TagsInput onFilter={this.onFilter} tags={tags} />
@@ -180,12 +187,9 @@ export class Radar extends Component {
             <div className="one-half column">
               <h2>About the Tech Radar</h2>
               <p>
-                The Extenda Retail Tech Radar is based on the concept introduced by
-                {' '}
-                <a href="https://www.thoughtworks.com/radar">ThoughtWorks</a>
-                .
-                The Radar contains a list of technologies, complemented by an assessment result,
-                called ring assessment.
+                The Extenda Retail Tech Radar is based on the concept introduced by{' '}
+                <a href="https://www.thoughtworks.com/radar">ThoughtWorks</a>. The Radar contains a
+                list of technologies, complemented by an assessment result, called ring assessment.
                 The following rings are used:
               </p>
               <ul className="no-bullets">
@@ -203,35 +207,31 @@ export class Radar extends Component {
                 <li>
                   <strong>Assess</strong>
                   {' — '}
-                  Technologies that are promising with a clear potential value for us.
-                  Requires research and prototyping to analyze its impact.
+                  Technologies that are promising with a clear potential value for us. Requires
+                  research and prototyping to analyze its impact.
                 </li>
                 <li>
                   <strong>Hold</strong>
                   {' — '}
-                  Technologies not recommended for new products or technology we no longer
-                  want to invest in. Existing products may still consider these depending
-                  on their legacy.
+                  Technologies not recommended for new products or technology we no longer want to
+                  invest in. Existing products may still consider these depending on their legacy.
                 </li>
               </ul>
             </div>
             <div className="one-half column">
               <h2>The Purpose</h2>
               <p>
-                The Tech Radar aims to inspire and support teams at Extenda Retail to pick the
-                best technologies for their projects. It is way to share experience and knowledge
-                between the teams and to create transparency about the technology direction of
-                Extenda Retail.
-                The Tech Radar also becomes a list of dos and don&apos;ts, what to try and to avoid
-                in order to increase success.
+                The Tech Radar aims to inspire and support teams at Extenda Retail to pick the best
+                technologies for their projects. It is way to share experience and knowledge between
+                the teams and to create transparency about the technology direction of Extenda
+                Retail. The Tech Radar also becomes a list of dos and don&apos;ts, what to try and
+                to avoid in order to increase success.
               </p>
               <h2>How to Contribute</h2>
               <p>
-                The Tech Radar is maintained on
-                {' '}
-                <a href="https://github.com/extenda/tech-radar">GitHub</a>
-                .
-                There you can read more about the process and how to contribute.
+                The Tech Radar is maintained on{' '}
+                <a href="https://github.com/extenda/tech-radar">GitHub</a>. There you can read more
+                about the process and how to contribute.
               </p>
             </div>
           </div>

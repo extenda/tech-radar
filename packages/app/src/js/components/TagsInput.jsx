@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import ReactTags from 'react-tag-autocomplete';
 import '../../assets/css/react-tags.css';
+
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import ReactTags from 'react-tag-autocomplete';
 
 class TagsInput extends Component {
   constructor(props) {
@@ -22,17 +23,23 @@ class TagsInput extends Component {
     let { tags } = this.state;
     tags = tags.slice(0);
     tags.splice(i, 1);
-    this.setState({
-      tags,
-    }, this.updateFilter);
+    this.setState(
+      {
+        tags,
+      },
+      this.updateFilter,
+    );
   };
 
   handleAddition = (tag) => {
     const { tags } = this.state;
     tags.push(tag);
-    this.setState({
-      tags,
-    }, this.updateFilter);
+    this.setState(
+      {
+        tags,
+      },
+      this.updateFilter,
+    );
   };
 
   render = () => {

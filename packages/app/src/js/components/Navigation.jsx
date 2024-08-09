@@ -1,15 +1,11 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+
 import Icon from './Icon';
 
 const Navigation = (props) => {
-  const {
-    quadrant,
-    entry,
-    home,
-    tag,
-  } = props;
+  const { quadrant, entry, home, tag } = props;
 
   if (quadrant || entry || tag) {
     return (
@@ -19,27 +15,17 @@ const Navigation = (props) => {
             <Link to="/">Radar</Link>
             <Icon name="angle-right" />
           </li>
-          {!entry && !tag && (
-            <li key={quadrant.dirname}>
-              {quadrant.name}
-            </li>
-          )}
+          {!entry && !tag && <li key={quadrant.dirname}>{quadrant.name}</li>}
           {entry && (
             <>
               <li key={quadrant.dirname}>
                 <Link to={`/${quadrant.dirname}.html`}>{quadrant.name}</Link>
                 <Icon name="angle-right" />
               </li>
-              <li key={entry.name}>
-                {entry.name}
-              </li>
+              <li key={entry.name}>{entry.name}</li>
             </>
           )}
-          {tag && (
-            <li key={tag}>
-              {tag}
-            </li>
-          )}
+          {tag && <li key={tag}>{tag}</li>}
         </ul>
       </nav>
     );
@@ -73,9 +59,7 @@ Navigation.propTypes = {
     name: PropTypes.string.isRequired,
   }),
   tag: PropTypes.string,
-  home: PropTypes.arrayOf(
-    PropTypes.shape(quadrantShape),
-  ),
+  home: PropTypes.arrayOf(PropTypes.shape(quadrantShape)),
 };
 
 Navigation.defaultProps = {

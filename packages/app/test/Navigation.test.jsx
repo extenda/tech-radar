@@ -1,6 +1,7 @@
-import React from 'react';
 import { shallow } from 'enzyme';
+import React from 'react';
 import { Link } from 'react-router-dom';
+
 import Navigation from '../src/js/components/Navigation';
 
 describe('<Navigation />', () => {
@@ -24,10 +25,7 @@ describe('<Navigation />', () => {
 
   test('It renders entry breadcrumbs', () => {
     const component = shallow(
-      <Navigation
-        quadrant={{ name: 'Test1', dirname: 'test1' }}
-        entry={{ name: 'Entry' }}
-      />,
+      <Navigation quadrant={{ name: 'Test1', dirname: 'test1' }} entry={{ name: 'Entry' }} />,
     );
 
     expect(component.find(Link)).toHaveLength(2);

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import radarService from '../modules/radarService';
 import Icon from './Icon';
 
@@ -24,12 +25,10 @@ const Footer = () => {
           <Icon name="slack" />
           <a href="https://extendaretail.slack.com/channels/tech-radar">tech-radar</a>
           <br />
-          The Tech Radar Generator is licensed under
-          {' '}
+          The Tech Radar Generator is licensed under{' '}
           <a href="https://github.com/extenda/tech-radar/blob/master/LICENSE">MIT</a>
           {dotSeparator}
-          Thanks to Zalando for the
-          {' '}
+          Thanks to Zalando for the{' '}
           <a href="https://github.com/zalando/tech-radar">radar visualization</a>
         </p>
       </div>

@@ -8,16 +8,27 @@ const loadModel = require('./model');
 const build = (radarDir, output = 'build/js/radar.json') => {
   fs.mkdirsSync(path.dirname(output));
   const radar = loadModel(radarDir);
-  const json = pick(radar, 'id', 'title', 'version', 'formattedDate', 'quadrants', 'quadrantsNavBar', 'rings');
+  const json = pick(
+    radar,
+    'id',
+    'title',
+    'version',
+    'formattedDate',
+    'quadrants',
+    'quadrantsNavBar',
+    'rings',
+  );
   json.entries = [];
 
   // Read entries from YAML files.
   reader.collectEntries(radarDir, radar, (entry) => json.entries.push(entry));
 
   // Sort entries by quadrant, ring and name.
-  json.entries.sort(firstBy((a, b) => a.blip.quadrant - b.blip.quadrant)
-    .thenBy((a, b) => a.blip.ring - b.blip.ring)
-    .thenBy('name'));
+  json.entries.sort(
+    firstBy((a, b) => a.blip.quadrant - b.blip.quadrant)
+      .thenBy((a, b) => a.blip.ring - b.blip.ring)
+      .thenBy('name'),
+  );
 
   // Assign unique IDs
   let id = 0;

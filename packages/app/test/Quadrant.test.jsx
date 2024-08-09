@@ -1,8 +1,9 @@
+import { mount, shallow } from 'enzyme';
 import React from 'react';
-import { shallow, mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
-import Quadrant from '../src/js/components/Quadrant';
+
 import NotFound from '../src/js/components/NotFound';
+import Quadrant from '../src/js/components/Quadrant';
 
 jest.mock('../src/js/modules/radarService');
 

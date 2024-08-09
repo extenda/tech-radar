@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 const Related = (props) => {
   const { related } = props;
@@ -24,10 +24,12 @@ const Related = (props) => {
 };
 
 Related.propTypes = {
-  related: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    file: PropTypes.string.isRequired,
-  })),
+  related: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      file: PropTypes.string.isRequired,
+    }),
+  ),
 };
 
 Related.defaultProps = {

@@ -37,10 +37,7 @@ const launchDarklyClientId = () => process.env.LD_CLIENT_ID || '616ee08b06d2ef0b
 module.exports = (env, argv) => {
   const webpack = {
     devServer: {
-      static: [
-        { directory: outputPath },
-        { directory: path.resolve(__dirname, 'src/assets') },
-      ],
+      static: [{ directory: outputPath }, { directory: path.resolve(__dirname, 'src/assets') }],
       devMiddleware: {
         publicPath: '/',
       },
@@ -87,10 +84,7 @@ module.exports = (env, argv) => {
       ],
     },
     optimization: {
-      minimizer: [
-        '...',
-        new CssMinimizerPlugin(),
-      ],
+      minimizer: ['...', new CssMinimizerPlugin()],
     },
     output: {
       path: outputPath,
@@ -103,9 +97,14 @@ module.exports = (env, argv) => {
     },
     plugins: [
       // Build the radar YAMLs on first run, then watch for changes in dev-server.
-      (compiler) => compiler.hooks.beforeRun.tapAsync('RadarBuilderPlugin', (params, callback) => {
-        buildRadar().then(callback);
-      }),
+      (compiler) => {
+        // Install hooks for run and watch (dev-server)
+        ['run', 'watchRun'].forEach((hookName) => {
+          compiler.hooks[hookName].tapAsync('RadarBuilderPlugin', (params, callback) => {
+            buildRadar().then(callback);
+          });
+        });
+      },
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),

@@ -1,6 +1,7 @@
+import { shallow } from 'enzyme/build';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { shallow } from 'enzyme/build';
+
 import TagList from '../src/js/components/TagList';
 
 jest.mock('../src/js/modules/radarService');

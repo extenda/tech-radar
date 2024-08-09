@@ -1,21 +1,15 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import Icon from '../Icon';
 
 const Badge = (props) => {
-  const {
-    className,
-    icon,
-    text,
-    link,
-  } = props;
+  const { className, icon, text, link } = props;
 
   let content;
 
   if (link) {
-    content = (
-      <a href={link}>{text}</a>
-    );
+    content = <a href={link}>{text}</a>;
   } else {
     content = text;
   }

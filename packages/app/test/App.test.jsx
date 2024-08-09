@@ -1,59 +1,34 @@
+/* eslint-disable react/display-name */
+import { mount, shallow } from 'enzyme';
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+
 import { App } from '../src/js/components/App';
 import Entry from '../src/js/components/Entry';
-import Quadrant from '../src/js/components/Quadrant';
-import NotFound from '../src/js/components/NotFound';
-import TagList from '../src/js/components/TagList';
-import Logout from '../src/js/components/Logout';
 import Login from '../src/js/components/Login';
+import Logout from '../src/js/components/Logout';
+import NotFound from '../src/js/components/NotFound';
+import Quadrant from '../src/js/components/Quadrant';
+import TagList from '../src/js/components/TagList';
 import sha256 from '../src/js/modules/sha256';
 
-const TEST_TOKEN = 'eyJhbGciOiJIUzI1NiIsImtpZCI6IjQ1MjljNDA5Zjc3YTEwNmZiNjdlZTFhODVkMTY4ZmQyY2ZiN2MwYjciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJzdWIiOiJ0ZXN0IiwiaGQiOiJleHRlbmRhcmV0YWlsLmNvbSIsImVtYWlsIjoidGVzdEBleHRlbmRhcmV0YWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlfQ.pevBIXNzVdqfUfmmREIKFYu6GDdD4pdsKao83zs6A9Y';
+const TEST_TOKEN =
+  'eyJhbGciOiJIUzI1NiIsImtpZCI6IjQ1MjljNDA5Zjc3YTEwNmZiNjdlZTFhODVkMTY4ZmQyY2ZiN2MwYjciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJzdWIiOiJ0ZXN0IiwiaGQiOiJleHRlbmRhcmV0YWlsLmNvbSIsImVtYWlsIjoidGVzdEBleHRlbmRhcmV0YWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlfQ.pevBIXNzVdqfUfmmREIKFYu6GDdD4pdsKao83zs6A9Y';
 
 jest.mock('../src/js/modules/sha256');
 
-jest.mock('../src/js/components/Radar', () => () => (
-  <div id="radar">
-    Radar
-  </div>
-));
+jest.mock('../src/js/components/Radar', () => () => <div id="radar">Radar</div>);
 
-jest.mock('../src/js/components/Entry', () => () => (
-  <div>
-    Entry
-  </div>
-));
+jest.mock('../src/js/components/Entry', () => () => <div>Entry</div>);
 
-jest.mock('../src/js/components/Quadrant', () => () => (
-  <div>
-    Quadrant
-  </div>
-));
+jest.mock('../src/js/components/Quadrant', () => () => <div>Quadrant</div>);
 
-jest.mock('../src/js/components/NotFound', () => () => (
-  <div>
-    NotFound
-  </div>
-));
+jest.mock('../src/js/components/NotFound', () => () => <div>NotFound</div>);
 
-jest.mock('../src/js/components/TagList', () => () => (
-  <div>
-    TagList
-  </div>
-));
+jest.mock('../src/js/components/TagList', () => () => <div>TagList</div>);
 
-jest.mock('../src/js/components/Login', () => () => (
-  <div>
-    Login
-  </div>
-));
+jest.mock('../src/js/components/Login', () => () => <div>Login</div>);
 
-jest.mock('../src/js/components/Logout', () => () => (
-  <div>
-    Logout
-  </div>
-));
+jest.mock('../src/js/components/Logout', () => () => <div>Logout</div>);
 
 jest.mock('../src/js/modules/radarService');
 
@@ -99,7 +74,7 @@ describe('<App />', () => {
     window.history.pushState({}, '', '/');
     const identify = jest.fn().mockResolvedValueOnce({});
     const component = mount(<App ldClient={{ identify }} />);
-    await component.instance().loginDidFail({ });
+    await component.instance().loginDidFail({});
     await component.update();
     expect(component.state().isSignedIn).toEqual(false);
     expect(component.state().loading).toEqual(true);

@@ -12,17 +12,21 @@ class AuthenticationError {
   }
 }
 
-const verifyToken = async (token) => client.verifyIdToken({
-  idToken: token,
-  audience: clientId,
-}).then((ticket) => {
-  const { hd, sub, email } = ticket.getPayload();
-  return {
-    valid: hd === hostedDomain,
-    sub,
-    email,
-  };
-}).catch(() => ({ valid: false }));
+const verifyToken = async (token) =>
+  client
+    .verifyIdToken({
+      idToken: token,
+      audience: clientId,
+    })
+    .then((ticket) => {
+      const { hd, sub, email } = ticket.getPayload();
+      return {
+        valid: hd === hostedDomain,
+        sub,
+        email,
+      };
+    })
+    .catch(() => ({ valid: false }));
 
 const verifyRequest = async (req) => {
   if (req.headers && req.headers.authorization) {

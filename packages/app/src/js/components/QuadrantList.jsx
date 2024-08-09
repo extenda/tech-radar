@@ -1,24 +1,20 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 const header = (title, level) => {
   switch (level) {
     case 3:
-      return (<h3>{title}</h3>);
+      return <h3>{title}</h3>;
     default:
-      return (<h2>{title}</h2>);
+      return <h2>{title}</h2>;
   }
 };
 
 const renderEntry = (entry, enabled, params) => {
-  const {
-    useShortname,
-    onMouseEnter,
-    onMouseLeave,
-  } = params;
+  const { useShortname, onMouseEnter, onMouseLeave } = params;
 
-  const name = useShortname ? (entry.shortname || entry.name) : entry.name;
+  const name = useShortname ? entry.shortname || entry.name : entry.name;
 
   if (!enabled) {
     return name;
@@ -58,14 +54,7 @@ const renderEntriesList = (params, ring) => {
 };
 
 const QuadrantList = (props) => {
-  const {
-    blips,
-    quadrant,
-    headerLevel,
-    useShortname,
-    onMouseEnter,
-    onMouseLeave,
-  } = props;
+  const { blips, quadrant, headerLevel, useShortname, onMouseEnter, onMouseLeave } = props;
 
   const params = {
     filter: new Set(blips.map((b) => b.id)),
@@ -97,18 +86,22 @@ const QuadrantList = (props) => {
   );
 };
 
-const entries = PropTypes.arrayOf(PropTypes.shape({
-  name: PropTypes.string.isRequired,
-  shortname: PropTypes.string,
-  filename: PropTypes.string.isRequired,
-  active: PropTypes.bool.isRequired,
-  id: PropTypes.number.isRequired,
-})).isRequired;
+const entries = PropTypes.arrayOf(
+  PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    shortname: PropTypes.string,
+    filename: PropTypes.string.isRequired,
+    active: PropTypes.bool.isRequired,
+    id: PropTypes.number.isRequired,
+  }),
+).isRequired;
 
 QuadrantList.propTypes = {
-  blips: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-  })),
+  blips: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ),
   quadrant: PropTypes.shape({
     adopt: entries,
     trial: entries,
