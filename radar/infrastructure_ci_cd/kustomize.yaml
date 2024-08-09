@@ -2,6 +2,8 @@ name: Kustomize
 blip:
   - date: 2019-10-03
     ring: TRIAL
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Kustomize introduces a template-free way to customize application configuration for Kubernetes.
   Simplifies the use of off-the-shelf applications.

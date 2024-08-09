@@ -2,13 +2,15 @@ name: ORY Hydra
 blip:
   - date: 2021-01-29
     ring: ASSESS
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   [ORY Hyrda](https://www.ory.sh/hydra/) OAuth 2.0 and OpenID Certified OpenID Connect Server.
 rationale: |
-  ORY Hydra is a fully compiant OAuth2.0 and OpenID Connect Server. We plan to utilize Hydra to support the OAuth Client
-  Credential Flow which is not currently supported by Google Identity Platform. The Client Credential Flow is used to
-  enable machine authentication, where a client_id and client_secret are exchanged for a signed JWT which is used for
-  authentication to Extenda Retail APIs. Things that we want to assess are as follows
+  ORY Hydra is a fully compliant OAuth2.0 and OpenID Connect Server. We plan to utilize Hydra to support the
+  OAuth Client Credential Flow which is not currently supported by Google Identity Platform. The Client Credential
+  Flow is used to enable machine authentication, where a client_id and client_secret are exchanged for a signed
+  JWT which is used for authentication to Extenda Retail APIs. Things that we want to assess are as follows
 
     * Ease of Deployment
     * Scalability

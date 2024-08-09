@@ -12,7 +12,7 @@ description: |
 rationale: |
   GitHub Actions support CI on a variety of build platforms including Windows, MacOS and Linux. You have the option to
   build in pre-built containers, bring your own, or build on VMs. There already exists an enormous collection of
-  community actions to move quickly with intergrating with 3rd party sevices. The pricing model is highly competitive,
+  community actions to move quickly with integrating with 3rd party services. The pricing model is highly competitive,
   and would allow us to significantly reduce our spend compared to CircleCI or Appveyor. It is CI as a Service, which is
   the direction we want to move.
 

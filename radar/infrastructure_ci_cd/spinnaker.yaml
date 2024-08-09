@@ -2,6 +2,8 @@ name: Spinnaker
 blip:
   - date: 2019-05-22
     ring: ADOPT
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Spinnaker is an open-source, multi-cloud continuous delivery platform
   that helps you release software changes with high velocity and confidence.

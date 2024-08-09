@@ -3,6 +3,8 @@ logo: https://gruntjs.com/img/grunt-logo.svg
 blip:
   - date: 2019-02-20
     ring: HOLD
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   The JavaScript task runner.
 rationale: |

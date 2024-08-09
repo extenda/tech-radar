@@ -6,7 +6,6 @@ description: |
   HashiCorp Terraform allows you to declare infrastructure as code.
 rationale:
   Terraform is the preferred IoC configuration tool in use at Extenda Retail.
-  It is for example  used by IS/IT and for all our AWS services.
 license:
   open-source:
     name: MPL-2.0

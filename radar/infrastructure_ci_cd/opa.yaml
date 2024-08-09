@@ -1,4 +1,5 @@
-name: OPA
+name: Open Policy Agent
+logo: https://www.openpolicyagent.org/img/logo.png
 blip:
   - date: 2020-03-11
     ring: ASSESS
@@ -7,8 +8,6 @@ blip:
   - date: 2020-08-29
     ring: ADOPT
 description: |
-  Open Policy Agent
-rationale: |
   As the technology landscape is becoming more complex, concerns such as security need more automation and engineering
   practices. When building systems, we need to take into consideration security policies, which are rules and procedures
   to protect our systems from threats and disruption. For example, access control policies define and enforce who can
@@ -19,6 +18,12 @@ rationale: |
   policy enforcement across the stack. OPA provides a high-level declarative language that let’s you specify
   policy as code and simple APIs to offload policy decision-making from your software. You can use OPA to
   enforce policies in microservices, Kubernetes, CI/CD pipelines, API gateways, and more.
+rationale: |
+  We use OPA to secure all our APIs. OPA allows us to express security policies in a technology agnostic language
+  (Rego) and decouples authorization decisions from application business logic.
+
+  We prefer to run OPA an ingestor sidecar that intercepts and authorizes all API calls prior to dispatching them
+  to the API.
 license:
   open-source:
     name: Apache-2.0

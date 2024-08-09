@@ -4,6 +4,8 @@ blip:
     ring: ASSESS
   - date: 2019-11-15
     ring: HOLD
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   CircleCI is an elastic SaaS CI/CD platform. It's based on dockerized ephemeral builds
   configured with `.circleci/config.yml` files following the [pipelines as code](pipelines_as_code.html) principles.

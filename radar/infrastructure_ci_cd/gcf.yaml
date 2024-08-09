@@ -18,6 +18,9 @@ rationale: |
     * Managing and sharing code across services is more complex
     * local or offline testing is more difficult if not impossible.
 
+  While there can be a place for Cloud Functions, we have put it on hold and recommend Cloud Run over functions.
+  Cloud Functions v2 is essentially Cloud Run with a build pipeline in-front. As we're building containers in our
+  CI/CD pipelines there's not much differences left.
 license:
   commercial:
     company: Google
@@ -25,7 +28,7 @@ license:
       Use of this software requires a license for Google Cloud Platform.
 related:
   - infrastructure_ci_cd/gcp.yaml
-  - infrastructure_ci_cd/knative.yaml
+  - infrastructure_ci_cd/cloud_run.yaml
 tags:
   - cloud
   - gcp

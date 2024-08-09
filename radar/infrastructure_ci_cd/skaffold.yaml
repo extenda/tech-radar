@@ -2,6 +2,8 @@ name: Skaffold
 blip:
   - date: 2020-04-16
     ring: TRIAL
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   [Skaffold](https://skaffold.dev/) is a command line tool that facilitates continuous development for K8s applications.
   You can iterate on your application source code locally

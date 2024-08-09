@@ -17,7 +17,7 @@ description: |
 rationale: |
   Since we have chosen to go with Google Cloud,
   This blip represent all services that are considered to be part of the core package for GCP.
-  Therefore all the services gathered here are consolidated into a single blip for brewity.
+  Therefore all the services gathered here are consolidated into a single blip for brevity.
 license:
   commercial:
     company: Google

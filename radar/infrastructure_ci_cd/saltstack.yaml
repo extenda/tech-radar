@@ -4,6 +4,8 @@ blip:
     ring: ADOPT
   - date: 2020-06-15
     ring: HOLD
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   SaltStack is a deployment and monitoring platform.
 rationale: |

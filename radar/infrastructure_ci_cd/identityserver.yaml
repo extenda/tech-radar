@@ -2,6 +2,8 @@ name: IdentityServer
 blip:
   - date: 2019-05-22
     ring: HOLD
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   [IdentityServer](http://docs.identityserver.io/en/latest/) is an OpenID Connect
   and OAuth 2.0 framework for ASP.NET Core.

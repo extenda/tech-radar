@@ -2,6 +2,8 @@ name: Apache Ant
 blip:
   - date: 2018-03-20
     ring: HOLD
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Apache Ant is a build tool designed to replace Make in early 2000. It is
   implemented in Java, configured with XML and primarily used to configure

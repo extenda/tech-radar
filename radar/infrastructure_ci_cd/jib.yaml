@@ -5,6 +5,8 @@ blip:
     ring: ASSESS
   - date: 2020-01-27
     ring: TRIAL
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Jib builds optimized Docker and OCI images for your Java applications without a Docker daemon.
   It is available as plugins for Maven and Gradle and as a Java library.
