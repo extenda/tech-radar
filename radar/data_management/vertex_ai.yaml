@@ -2,6 +2,8 @@ name: Vertex AI
 blip:
   - date: 2021-06-25
     ring: ASSESS
+  - date: 2022-07-25
+    ring: ADOPT
 description: |
   [Vertex AI](https://cloud.google.com/vertex-ai) is a Google Cloud service and a unified
   AI platform that provides tooling for building, deploying, and scaling pre-trained and custom ML models.
@@ -23,6 +25,9 @@ rationale: |
 
   The main benefit of using Vertex AI is that it significantly simplifies the process
   of building, serving, and scaling ML models on GCP.
+
+  After successfully evaluating all major Vertex AI functionality, we decided to adopt it
+  for implementing all MLOps workflows.
 license:
   commercial:
     company: Google

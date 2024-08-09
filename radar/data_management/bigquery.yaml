@@ -2,14 +2,17 @@ name: BigQuery
 blip:
   - date: 2020-04-16
     ring: TRIAL
+  - date: 2022-07-25
+    ring: ADOPT
 description: |
   [Bigquery](https://cloud.google.com/bigquery) is a serverless, highly scalable,
   and cost-effective cloud data warehouse designed for business agility.
 rationale: |
-  Analyze petabytes of data using ANSI SQL at blazing-fast speeds,
-  with zero operational overhead.
+  Analyze petabytes of data using ANSI SQL at blazing-fast speeds,with zero operational overhead.
   Run analytics at scale with 26%–34% lower three-year TCO than cloud data warehouse alternatives.
   Democratize insights with a trusted, and more secure platform that scales with your needs.
+
+  We recommend adopting BigQuery for analytics of big data sets.
 license:
   commercial:
     company: Google
