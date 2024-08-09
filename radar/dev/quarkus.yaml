@@ -2,6 +2,8 @@ name: Quarkus
 blip:
   - date: 2019-08-21
     ring: TRIAL
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   A Kubernetes Native Java stack tailored for GraalVM & OpenJDK HotSpot,
   crafted from the best of breed Java libraries and standards.

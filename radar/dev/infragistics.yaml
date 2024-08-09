@@ -4,6 +4,8 @@ blip:
     ring: ASSESS
   - date: 2019-09-12
     ring: TRIAL
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Fast and beautiful UI controls and time-saving tools for developers and UX pros
 rationale:
