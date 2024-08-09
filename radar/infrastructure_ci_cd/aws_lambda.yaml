@@ -4,6 +4,8 @@ blip:
     ring: TRIAL
   - date: 2019-02-20
     ring: HOLD
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   AWS Lambdas are serverless functions managed by AWS and automatically scaled
   to handle varying load. They support multiple languages such as Java, Node.js

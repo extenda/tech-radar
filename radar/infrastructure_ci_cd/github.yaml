@@ -15,7 +15,7 @@ description: |
 rationale: |
   Using GitHub makes it easier to collaborate with colleagues and peers
   and look back at previous versions of your work. We have many integrations to github
-  from other tools, e.g Spinnaker, Sonarcube, Jenkins.
+  from other tools, e.g Spinnaker, Sonarcloud, Jenkins.
 license:
   commercial:
     company: GitHub

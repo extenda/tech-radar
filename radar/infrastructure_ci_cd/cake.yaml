@@ -4,6 +4,8 @@ blip:
     ring: ASSESS
   - date: 2019-06-10
     ring: TRIAL
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Cake (C# Make) is a cross-platform build automation system with a C# DSL for tasks such as compiling code, copying
   files and folders, running unit tests, compressing files and building NuGet packages.

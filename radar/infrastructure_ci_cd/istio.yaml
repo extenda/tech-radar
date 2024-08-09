@@ -5,6 +5,8 @@ blip:
     ring: ASSESS
   - date: 2020-04-13
     ring: TRIAL
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Cloud platforms provide a wealth of benefits for the organizations that use them.
   However, there’s no denying that adopting the cloud can put strains on DevOps teams.
