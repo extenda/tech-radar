@@ -18,10 +18,19 @@ import TagList from './TagList';
 export class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isSignedIn: false,
-      loading: true,
-    };
+    if (typeof DISABLE_GOOGLE_LOGIN === 'boolean' && DISABLE_GOOGLE_LOGIN) {
+      // No log in required. Usually desired in development server.
+      this.state = {
+        isSignedIn: true,
+        loading: true,
+      };
+      radarService.init().then(this.radarDidLoad);
+    } else {
+      this.state = {
+        isSignedIn: false,
+        loading: true,
+      };
+    }
   }
 
   radarDidLoad = () => {
