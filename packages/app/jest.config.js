@@ -7,6 +7,8 @@ module.exports = {
   moduleNameMapper: {
     '\\.(css|less)$': 'identity-obj-proxy',
     'react-markdown': '<rootDir>/../../node_modules/react-markdown/react-markdown.min.js',
+    'd3-selection': '<rootDir>/../../node_modules/d3-selection/dist/d3-selection.js',
+    'd3-force': '<rootDir>/../../node_modules/d3-force/dist/d3-force.js',
   },
   reporters: [
     'default',

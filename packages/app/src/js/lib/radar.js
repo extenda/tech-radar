@@ -152,7 +152,7 @@ export default class SvgRadar {
 
     const { print_layout } = this.config;
 
-    // Store all entries so we can search them by ID later.
+    // Store all entries, so we can search them by ID later.
     this.radarEntries = entries;
 
     this.rink.selectAll('*').remove();
@@ -210,9 +210,9 @@ export default class SvgRadar {
                 .text(d => `${d.id}. ${d.label}`)
                 .style('font-family', fontFamily)
                 .style('font-size', '10')
-                .on('mouseover', d => { this.showBubble(d); this.highlightLegendItem(d); })
-                .on('mouseout', d => { this.hideBubble(d); this.unhighlightLegendItem(d); })
-                .on('click', this.followLink);
+                .on('mouseover', (e, d) => { this.showBubble(d); this.highlightLegendItem(d); })
+                .on('mouseout', (e, d) => { this.hideBubble(d); this.unhighlightLegendItem(d); })
+                .on('click', (e, d) => this.followLink(d));
         }
       }
     }
@@ -223,9 +223,9 @@ export default class SvgRadar {
         .append('g')
           .attr('class', 'blip svglink')
           .attr('transform', (d, i) => this.legend_transform(d.quadrant, d.ring, i))
-          .on('mouseover', d => { this.showBubble(d); this.highlightLegendItem(d); })
-          .on('mouseout', d => { this.hideBubble(d); this.unhighlightLegendItem(d); })
-          .on('click', this.followLink);
+          .on('mouseover', (e, d) => { this.showBubble(d); this.highlightLegendItem(d); })
+          .on('mouseout', (e, d) => { this.hideBubble(d); this.unhighlightLegendItem(d); })
+          .on('click', (e, d) => this.followLink(d));
 
     // configure each blip
     blips.each(function (d) {
@@ -404,7 +404,7 @@ export default class SvgRadar {
   }
 
   showBubble = (d) => {
-    if (d.active || config.print_layout) {
+    if (d.active || this.config.print_layout) {
       let tooltip = d3.select('#bubble text')
         .text(d.label);
       let bbox = tooltip.node().getBBox();
