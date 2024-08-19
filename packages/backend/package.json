@@ -21,7 +21,7 @@
     "sha.js": "^2.4.11"
   },
   "devDependencies": {
-    "esbuild": "^0.23.0",
-    "node-fetch": "^2.7.0"
+    "esbuild": "^0.23.1",
+    "node-fetch": "^3.3.2"
   }
 }
