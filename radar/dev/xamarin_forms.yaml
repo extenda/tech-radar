@@ -2,6 +2,8 @@ name: Xamarin Forms
 blip:
   - date: 2020-06-30
     ring: HOLD
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Xamarin.Forms (XF) is an open-source UI framework. XF allows developers to build Xamarin.Android, Xamarin.iOS,
   and Windows applications from a single shared codebase.

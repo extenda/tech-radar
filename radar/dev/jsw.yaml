@@ -3,6 +3,8 @@ logo: https://wrapper.tanukisoftware.com/doc/images/jsw-logo.jpg?20190730145704
 blip:
   - date: 2019-08-26
     ring: HOLD
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Java Service Wrapper is a cross-platform solution to run java
   applications as services on Windows, Linux and MacOS.

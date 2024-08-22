@@ -5,6 +5,8 @@ blip:
     ring: TRIAL
   - date: 2020-06-26
     ring: HOLD
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   Open source framework for building truly native mobile apps with Angular, Vue.js, TypeScript, or JavaScript.
 rationale: |
