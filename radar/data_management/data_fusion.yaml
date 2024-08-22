@@ -3,6 +3,8 @@ logo: https://img.stackshare.io/service/10775/Image_2019-04-16_at_7.45.29_AM.png
 blip:
   - date: 2020-06-23
     ring: ASSESS
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   [Data Fusion](https://cloud.google.com/data-fusion) is a fully-managed cloud-native code-free
   data integration service for quickly building and managing data pipelines on GCP.
