@@ -4,6 +4,8 @@ blip:
     ring: ASSESS
   - date: 2020-10-22
     ring: ADOPT
+  - date: 2024-08-09
+    ring: HOLD
 description: |
   Ardoq is a collaborative, easy-to-use and intuitive tool for documenting your projects,
   business processes, applications, services, infrastructure or anything else that you can document in a structured way.
