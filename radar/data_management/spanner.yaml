@@ -1,9 +1,10 @@
 name: Google Cloud Spanner
 shortname: Cloud Spanner
-logo: https://upload.wikimedia.org/wikipedia/commons/8/84/Cloud-Spanner-Logo.svg
 blip:
   - date: 2020-05-06
     ring: ASSESS
+  - date: 2024-08-09
+    ring: ADOPT
 description: |
   [Spanner](https://cloud.google.com/spanner) is a fully managed, scalable,
   relational database service for regional and global application data.
@@ -11,18 +12,16 @@ description: |
   database service. It combines that benefits of relational database structures
   with the non-relational horizontal scale.
 rationale: |
-  Spanner seems to be inline with our strategy of global operations.
-  With its global consistency we could build systems for the future retailer.
-  The downside of Spanner is its cost and we need to make sure we can justify it.
+  Spanner's multi-regional capabilities makes it a good fit for global operations
+  and multi-regional deployments. The entry-level pricing is comparable to the
+  cost of a Cloud SQL database, hence many solutions can opt to use Spanner
+  instead of Cloud SQL.
 
-  What we need to assess:
-    * Do we have clear business cases that could benefit from Spanner?
-    * Does the functionality justify the costs?
+  Teams should start small and a minimal Spanner instance in a single region
+  and scale out with more compute units and nodes when required.
 license:
   commercial:
     company: Google
-    description: |
-      Use of this software requires a license for Google Cloud Platform.
 related:
   - data_management/cloud_sql.yaml
 tags:
