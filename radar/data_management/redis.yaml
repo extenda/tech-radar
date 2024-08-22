@@ -2,12 +2,28 @@ name: Redis
 blip:
   - date: 2019-05-21
     ring: TRIAL
+  - date: 2024-08-09
+    ring: ADOPT
 description: |
   Redis is open source, in-memory data structure store, used as a database, cache or message broker,
   offering built-in replication. Most standard operation has time complexity O(1).
+
+  [Memorystore for Redis](https://cloud.google.com/memorystore/docs/redis) is available in Google Cloud.
 rationale: |
-  Consider Redis when there's need of data caching, fast lookup or session handling.
+  Consider Redis when there's need of data caching, fast lookup or session handling. Redis is also useful
+  to share or distribute data between multiple running instances in an elastically scaling system.
+
+  We recommend using Redis as managed service, mainly Memorystore for Redis. If a managed solution is
+  available, always prefer it. If not possible, keep in mind that Redis Community Edition went through
+  a license change and is now licensed by their [RSALv2 license](https://redis.io/legal/rsalv2-agreement/).
+  It's not a recognized open source license, but permits usage without any copy-left. It's main objective
+  is to take a license fee from cloud providers.
+license:
+  commercial:
+    company: Google
+    description: Memorystore for Redis requires a commercial license for Google Cloud Platform.
 tags:
   - dotnet
   - java
+  - nodejs
   - nosql
