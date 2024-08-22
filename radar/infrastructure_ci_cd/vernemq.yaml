@@ -4,6 +4,8 @@ logo: https://vernemq.com/images/og-vernemq-logo.png
 blip:
   - date: 2021-01-28
     ring: ASSESS
+  - date: 2024-08-09
+    ring: ARCHIVE
 description: |
   [VerneMQ](https://vernemq.com) is first and foremost a MQTT publish/subscribe message broker which
   implements the OASIS industry standard MQTT protocol. But VerneMQ is also built to take messaging and IoT
