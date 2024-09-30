@@ -29,8 +29,8 @@
   "license": "MIT",
   "homepage": "https://github.com/extenda/tech-radar#readme",
   "devDependencies": {
-    "@eslint/js": "^9.8.0",
-    "eslint": "^9.8.0",
+    "@eslint/js": "^9.11.1",
+    "eslint": "^9.11.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-formatter-junit": "^8.40.0",
     "eslint-plugin-prettier": "^5.2.1",
