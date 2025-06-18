@@ -13,7 +13,7 @@ license:
     name: Apache-2.0
     link: https://github.com/zaproxy/zaproxy?tab=Apache-2.0-1-ov-file#readme
 related:
-  - trivy
+  - infrastructure_ci_cd/trivy.yaml
 tags:
   - devops
   - security

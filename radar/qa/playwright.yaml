@@ -12,8 +12,8 @@ license:
     name: Apache-2.0
     link: https://github.com/microsoft/playwright?tab=Apache-2.0-1-ov-file#readme
 related:
-  - detox
-  - puppeteer
+  - qa/detox.yaml
+  - qa/puppeteer.yaml
 tags:
   - devops
   - test
