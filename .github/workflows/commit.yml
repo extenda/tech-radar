@@ -131,7 +131,7 @@ jobs:
         id: docker-publish
         run: |
           gcloud auth configure-docker --quiet
-          IMAGE=europe-west1-docker.pkg.dev/${{ steps.gcloud.outputs.project-id }}/tech-radar:${{ steps.release.outputs.release-tag }}
+          IMAGE=gcr.io/${{ steps.gcloud.outputs.project-id }}/tech-radar:${{ steps.release.outputs.release-tag }}
           echo "::set-output name=docker-image-name::$IMAGE"
           docker build -t $IMAGE .
           docker push $IMAGE
