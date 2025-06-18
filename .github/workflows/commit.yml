@@ -132,7 +132,7 @@ jobs:
         run: |
           gcloud auth configure-docker --quiet
           IMAGE=gcr.io/${{ steps.gcloud.outputs.project-id }}/tech-radar:${{ steps.release.outputs.release-tag }}
-          echo "::set-output name=docker-image-name::$IMAGE"
+          echo "{docker-image-name}={$IMAGE}" >> $GITHUB_OUTPUT
           docker build -t $IMAGE .
           docker push $IMAGE
 
