@@ -1,0 +1,18 @@
+name: Toxiproxy
+blip:
+  - date: 2025-06-18
+    ring: ASSESS
+description: |
+  [Toxiproxy](https://github.com/Shopify/toxiproxy) is a framework for simulation network conditions.
+  It can be used for chaos engineering to simulate latency, downtime and unreliable networking towards dependencies.
+rationale: |
+  Toxiproxy is an interesting tool for use during development and staging to help development teams understand
+  how their system behaves when dependencies become unavailable or unstable. In a distributed microservice
+  system we cannot count on all things always being up and available.
+license:
+  open-source:
+    name: MIT
+    link: https://github.com/Shopify/toxiproxy?tab=MIT-1-ov-file#readme
+tags:
+  - devops
+  - test
