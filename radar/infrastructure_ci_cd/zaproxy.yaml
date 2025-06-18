@@ -1,0 +1,20 @@
+name: Zed Attack Proxy
+blip:
+  - date: 2025-06-18
+    ring: ASSESS
+description: |
+  [Zed Attach Proxy (ZAP)](https://www.zaproxy.org/) is a web app scanner to discover vulnerabilities in APIs.
+rationale: |
+  We're assessing ZAP as a tool to automate vulnerability scanning of APIs and services. We hope that this,
+  in addition to our other tooling around security (such as SonarCloud and Trivy), can give teams good insights
+  into their areas to improve as well as inherited vulnerabilities (from dependencies).
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/zaproxy/zaproxy?tab=Apache-2.0-1-ov-file#readme
+related:
+  - infrastructure_ci_cd/trivy.yaml
+tags:
+  - devops
+  - security
+  - web

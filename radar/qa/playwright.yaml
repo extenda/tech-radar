@@ -1,0 +1,21 @@
+name: Playwright
+blip:
+  - date: 2025-06-18
+    ring: ASSESS
+description: |
+  [Playwright](https://playwright.dev/) enables reliable end to end testing for modern web apps.
+rationale: |
+  We're assessing Playwright as a test automation tool for our web apps. We're on the look for a stable,
+  fast and reliable automation framework that yields repeatable test results.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/microsoft/playwright?tab=Apache-2.0-1-ov-file#readme
+related:
+  - qa/detox.yaml
+  - qa/puppeteer.yaml
+tags:
+  - devops
+  - test
+  - e2e
+  - web
