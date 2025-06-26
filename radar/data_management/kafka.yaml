@@ -2,18 +2,25 @@ name: Kafka Streams
 blip:
   - date: 2019-05-22
     ring: TRIAL
+  - date: 2022-02-10
+    ring: ADOPT
 description: |
-  [Kafka](https://kafka.apache.org/) is an open-source stream-processing software platform
-  developed by LinkedIn and donated to the Apache Software Foundation, written in Scala and Java.
-  The project aims to provide a unified, high-throughput,
-  low-latency platform for handling real-time data feeds.
+  Kafka in [Confluent Cloud](https://www.confluent.io/confluent-cloud/)
+  is a fully managed, cloud-native Kafka service for connecting and processing all of your data,
+  everywhere it's needed.
+  Confluent's elastic scalability and virtually infinite storage simplifies real-time data movement across public
+  and private clouds. You get out-of-the-box [connectors](https://www.confluent.io/hub/) to the most popular data
+  sources/sinks in the Kafka ecosystem, in addition to a vast amount of other services.
+  You get SQL-based stream processing, a governance suite for streaming data,
+  and more — all fully managed in the same cloud UI.
 rationale: |
-  Kafka is a streaming platform available to be used when stream processing capabilities
-  are needed and the output of the stream is required input to other services.
-  To use Kafka for stream processing, the following conditions must be met:
+  Confluent Cloud provides Kafka and Kafka Streams as a streaming engine and processing platform available to be used
+  when stream processing capabilities are needed and the output of the stream is required input to other services.
+  To use Confluent Cloud for stream processing, the following conditions must be met:
 
     * Need for real-time event processing and streaming calculations
-    * Kafka is not our messaging platform, if no stream processors or message
+    * Need to source or sink data from/to multiple services without writing code
+    * Kafka is not our messaging platform, if no stream processing or message
       ordering is needed, always use the general purpose message platform for
       both internal and external messaging. In cases where both producing and
       consuming services utilize Kafka Streams the consuming service can
@@ -26,9 +33,17 @@ license:
     description: |
       Using Kafka requires a commercial agreement with Confluent Inc.
       The services and stream processors must also run in the Google Cloud Platform.
-# related:
-# Add pubsub once adopted.
+related:
+  - data_management/dataflow.yaml
+  - infrastructure_ci_cd/pubsub.yaml
+  - data_management/bigquery.yaml
 tags:
   - java
+  - kotlin
   - dotnet
   - streaming
+  - real-time
+  - bigdata
+  - event
+  - kubernetes
+  - microservice
