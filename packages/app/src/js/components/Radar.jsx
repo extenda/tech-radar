@@ -34,7 +34,7 @@ export class Radar extends Component {
         grid: '#bbb',
         inactive: '#ddd',
       },
-      quadrants: radar.quadrants.map((q) => pick(q, 'name')),
+      quadrants: radar.quadrants.slice(0, 4).map((q) => pick(q, 'name')),
       rings: [
         { name: 'Adopt', color: '#43a047' },
         { name: 'Trial', color: '#c0ca33' },
