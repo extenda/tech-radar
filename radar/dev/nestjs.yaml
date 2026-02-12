@@ -3,6 +3,8 @@ logo: https://docs.nestjs.com/assets/logo-small.svg
 blip:
   - date: 2021-04-14
     ring: TRIAL
+  - date: 2026-02-12
+    ring: ADOPT
 description: |
   [_Nest_](https://nestjs.com/) (NestJS) is a framework for building efficient,
   scalable Node.js server-side applications. It uses progressive JavaScript,

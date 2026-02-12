@@ -2,6 +2,8 @@ name: OpenTelemetry
 blip:
   - date: 2020-06-15
     ring: TRIAL
+  - date: 2026-02-12
+    ring: ADOPT
 description: |
   [OpenTelemetry](https://opentelemetry.io) is a set of APIs, libraries, agents and collectors to capture
   distributed traces and metrics from applications. They can be analyzed using Google Operations

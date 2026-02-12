@@ -2,6 +2,8 @@ name: Micronaut
 blip:
   - date: 2019-05-22
     ring: TRIAL
+  - date: 2026-02-12
+    ring: HOLD
 description: |
   Micronaut is a new JVM framework for building microservices using Java, Kotlin or Groovy.
   It distinguishes itself through a small memory footprint and short startup time.

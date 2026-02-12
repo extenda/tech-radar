@@ -3,6 +3,8 @@ logo: https://github.com/aquasecurity/trivy/blob/main/imgs/logo.png
 blip:
   - date: 2021-01-19
     ring: ASSESS
+  - date: 2026-02-12
+    ring: ADOPT
 description: |
   [Trivy](https://github.com/aquasecurity/trivy) is a simple and comprehensive vulnerability scanner
   for containers and other artifacts, suitable for CI.

@@ -3,6 +3,8 @@ shortname: Elastic ML
 blip:
   - date: 2019-05-22
     ring: ASSESS
+  - date: 2026-02-12
+    ring: ARCHIVE
 description: |
   Addon to Kibana to leverage machine learning algorithms to anticipate expected results
   and find data outliers.

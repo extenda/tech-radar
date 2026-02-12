@@ -2,6 +2,8 @@ name: Playwright
 blip:
   - date: 2025-06-18
     ring: ASSESS
+  - date: 2026-02-12
+    ring: TRIAL
 description: |
   [Playwright](https://playwright.dev/) enables reliable end to end testing for modern web apps.
 rationale: |

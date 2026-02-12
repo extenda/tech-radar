@@ -4,6 +4,8 @@ logo: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.confluent.io%2Fblog%
 blip:
   - date: 2020-11-11
     ring: ASSESS
+  - date: 2026-02-12
+    ring: ARCHIVE
 description: |
   [Confluent Cloud Schema Registry](https://www.confluent.io/product/confluent-platform/data-compatibility/)
   is a central repository with a RESTful interface for developers to define standard schemas and register

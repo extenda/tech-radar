@@ -2,6 +2,8 @@ name: Kibana
 blip:
   - date: 2019-05-22
     ring: ADOPT
+  - date: 2026-02-12
+    ring: ARCHIVE
 description: |
   Visualisation tool for Elastic stack
 rationale: |

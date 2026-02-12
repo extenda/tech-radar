@@ -4,6 +4,8 @@ blip:
     ring: ASSESS
   - date: 2021-05-24
     ring: ADOPT
+  - date: 2026-02-12
+    ring: HOLD
 description: |
   [Looker](https://looker.com/) is a business intelligence software and big data analytics platform
   that helps you explore, analyze and share real-time business analytics easily.

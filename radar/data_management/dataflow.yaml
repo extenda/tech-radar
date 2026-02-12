@@ -3,6 +3,8 @@ logo: https://upload.wikimedia.org/wikipedia/commons/5/5b/Cloud-Dataflow-Logo.sv
 blip:
   - date: 2020-06-23
     ring: TRIAL
+  - date: 2026-02-12
+    ring: HOLD
 description: |
   [Dataflow](https://cloud.google.com/dataflow) is a serverless GCP service
   based on open-source project Apache Beam that provides a unified API for both stream and batch data processing.

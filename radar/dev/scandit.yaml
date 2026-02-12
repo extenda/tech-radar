@@ -3,6 +3,8 @@ shortname: Scandit SDK
 blip:
   - date: 2019-09-16
     ring: TRIAL
+  - date: 2026-02-12
+    ring: ARCHIVE
 description: |
   Scandit SDK is a cross-platform barcode scanner and data-capture solution.
   It is available for iOS, Android, Windows and Web and uses the camera to

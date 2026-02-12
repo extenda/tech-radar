@@ -2,6 +2,8 @@ name: VM Ware
 blip:
   - date: 2018-03-20
     ring: HOLD
+  - date: 2026-02-12
+    ring: ARCHIVE
 description: |
   VM Ware is a software to run and manage virtual machines. VM Ware has been for
   many years at Extenda Retail to manage test environments.

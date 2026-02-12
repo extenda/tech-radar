@@ -2,6 +2,8 @@ name: Zed Attack Proxy
 blip:
   - date: 2025-06-18
     ring: ASSESS
+  - date: 2026-02-12
+    ring: ARCHIVE
 description: |
   [Zed Attach Proxy (ZAP)](https://www.zaproxy.org/) is a web app scanner to discover vulnerabilities in APIs.
 rationale: |

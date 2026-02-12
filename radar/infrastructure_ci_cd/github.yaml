@@ -2,6 +2,8 @@ name: GitHub
 blip:
   - date: 2019-05-22
     ring: ADOPT
+  - date: 2026-02-12
+    ring: ARCHIVE
 description: |
   GitHub brings teams together to work through problems, move ideas forward,
   and learn from each other along the way. GitHub is a webapp designed for
