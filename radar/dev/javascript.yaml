@@ -16,8 +16,8 @@ rationale: |
   strict and unapologetic best practices for how JS projects should be structured and how the code should be written
   and quality assured.
 
-  In 2026 and beyond we see JS being used less and less for large scale applications as TypeScript takes over that space.
-  However, for small projects and automation scripts JS is still an acceptable choice.
+  In 2026 and beyond we see JS being used less and less for large scale applications as TypeScript
+  takes over that space. However, for small projects and automation scripts JS is still an acceptable choice.
 license:
 tags:
   - javascript
