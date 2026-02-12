@@ -3,6 +3,8 @@ logo: https://www.getpostman.com/img/v2/logo-mark.svg
 blip:
   - date: 2019-02-20
     ring: ADOPT
+  - date: 2026-02-12
+    ring: HOLD
 description: |
   Postman is an API testing and development tool. At the core are Postman Collections which
   is an executable description of an API. With Postman Collections you can mock, test,

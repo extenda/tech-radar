@@ -2,6 +2,8 @@ name: Micro Frontends
 blip:
   - date: 2019-09-27
     ring: ASSESS
+  - date: 2026-02-12
+    ring: TRIAL
 description: |
   Micro frontends are a way, similar to micro services, to distribute and isolate development of
   business logic into smaller components and being able to present them in a customizable way.

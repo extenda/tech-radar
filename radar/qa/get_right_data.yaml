@@ -2,6 +2,8 @@ name: GetRightData
 blip:
   - date: 2020-05-14
     ring: TRIAL
+  - date: 2026-02-12
+    ring: ARCHIVE
 description: |
   RightData is a self-service suite of applications that helps
   you achieve Data Quality Assurance, Data Integrity Audit and

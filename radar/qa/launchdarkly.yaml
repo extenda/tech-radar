@@ -2,6 +2,8 @@ name: LaunchDarkly
 blip:
   - date: 2021-10-06
     ring: ASSESS
+  - date: 2026-02-12
+    ring: ADOPT
 description: |
   [LaunchDarkly](https://launchdarkly.com) is a feature toggle SaaS that makes it possible to release and rollback
   features immediately without a redeploy. The service supports user segmentation for targeted feature previews

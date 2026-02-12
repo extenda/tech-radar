@@ -5,6 +5,8 @@ blip:
     ring: TRIAL
   - date: 2024-04-05
     ring: HOLD
+  - date: 2026-02-12
+    ring: ARCHIVE
 description: |
   Puppeteer is an automation library which provides a high-level API to control Chrome or Chromium.
   Puppeteer runs headless by default, but can be configured to run full (non-headless) Chrome or Chromium.
