@@ -18,7 +18,6 @@ rationale: |
 
   In 2026 and beyond we see JS being used less and less for large scale applications as TypeScript
   takes over that space. However, for small projects and automation scripts JS is still an acceptable choice.
-license:
 tags:
   - javascript
   - web
