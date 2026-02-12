@@ -3,6 +3,8 @@ logo: https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.pn
 blip:
   - date: 2020-04-06
     ring: ASSESS
+  - date: 2026-02-12
+    ring: HOLD
 description: |
   Flutter is Google’s UI toolkit for building beautiful, natively
   compiled applications for mobile from a single codebase.

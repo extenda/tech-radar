@@ -2,6 +2,8 @@ name: Artifact Registry
 blip:
   - date: 2020-04-17
     ring: ASSESS
+  - date: 2026-06-12
+    ring: ADOPT
 description: |
   [Artifact Registry](https://cloud.google.com/artifact-registry/docs/overview)
   enables us to centrally store artifacts and

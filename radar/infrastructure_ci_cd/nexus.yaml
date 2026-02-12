@@ -3,6 +3,8 @@ shortname: Nexus Repository
 blip:
   - date: 2020-06-15
     ring: TRIAL
+  - date: 2026-02-12
+    ring: HOLD
 description: |
   Nexus Repository Manager (OSS) is the leading repository manager with universal support
   for Maven, npm, NuGet, Docker, YUM etc.

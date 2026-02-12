@@ -2,6 +2,8 @@ name: Flatfile Portal
 blip:
   - date: 2020-06-26
     ring: ASSESS
+  - date: 2026-02-12
+    ring: ARCHIVE
 description: |
   An add-on for web-based applications to allow customers or internal users to upload spreadsheets of data.
   It pairs with SaaS dashboard and AI-assisted field match feature.

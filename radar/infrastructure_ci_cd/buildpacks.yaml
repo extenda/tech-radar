@@ -3,6 +3,8 @@ logo: https://buildpacks.io/images/buildpacks-logo.svg
 blip:
   - date: 2020-09-16
     ring: ASSESS
+  - date: 2026-02-12
+    ring: ARCHIVE
 description: |
   Buildpacks is a Cloud Native Sandbox project. It embraces modern container standards, such as OCI image format,
   to build the most optimized Docker image to be deployed to any Cloud.

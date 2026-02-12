@@ -2,6 +2,8 @@ name: JavaScript
 blip:
   - date: 2019-02-20
     ring: ADOPT
+  - date: 2026-02-12
+    ring: HOLD
 description: |
   JavaScript, often abbreviated as JS, is a high-level, interpreted programming language.
   It is a language which is also characterized as dynamic, weakly typed, prototype-based and multi-paradigm.
@@ -13,6 +15,10 @@ rationale: |
   Because of it's loosely typed nature and plethora of misinformation online on how to write proper JS we have
   strict and unapologetic best practices for how JS projects should be structured and how the code should be written
   and quality assured.
+
+  In 2026 and beyond we see JS being used less and less for large scale applications as TypeScript takes over that space.
+  However, for small projects and automation scripts JS is still an acceptable choice.
+license:
 tags:
   - javascript
   - web
