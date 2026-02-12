@@ -3,6 +3,8 @@ logo: https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg
 blip:
   - date: 2019-02-20
     ring: ADOPT
+  - date: 2026-02-12
+    ring: ARCHIVE
 description: |
   Sass 3 introduces a new syntax known as SCSS which is fully compatible with the
   syntax of CSS, while still supporting the full power of Sass.

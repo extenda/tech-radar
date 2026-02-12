@@ -3,6 +3,8 @@ shortname: Contract Testing
 blip:
   - date: 2019-03-04
     ring: ASSESS
+  - date: 2026-02-12
+    ring: ARCHIVE
 description: |
   [Consumer-driven contract testing](https://www.martinfowler.com/articles/consumerDrivenContracts.html)
   is a way to ensure that services (such as an API provider and a client) can communicate with each other.
