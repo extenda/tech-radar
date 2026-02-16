@@ -7,3 +7,4 @@ coverage/
 packages/backend/dist/
 .scripts/*.pyc
 radar_it
+__pycache__/

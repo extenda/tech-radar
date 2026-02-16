@@ -15,10 +15,10 @@
     "start": "npm start -w @tech-radar/app",
     "backend": "npm start -w @tech-radar/backend",
     "frontend": "npm run frontend -w @tech-radar/app",
-    "pip:install": "pip install --user -r .scripts/python_requirements.txt",
+    "pip:install": "pip3 install --user -r .scripts/python_requirements.txt",
     "test": "npm test --ws",
-    "yaml:lint": "python .scripts/yaml_lint.py",
-    "yaml:validate": "python .scripts/yaml_validate.py"
+    "yaml:lint": "python3 .scripts/yaml_lint.py",
+    "yaml:validate": "python3 .scripts/yaml_validate.py"
   },
   "repository": "github:extenda/tech-radar",
   "author": {
