@@ -1,0 +1,40 @@
+name: Google Agent Development Kit
+shortname: Google ADK
+logo: https://google.github.io/adk-docs/assets/agent-development-kit.png
+blip:
+  - date: 2026-02-16
+    ring: ASSESS
+description: |
+  The [Google Agent Development Kit](https://ai.google.dev/docs/agents) (ADK) is a framework
+  for building, testing, and deploying AI agents. It provides tools and libraries to create agents
+  that can understand natural language, reason about problems, and take actions to accomplish tasks.
+  The ADK includes components for agent orchestration, tool integration, and multi-turn conversations.
+rationale: |
+  As AI agents become increasingly important for enterprise automation, evaluating Google's native
+  agent development framework is strategically important. The ADK provides a structured approach
+  to building production-grade agents with proper error handling, safety features, and integration
+  with Google Cloud services. It represents the evolution of AI assistants from single-turn
+  interactions to multi-step, reasoning-based automation that can integrate with enterprise systems.
+
+  Key benefits include:
+  - Native integration with Google Cloud AI services
+  - Built-in support for function calling and tool use
+  - Structured prompt management and agent patterns
+  - Memory and state management for multi-turn conversations
+  - Built-in safety and filtering features
+
+  We should assess this for potential use in customer-facing automation scenarios and internal
+  process optimization where AI agents can improve efficiency and user experience.
+license:
+  open-source:
+    name: Apache-2.0
+    link: https://github.com/googleapis/python-genai/blob/main/LICENSE
+tags:
+  - artificial-intelligence
+  - agents
+  - llm
+  - ai-agents
+  - google-cloud
+  - agentic-ai
+related:
+  - ai/vertex_ai.yaml
