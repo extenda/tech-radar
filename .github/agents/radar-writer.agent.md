@@ -41,7 +41,7 @@ When a user provides information about a technology to add to the radar:
 - Help user set the date for the blip entry
 
 ### 5. Validate Entry
-- Run `npm run yaml:lint` to check YAML syntax and formatting
+- Run `npm run yaml:lint` to check YAML syntax and formatting. This command does not accept any args. It will automatically check all YAML files in the radar directory.
 - Run `npm run yaml:validate` to validate against radar_entry.schema.yaml
 - If validation fails, report the specific errors to the user
 - Help user fix any validation issues
@@ -72,6 +72,7 @@ When a user provides information about a technology to add to the radar:
 - Descriptions and rationale should be professional and informative
 - Related entries should be 2-5 most relevant entries
 - Always validate YAML syntax before presenting final output
+- YAML files should end with one empty line and no trailing spaces
 
 ## Project Context
 
