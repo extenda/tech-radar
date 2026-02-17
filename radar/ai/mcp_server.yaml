@@ -1,0 +1,23 @@
+name: MCP Server
+blip:
+  - date: 2026-02-17
+    ring: ASSESS
+description: |
+  MCP Server implements the Model Context Protocol (MCP), enabling large language models to access tools
+  and APIs through a standardized server interface. It provides a consistent way to expose capabilities,
+  connect data sources, and broker tool use between LLMs and enterprise systems.
+rationale: |
+  We are assessing MCP servers to enable LLM access to our APIs in a controlled, well-designed manner.
+  The goal is to identify MCP implementations that are secure, appropriately scoped, and suitable for
+  production use without exposing overly fine-grained or destructive operations. We do not want teams to
+  automatically convert existing APIs to MCP endpoints without careful design and security review.
+tags:
+  - artificial-intelligence
+  - ai-agents
+  - tool-use
+  - api-integration
+  - model-context-protocol
+related:
+  - ai/claude_code.yaml
+  - ai/github_copilot.yaml
+  - ai/google_agent_development_kit.yaml
