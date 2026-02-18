@@ -1,8 +1,10 @@
 - name: Data Management
   dirname: data_management
-- name: CI/CD & Infrastructure
-  dirname: infrastructure_ci_cd
+- name: Artificial Intelligence
+  dirname: ai
 - name: Development
   dirname: dev
 - name: Quality Assurance
   dirname: qa
+- name: CI/CD & Infrastructure
+  dirname: infrastructure_ci_cd

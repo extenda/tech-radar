@@ -27,6 +27,29 @@ The radar content is maintained in the `radar` directory. To suggest changes or 
   4. The pull request is automatically published in [#tech-radar](https://extendaretail.slack.com/channels/tech-radar)
   5. If approved, the pull request is merged by the [maintainers](#maintainers)
 
+To make it easier to create new radar entries, you can use the **radar-writer** agent in GitHub Copilot.
+It helps you create new radar entries by asking you a series of questions and then generating the YAML file for you.
+Access the agent in your IDE's Copilot chat by typing:
+
+```
+@radar-writer Create a radar blip for [technology name]
+```
+
+Or start with a general request:
+
+```
+@radar-writer I want to add a new technology to the radar
+```
+
+The agent will:
+1. Gather information about the technology
+2. Research and suggest related entries
+3. Generate a properly formatted YAML template
+4. Validate the entry against the schema
+5. Help you fix any validation errors
+
+See [.github/agents/radar-writer.agent.md](.github/agents/radar-writer.agent.md) for detailed agent documentation.
+
 ### Vote on Pull Requests
 
 To promote change, everyone is encouraged to vote on active pull requests. We use the slack channel [#tech-radar](https://extendaretail.slack.com/channels/tech-radar) to discuss changes. In the end, pull requests are reviewed and merged by the Tech Radar [maintainers](#maintainers).

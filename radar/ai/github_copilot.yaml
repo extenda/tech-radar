@@ -1,0 +1,43 @@
+name: GitHub Copilot
+shortname: Copilot
+logo: https://github.githubassets.com/assets/copilot-logo-6cbbec34dd82.png
+blip:
+  - date: 2026-02-16
+    ring: TRIAL
+description: |
+  [GitHub Copilot](https://github.com/features/copilot) is an AI-powered code completion tool powered by third-party
+  LLMs (e.g. Open AI, Claude Code and Gemini). It provides intelligent code suggestions, helps with boilerplate
+  generation, and assists with refactoring across multiple programming languages. Copilot integrates directly into
+  popular IDEs including VS Code, Visual Studio and JetBrains IDEs, offering real-time suggestions as developers
+  type.
+rationale: |
+  GitHub Copilot represents a maturation of AI-assisted development, moving from experimental to practical
+  adoption in enterprise environments. We are recommending TRIAL ring placement because:
+
+  - **Proven productivity gains**: Substantial evidence shows Copilot improves developer velocity for both
+    new code and maintenance tasks
+  - **Wide IDE support**: Deep integration with tools we already use (VS Code, JetBrains) reduces adoption friction
+  - **Enterprise-ready**: GitHub Copilot Business and Copilot Enterprise offer security controls and audit
+    features suitable for production use
+  - **Code quality**: Features like code review assistance and security vulnerability detection add value beyond
+    basic code completion
+  - **Tangible ROI**: Organizations report measurable improvements in time-to-delivery and developer satisfaction
+
+  We recommend teams start evaluating Copilot for their codebases, particularly in new feature development and
+  maintenance scenarios where it can have immediate impact. Organizations should establish clear guidelines
+  around acceptable use, code review practices, and security considerations when adopting Copilot.
+license:
+  commercial:
+    company: GitHub
+    description: Available as GitHub Copilot Individual, Business, or Enterprise subscriptions
+tags:
+  - artificial-intelligence
+  - ai-assisted-development
+  - code-generation
+  - developer-experience
+  - productivity
+  - llm
+  - developer-tools
+related:
+  - ai/spec_kit.yaml
+  - ai/claude_code.yaml

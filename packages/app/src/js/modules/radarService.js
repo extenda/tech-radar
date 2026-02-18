@@ -41,6 +41,11 @@ class RadarService {
         return false;
       }
 
+      if (entry.blip.quadrant >= 4) {
+        // Exclude entries with invalid quadrant.
+        return false;
+      }
+
       if (tags && tags.length > 0) {
         // Return true if entry includes all filter tags.
         return tags.every((tag) => entry.tags.includes(tag));

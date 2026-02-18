@@ -27,7 +27,8 @@ const createModel = (radarDir) => {
     quadrants,
 
     // Quadrants in the order we want them in the navbar.
-    quadrantsNavBar: [quadrants[2], quadrants[3], quadrants[1], quadrants[0]],
+    // We support more than 4 quadrants in the nav bar.
+    quadrantsNavBar: [quadrants[2], quadrants[3], quadrants[1], quadrants[0], quadrants[4]],
     rings: ['ADOPT', 'TRIAL', 'ASSESS', 'HOLD'],
   };
 };
