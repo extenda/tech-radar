@@ -1,0 +1,41 @@
+name: AlloyDB
+blip:
+  - date: 2026-02-18
+    ring: TRIAL
+description: |
+  [AlloyDB](https://cloud.google.com/alloydb) is a fully managed, PostgreSQL-compatible relational database
+  service on Google Cloud. It combines the familiarity and compatibility of PostgreSQL with Google Cloud's
+  advanced scalability, performance, and reliability features. AlloyDB is designed for transactional workloads
+  requiring high availability and horizontal scale without sacrificing PostgreSQL compatibility.
+rationale: |
+  We are trialing AlloyDB as a next-generation relational database solution for large-scale transactional
+  workloads. Key advantages that justify trial placement:
+
+  - **PostgreSQL compatibility**: Full compatibility with PostgreSQL enables easy migration from existing
+    deployments and reduces learning curves for development teams
+  - **Superior scalability**: Scales horizontally beyond traditional Cloud SQL limitations while maintaining
+    ACID guarantees and consistency
+  - **Performance**: Optimized for high-throughput transactional workloads with better performance than
+    PostgreSQL-based Cloud SQL instances
+  - **Managed service**: Fully managed infrastructure reduces operational overhead compared to self-managed
+    PostgreSQL deployments
+
+  We are testing AlloyDB in production with large datasets to validate its performance characteristics,
+  scalability, and operational fit within our architecture. Teams should evaluate AlloyDB as a strategic
+  alternative to Cloud SQL when handling rapidly growing transactional datasets.
+license:
+  commercial:
+    company: Google
+    description: |
+      Use of this software requires a license for Google Cloud Platform.
+tags:
+  - cloud
+  - gcp
+  - sql
+  - database
+  - postgresql
+  - scalability
+related:
+  - data_management/cloud_sql.yaml
+  - data_management/bigquery.yaml
+  - data_management/spanner.yaml
