@@ -1,0 +1,38 @@
+name: BigTable
+blip:
+  - date: 2026-02-18
+    ring: ASSESS
+description: |
+  [Google Cloud Bigtable](https://cloud.google.com/bigtable) is a fully-managed, NoSQL Big Data database service
+  designed for massive-scale analytical and operational workloads.
+
+  Bigtable is a sparse, distributed, and persistent multidimensional sorted map that is optimized for real-time
+  access to very large data sets. It provides high throughput and low latency performance characteristics
+  ideal for time-series data, analytics, and monitoring workloads.
+rationale: |
+  We are assessing BigTable as a potential storage solution for our transaction journal to evaluate:
+  - Performance characteristics for high-velocity, time-series transaction data
+  - Its ability to handle complex filtering requirements for transaction queries
+  - Scalability and cost-effectiveness compared to other database solutions
+  - Suitability as an operational database for serving real-time transaction data
+
+  BigTable should be evaluated for use cases where we need massive scale, high throughput, and low latency
+  reads and writes of structured data, particularly for append-heavy workloads like transaction journals.
+license:
+  commercial:
+    company: Google
+    description: |
+      Use of this software requires a license for Google Cloud Platform.
+related:
+  - data_management/elasticsearch.yaml
+  - data_management/bigquery.yaml
+  - data_management/cloud_sql.yaml
+tags:
+  - cloud
+  - gcp
+  - google
+  - nosql
+  - time-series
+  - high-throughput
+  - low-latency
+  - scalable
