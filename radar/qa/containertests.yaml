@@ -13,6 +13,7 @@ rationale:
   This will enable a stabile sandbox environment for every test run.
 related:
   - qa/ductus_fluentdocker.yaml
+  - qa/testcontainers.yaml
 tags:
   - docker
   - dotnet

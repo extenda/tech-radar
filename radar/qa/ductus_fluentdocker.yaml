@@ -3,6 +3,8 @@ shortname: Ductus
 blip:
   - date: 2019-05-22
     ring: ADOPT
+  - date: 2026-02-19
+    ring: ARCHIVE
 description: |
   FluentDocker is a library to interact with docker-machine, docker-compose and docker.
   It supports the docker for windows, docker for mac, docker machine, and native linux

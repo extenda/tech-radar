@@ -5,8 +5,9 @@ blip:
   - date: 2026-02-12
     ring: ADOPT
 description: |
-  [Testcontainers](https://www.testcontainers.org/) is a Java library that supports JUnit tests, providing lightweight,
-  throwaway instances of common databases, Selenium web browsers, or anything else that can run in a Docker container.
+  [Testcontainers](https://www.testcontainers.org/) is an open source library for providing throwaway,
+  lightweight instances of databases, message brokers, web browsers, or just about anything that can
+  run in a Docker container.
 rationale: |
   Testcontainers make the following kinds of tests easier:
     Data access layer integration tests: use a containerized instance of a MySQL,
