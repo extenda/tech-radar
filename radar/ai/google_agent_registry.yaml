@@ -1,0 +1,55 @@
+name: Google Agent Registry
+shortname: Agent Registry
+blip:
+  - date: 2026-06-11
+    ring: ASSESS
+description: |
+  [Google Agent Registry](https://cloud.google.com/products/agent-registry) is a centralized catalog within
+  Google Cloud for storing, discovering, and governing Model Context Protocol (MCP) servers, tools, and AI
+  agents. It serves as the governance layer for enterprise agentic deployments, enabling organizations to
+  manage their fleet of AI agents with unified identity, access control, and audit capabilities.
+rationale: |
+  We are assessing Google Agent Registry to understand how centralized governance can address the growing
+  complexity of managing AI agents at enterprise scale. As organizations deploy more agentic systems, the
+  need for coordinated discovery, access control, and compliance tracking becomes critical.
+
+  Key aspects we want to evaluate:
+
+  - **Centralized discovery**: Agent Registry provides a single location to find agents, MCP servers, and
+    tools across the organization. This could eliminate redundant implementations and help teams discover
+    existing capabilities rather than building from scratch.
+
+  - **MCP server management**: With Model Context Protocol emerging as a standard for tool integration,
+    having a registry that natively supports MCP servers could simplify how we expose and consume
+    capabilities across different AI platforms.
+
+  - **Governance at scale**: Role-based permissions, security boundaries, and audit logging address
+    compliance requirements that become essential as AI agents gain access to sensitive systems and data.
+    Unified identity management could reduce the overhead of managing credentials across multiple agents.
+
+  - **Agent-to-agent orchestration**: The registry's support for agent-to-agent protocols opens
+    possibilities for composing complex workflows from specialized agents, with the registry serving
+    as the coordination point.
+
+  - **GCP integration**: For teams already invested in Google Cloud, Agent Registry integrates with
+    existing IAM, logging, and monitoring infrastructure, potentially reducing operational overhead.
+
+  We should assess Agent Registry on projects where we need to manage multiple AI agents with different
+  capabilities, particularly where governance, discoverability, and standardized tool access are concerns.
+  Note that the service is currently in Preview with limited support.
+license:
+  commercial:
+    company: Google
+    description: Available as part of Google Cloud Platform with usage-based pricing.
+tags:
+  - artificial-intelligence
+  - agentic-ai
+  - ai-agents
+  - mcp
+  - governance
+  - google-cloud
+  - developer-tools
+related:
+  - ai/claude_code.yaml
+  - ai/vertex_ai.yaml
+  - ai/google_agent_development_kit.yaml
