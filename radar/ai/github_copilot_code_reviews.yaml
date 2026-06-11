@@ -1,0 +1,61 @@
+name: Copilot Code Reviews
+shortname: Copilot Reviews
+logo: https://github.githubassets.com/assets/copilot-logo-6cbbec34dd82.png
+blip:
+  - date: 2026-06-11
+    ring: ADOPT
+description: |
+  [Copilot Code Reviews](https://github.com/features/copilot/code-review) is GitHub's AI-powered code review
+  feature that automatically analyzes pull requests for bugs, security vulnerabilities, and code quality
+  issues. It provides contextual feedback directly in the PR workflow, suggesting improvements and
+  highlighting potential problems before human reviewers engage.
+rationale: |
+  We recommend adopting Copilot Code Reviews as a standard part of our pull request workflow. Unlike
+  agentic coding tools where we are consolidating on Claude Code, Copilot Code Reviews serves a distinct
+  and complementary purpose that integrates seamlessly with our GitHub-based development process.
+
+  Reasons for ADOPT:
+
+  - **Native GitHub integration**: Code reviews happen where our code already lives. Copilot analyzes PRs
+    automatically without context switching to external tools, and feedback appears inline alongside
+    human reviewer comments. This tight integration reduces friction and increases adoption.
+
+  - **Early defect detection**: Automated review catches common issues—null pointer risks, security
+    vulnerabilities, logic errors, and style inconsistencies—before human reviewers spend time on them.
+    This lets human reviewers focus on architecture, design decisions, and business logic.
+
+  - **Consistent review coverage**: Every PR gets reviewed with the same thoroughness regardless of team
+    workload or reviewer availability. This is particularly valuable for smaller changes that might
+    otherwise receive cursory review.
+
+  - **Educational feedback**: Junior developers receive immediate, contextual guidance on code quality
+    and best practices. The AI explains why something is problematic, not just what to change,
+    accelerating skill development.
+
+  - **Complementary to human review**: Copilot Code Reviews augments rather than replaces human judgment.
+    It handles mechanical checks while humans focus on what they do best—understanding context, evaluating
+    trade-offs, and ensuring alignment with team conventions.
+
+  - **Distinct from agentic coding**: This is a focused, bounded use of AI for a specific task (review)
+    rather than autonomous code generation. The pricing and risk profile differ significantly from
+    agentic coding sessions, making it a practical choice even while we evaluate alternatives for
+    code generation.
+
+  Teams should enable Copilot Code Reviews on all repositories. Establish guidelines for when AI feedback
+  should be addressed versus when it can be acknowledged and deferred, and track metrics on defects
+  caught to quantify value.
+license:
+  commercial:
+    company: GitHub
+    description: Included with GitHub Copilot Business and Enterprise subscriptions.
+tags:
+  - artificial-intelligence
+  - ai-assisted-development
+  - code-review
+  - developer-experience
+  - code-quality
+  - security
+  - developer-tools
+related:
+  - ai/github_copilot.yaml
+  - ai/claude_code.yaml

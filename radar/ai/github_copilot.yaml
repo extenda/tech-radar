@@ -1,5 +1,5 @@
-name: GitHub Copilot
-shortname: Copilot
+name: GitHub Copilot (Agentic Coding)
+shortname: Copilot Agent
 logo: https://github.githubassets.com/assets/copilot-logo-6cbbec34dd82.png
 blip:
   - date: 2026-02-16
@@ -7,13 +7,13 @@ blip:
   - date: 2026-06-11
     ring: HOLD
 description: |
-  [GitHub Copilot](https://github.com/features/copilot) is an AI-powered code completion tool powered by third-party
-  LLMs (e.g. Open AI, Claude Code and Gemini). It provides intelligent code suggestions, helps with boilerplate
-  generation, and assists with refactoring across multiple programming languages. Copilot integrates directly into
-  popular IDEs including VS Code, Visual Studio and JetBrains IDEs, offering real-time suggestions as developers
-  type.
+  [GitHub Copilot](https://github.com/features/copilot) as an agentic coding assistant uses AI to autonomously
+  complete multi-step development tasks. This includes Copilot's agent mode for code generation, refactoring,
+  and implementation work where the AI operates with significant autonomy. This blip specifically covers
+  Copilot's agentic capabilities—for Copilot's code review features, see the separate Copilot Code Reviews
+  blip which remains at ADOPT.
 rationale: |
-  We are moving GitHub Copilot to HOLD for two reasons:
+  We are moving GitHub Copilot's agentic coding capabilities to HOLD for two reasons:
 
   - **Strategic focus on Claude Code**: We are consolidating our AI-assisted development efforts around
     Anthropic's Claude Code. Its agentic approach to multi-step reasoning, codebase exploration, and
@@ -30,7 +30,9 @@ rationale: |
 
   [copilot-billing]: https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/
 
-  Teams currently using Copilot may continue, but new adoptions should evaluate Claude Code instead.
+  Teams currently using Copilot for agentic coding may continue, but new adoptions should evaluate
+  Claude Code instead. Note that Copilot Code Reviews remains at ADOPT—this HOLD applies only to
+  Copilot's agentic coding capabilities.
 license:
   commercial:
     company: GitHub
@@ -39,10 +41,11 @@ tags:
   - artificial-intelligence
   - ai-assisted-development
   - code-generation
+  - agentic-ai
   - developer-experience
   - productivity
   - llm
   - developer-tools
 related:
-  - ai/spec_kit.yaml
+  - ai/github_copilot_code_reviews.yaml
   - ai/claude_code.yaml
