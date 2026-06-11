@@ -3,17 +3,40 @@ logo: https://upload.wikimedia.org/wikipedia/commons/b/b0/Claude_AI_symbol.svg
 blip:
   - date: 2026-02-17
     ring: ASSESS
+  - date: 2026-06-11
+    ring: TRIAL
 description: |
   [Claude Code](https://www.anthropic.com/claude) is Anthropic's agentic AI assistant for software development.
   It supports code generation, refactoring, reviews, and multi-step problem solving across languages and frameworks.
   By combining conversational guidance with tool use and context awareness, it helps developers move from intent
   to implementation faster while keeping human oversight in the loop.
 rationale: |
-  We are assessing Claude Code to understand its impact on code quality, maintainability, and delivery speed in
-  projects where Claude is already used. The agentic approach enables multi-step reasoning, codebase exploration,
-  and iterative improvements, which aligns well with specification-driven workflows such as Spec Kit. We want to
-  evaluate where it accelerates development, how it affects review rigor and test coverage, and which guardrails
-  are needed to maintain standards.
+  We are moving Claude Code to TRIAL as our primary AI-assisted development tool. After evaluating multiple
+  options, Claude Code stands out for several reasons:
+
+  - **Agentic architecture**: Unlike traditional code completion tools, Claude Code operates as an autonomous
+    agent that can explore codebases, reason through multi-step problems, and iterate on solutions. This
+    enables tackling complex tasks like refactoring across multiple files, debugging intricate issues, and
+    implementing features end-to-end with minimal hand-holding.
+
+  - **Specification-driven workflow alignment**: Claude Code integrates naturally with our Spec Kit approach.
+    Developers can provide specifications and let the agent translate intent into implementation while
+    maintaining oversight. This keeps humans in the loop for architectural decisions while accelerating
+    routine coding tasks.
+
+  - **Predictable pricing**: Anthropic offers straightforward subscription-based pricing, making budgeting
+    more predictable compared to usage-based models where costs scale unpredictably with token consumption.
+
+  - **Strong reasoning capabilities**: Claude's extended thinking and multi-turn context retention allow it
+    to maintain coherence across long development sessions, understand existing code patterns, and produce
+    implementations that align with project conventions.
+
+  - **Safety-conscious design**: Anthropic's focus on AI safety translates to a tool that asks clarifying
+    questions, surfaces uncertainties, and avoids making irreversible changes without explicit approval.
+
+  Teams should trial Claude Code on new feature development and maintenance tasks. Establish guidelines
+  for code review of AI-generated changes and track metrics on velocity, defect rates, and developer
+  satisfaction to inform broader adoption decisions.
 license:
   commercial:
     company: Anthropic
