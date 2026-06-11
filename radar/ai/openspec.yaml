@@ -1,0 +1,57 @@
+name: OpenSpec
+logo: https://openspec.pro/img/logo.svg
+blip:
+  - date: 2026-06-11
+    ring: TRIAL
+description: |
+  [OpenSpec](https://openspec.pro/) is a lightweight, open-source spec-driven development (SDD) framework
+  for AI coding assistants. It structures AI-assisted development through specifications that live alongside
+  code in repositories, enabling persistent context across chat sessions and predictable, organized outputs
+  from any AI coding tool.
+rationale: |
+  We are recommending OpenSpec for TRIAL as our primary specification-driven development framework. After
+  evaluating multiple SDD approaches, OpenSpec stands out for teams working with existing codebases:
+
+  - **Built for brownfield projects**: Unlike frameworks that assume greenfield development, OpenSpec is
+    designed for incremental adoption in existing codebases. Teams can introduce SDD practices without
+    rewriting code or disrupting established workflows. Specifications integrate naturally alongside
+    existing code, documentation, and tests.
+
+  - **Tool agnostic**: OpenSpec works with 20+ AI assistants including Claude Code, Cursor, GitHub Copilot,
+    Windsurf, and others. This eliminates vendor lock-in and allows teams to use their preferred tools
+    while maintaining consistent specification practices across the organization.
+
+  - **Persistent context**: Specifications live in dedicated folders within the repository, providing
+    context that survives beyond individual chat sessions. This solves the common problem of AI assistants
+    losing context between conversations and enables "spec delta review" to understand changes without
+    analyzing full code diffs.
+
+  - **Fluid workflow**: OpenSpec's philosophy of "fluid not rigid, iterative not waterfall" aligns with
+    agile practices. Simple slash commands (`/opsx:new`, `/opsx:ff`, `/opsx:apply`) guide developers
+    through structured phases without imposing heavyweight processes.
+
+  - **Reduced rework**: By aligning humans and AI on specifications before coding begins, OpenSpec reduces
+    surprises and the frustrating cycle of regenerating code that doesn't meet requirements. Pre-agreed
+    specs create a shared understanding that leads to predictable outputs.
+
+  - **Zero cost of entry**: As a free, open-source framework with no API keys or subscriptions required,
+    teams can adopt OpenSpec immediately without procurement overhead.
+
+  Teams should trial OpenSpec on maintenance tasks, feature additions, and refactoring efforts in existing
+  codebases where specification clarity and persistent context will have the most impact.
+license:
+  open-source:
+    name: MIT
+    link: https://github.com/Fission-AI/OpenSpec/blob/main/LICENSE
+tags:
+  - artificial-intelligence
+  - ai-assisted-development
+  - spec-driven-development
+  - developer-tools
+  - documentation
+  - llm
+  - agentic-ai
+related:
+  - ai/claude_code.yaml
+  - ai/spec_kit.yaml
+  - ai/github_copilot.yaml

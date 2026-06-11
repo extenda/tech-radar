@@ -4,6 +4,8 @@ logo: https://raw.githubusercontent.com/github/spec-kit/main/media/logo_large.we
 blip:
   - date: 2026-02-16
     ring: ASSESS
+  - date: 2026-06-11
+    ring: HOLD
 description: |
   [Spec Kit](https://github.com/github/spec-kit) is an AI-powered toolkit from GitHub for automatically
   generating specifications, tests, and documentation from code. It leverages large language models to analyze
@@ -11,18 +13,25 @@ description: |
   collaboration. Spec Kit helps bridge the gap between code and documentation by automatically capturing
   intent and behavior.
 rationale: |
-  Spec Kit represents an emerging pattern in AI-assisted development where LLMs are used to generate
-  specifications and tests from existing code. This is particularly valuable for:
+  We are moving Spec Kit to HOLD in favor of OpenSpec for specification-driven development.
 
-  - **Knowledge capture**: Automatically documenting code intent without manual effort
-  - **Quality improvement**: Generating comprehensive test suites that might be missed in manual testing
-  - **Specification-driven development**: Using AI-generated specs as a foundation for refactoring and optimization
-  - **Reduced documentation debt**: Keeping specifications synchronized with code automatically
+  While Spec Kit offers valuable capabilities for generating specifications from code, our evaluation
+  identified several factors that make OpenSpec a better fit for our needs:
 
-  As AI-assisted development tools mature, Spec Kit offers a practical approach to leveraging language models
-  for pragmatic software engineering tasks. We should assess this for potential use in codebases where
-  documentation and test coverage need improvement, and where AI-generated specifications could enhance
-  code quality and maintainability.
+  - **Brownfield focus**: OpenSpec is designed from the ground up for incremental adoption in existing
+    codebases, whereas Spec Kit's approach works best when integrated early in a project's lifecycle.
+
+  - **Tool agnosticism**: OpenSpec works across 20+ AI assistants without vendor lock-in, while Spec Kit
+    is tightly coupled to GitHub's ecosystem.
+
+  - **Lighter weight**: OpenSpec's minimal footprint and simple slash-command workflow reduce friction
+    for teams already using various AI coding tools.
+
+  - **Persistent context**: OpenSpec's specification folders live alongside code in the repository,
+    providing context that survives beyond individual chat sessions.
+
+  Teams currently using Spec Kit may continue, but new specification-driven development initiatives
+  should evaluate OpenSpec instead.
 license:
   open-source:
     name: Apache-2.0
@@ -36,5 +45,6 @@ tags:
   - documentation
   - llm
 related:
+  - ai/openspec.yaml
   - ai/google_agent_development_kit.yaml
   - ai/vertex_ai.yaml
