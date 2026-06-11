@@ -4,6 +4,8 @@ logo: https://github.githubassets.com/assets/copilot-logo-6cbbec34dd82.png
 blip:
   - date: 2026-02-16
     ring: TRIAL
+  - date: 2026-06-11
+    ring: HOLD
 description: |
   [GitHub Copilot](https://github.com/features/copilot) is an AI-powered code completion tool powered by third-party
   LLMs (e.g. Open AI, Claude Code and Gemini). It provides intelligent code suggestions, helps with boilerplate
@@ -11,21 +13,24 @@ description: |
   popular IDEs including VS Code, Visual Studio and JetBrains IDEs, offering real-time suggestions as developers
   type.
 rationale: |
-  GitHub Copilot represents a maturation of AI-assisted development, moving from experimental to practical
-  adoption in enterprise environments. We are recommending TRIAL ring placement because:
+  We are moving GitHub Copilot to HOLD for two reasons:
 
-  - **Proven productivity gains**: Substantial evidence shows Copilot improves developer velocity for both
-    new code and maintenance tasks
-  - **Wide IDE support**: Deep integration with tools we already use (VS Code, JetBrains) reduces adoption friction
-  - **Enterprise-ready**: GitHub Copilot Business and Copilot Enterprise offer security controls and audit
-    features suitable for production use
-  - **Code quality**: Features like code review assistance and security vulnerability detection add value beyond
-    basic code completion
-  - **Tangible ROI**: Organizations report measurable improvements in time-to-delivery and developer satisfaction
+  - **Strategic focus on Claude Code**: We are consolidating our AI-assisted development efforts around
+    Anthropic's Claude Code. Its agentic approach to multi-step reasoning, codebase exploration, and
+    iterative problem-solving aligns better with our specification-driven workflows. Rather than splitting
+    investment across multiple AI coding tools, we want teams to focus evaluation efforts on Claude Code
+    to build deeper expertise and establish consistent practices.
 
-  We recommend teams start evaluating Copilot for their codebases, particularly in new feature development and
-  maintenance scenarios where it can have immediate impact. Organizations should establish clear guidelines
-  around acceptable use, code review practices, and security considerations when adopting Copilot.
+  - **Pricing model uncertainty**: GitHub has announced a shift to usage-based billing effective
+    June 1, 2026. The new model replaces predictable per-seat pricing with AI Credits consumed based on
+    token usage, making costs harder to forecast. Early reports suggest agentic coding sessions can
+    consume $30-40 in credits per session, potentially increasing costs significantly for heavy users.
+    We want to wait for the pricing model to stabilize and for clearer usage patterns to emerge before
+    recommending further adoption. See [GitHub's announcement][copilot-billing].
+
+  [copilot-billing]: https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/
+
+  Teams currently using Copilot may continue, but new adoptions should evaluate Claude Code instead.
 license:
   commercial:
     company: GitHub
