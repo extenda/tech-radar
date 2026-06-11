@@ -1,0 +1,57 @@
+name: Superpowers
+blip:
+  - date: 2026-06-11
+    ring: ASSESS
+description: |
+  [Superpowers](https://github.com/obra/superpowers) is a composable skills framework and software development
+  methodology for AI coding agents. It provides structured workflows that guide agents through complete
+  development cycles—from brainstorming and design through implementation, testing, and code review—while
+  enforcing disciplined engineering practices.
+rationale: |
+  We are assessing Superpowers to understand how structured methodologies can improve the consistency and
+  quality of AI-assisted development. The framework addresses a critical gap in agentic coding: ensuring
+  that AI agents follow disciplined engineering practices rather than improvising solutions.
+
+  Key aspects we want to evaluate:
+
+  - **Test-driven development enforcement**: Superpowers enforces RED-GREEN-REFACTOR cycles where tests
+    must precede implementation. This could significantly reduce defects introduced by AI-generated code
+    and ensure that changes are verifiable from the start.
+
+  - **Systematic debugging**: The four-phase debugging methodology provides a structured approach to
+    problem-solving that prevents agents from making speculative fixes. Evidence-based validation
+    ensures issues are actually resolved before moving on.
+
+  - **Planning discipline**: Tasks are broken into bite-sized segments (2-5 minutes each) with precise
+    specifications, exact file paths, and verification steps. This granularity could improve
+    predictability and make AI-assisted work easier to review.
+
+  - **Subagent orchestration**: The framework can dispatch autonomous subagents for extended execution
+    periods with two-stage review processes, potentially enabling more complex multi-step tasks while
+    maintaining oversight.
+
+  - **Tool agnosticism**: Superpowers works across multiple AI platforms including Claude Code, Cursor,
+    GitHub Copilot CLI, and others, allowing teams to adopt it without changing their preferred tools.
+
+  - **Git worktree isolation**: Development happens in isolated branches with verified test baselines,
+    reducing risk of destabilizing main branches during AI-assisted work.
+
+  We should assess Superpowers on projects where maintaining engineering discipline is critical, and
+  where the overhead of structured workflows is justified by the need for predictable, high-quality
+  outputs from AI agents.
+license:
+  open-source:
+    name: MIT
+    link: https://github.com/obra/superpowers/blob/main/LICENSE
+tags:
+  - artificial-intelligence
+  - ai-assisted-development
+  - agentic-ai
+  - ai-agents
+  - developer-tools
+  - test-driven-development
+  - developer-experience
+related:
+  - ai/claude_code.yaml
+  - ai/openspec.yaml
+  - ai/github_copilot.yaml
